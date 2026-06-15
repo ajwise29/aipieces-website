@@ -146,6 +146,22 @@
             content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
             border-radius: 24px 24px 0 0; background: linear-gradient(90deg, #8b6914, #d4af37);
         }
+        .fc-lead-shot { max-width: 330px; margin: 0 auto; }
+        .fc-lead-shot .phone-frame {
+            background: #1c140c; border-radius: 36px; padding: 11px;
+            box-shadow: 0 24px 60px rgba(61,46,30,0.32); max-width: 330px; margin: 0 auto;
+        }
+        .fc-lead-shot .phone-frame img { display: block; width: 100%; height: auto; border-radius: 27px; }
+        .fc-lead-shot figcaption {
+            font-family: -apple-system, sans-serif; font-size: 0.85rem; color: #5a4a3a;
+            text-align: center; margin-top: 16px; line-height: 1.5; max-width: 300px;
+            margin-left: auto; margin-right: auto;
+        }
+        .fc-inline-photo { margin: 26px 0 4px; }
+        .fc-inline-photo img {
+            width: 100%; max-width: 340px; height: auto; border-radius: 14px; display: block;
+            box-shadow: 0 8px 24px rgba(139,105,20,0.16); object-fit: cover;
+        }
         @media (max-width: 900px) { .fc-lead-grid { grid-template-columns: 1fr; } }
 
         /* ── SECONDARY PRODUCTS (lighter) ── */
@@ -423,15 +439,18 @@
         <section class="fc-lead" id="familycompass" aria-label="FamilyCompass">
             <div class="container">
                 <div class="fc-lead-grid">
-                    <div class="fc-lead-photo">
-                        <picture>
-                            <source srcset="mumteensofa.webp" type="image/webp">
-                            <img src="mumteensofa.jpg"
-                                 alt="A mother and her teenagers relaxing together on a sofa"
-                                 loading="lazy"
-                                 width="600" height="500">
-                        </picture>
-                    </div>
+                    <figure class="fc-lead-shot">
+                        <div class="phone-frame">
+                            <picture>
+                                <source srcset="marketingCompass.webp" type="image/webp">
+                                <img src="marketingCompass.png"
+                                     alt="FamilyCompass app showing family members' locations around a compass"
+                                     loading="lazy"
+                                     width="540" height="1200">
+                            </picture>
+                        </div>
+                        <figcaption>The actual FamilyCompass app — every family member's location around one shared compass.</figcaption>
+                    </figure>
                     <article class="fc-lead-card product-card family">
                         <span class="product-badge badge-beta">Beta Available — Summer 2026 Launch</span>
                         <h2 class="product-name">FamilyCompass</h2>
@@ -453,6 +472,15 @@
                             <li>Personal User Dashboard with attention to physical &amp; mental wellbeing, hobbies, and daily routines</li>
                             <li>Works on iOS &amp; Android — pure React Native</li>
                         </ul>
+                        <figure class="fc-inline-photo">
+                            <picture>
+                                <source srcset="mumteensofa.webp" type="image/webp">
+                                <img src="mumteensofa.jpg"
+                                     alt="A mother and her teenagers relaxing together on a sofa"
+                                     loading="lazy"
+                                     width="600" height="500">
+                            </picture>
+                        </figure>
                         <div class="product-cta-note">🚀 Currently in beta with testers across four countries. Join the waitlist for early access.</div>
                         <a href="#beta-signup-section" class="btn-product">Join FamilyCompass Beta</a>
                     </article>
