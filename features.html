@@ -232,7 +232,7 @@
                 <div class="stat-row">
                     <div class="stat-box"><span class="stat-number">12</span><span class="stat-label">Family members per account</span></div>
                     <div class="stat-box"><span class="stat-number">21+</span><span class="stat-label">Wearable &amp; health devices supported</span></div>
-                    <div class="stat-box"><span class="stat-number">8</span><span class="stat-label">Participants per group call</span></div>
+                    <div class="stat-box"><span class="stat-number">72hr</span><span class="stat-label">Message metadata retention, then deleted</span></div>
                     <div class="stat-box"><span class="stat-number">256-bit</span><span class="stat-label">AES-GCM encryption on all data</span></div>
                 </div>
             </div>
@@ -267,7 +267,6 @@
                     <h3 class="block-heading">Encrypted Communications</h3>
                     <div class="feature-grid">
                         <div class="feature-card"><div class="feature-card-icon">💬</div><h3>End-to-End Encrypted Messaging</h3><p>Text messages encrypted using AES-256-GCM with a family shared key. Key exchange via ECDH P-256. Even Supabase stores only ciphertext. Messages support text, voice notes, and photos.</p><span class="tech-tag">AES-256-GCM</span><span class="tech-tag">ECDH P-256</span><span class="tech-tag">Signal Protocol</span></div>
-                        <div class="feature-card"><div class="feature-card-icon">📞</div><h3>Encrypted Voice &amp; Video Calls</h3><p>1-to-1 and group calls up to 8 participants using WebRTC with end-to-end encryption. DTLS-SRTP for media streams. No call data stored server-side. Integrates with iOS/Android call handling for seamless UX.</p><span class="tech-tag">WebRTC</span><span class="tech-tag">DTLS-SRTP</span><span class="tech-tag">8 Participants</span></div>
                         <div class="feature-card"><div class="feature-card-icon">📷</div><h3>Encrypted Photo Sharing</h3><p>Photos encrypted client-side before upload. Stored as ciphertext in Supabase Storage. Thumbnails generated locally and transmitted encrypted. OCR scans paper schedules or documents into text using on-device ML.</p><span class="tech-tag">Client-Side Encryption</span><span class="tech-tag">On-Device OCR</span></div>
                         <div class="feature-card"><div class="feature-card-icon">📄</div><h3>Receipt &amp; Document OCR</h3><p>Photograph any paper receipt, grocery bill, school letter, or prescription. On-device OCR (react-native-mlkit-ocr) extracts text instantly. Content encrypted and synced to the relevant family category.</p><span class="tech-tag">On-Device OCR</span><span class="tech-tag">MLKit</span><span class="tech-tag">Encrypted Sync</span></div>
                         <div class="feature-card"><div class="feature-card-icon">🔔</div><h3>Intelligent Push Notifications</h3><p>Delivered via encrypted push server with Twilio SMS fallback for emergency alerts. Notification payload encrypted end-to-end. Per-member notification preferences, quiet hours, and priority levels configurable.</p><span class="tech-tag">Encrypted Push</span><span class="tech-tag">Twilio SMS Fallback</span></div>

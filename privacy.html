@@ -513,7 +513,7 @@
                     <div class="arch-cell">
                         <p class="arch-cell-label">Layer 02 · Messaging Encryption</p>
                         <h3>Signal Protocol End-to-End</h3>
-                        <p>All messages, voice calls, and video calls use the Signal Protocol: X3DH key agreement for session establishment, Double Ratchet algorithm for forward secrecy and post-compromise security, and per-message unique keys that are discarded after use.</p>
+                        <p>All messages use the Signal Protocol: X3DH key agreement for session establishment, Double Ratchet algorithm for forward secrecy and post-compromise security, and per-message unique keys that are discarded after use.</p>
                         <span class="arch-cell-tag blue">X3DH · Double Ratchet · PQXDH</span>
                     </div>
                     <div class="arch-cell">
@@ -660,7 +660,7 @@
                     <ul class="policy-list">
                         <li><strong>Identity data:</strong> Display name, email address, family role. Purpose: account management and family group membership. Retention: duration of account plus 30 days after deletion request.</li>
                         <li><strong>Location data:</strong> Real-time GPS coordinates, geofence trigger events, last-known location. Encrypted end-to-end — not readable by AI Pieces. Purpose: family compass feature. Consent-gated. Retention: configurable by user; default 24-hour rolling window.</li>
-                        <li><strong>Communication content:</strong> Messages, call metadata, shared media. Encrypted end-to-end using Signal Protocol. Content is not accessible to AI Pieces. Metadata (timestamp, sender ID — not content) retained for 72 hours for delivery assurance.</li>
+                        <li><strong>Communication content:</strong> Messages and shared media. Encrypted end-to-end using Signal Protocol. Content is not accessible to AI Pieces. Metadata (timestamp, sender ID — not content) retained for 72 hours for delivery assurance.</li>
                         <li><strong>Calendar data:</strong> Events, schedules, availability. Encrypted at rest. Synced with device calendar only with explicit user permission. Retention: duration of account.</li>
                         <li><strong>Technical data:</strong> App version, device OS type (not device ID), crash reports (anonymised). Purpose: service quality. No advertising identifiers are collected or processed.</li>
                         <li><strong>Children's data (where applicable):</strong> Subject to COPPA and GDPR Art. 8 — processed only with verifiable parental consent for users under 13 (US) or under 16 (EU/UK default, may vary by member state).</li>
@@ -698,7 +698,7 @@
                             </tr>
                             <tr>
                                 <td>Signal Protocol (X3DH + Double Ratchet)</td>
-                                <td>End-to-end encrypted messaging, voice &amp; video calls</td>
+                                <td>End-to-end encrypted messaging</td>
                                 <td><a href="https://signal.org/docs/specifications/x3dh/" target="_blank" rel="noopener">X3DH Spec</a> · <a href="https://signal.org/docs/specifications/doubleratchet/" target="_blank" rel="noopener">Double Ratchet Spec</a> <span class="std-tag">Signal Foundation</span></td>
                             </tr>
                             <tr>
