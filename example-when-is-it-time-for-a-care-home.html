@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--
+  EXAMPLE PAGE built from content-page-template.html
+  ───────────────────────────────────────────────────
+  This is the STATIC, crawler-first form: the template's data object has
+  been rendered straight into HTML so every word and the FAQ schema are in
+  the source with no JavaScript dependency. The page-data block is kept at
+  the top (commented) as the single source of content for this page; if you
+  prefer the JS-rendered workflow, copy content-page-template.html instead
+  and paste this data into its <script id="page-data"> block.
+
+  All copy below is PLACEHOLDER content for layout review.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>When Is It Time for a Care Home? A Family Guide — AI Pieces</title>
+    <meta name="description" content="A calm, practical guide to knowing when it is time for a care home — the signs to watch for, how to talk to your parent, and how to choose well, without guilt.">
+    <meta name="author" content="AI Pieces Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipieces.org/example-when-is-it-time-for-a-care-home.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI Pieces">
+    <meta property="og:url" content="https://aipieces.org/example-when-is-it-time-for-a-care-home.html">
+    <meta property="og:title" content="When Is It Time for a Care Home? A Family Guide — AI Pieces">
+    <meta property="og:description" content="A calm, practical guide to knowing when it is time for a care home — the signs to watch for, how to talk to your parent, and how to choose well, without guilt.">
+    <meta property="og:image" content="https://aipieces.org/share-card.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://aipieces.org/example-when-is-it-time-for-a-care-home.html">
+    <meta name="twitter:title" content="When Is It Time for a Care Home? A Family Guide — AI Pieces">
+    <meta name="twitter:description" content="A calm, practical guide to knowing when it is time for a care home — the signs to watch for, how to talk to your parent, and how to choose well, without guilt.">
+    <meta name="twitter:image" content="https://aipieces.org/share-card.jpg">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- FAQPage + Article schema, generated from the page data (static for crawlers) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I know when it is time for a care home?",
+              "acceptedAnswer": { "@type": "Answer", "text": "It is usually time when safety, health, or daily needs can no longer be met at home, even with extra help. Watch for repeated falls, missed medication, weight loss, wandering, or carer exhaustion. One serious incident, or several small ones together, is a clear signal to start looking at residential care." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is it normal to feel guilty about a care home?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Almost every family feels guilt, even when the decision is plainly right. Guilt is a sign of love, not of a wrong choice. Choosing a safe, well-staffed home where your parent is cared for around the clock is an act of care, not abandonment." }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a care home cost in 2026?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Costs vary widely by country, region, and level of care. Residential care is generally cheaper than nursing care, which includes on-site medical staff. Ask each home for a full written breakdown, and check what local authority or insurance funding your family may be entitled to before deciding." }
+            },
+            {
+              "@type": "Question",
+              "name": "What should I look for when visiting a care home?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Visit unannounced if you can. Notice whether residents look clean, calm, and engaged, and whether staff know them by name. Check smells, noise, food, and how call bells are answered. Ask about staff turnover and the ratio of carers to residents at night." }
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "headline": "When Is It Time for a Care Home? A Family Guide",
+          "description": "A calm, practical guide to knowing when it is time for a care home — the signs to watch for, how to talk to your parent, and how to choose well, without guilt.",
+          "image": "https://aipieces.org/share-card.jpg",
+          "datePublished": "2026-06-15",
+          "dateModified": "2026-06-15",
+          "author": { "@type": "Organization", "name": "AI Pieces", "url": "https://aipieces.org" },
+          "publisher": { "@type": "Organization", "name": "AI Pieces", "logo": { "@type": "ImageObject", "url": "https://aipieces.org/compass.png" } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://aipieces.org/example-when-is-it-time-for-a-care-home.html" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         PAGE CONTENT DATA (source of truth for this page). Mirrors the
+         markup below. Edit both together, or paste into the JS template.
+    ─────────────────────────────────────────────────────────────────────
+    {
+      "slug": "example-when-is-it-time-for-a-care-home",
+      "h1": "When Is It Time for a Care Home?",
+      "standfirst": "A calm, practical guide for families facing one of the hardest decisions there is.",
+      "sections": ["When is it time?", "How do I talk to my parent about it?",
+                   "How do I choose the right home?", "How do I cope with the guilt?"],
+      "faq": [ ... 4 Q/A pairs ... ]
+    }
+    ──────────────────────────────────────────────────────────────────── -->
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --ink:#4a3c2e; --ink-soft:#6b5a47; --gold:#8b6914; --gold-lt:#d4af37;
+            --rule:rgba(139,105,20,0.18); --lead-bg:rgba(255,255,255,0.55);
+            --h1:clamp(2rem,6vw,3.25rem); --h2:clamp(1.5rem,4.5vw,2.1rem);
+            --lead:clamp(1.12rem,2.6vw,1.3rem); --body:clamp(1.02rem,2.2vw,1.12rem);
+        }
+        body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+            background:linear-gradient(135deg,#f5f1e8 0%,#e8ddd4 100%); color:var(--ink);
+            line-height:1.7; -webkit-font-smoothing:antialiased; }
+        a { color:var(--gold); }
+        .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+        .header { padding:18px 0; background:rgba(255,255,255,0.1); backdrop-filter:blur(10px);
+            border-bottom:1px solid rgba(255,255,255,0.2); position:sticky; top:0; z-index:1000; }
+        .nav { display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-size:1.4rem; font-weight:700; color:var(--gold); letter-spacing:1px; text-decoration:none; }
+        .trust-badge { background:rgba(139,105,20,0.1); color:var(--gold); padding:4px 12px;
+            border-radius:20px; font-size:0.75rem; font-weight:600; margin-left:8px; }
+        .nav-links { display:flex; list-style:none; gap:22px; }
+        .nav-links a { text-decoration:none; color:var(--ink); font-weight:500; font-size:0.92rem; }
+        .nav-links a:hover { color:var(--gold); }
+
+        .article-wrap { max-width:760px; margin:0 auto; padding:0 22px; }
+        .eyebrow { margin:48px 0 14px; font-size:0.82rem; font-weight:700; letter-spacing:1.5px;
+            text-transform:uppercase; color:var(--gold); }
+        .page-h1 { font-size:var(--h1); font-weight:800; line-height:1.12; color:#3d2e1e;
+            letter-spacing:-0.5px; word-spacing:normal; margin-bottom:18px; }
+        .standfirst { font-size:var(--lead); color:var(--ink-soft); line-height:1.6; margin-bottom:8px; }
+        .byline { font-size:0.88rem; color:var(--ink-soft); margin:18px 0 6px; }
+
+        .hero-figure { margin:30px 0 10px; }
+        .hero-figure img { width:100%; height:auto; border-radius:20px; display:block;
+            box-shadow:0 18px 50px rgba(139,105,20,0.18); aspect-ratio:16/9; object-fit:cover; }
+        figcaption { font-size:0.85rem; color:var(--ink-soft); margin-top:10px; text-align:center; font-style:italic; }
+
+        .content-section { margin:56px 0; }
+        .section-h2 { font-size:var(--h2); font-weight:700; color:var(--gold); line-height:1.2;
+            margin-bottom:20px; letter-spacing:-0.3px; }
+        .direct-answer { font-size:var(--lead); line-height:1.6; color:#43372a; font-weight:450;
+            border-left:3px solid var(--gold-lt); background:var(--lead-bg);
+            padding:18px 22px; border-radius:0 12px 12px 0; margin-bottom:26px; }
+        .content-section p.body { font-size:var(--body); margin-bottom:20px; }
+        .content-section p.body:last-child { margin-bottom:0; }
+        .content-section ul.body { font-size:var(--body); margin:0 0 20px 1.1em; }
+        .content-section ul.body li { margin-bottom:8px; }
+
+        figure.inline-figure { margin:30px 0; }
+        figure.inline-figure img { width:100%; height:auto; border-radius:16px; display:block;
+            box-shadow:0 12px 34px rgba(139,105,20,0.15); aspect-ratio:3/2; object-fit:cover; }
+
+        .faq-section { margin:64px 0 40px; }
+        .faq-section h2 { font-size:var(--h2); font-weight:700; color:var(--gold); margin-bottom:24px; }
+        .faq-item { border-bottom:1px solid var(--rule); padding:22px 0; }
+        .faq-item:first-of-type { border-top:1px solid var(--rule); }
+        .faq-q { font-size:1.15rem; font-weight:700; color:#3d2e1e; margin-bottom:10px; line-height:1.4; }
+        .faq-a { font-size:var(--body); color:var(--ink); }
+
+        .cta-strip { background:rgba(255,255,255,0.2); border:2px solid rgba(139,105,20,0.2);
+            border-radius:22px; padding:34px; margin:50px 0; text-align:center;
+            box-shadow:0 10px 40px rgba(139,105,20,0.12); }
+        .cta-strip h2 { font-size:1.5rem; color:var(--gold); margin-bottom:12px; }
+        .cta-strip p { color:var(--ink-soft); margin-bottom:22px; }
+        .btn { padding:14px 30px; border-radius:50px; text-decoration:none; font-weight:600;
+            display:inline-block; transition:transform 0.25s,box-shadow 0.25s;
+            background:linear-gradient(135deg,var(--gold),var(--gold-lt)); color:#fff;
+            box-shadow:0 10px 30px rgba(139,105,20,0.3); }
+        .btn:hover { transform:translateY(-3px); box-shadow:0 15px 40px rgba(139,105,20,0.4); }
+
+        .footer { background:rgba(0,0,0,0.1); padding:50px 0 36px; text-align:center;
+            border-top:1px solid rgba(255,255,255,0.1); margin-top:60px; }
+        .footer-content { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:36px; margin-bottom:34px; text-align:left; }
+        .footer-section h4 { color:var(--gold); font-size:1.05rem; margin-bottom:14px; }
+        .footer-links { display:flex; flex-direction:column; gap:9px; list-style:none; }
+        .footer-links a { color:var(--ink); text-decoration:none; }
+        .footer-links a:hover { color:var(--gold); }
+        .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;
+            font-size:0.88rem; color:var(--ink-soft); }
+
+        html { scroll-behavior:smooth; }
+        @media (max-width:768px) {
+            .nav-links { display:none; }
+            .article-wrap { padding:0 18px; }
+            .eyebrow { margin-top:32px; }
+            .content-section { margin:44px 0; }
+            .direct-answer { padding:16px 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══ HEADER ══ -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html" class="logo">AIPieces <span class="trust-badge">Privacy First</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="article-wrap">
+
+            <p class="eyebrow">Elderly Care Guides</p>
+
+            <!-- H1 = primary query phrase, correct word spacing -->
+            <h1 class="page-h1">When Is It Time for a Care Home?</h1>
+
+            <p class="standfirst">A calm, practical guide for families facing one of the hardest decisions there is — written to be read at 2&nbsp;a.m., when the worry is loudest.</p>
+            <p class="byline">By the AI Pieces care team · Updated 15 June 2026</p>
+
+            <figure class="hero-figure">
+                <picture>
+                    <source srcset="blog-family-hands.webp" type="image/webp">
+                    <img src="blog-family-hands.jpg" alt="Close-up of an older hand and a younger hand clasped together, conveying family support and care" loading="eager" decoding="async" fetchpriority="high" width="1600" height="1063">
+                </picture>
+                <figcaption>Placeholder hero image — swap for a warm, natural family photo (1200×675).</figcaption>
+            </figure>
+
+            <!-- ── SECTION 1 ── -->
+            <section class="content-section">
+                <h2 class="section-h2">When is it time?</h2>
+
+                <p class="direct-answer">It is usually time for a care home when safety, health, or daily needs can no longer be met at home, even with extra help. Watch for repeated falls, missed medication, sudden weight loss, wandering, or a carer who is worn down. One serious incident — or several small ones together — is a clear signal to start looking.</p>
+
+                <p class="body">There is rarely a single dramatic moment. More often it is a slow accumulation: a pan left on the hob, a bill unpaid, a fall that nobody saw. Each on its own feels manageable, which is exactly why families wait too long.</p>
+
+                <p class="body">A useful test is to ask what would happen on the worst possible day. If the honest answer frightens you, that fear is information. It does not mean you have failed — it means the level of need has outgrown the current setup.</p>
+
+                <figure class="inline-figure">
+                    <picture>
+                        <source srcset="blog-family-hands.webp" type="image/webp">
+                        <img src="blog-family-hands.jpg" alt="Close-up of two hands, one older and one younger, resting together" loading="lazy" decoding="async" width="1600" height="1063">
+                    </picture>
+                    <figcaption>Placeholder image — interspersing photos keeps the page feeling light.</figcaption>
+                </figure>
+
+                <p class="body">Talk to the people who see your parent that you don't — the GP, a neighbour, the pharmacist. They often notice changes that families, seeing someone every day, quietly adjust to without realising.</p>
+            </section>
+
+            <!-- ── SECTION 2 ── -->
+            <section class="content-section">
+                <h2 class="section-h2">How do I talk to my parent about it?</h2>
+
+                <p class="direct-answer">Start early, gently, and more than once — not in a single difficult conversation. Lead with their worries, not your conclusion: ask what would make daily life easier or safer. Frame a care home as a way to keep their independence and dignity, not lose it. Bring them into every choice you possibly can.</p>
+
+                <p class="body">Most people fear losing control far more than they fear the move itself. The more genuine choice your parent has — over timing, over which home, over what they bring — the less the decision feels like something happening to them.</p>
+
+                <p class="body">Expect resistance, and don't treat it as failure. A first "absolutely not" is often the beginning of the conversation, not the end of it. Give the idea time to settle between talks.</p>
+
+                <p class="body">If your parent has memory difficulties, keep it simple and reassuring, and repeat the same calm message. You are not trying to win an argument — you are helping someone feel safe about a frightening change.</p>
+            </section>
+
+            <!-- ── SECTION 3 ── -->
+            <section class="content-section">
+                <h2 class="section-h2">How do I choose the right home?</h2>
+
+                <p class="direct-answer">Choose with your senses, not just the brochure. Visit in person — ideally unannounced — and notice whether residents look clean, calm, and engaged, and whether staff know them by name. Check the latest inspection report, the night-time staffing ratio, and how call bells are answered. The feel of a place tells you more than the décor.</p>
+
+                <p class="body">Go more than once, and at different times of day. A home can look very different at lunchtime than at 8&nbsp;p.m. when staffing is thinner. If you can, eat a meal there and use the visitors' toilet — small things reveal the standard of care.</p>
+
+                <figure class="inline-figure">
+                    <picture>
+                        <source srcset="blog-family-hands.webp" type="image/webp">
+                        <img src="blog-family-hands.jpg" alt="Close-up of an older hand and a younger hand clasped together, conveying family support and care" loading="lazy" decoding="async" width="1600" height="1063">
+                    </picture>
+                    <figcaption>Placeholder image — show real spaces, not stock perfection.</figcaption>
+                </figure>
+
+                <p class="body">Ask direct questions about staff turnover. A home where carers stay for years is usually a home where residents are known and well looked after. High turnover is one of the most reliable warning signs.</p>
+
+                <p class="body">Finally, ask how the home keeps families in the loop. Good homes welcome questions and share updates openly — the same coordination and transparency that <a href="index.html">AI Pieces</a> is built around.</p>
+            </section>
+
+            <!-- ── SECTION 4 ── -->
+            <section class="content-section">
+                <h2 class="section-h2">How do I cope with the guilt?</h2>
+
+                <p class="direct-answer">Accept that the guilt is normal and will probably never fully vanish — and that it is not evidence you made the wrong choice. Guilt is a sign of love. Arranging round-the-clock, professional care so your parent is safe and your own family can breathe is an act of devotion, not abandonment.</p>
+
+                <p class="body">Many adult children carry the weight of an old promise — "I'll never put you in a home." Promises like that were made in a different reality, before the falls, the fear, and the exhaustion. Keeping your parent safe is the deeper promise underneath.</p>
+
+                <p class="body">Once the move happens, your role changes but does not end. You stop being the overnight carer and go back to being the daughter or son — present, loving, and able to enjoy the time you have left together.</p>
+            </section>
+
+            <!-- ── CTA ── -->
+            <section class="cta-strip">
+                <h2>Stay close, even when you can't be there</h2>
+                <p>AI Pieces keeps families and care teams connected through secure, private updates — so you always know how your parent is doing.</p>
+                <a class="btn" href="index.html#beta-signup-section">See how AI Pieces helps families</a>
+            </section>
+
+            <!-- ── FAQ ── -->
+            <section class="faq-section" aria-label="Frequently asked questions">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <p class="faq-q">How do I know when it is time for a care home?</p>
+                    <p class="faq-a">It is usually time when safety, health, or daily needs can no longer be met at home, even with extra help. Watch for repeated falls, missed medication, weight loss, wandering, or carer exhaustion. One serious incident, or several small ones together, is a clear signal to start looking at residential care.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-q">Is it normal to feel guilty about a care home?</p>
+                    <p class="faq-a">Yes. Almost every family feels guilt, even when the decision is plainly right. Guilt is a sign of love, not of a wrong choice. Choosing a safe, well-staffed home where your parent is cared for around the clock is an act of care, not abandonment.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-q">How much does a care home cost in 2026?</p>
+                    <p class="faq-a">Costs vary widely by country, region, and level of care. Residential care is generally cheaper than nursing care, which includes on-site medical staff. Ask each home for a full written breakdown, and check what local authority or insurance funding your family may be entitled to before deciding.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-q">What should I look for when visiting a care home?</p>
+                    <p class="faq-a">Visit unannounced if you can. Notice whether residents look clean, calm, and engaged, and whether staff know them by name. Check smells, noise, food, and how call bells are answered. Ask about staff turnover and the ratio of carers to residents at night.</p>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="subscriptions.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about-founder.html">About the Founder</a></li>
+                        <li><a href="research.html">Our Research</a></li>
+                        <li><a href="example-when-is-it-time-for-a-care-home.html">Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Privacy &amp; Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Help Center</a></li>
+                        <li><a href="support.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Made with ❤️ for families everywhere.</p>
+                <p style="margin-top:10px;font-size:0.8rem;">Privacy-first by design · Built in Kerry, Ireland · GDPR &amp; HIPAA compliant</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

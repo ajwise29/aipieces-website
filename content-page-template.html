@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<!--
+  ════════════════════════════════════════════════════════════════════════
+  AI PIECES · REUSABLE CONTENT-PAGE TEMPLATE  (elderly-care content pages)
+  ════════════════════════════════════════════════════════════════════════
+
+  HOW TO MAKE A NEW PAGE
+  ----------------------
+  1. Copy this file to e.g.  is-it-time-for-a-care-home.html
+  2. Edit ONLY the `PAGE` object inside the <script id="page-data"> block
+     near the top of <body>. Everything else (head meta, schema, layout)
+     is generated from that object at load time. No hand-editing of markup.
+  3. Fill the slots marked __LIKE_THIS__ in <head> (title, description,
+     canonical, og/twitter) — these can't be JS-generated because crawlers
+     read them before script runs, so they live as static HTML.
+
+  DESIGN CONTRACT
+  ---------------
+  · Light & airy LOOK, text-rich UNDERNEATH. All copy is real DOM text,
+    server-readable, never injected as images.
+  · H1 = the page's primary query phrase. Word spacing is enforced by
+    normalising the string (collapse whitespace) before render so a stray
+    newline never produces "We're hereto help".
+  · Each H2 section carries a "direct answer" lead block (50–70 words) that
+    plainly answers the section's implied question. Styled as a clean lead
+    paragraph, NOT an ad-like callout.
+  · Body depth = short 2–3 sentence paragraphs with images interspersed.
+  · FAQ block at the foot; FAQPage JSON-LD is generated from the same data.
+  · Optional Article JSON-LD when PAGE.article is provided.
+  · Mobile-first responsive (single column, fluid type, lazy images).
+  ════════════════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ── PER-PAGE SLOTS · edit these on every copy ─────────────────── -->
+    <title>__PAGE_TITLE__ — AI Pieces</title>
+    <meta name="description" content="__META_DESCRIPTION__">
+    <meta name="author" content="AI Pieces Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipieces.org/__PAGE_SLUG__.html">
+
+    <!-- Open Graph / Twitter · shared share card by default; override per page -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI Pieces">
+    <meta property="og:url" content="https://aipieces.org/__PAGE_SLUG__.html">
+    <meta property="og:title" content="__PAGE_TITLE__ — AI Pieces">
+    <meta property="og:description" content="__META_DESCRIPTION__">
+    <meta property="og:image" content="https://aipieces.org/share-card.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://aipieces.org/__PAGE_SLUG__.html">
+    <meta name="twitter:title" content="__PAGE_TITLE__ — AI Pieces">
+    <meta name="twitter:description" content="__META_DESCRIPTION__">
+    <meta name="twitter:image" content="https://aipieces.org/share-card.jpg">
+    <!-- ──────────────────────────────────────────────────────────────── -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --ink:      #4a3c2e;   /* primary body text — high contrast on cream */
+            --ink-soft: #6b5a47;   /* secondary text */
+            --gold:     #8b6914;
+            --gold-lt:  #d4af37;
+            --rule:     rgba(139,105,20,0.18);
+            --lead-bg:  rgba(255,255,255,0.55);
+            /* Fluid type: small-phone → desktop without breakpoints */
+            --h1: clamp(2rem, 6vw, 3.25rem);
+            --h2: clamp(1.5rem, 4.5vw, 2.1rem);
+            --lead: clamp(1.12rem, 2.6vw, 1.3rem);
+            --body: clamp(1.02rem, 2.2vw, 1.12rem);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8ddd4 100%);
+            color: var(--ink);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: var(--gold); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* ── HEADER (matches site) ── */
+        .header {
+            padding: 18px 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--gold); letter-spacing: 1px; text-decoration: none; }
+        .trust-badge {
+            background: rgba(139,105,20,0.1); color: var(--gold);
+            padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-left: 8px;
+        }
+        .nav-links { display: flex; list-style: none; gap: 22px; }
+        .nav-links a { text-decoration: none; color: var(--ink); font-weight: 500; font-size: 0.92rem; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* ── ARTICLE SHELL · narrow measure for airy reading ── */
+        .article-wrap { max-width: 760px; margin: 0 auto; padding: 0 22px; }
+
+        /* Breadcrumb / eyebrow */
+        .eyebrow {
+            margin: 48px 0 14px; font-size: 0.82rem; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold);
+        }
+
+        /* H1 — primary query phrase */
+        .page-h1 {
+            font-size: var(--h1); font-weight: 800; line-height: 1.12;
+            color: #3d2e1e; letter-spacing: -0.5px;
+            /* word-spacing safety net — never let glyphs run together */
+            word-spacing: normal; white-space: normal;
+            margin-bottom: 18px;
+        }
+
+        /* Standfirst under H1 */
+        .standfirst {
+            font-size: var(--lead); color: var(--ink-soft); font-weight: 400;
+            line-height: 1.6; margin-bottom: 8px;
+        }
+        .byline { font-size: 0.88rem; color: var(--ink-soft); margin: 18px 0 6px; }
+
+        .hero-figure { margin: 30px 0 10px; }
+        .hero-figure img {
+            width: 100%; height: auto; border-radius: 20px; display: block;
+            box-shadow: 0 18px 50px rgba(139,105,20,0.18);
+            aspect-ratio: 16 / 9; object-fit: cover;
+        }
+        figcaption { font-size: 0.85rem; color: var(--ink-soft); margin-top: 10px; text-align: center; font-style: italic; }
+
+        /* ── SECTION ── */
+        .content-section { margin: 56px 0; }
+        .section-h2 {
+            font-size: var(--h2); font-weight: 700; color: var(--gold);
+            line-height: 1.2; margin-bottom: 20px; letter-spacing: -0.3px;
+        }
+
+        /* DIRECT ANSWER lead block — reads as a lead paragraph, not a callout.
+           Subtle left rule + lighter ground; deliberately NOT a boxed ad. */
+        .direct-answer {
+            font-size: var(--lead); line-height: 1.6; color: #43372a;
+            font-weight: 450;
+            border-left: 3px solid var(--gold-lt);
+            background: var(--lead-bg);
+            padding: 18px 22px; border-radius: 0 12px 12px 0;
+            margin-bottom: 26px;
+        }
+
+        /* Body depth: short paragraphs, generous spacing */
+        .content-section p.body { font-size: var(--body); margin-bottom: 20px; }
+        .content-section p.body:last-child { margin-bottom: 0; }
+        .content-section ul.body { font-size: var(--body); margin: 0 0 20px 1.1em; }
+        .content-section ul.body li { margin-bottom: 8px; }
+
+        /* In-flow images between paragraphs */
+        figure.inline-figure { margin: 30px 0; }
+        figure.inline-figure img {
+            width: 100%; height: auto; border-radius: 16px; display: block;
+            box-shadow: 0 12px 34px rgba(139,105,20,0.15);
+            aspect-ratio: 3 / 2; object-fit: cover;
+        }
+
+        /* ── FAQ ── */
+        .faq-section { margin: 64px 0 40px; }
+        .faq-section h2 { font-size: var(--h2); font-weight: 700; color: var(--gold); margin-bottom: 24px; }
+        .faq-item {
+            border-bottom: 1px solid var(--rule); padding: 22px 0;
+        }
+        .faq-item:first-of-type { border-top: 1px solid var(--rule); }
+        .faq-q { font-size: 1.15rem; font-weight: 700; color: #3d2e1e; margin-bottom: 10px; line-height: 1.4; }
+        .faq-a { font-size: var(--body); color: var(--ink); }
+
+        /* CTA strip reused from site */
+        .cta-strip {
+            background: rgba(255,255,255,0.2); border: 2px solid rgba(139,105,20,0.2);
+            border-radius: 22px; padding: 34px; margin: 50px 0; text-align: center;
+            box-shadow: 0 10px 40px rgba(139,105,20,0.12);
+        }
+        .cta-strip h2 { font-size: 1.5rem; color: var(--gold); margin-bottom: 12px; }
+        .cta-strip p { color: var(--ink-soft); margin-bottom: 22px; }
+        .btn {
+            padding: 14px 30px; border-radius: 50px; text-decoration: none; font-weight: 600;
+            display: inline-block; transition: transform 0.25s, box-shadow 0.25s;
+            background: linear-gradient(135deg, var(--gold), var(--gold-lt)); color: #fff;
+            box-shadow: 0 10px 30px rgba(139,105,20,0.3);
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(139,105,20,0.4); }
+
+        /* ── FOOTER (matches site) ── */
+        .footer { background: rgba(0,0,0,0.1); padding: 50px 0 36px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 60px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 36px; margin-bottom: 34px; text-align: left; }
+        .footer-section h4 { color: var(--gold); font-size: 1.05rem; margin-bottom: 14px; }
+        .footer-links { display: flex; flex-direction: column; gap: 9px; list-style: none; }
+        .footer-links a { color: var(--ink); text-decoration: none; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.88rem; color: var(--ink-soft); }
+
+        html { scroll-behavior: smooth; }
+
+        /* ── MOBILE-FIRST refinements ── */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-wrap { padding: 0 18px; }
+            .eyebrow { margin-top: 32px; }
+            .content-section { margin: 44px 0; }
+            .direct-answer { padding: 16px 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         PAGE CONTENT DATA · this is the ONLY block you edit per page.
+         Plain JSON-compatible object. Strings may contain inline HTML
+         (e.g. <strong>, <a>) — it is rendered as markup, so it stays
+         crawlable text. Markdown-style is not parsed; write light HTML.
+         ════════════════════════════════════════════════════════════════ -->
+    <script id="page-data" type="application/json">
+    {
+      "slug": "__PAGE_SLUG__",
+      "eyebrow": "Elderly Care Guides",
+
+      "h1": "__PRIMARY_QUERY_PHRASE_H1__",
+      "standfirst": "__ONE_OR_TWO_SENTENCE_STANDFIRST__",
+      "byline": "By the AI Pieces care team",
+
+      "heroImage": { "src": "share-card.jpg", "alt": "__HERO_ALT_TEXT__", "caption": "" },
+
+      "sections": [
+        {
+          "h2": "__SECTION_QUESTION_HEADING__",
+          "directAnswer": "__DIRECT_ANSWER_50_TO_70_WORDS__",
+          "blocks": [
+            { "type": "p", "html": "__SHORT_PARAGRAPH_2_TO_3_SENTENCES__" },
+            { "type": "p", "html": "__SHORT_PARAGRAPH_2_TO_3_SENTENCES__" },
+            { "type": "image", "src": "__IMAGE_FILE__", "alt": "__IMAGE_ALT__", "caption": "" },
+            { "type": "p", "html": "__SHORT_PARAGRAPH_2_TO_3_SENTENCES__" }
+          ]
+        }
+      ],
+
+      "faq": [
+        { "q": "__FAQ_QUESTION__", "a": "__FAQ_ANSWER_PLAIN_TEXT__" }
+      ],
+
+      "cta": {
+        "heading": "__CTA_HEADING__",
+        "body": "__CTA_BODY__",
+        "buttonText": "__CTA_BUTTON__",
+        "buttonHref": "index.html#beta-signup-section"
+      },
+
+      "article": {
+        "headline": "__ARTICLE_HEADLINE__",
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-01-01",
+        "image": "https://aipieces.org/share-card.jpg"
+      }
+    }
+    </script>
+
+    <!-- ══ HEADER ══ -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html" class="logo">AIPieces <span class="trust-badge">Privacy First</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="article-wrap">
+            <p class="eyebrow" id="slot-eyebrow"></p>
+            <h1 class="page-h1" id="slot-h1"></h1>
+            <p class="standfirst" id="slot-standfirst"></p>
+            <p class="byline" id="slot-byline"></p>
+
+            <figure class="hero-figure" id="slot-hero" hidden>
+                <img id="slot-hero-img" alt="" loading="eager" decoding="async" width="1200" height="675">
+                <figcaption id="slot-hero-cap" hidden></figcaption>
+            </figure>
+
+            <!-- Generated sections land here -->
+            <div id="slot-sections"></div>
+
+            <!-- CTA -->
+            <section class="cta-strip" id="slot-cta" hidden>
+                <h2 id="slot-cta-h"></h2>
+                <p id="slot-cta-p"></p>
+                <a class="btn" id="slot-cta-btn" href="#"></a>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq-section" id="slot-faq" hidden aria-label="Frequently asked questions">
+                <h2>Frequently Asked Questions</h2>
+                <div id="slot-faq-list"></div>
+            </section>
+        </article>
+    </main>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="subscriptions.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about-founder.html">About the Founder</a></li>
+                        <li><a href="research.html">Our Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Privacy &amp; Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Help Center</a></li>
+                        <li><a href="support.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Made with ❤️ for families everywhere.</p>
+                <p style="margin-top:10px;font-size:0.8rem;">Privacy-first by design · Built in Kerry, Ireland · GDPR &amp; HIPAA compliant</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         TEMPLATE ENGINE · renders PAGE data into the slots above and
+         emits FAQPage (+ optional Article) JSON-LD. Generic; do not edit
+         per page. Markup it produces is real text in the DOM.
+         ════════════════════════════════════════════════════════════════ -->
+    <script>
+    (function () {
+        var PAGE;
+        try { PAGE = JSON.parse(document.getElementById('page-data').textContent); }
+        catch (e) { console.error('page-data JSON invalid:', e); return; }
+
+        // Collapse runs of whitespace/newlines to single spaces and trim.
+        // This is the guard against run-together H1s like "We're hereto help".
+        function clean(s) { return (s == null ? '' : String(s)).replace(/\s+/g, ' ').trim(); }
+        function setText(id, val) { var el = document.getElementById(id); if (el) el.textContent = clean(val); }
+        function escapeText(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
+
+        // ── Head: keep <title> in sync with data H1 if slot still placeholder ──
+        if (PAGE.h1 && /__PAGE_TITLE__/.test(document.title)) {
+            document.title = clean(PAGE.h1) + ' — AI Pieces';
+        }
+
+        // ── Eyebrow / H1 / standfirst / byline ──
+        setText('slot-eyebrow', PAGE.eyebrow);
+        setText('slot-h1', PAGE.h1);            // cleaned → correct word spacing
+        setText('slot-standfirst', PAGE.standfirst);
+        setText('slot-byline', PAGE.byline);
+
+        // ── Hero image ──
+        if (PAGE.heroImage && PAGE.heroImage.src) {
+            var hf = document.getElementById('slot-hero');
+            var hi = document.getElementById('slot-hero-img');
+            hi.src = PAGE.heroImage.src;
+            hi.alt = clean(PAGE.heroImage.alt);
+            hf.hidden = false;
+            if (PAGE.heroImage.caption) {
+                var hc = document.getElementById('slot-hero-cap');
+                hc.textContent = clean(PAGE.heroImage.caption);
+                hc.hidden = false;
+            }
+        }
+
+        // ── Sections: H2 + direct-answer lead + body blocks (p / list / image) ──
+        var secWrap = document.getElementById('slot-sections');
+        (PAGE.sections || []).forEach(function (sec) {
+            var s = document.createElement('section');
+            s.className = 'content-section';
+
+            var h2 = document.createElement('h2');
+            h2.className = 'section-h2';
+            h2.textContent = clean(sec.h2);
+            s.appendChild(h2);
+
+            if (sec.directAnswer) {
+                var da = document.createElement('p');
+                da.className = 'direct-answer';
+                // direct answers are plain text → escape, but allow the author's
+                // light inline HTML through innerHTML for emphasis/links.
+                da.innerHTML = sec.directAnswer;
+                s.appendChild(da);
+            }
+
+            (sec.blocks || []).forEach(function (b) {
+                if (b.type === 'image' && b.src) {
+                    var fig = document.createElement('figure');
+                    fig.className = 'inline-figure';
+                    var img = document.createElement('img');
+                    img.src = b.src; img.alt = clean(b.alt);
+                    img.loading = 'lazy'; img.decoding = 'async';
+                    img.width = 900; img.height = 600;
+                    fig.appendChild(img);
+                    if (b.caption) { var cap = document.createElement('figcaption'); cap.textContent = clean(b.caption); fig.appendChild(cap); }
+                    s.appendChild(fig);
+                } else if (b.type === 'list' && Array.isArray(b.items)) {
+                    var ul = document.createElement('ul');
+                    ul.className = 'body';
+                    b.items.forEach(function (it) { var li = document.createElement('li'); li.innerHTML = it; ul.appendChild(li); });
+                    s.appendChild(ul);
+                } else { // default: paragraph
+                    var p = document.createElement('p');
+                    p.className = 'body';
+                    p.innerHTML = b.html != null ? b.html : '';
+                    s.appendChild(p);
+                }
+            });
+
+            secWrap.appendChild(s);
+        });
+
+        // ── CTA ──
+        if (PAGE.cta && (PAGE.cta.heading || PAGE.cta.body)) {
+            document.getElementById('slot-cta').hidden = false;
+            setText('slot-cta-h', PAGE.cta.heading);
+            setText('slot-cta-p', PAGE.cta.body);
+            var btn = document.getElementById('slot-cta-btn');
+            btn.textContent = clean(PAGE.cta.buttonText || 'Learn more');
+            btn.href = PAGE.cta.buttonHref || 'index.html';
+        }
+
+        // ── FAQ render ──
+        var faq = Array.isArray(PAGE.faq) ? PAGE.faq.filter(function (f) { return f && f.q && f.a; }) : [];
+        if (faq.length) {
+            document.getElementById('slot-faq').hidden = false;
+            var list = document.getElementById('slot-faq-list');
+            faq.forEach(function (f) {
+                var item = document.createElement('div'); item.className = 'faq-item';
+                var q = document.createElement('p'); q.className = 'faq-q'; q.textContent = clean(f.q);
+                var a = document.createElement('p'); a.className = 'faq-a'; a.innerHTML = f.a;
+                item.appendChild(q); item.appendChild(a); list.appendChild(item);
+            });
+        }
+
+        // ── JSON-LD: FAQPage (always when FAQ present) + optional Article ──
+        var graph = [];
+        if (faq.length) {
+            graph.push({
+                "@type": "FAQPage",
+                "mainEntity": faq.map(function (f) {
+                    return {
+                        "@type": "Question",
+                        "name": clean(f.q),
+                        "acceptedAnswer": { "@type": "Answer", "text": clean(stripTags(f.a)) }
+                    };
+                })
+            });
+        }
+        if (PAGE.article && PAGE.article.headline) {
+            var canonical = "https://aipieces.org/" + (PAGE.slug || '') + ".html";
+            graph.push({
+                "@type": "Article",
+                "headline": clean(PAGE.article.headline),
+                "description": clean(PAGE.standfirst),
+                "image": PAGE.article.image || "https://aipieces.org/share-card.jpg",
+                "datePublished": PAGE.article.datePublished,
+                "dateModified": PAGE.article.dateModified || PAGE.article.datePublished,
+                "author": { "@type": "Organization", "name": "AI Pieces", "url": "https://aipieces.org" },
+                "publisher": {
+                    "@type": "Organization", "name": "AI Pieces",
+                    "logo": { "@type": "ImageObject", "url": "https://aipieces.org/compass.png" }
+                },
+                "mainEntityOfPage": { "@type": "WebPage", "@id": canonical }
+            });
+        }
+        if (graph.length) {
+            var ld = document.createElement('script');
+            ld.type = 'application/ld+json';
+            ld.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
+            document.head.appendChild(ld);
+        }
+
+        function stripTags(html) { var d = document.createElement('div'); d.innerHTML = html == null ? '' : html; return d.textContent || ''; }
+    })();
+    </script>
+
+</body>
+</html>
