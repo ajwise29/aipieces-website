@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forschung — AI Pieces | Die Evidenz hinter FamilyCompass, HealthCompass, CareCompass, EduCompass</title>
+
+    <meta name="description" content="Die Forschungsgrundlage der AI-Pieces-Produkte. Von Fachleuten begutachtete Daten zur Familienkoordination, Datenschutzvorschriften (DSGVO, HIPAA, COPPA), Statistiken zu Standortdaten von Verbrauchern und über 4.000 Jahre altes Familienwissen aus 23 Zivilisationen.">
+    <meta name="author" content="AI Pieces Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipieces.org/de/research.html">
+    <link rel="alternate" hreflang="en" href="https://aipieces.org/research.html">
+    <link rel="alternate" hreflang="de" href="https://aipieces.org/de/research.html">
+    <link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/research.html">
+    <link rel="alternate" hreflang="es" href="https://aipieces.org/es/research.html">
+    <link rel="alternate" hreflang="x-default" href="https://aipieces.org/research.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aipieces.org/de/research.html">
+    <meta property="og:title" content="Forschung — AI Pieces | Die Evidenz hinter FamilyCompass und HealthCompass">
+    <meta property="og:description" content="Warum wir gebaut haben, was wir gebaut haben. Von Fachleuten begutachtete Daten, Datenschutzvorschriften, Verbraucherstatistiken und 4.000 Jahre Familienkoordinationswissen aus 23 Zivilisationen.">
+    <meta property="og:image" content="https://aipieces.org/share-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "Die Forschungsgrundlage von AI Pieces — FamilyCompass, HealthCompass, CareCompass, EduCompass",
+      "author": { "@type": "Organization", "name": "AI Pieces Ltd" },
+      "publisher": { "@type": "Organization", "name": "AI Pieces" },
+      "url": "https://aipieces.org/de/research.html",
+      "description": "Von Fachleuten begutachtete Evidenz, regulatorische Analysen und Datenschutzstatistiken, die der AI-Pieces-Produktfamilie zugrunde liegen."
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #8b6914;
+            --gold-light: #d4af37;
+            --gold-pale: #f5e9c4;
+            --brown-deep: #3d2e1e;
+            --brown-mid: #5a4a3a;
+            --cream: #f5f1e8;
+            --cream-dark: #e8ddd4;
+            --blue-cite: #2c5f8a;
+            --teal: #2e7d8a;
+            --red-data: #c0392b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            color: var(--brown-mid);
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .container-narrow { max-width: 840px; margin: 0 auto; padding: 0 20px; }
+
+        .header {
+            padding: 20px 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); letter-spacing: 1px; text-decoration: none; }
+        .trust-badge {
+            background: rgba(139,105,20,0.1); color: var(--gold);
+            padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;
+            font-weight: 600; margin-left: 10px; font-family: -apple-system, sans-serif;
+        }
+        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+        .nav-links a { font-family: -apple-system, sans-serif; text-decoration: none; color: var(--brown-mid); font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--gold); }
+        .lang-switcher { display: flex; gap: 6px; align-items: center; font-size: 0.85rem; font-family: -apple-system, sans-serif; }
+        .lang-switcher a { color: var(--brown-mid); text-decoration: none; font-weight: 600; padding: 2px 5px; border-radius: 4px; }
+        .lang-switcher a.active { color: var(--gold); background: rgba(139,105,20,0.1); }
+        .lang-switcher a:hover { color: var(--gold); }
+        .lang-switcher span { color: rgba(90,74,58,0.4); }
+
+        .hero {
+            padding: 160px 0 90px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '"';
+            position: absolute;
+            top: 60px; left: -30px;
+            font-family: 'Playfair Display', serif;
+            font-size: 40rem;
+            color: rgba(139,105,20,0.04);
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+        .hero-eyebrow {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.78rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3px;
+            color: var(--gold); margin-bottom: 20px;
+        }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem; font-weight: 900; line-height: 1.1;
+            color: var(--brown-deep); margin-bottom: 30px;
+        }
+        .hero-title em { color: var(--gold); font-style: italic; }
+        .hero-body {
+            font-size: 1.25rem; color: var(--brown-mid); max-width: 680px;
+            line-height: 1.8; margin-bottom: 40px;
+        }
+        .hero-credentials {
+            display: flex; gap: 20px; flex-wrap: wrap;
+        }
+        .cred-pill {
+            background: rgba(139,105,20,0.1);
+            border: 1px solid rgba(139,105,20,0.25);
+            padding: 8px 18px; border-radius: 50px;
+            font-size: 0.85rem; color: var(--gold);
+            font-family: -apple-system, sans-serif; font-weight: 600;
+        }
+
+        .section-rule {
+            border: none; border-top: 2px solid var(--gold);
+            margin: 0; opacity: 0.3; width: 60px;
+            margin-bottom: 12px;
+        }
+        .section-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.78rem; color: var(--gold);
+            letter-spacing: 2px; text-transform: uppercase;
+            margin-bottom: 8px; font-weight: 400;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem; font-weight: 700;
+            color: var(--brown-deep); line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .section-title em { color: var(--gold); font-style: italic; }
+        .section-lead {
+            font-size: 1.2rem; color: var(--brown-mid);
+            max-width: 700px; line-height: 1.8; margin-bottom: 50px;
+        }
+
+        .band { padding: 90px 0; }
+        .band-dark { background: var(--brown-deep); color: rgba(255,255,255,0.9); }
+        .band-gold { background: linear-gradient(135deg, rgba(139,105,20,0.08), rgba(212,175,55,0.12)); }
+        .band-white { background: rgba(255,255,255,0.5); backdrop-filter: blur(5px); }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            margin: 50px 0;
+            background: rgba(139,105,20,0.15);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .stat-card { background: white; padding: 40px 30px; position: relative; }
+        .stat-card:hover { background: var(--gold-pale); }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem; font-weight: 900;
+            color: var(--gold); line-height: 1;
+            margin-bottom: 10px;
+        }
+        .stat-label { font-size: 1rem; color: var(--brown-mid); line-height: 1.5; margin-bottom: 10px; }
+        .stat-source { font-size: 0.75rem; color: var(--blue-cite); font-family: -apple-system, sans-serif; }
+        .stat-source a { color: var(--blue-cite); }
+
+        .citation-block {
+            border-left: 4px solid var(--gold);
+            padding: 25px 30px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 0 12px 12px 0;
+            margin: 30px 0;
+            backdrop-filter: blur(5px);
+        }
+        .citation-block blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem; font-style: italic;
+            color: var(--brown-deep); line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .citation-source { font-size: 0.82rem; color: var(--blue-cite); font-family: -apple-system, sans-serif; font-weight: 600; }
+        .citation-source a { color: var(--blue-cite); text-decoration: none; border-bottom: 1px solid; }
+
+        .data-story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 50px 0; }
+        .data-story-card {
+            background: rgba(255,255,255,0.7);
+            border-radius: 20px; padding: 35px;
+            border: 1px solid rgba(139,105,20,0.15);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .data-story-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(139,105,20,0.12); }
+        .card-eyebrow { font-family: -apple-system, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+        .data-story-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--brown-deep); margin-bottom: 15px; line-height: 1.3; }
+        .data-story-card p { font-size: 0.95rem; color: var(--brown-mid); line-height: 1.7; margin-bottom: 12px; }
+        .ref-link { font-size: 0.78rem; color: var(--blue-cite); font-family: -apple-system, sans-serif; font-weight: 600; }
+        .ref-link a { color: var(--blue-cite); text-decoration: none; border-bottom: 1px dotted; }
+
+        .reg-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin: 50px 0; }
+        .reg-card { border-radius: 16px; padding: 30px; border: 2px solid; }
+        .reg-card.gdpr { border-color: #1a5276; background: rgba(26,82,118,0.05); }
+        .reg-card.hipaa { border-color: #145a32; background: rgba(20,90,50,0.05); }
+        .reg-card.coppa { border-color: #6e2f8c; background: rgba(110,47,140,0.05); }
+        .reg-card.ccpa  { border-color: #7d3c00; background: rgba(125,60,0,0.05); }
+        .reg-badge { font-family: -apple-system, sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 4px; display: inline-block; margin-bottom: 14px; }
+        .reg-card.gdpr  .reg-badge { background: #1a5276; color: white; }
+        .reg-card.hipaa .reg-badge { background: #145a32; color: white; }
+        .reg-card.coppa .reg-badge { background: #6e2f8c; color: white; }
+        .reg-card.ccpa  .reg-badge { background: #7d3c00; color: white; }
+        .reg-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--brown-deep); margin-bottom: 10px; }
+        .reg-card p { font-size: 0.9rem; color: var(--brown-mid); line-height: 1.6; margin-bottom: 10px; }
+        .reg-card a { font-size: 0.8rem; color: var(--blue-cite); font-family: -apple-system, sans-serif; }
+
+        .scandal-band { background: linear-gradient(135deg, #2c1a0e, #3d2e1e); padding: 80px 0; color: white; }
+        .scandal-band h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold-light); margin-bottom: 20px; }
+        .scandal-band .lead { font-size: 1.15rem; color: rgba(255,255,255,0.8); max-width: 720px; line-height: 1.8; margin-bottom: 50px; }
+        .scandal-stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: rgba(255,255,255,0.05); border-radius: 16px; overflow: hidden; margin-bottom: 50px; }
+        .scandal-stat { padding: 30px 20px; text-align: center; background: rgba(255,255,255,0.04); transition: background 0.3s; }
+        .scandal-stat:hover { background: rgba(212,175,55,0.1); }
+        .scandal-stat .num { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; color: var(--gold-light); display: block; line-height: 1; }
+        .scandal-stat .lbl { font-size: 0.82rem; color: rgba(255,255,255,0.7); margin-top: 8px; line-height: 1.4; }
+        .scandal-timeline { display: flex; flex-direction: column; gap: 20px; }
+        .timeline-item { display: grid; grid-template-columns: 100px 1fr; gap: 20px; align-items: start; }
+        .timeline-year { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--gold-light); text-align: right; padding-top: 3px; }
+        .timeline-content { padding: 20px 25px; background: rgba(255,255,255,0.06); border-radius: 12px; border-left: 3px solid var(--gold); }
+        .timeline-content h4 { font-size: 1rem; color: white; margin-bottom: 5px; font-family: -apple-system, sans-serif; font-weight: 600; }
+        .timeline-content p { font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.6; }
+        .timeline-content a { color: var(--gold-light); font-size: 0.78rem; }
+
+        .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin: 50px 0; }
+        .why-card { background: white; border-radius: 20px; padding: 35px; border-top: 5px solid var(--gold); box-shadow: 0 4px 20px rgba(139,105,20,0.08); transition: transform 0.3s; }
+        .why-card:hover { transform: translateY(-5px); }
+        .why-icon { font-size: 2.2rem; margin-bottom: 16px; }
+        .why-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--brown-deep); margin-bottom: 12px; }
+        .why-card p { font-size: 0.92rem; color: var(--brown-mid); line-height: 1.7; margin-bottom: 12px; }
+        .why-card .stat-highlight { background: var(--gold-pale); border-radius: 8px; padding: 12px 16px; font-size: 0.9rem; color: var(--brown-deep); font-weight: 600; margin-top: 12px; border-left: 3px solid var(--gold); }
+        .why-ref { font-size: 0.75rem; color: var(--blue-cite); font-family: -apple-system, sans-serif; margin-top: 10px; }
+        .why-ref a { color: var(--blue-cite); }
+
+        .map-section { background: rgba(255,255,255,0.6); backdrop-filter: blur(10px); padding: 80px 0; }
+        .map-container { max-width: 1100px; margin: 0 auto; background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 40px rgba(139,105,20,0.15); }
+        .map-wrapper { position: relative; width: 100%; }
+        .map-image { width: 100%; height: auto; display: block; opacity: 0.3; }
+        .regions-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .region-box { position: absolute; background: var(--gold-light); border: 2px solid var(--gold); cursor: pointer; transition: all 0.25s; display: flex; align-items: center; justify-content: center; font-family: -apple-system, sans-serif; font-size: 0.72rem; font-weight: 700; color: var(--brown-deep); padding: 4px; text-align: center; border-radius: 4px; }
+        .region-box:hover { background: var(--gold); color: white; transform: scale(1.08); z-index: 10; box-shadow: 0 4px 15px rgba(139,105,20,0.4); }
+        .region-norse { top: 10%; left: 40%; width: 6%; height: 8%; }
+        .region-native-north { top: 22%; left: 16%; width: 9%; height: 10%; }
+        .region-rome { top: 28%; left: 45%; width: 6.5%; height: 5%; }
+        .region-greece { top: 25%; left: 50%; width: 7%; height: 5%; }
+        .region-hebrew { top: 32%; left: 53%; width: 6.5%; height: 5%; }
+        .region-babylon { top: 32%; left: 60%; width: 7%; height: 5%; }
+        .region-egypt { top: 35%; left: 48%; width: 5%; height: 6%; }
+        .region-persia { top: 20%; left: 62%; width: 7%; height: 5%; }
+        .region-arabia { top: 39%; left: 60%; width: 5%; height: 5%; }
+        .region-ethiopia { top: 52%; left: 54%; width: 7%; height: 6%; }
+        .region-nubia { top: 42%; left: 54%; width: 6%; height: 5%; }
+        .region-africa { top: 60%; left: 50%; width: 10%; height: 12%; }
+        .region-aztec { top: 35%; left: 8%; width: 6%; height: 7%; }
+        .region-maya { top: 40%; left: 15%; width: 6%; height: 6%; }
+        .region-pirates { top: 35%; left: 22%; width: 8.5%; height: 8%; }
+        .region-inca { top: 56%; left: 20%; width: 7%; height: 8%; }
+        .region-mapuche { top: 75%; left: 20%; width: 7.5%; height: 8%; }
+        .region-india { top: 38%; left: 68%; width: 6%; height: 8%; }
+        .region-china { top: 32%; left: 76%; width: 6%; height: 8%; }
+        .region-korea { top: 30%; left: 84%; width: 5%; height: 5%; }
+        .region-japan { top: 30%; left: 90%; width: 5%; height: 5%; }
+        .region-polynesia { top: 52%; left: 89%; width: 8%; height: 8%; }
+        .region-maori { top: 75%; left: 95%; width: 5%; height: 6%; }
+
+        .paper-card { background: rgba(255,255,255,0.7); border-radius: 16px; padding: 28px 30px; border: 1px solid rgba(139,105,20,0.15); margin-bottom: 18px; transition: all 0.3s; display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start; }
+        .paper-card:hover { transform: translateX(6px); border-color: var(--gold); }
+        .paper-journal { font-family: -apple-system, sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: white; background: var(--gold); padding: 6px 12px; border-radius: 6px; white-space: nowrap; writing-mode: vertical-lr; transform: rotate(180deg); text-align: center; }
+        .paper-content h3 a { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--blue-cite); text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(44,95,138,0.3); }
+        .paper-content h3 a:hover { color: var(--gold); border-color: var(--gold); }
+        .paper-meta { font-family: -apple-system, sans-serif; font-size: 0.8rem; color: var(--gold); margin: 6px 0 10px; font-style: italic; }
+        .paper-abstract { font-size: 0.92rem; color: var(--brown-mid); line-height: 1.6; }
+
+        .tools-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-top: 40px; }
+        .tool-card { background: rgba(212,175,55,0.1); border: 2px solid rgba(212,175,55,0.3); border-radius: 16px; padding: 30px; transition: all 0.3s; }
+        .tool-card:hover { border-color: var(--gold); background: rgba(212,175,55,0.15); transform: translateY(-4px); }
+        .tool-emoji { font-size: 2rem; margin-bottom: 12px; }
+        .tool-card h3 a { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--gold); text-decoration: none; font-weight: 600; }
+        .tool-card h3 a:hover { color: var(--brown-deep); }
+        .tool-by { font-family: -apple-system, sans-serif; font-size: 0.82rem; color: var(--gold); font-weight: 600; margin: 6px 0 10px; }
+        .tool-card p { font-size: 0.9rem; color: var(--brown-mid); line-height: 1.6; }
+
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); z-index: 2000; overflow-y: auto; padding: 20px; }
+        .modal.active { display: flex; align-items: center; justify-content: center; }
+        .modal-content { background: linear-gradient(135deg, var(--cream), var(--cream-dark)); border-radius: 25px; padding: 50px; max-width: 750px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; box-shadow: 0 25px 60px rgba(0,0,0,0.35); border: 2px solid var(--gold); }
+        .modal-close { position: absolute; top: 20px; right: 20px; font-size: 1.8rem; color: var(--gold); cursor: pointer; background: none; border: none; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all 0.3s; }
+        .modal-close:hover { background: rgba(139,105,20,0.1); transform: rotate(90deg); }
+        .modal-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); margin-bottom: 25px; font-weight: 800; }
+        .text-entry { margin-bottom: 25px; padding: 20px; background: rgba(255,255,255,0.6); border-radius: 12px; border-left: 4px solid var(--gold); }
+        .text-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--gold); font-weight: 700; margin-bottom: 4px; }
+        .text-author { font-size: 0.95rem; color: var(--brown-mid); font-weight: 600; margin-bottom: 3px; }
+        .text-date { font-size: 0.85rem; color: var(--gold); font-style: italic; margin-bottom: 10px; }
+        .text-takeaway { font-size: 0.95rem; color: var(--brown-mid); line-height: 1.7; }
+
+        .footer { background: rgba(0,0,0,0.1); padding: 60px 0 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { font-family: -apple-system, sans-serif; color: var(--gold); font-size: 1.1rem; margin-bottom: 15px; font-weight: 600; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+        .footer-links a { font-family: -apple-system, sans-serif; color: var(--brown-mid); text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: var(--brown-mid); font-family: -apple-system, sans-serif; }
+
+        .btn { font-family: -apple-system, sans-serif; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; border: none; cursor: pointer; font-size: 1rem; display: inline-block; margin: 8px; }
+        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: white; box-shadow: 0 8px 25px rgba(139,105,20,0.3); }
+        .btn-primary:hover { transform: translateY(-3px); }
+        .btn-outline { background: transparent; color: var(--gold); border: 2px solid var(--gold); }
+        .btn-outline:hover { background: var(--gold); color: white; transform: translateY(-3px); }
+        .text-center { text-align: center; }
+        .mt-6 { margin-top: 60px; }
+
+        html { scroll-behavior: smooth; }
+
+        @media (max-width: 960px) {
+            .stat-grid { grid-template-columns: repeat(2, 1fr); }
+            .data-story-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .reg-grid { grid-template-columns: 1fr; }
+            .scandal-stat-row { grid-template-columns: repeat(2, 1fr); }
+            .tools-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.8rem; }
+            .section-title { font-size: 2rem; }
+            .nav-links { display: none; }
+            .container, .container-narrow { padding: 0 16px; }
+            .modal-content { padding: 30px 20px; }
+            .timeline-item { grid-template-columns: 70px 1fr; }
+            .paper-card { grid-template-columns: 1fr; }
+            .paper-journal { writing-mode: horizontal-tb; transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══ HEADER ══ -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Hauptnavigation">
+                <a href="index.html" class="logo">
+                    AIPieces
+                    <span class="trust-badge">Datenschutz zuerst</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="family-coordination-app.html">Ratgeber</a></li>
+                    <li><a href="research.html">Forschung</a></li>
+                    <li><a href="features.html">Funktionen</a></li>
+                    <li><a href="subscriptions.html">Abonnement</a></li>
+                    <li><a href="about-founder.html">Gründergeschichte</a></li>
+                    <li><a href="how-it-works.html">So funktioniert's</a></li>
+                    <li><a href="privacy.html">Datenschutz</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li class="lang-switcher" aria-label="Sprache wählen">
+                        <a href="../research.html" hreflang="en">EN</a><span>·</span><a href="research.html" hreflang="de" class="active">DE</a><span>·</span><a href="../fr/research.html" hreflang="fr">FR</a><span>·</span><a href="../es/research.html" hreflang="es">ES</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ══ HERO ══ -->
+        <section class="hero band" id="top">
+            <div class="container-narrow">
+                <p class="hero-eyebrow">Forschungsgrundlage · AI Pieces</p>
+                <h1 class="hero-title">Jede Funktion verdient<br><em>ihren Platz in der Evidenz.</em></h1>
+                <p class="hero-body">
+                    Gute Produkte werden nicht aus dem Bauch heraus gebaut. Sie werden auf Evidenz gebaut — von Fachleuten begutachtet, hinterfragt, repliziert und stresstestet. Bevor die erste Zeile FamilyCompass-Code geschrieben wurde, wurden die Fragen gestellt, auf die es ankommt: <em>Was zeigt die Forschung tatsächlich? Wer hat einen Teil dieses Problems bereits gelöst? Was sagen die Daten, was Verbraucher wirklich wollen?</em> Diese Seite beantwortet diese Fragen vollständig.
+                </p>
+                <div class="hero-credentials">
+                    <span class="cred-pill">🎓 Drei Studienabschlüsse</span>
+                    <span class="cred-pill">🌍 Beratung zu Gesundheitssystemen für die Weltbank</span>
+                    <span class="cred-pill">📄 Über 40 Jahre begutachtete Literatur ausgewertet</span>
+                    <span class="cred-pill">🗺️ 23 Zivilisationen der Familienforschung</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ SECTION I — THE WHY ══ -->
+        <section class="band band-white" id="why">
+            <div class="container">
+                <hr class="section-rule">
+                <p class="section-number">Abschnitt I</p>
+                <h2 class="section-title">Warum diese vier<br><em>bestimmten Produkte?</em></h2>
+                <p class="section-lead">Die vier AI-Pieces-Produkte — FamilyCompass, HealthCompass, CareCompass, EduCompass — sind kein Ratespiel. Jedes adressiert einen Bereich, in dem fragmentierte, unverschlüsselte oder nicht vorhandene digitale Koordination messbaren Schaden anrichtet. Hier ist die Evidenz.</p>
+
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-icon">🧭</div>
+                        <h3>FamilyCompass — Die Koordinationskrise</h3>
+                        <p>Das Familienleben ist mit einer Geschwindigkeit logistisch komplex geworden, die kein informelles System bewältigen kann. Doppelverdiener-Haushalte, schichtarbeitende Eltern, verstreute Großfamilien und Verwandte über mehrere Zeitzonen erzeugen eine Koordinationslast, die familiäre Beziehungen direkt schädigt.</p>
+                        <p>Die Forschung ist eindeutig: Terminkonflikt ist keine kleine Unannehmlichkeit — er ist ein Hauptauslöser für familiären Stress, mit dokumentierten Folgewirkungen auf das Wohlbefinden von Kindern, die Zufriedenheit in der Partnerschaft und die psychische Gesundheit.</p>
+                        <div class="stat-highlight">68 % des familiären Stresses entstehen durch Terminkonflikte und Missverständnisse bei der Logistik — keine Beziehungsprobleme.</div>
+                        <p class="why-ref"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8456013/" target="_blank" rel="noopener">↳ National Institutes of Health, PMC8456013, 2021</a></p>
+                        <p class="why-ref"><a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jomf.13020" target="_blank" rel="noopener">↳ Journal of Marriage and Family, 2024</a></p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-icon">🏥</div>
+                        <h3>HealthCompass — Die Zeitkrise der Pflege</h3>
+                        <p>Die klinische Forschung dokumentiert durchgehend, dass 25–35 % der Pflegezeit auf Wachstationen (Intensiv, Geburt, Pädiatrie) durch Angehörigenkommunikation verbraucht werden — vor allem durch das wiederholte Beantworten derselben Fragen am Telefon von besorgten Verwandten, die keinen anderen Kanal haben.</p>
+                        <p>Das ist keine kleine Ineffizienz. In einem System unter beispiellosem Personaldruck ist jede Minute für einen wiederkehrenden Angehörigenanruf eine Minute, die nicht der direkten Patientenversorgung dient. Die Lösung besteht nicht darin, die Beteiligung der Angehörigen zu verringern — sondern darin, ihnen einen besseren Kanal zu geben.</p>
+                        <div class="stat-highlight">NHS-Studien deuten darauf hin, dass über 30 % der Pflegezeit auf Angehörigenkommunikation entfallen — vieles davon das Wiederholen derselben Updates an verschiedene Angehörige.</div>
+                        <p class="why-ref"><a href="https://www.england.nhs.uk/nursingmidwifery/2020-21-priorities/" target="_blank" rel="noopener">↳ NHS England Nursing Strategy, 2021</a></p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-icon">💜</div>
+                        <h3>CareCompass — Die unsichtbare Pflegekrise</h3>
+                        <p>Angehörige von Pflegeheimbewohnern berichten von einer durchgängigen und belastenden Erfahrung: Sie wissen nicht, was ihrem Verwandten täglich widerfährt. Anrufe in Pflegeheimen bleiben unbeantwortet. Das Personal ist zu beschäftigt, um Updates zu geben. Angehörige fühlen sich von Pflegeentscheidungen ausgeschlossen.</p>
+                        <p>Das ist kein Versagen des Pflegepersonals — es ist ein struktureller Mangel an der richtigen Kommunikationsinfrastruktur. CareCompass füllt genau diese Lücke.</p>
+                        <div class="stat-highlight">Über 400.000 Menschen leben in Pflegeheimen im Vereinigten Königreich. Mehr als 70 % der Angehörigen berichten über unzureichende Kommunikation der Pflegeanbieter (CQC State of Care, 2023).</div>
+                        <p class="why-ref"><a href="https://www.cqc.org.uk/publications/major-report/state-of-care" target="_blank" rel="noopener">↳ CQC State of Care Report, 2023</a></p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-icon">🎓</div>
+                        <h3>EduCompass — Die Schulkommunikationskrise</h3>
+                        <p>Schulen betreiben derzeit einen zersplitterten Flickenteppich der Kommunikation: E-Mail-Ketten, WhatsApp-Gruppen (unverschlüsselt, unkontrolliert), Papierbriefe, Telefonanrufe und Portale von Schulverwaltungssystemen — von denen keines mit dem anderen spricht und keines standardmäßig DSGVO-konform ist.</p>
+                        <p>Untersuchungen der britischen Regierung zeigen, dass die Eltern-Lehrer-Kommunikation 15–20 Aufgaben pro Lehrkraft und Tag verbraucht. Die Zersplitterung schafft zudem ein erhebliches Compliance-Risiko: Personenbezogene Daten über Kinder, die über unverschlüsselte Kanäle geteilt werden, verstoßen gegen DSGVO-Artikel 32.</p>
+                        <div class="stat-highlight">Britische Lehrkräfte verbringen im Schnitt 12 Stunden pro Woche mit Verwaltungsaufgaben — wovon die Elternkommunikation die größte Einzelkategorie ist.</div>
+                        <p class="why-ref"><a href="https://www.gov.uk/government/publications/teacher-workload-survey-2024" target="_blank" rel="noopener">↳ UK Dept. of Education, Teacher Workload Survey, 2024</a></p>
+                        <p class="why-ref"><a href="https://gdpr-info.eu/art-32-gdpr/" target="_blank" rel="noopener">↳ DSGVO Artikel 32 — Sicherheit der Verarbeitung</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ SECTION II — WHY SECURITY ══ -->
+        <section class="band" id="why-security">
+            <div class="container">
+                <hr class="section-rule">
+                <p class="section-number">Abschnitt II</p>
+                <h2 class="section-title">Warum <em>starke Verschlüsselung</em><br>nicht optional ist.</h2>
+                <p class="section-lead">Datenschutz ist keine Funktion. Er ist die grundlegende Designentscheidung, aus der jede andere Entscheidung folgt. Die Daten, die zeigen, warum das wichtig ist, sind überwältigend — und werden von den Apps, die Familien derzeit nutzen, weitgehend ignoriert.</p>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">76 %</div>
+                        <div class="stat-label">der Verbraucher sagen, sie würden nicht bei einem Unternehmen kaufen, dem sie ihre Daten nicht anvertrauen.</div>
+                        <div class="stat-source"><a href="https://www.cisco.com/c/en/us/about/trust-center/data-privacy-benchmark-study.html" target="_blank" rel="noopener">Cisco Consumer Privacy Survey, 2022</a></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">94 %</div>
+                        <div class="stat-label">der Organisationen bestätigen, dass Kunden keine Geschäfte mit ihnen machen, wenn Daten nicht ordnungsgemäß geschützt sind.</div>
+                        <div class="stat-source"><a href="https://www.cisco.com/c/en/us/about/trust-center/data-privacy-benchmark-study.html" target="_blank" rel="noopener">Cisco Data Privacy Benchmark, 2024</a></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">73 %</div>
+                        <div class="stat-label">der Verbraucher sind heute besorgter um ihren Datenschutz als noch vor wenigen Jahren.</div>
+                        <div class="stat-source"><a href="https://www.sas.com/en_us/insights/articles/analytics/privacy-consumer-data.html" target="_blank" rel="noopener">SAS Consumer Privacy Survey, 2023</a></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">72 %</div>
+                        <div class="stat-label">der US-Verbraucher sagen, es sollte mehr staatliche Regulierung dessen geben, was Unternehmen mit personenbezogenen Daten tun dürfen.</div>
+                        <div class="stat-source"><a href="https://www.pewresearch.org/internet/2023/10/18/how-americans-view-data-privacy/" target="_blank" rel="noopener">Pew Research Center, 2023</a></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">⅓</div>
+                        <div class="stat-label">der Nutzer von GPS- und Ortungsgeräten haben ernste Bedenken hinsichtlich der Datensicherheit dieser Geräte.</div>
+                        <div class="stat-source"><a href="https://www.safehome.org/gps-industry-outlook-statistics/" target="_blank" rel="noopener">SafeHome.org GPS Survey, 2023 · n=1.025</a></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">81 %</div>
+                        <div class="stat-label">der Verbraucher glauben, dass der Umgang einer Organisation mit personenbezogenen Daten zeigt, wie sie ihre Kunden sieht und respektiert.</div>
+                        <div class="stat-source"><a href="https://jumpcloud.com/blog/data-privacy-statistics" target="_blank" rel="noopener">Cisco Consumer Survey via JumpCloud, 2022</a></div>
+                    </div>
+                </div>
+
+                <div class="citation-block">
+                    <blockquote>„Die FTC duldet keine Unternehmen, die Verbraucherdaten übermäßig sammeln, unbegrenzt aufbewahren oder missbrauchen."</blockquote>
+                    <p class="citation-source"><a href="https://www.ftc.gov/business-guidance/blog/2022/07/location-health-and-other-sensitive-information-ftc-committed-fully-enforcing-law-against-illegal" target="_blank" rel="noopener">FTC-Vorsitzende Lina Khan, Januar 2024 — zum ersten Verbot der FTC gegen die Nutzung und den Verkauf sensibler Standortdaten</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ SECTION III — LOCATION DATA INDUSTRY ══ -->
+        <section class="scandal-band" id="data-scandal" aria-label="Standortdatenindustrie und regulatorische Maßnahmen">
+            <div class="container">
+                <hr style="border:none;border-top:2px solid rgba(212,175,55,0.4);width:60px;margin-bottom:12px;">
+                <p style="font-family:-apple-system,sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold-light);margin-bottom:12px;">Abschnitt III</p>
+                <h2>Die Standortdatenindustrie:<br>was Aufsichtsbehörden feststellen.</h2>
+                <p class="lead">FamilyCompass wurde nicht aus einer theoretischen Sorge um den Datenschutz gebaut. Es wurde als Reaktion auf ein dokumentiertes, behördlich durchgesetztes Problem gebaut: Mobile Apps, die präzise Familien-Standortdaten sammeln, verkaufen diese — oft ohne nennenswertes Wissen der Nutzer — an eine milliardenschwere Datenhändlerindustrie. Regierungen handeln nun.</p>
+
+                <div class="scandal-stat-row">
+                    <div class="scandal-stat">
+                        <span class="num">47</span>
+                        <div class="lbl">Standortdatenunternehmen, die von The Markup als Händler mit mobilen Standortdaten identifiziert wurden — 11 wurden seither vom Kongress geprüft oder bundesbehördlich verfolgt</div>
+                    </div>
+                    <div class="scandal-stat">
+                        <span class="num">3,1 Mrd. $+</span>
+                        <div class="lbl">EU-Bußgelder gegen große Social-Media-Unternehmen wegen Datenschutzverstößen allein im Jahr 2023</div>
+                    </div>
+                    <div class="scandal-stat">
+                        <span class="num">138</span>
+                        <div class="lbl">Länder mit Daten- und Verbraucherschutzgesetzen Stand 2024 — gegenüber 65 % der Weltbevölkerung, die 2022 abgedeckt waren</div>
+                    </div>
+                    <div class="scandal-stat">
+                        <span class="num">⅓</span>
+                        <div class="lbl">der GPS-Gerätebesitzer, die ernste Bedenken hinsichtlich der Datensicherheit ihrer Ortungsgeräte äußern</div>
+                    </div>
+                </div>
+
+                <div class="scandal-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">
+                            <h4>The Markup identifiziert 47 Standortdatenhändler</h4>
+                            <p>Das Investigativmedium The Markup identifiziert 47 Unternehmen, die in der mobilen Standortdatenindustrie tätig sind — sie kaufen, bündeln und verkaufen präzise Bewegungsdaten aus Verbraucher-Apps weiter, ohne dass die meisten Nutzer davon wissen. Die Untersuchung löst Schreiben des Kongresses und behördliche Anfragen aus.</p>
+                            <a href="https://themarkup.org/privacy/2021/09/30/theres-a-multibillion-dollar-market-for-your-phones-location-data" target="_blank" rel="noopener">↳ The Markup, September 2021</a>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Aug. 2022</div>
+                        <div class="timeline-content">
+                            <h4>FTC verklagt Kochava — erste Durchsetzung bei Standortdaten</h4>
+                            <p>Die Federal Trade Commission verklagt den Datenhändler Kochava für den Verkauf von Standortdaten, die von Personen gesammelt wurden, die Abtreibungskliniken, Suchtbehandlungszentren und andere sensible Orte besuchten. Die FTC signalisiert, dass die gesamte Standortdatenindustrie genau geprüft wird.</p>
+                            <a href="https://www.ftc.gov/news-events/news/press-releases/2022/08/ftc-sues-kochava-selling-data-tracking-people-reproductive-health-clinics-places-worship" target="_blank" rel="noopener">↳ FTC-Pressemitteilung, August 2022</a>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Jan. 2024</div>
+                        <div class="timeline-content">
+                            <h4>FTC verhängt erstmals ein Verbot des Verkaufs sensibler Standortdaten</h4>
+                            <p>Die FTC sanktioniert den Standortdatenhändler X-Mode (Outlogic) und verhängt das erste behördliche Verbot der Nutzung und des Verkaufs sensibler Standortdaten. FTC-Vorsitzende Lina Khan erklärt: „Mit der Durchsetzung eines erstmaligen Verbots der Nutzung und des Verkaufs sensibler Standortdaten setzt die FTC ihre wichtige Arbeit fort, Amerikaner vor aufdringlichen Datenhändlern und ungezügelter Unternehmensüberwachung zu schützen."</p>
+                            <a href="https://themarkup.org/privacy/2024/01/11/federal-trade-commission-sanctions-location-data-broker-x-mode" target="_blank" rel="noopener">↳ FTC-Maßnahme, Januar 2024</a>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Apr. 2024</div>
+                        <div class="timeline-content">
+                            <h4>FTC aktualisiert COPPA — Standortdaten von Kindern erfordern nun gesonderte Einwilligung</h4>
+                            <p>Die erste COPPA-Aktualisierung seit 2013 verlangt von Unternehmen, eine gesonderte elterliche Einwilligung einzuholen, bevor sie personenbezogene Daten von Kindern — einschließlich Standortdaten — an Dritte weitergeben. FamilyCompass war bereits darauf ausgelegt, dem zu entsprechen: In unserer Architektur gibt es keine Datenweitergabe an Dritte.</p>
+                            <a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa" target="_blank" rel="noopener">↳ FTC COPPA aktualisierte Regel, April 2024</a>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Jun. 2024</div>
+                        <div class="timeline-content">
+                            <h4>Oregon verbietet den Verkauf präziser Geolokalisierungsdaten</h4>
+                            <p>Oregon wird der zweite US-Bundesstaat, der den Verkauf präziser Geolokalisierungsdaten von Verbrauchern verbietet, nachdem Gouverneurin Tina Kotek eine Änderung des Oregon Consumer Privacy Act unterzeichnet hat. In Texas und Kalifornien laufen Klagen gegen die Standortdatenindustrie.</p>
+                            <a href="https://iapp.org/news/a/emerging-trends-insights-from-public-enforcement-of-us-state-privacy-laws" target="_blank" rel="noopener">↳ IAPP — Trends bei der Durchsetzung von US-Datenschutzgesetzen der Bundesstaaten, 2024</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top:50px;padding:30px;background:rgba(255,255,255,0.07);border-radius:16px;border-left:4px solid var(--gold-light);">
+                    <p style="font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;color:rgba(255,255,255,0.9);margin-bottom:12px;">„Die FTC duldet keine Unternehmen, die Verbraucherdaten übermäßig sammeln, unbegrenzt aufbewahren oder missbrauchen."</p>
+                    <p style="font-family:-apple-system,sans-serif;font-size:0.8rem;color:rgba(212,175,55,0.9);"><a href="https://www.ftc.gov/business-guidance/blog/2022/07/location-health-and-other-sensitive-information-ftc-committed-fully-enforcing-law-against-illegal" target="_blank" rel="noopener" style="color:var(--gold-light);">FTC-Vorsitzende Lina Khan · Juli 2022 · mit Durchsetzungsmaßnahmen 2024 bekräftigt</a></p>
+                </div>
+
+                <div style="margin-top:30px;text-align:center;">
+                    <p style="font-size:1.1rem;color:rgba(255,255,255,0.8);max-width:640px;margin:0 auto 25px;line-height:1.7;">FamilyCompass nutzt AES-256-GCM-Ende-zu-Ende-Verschlüsselung mit Zero-Knowledge-Architektur. Wir können Ihre Standortdaten nicht lesen. Wir verkaufen sie nicht. Das werden wir niemals tun.</p>
+                    <a href="features.html#security" class="btn btn-primary">Unsere Sicherheitsarchitektur →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ SECTION IV — REGULATIONS ══ -->
+        <section class="band band-white" id="regulations">
+            <div class="container">
+                <hr class="section-rule">
+                <p class="section-number">Abschnitt IV</p>
+                <h2 class="section-title">Die regulatorische Landschaft:<br><em>Compliance ist das Minimum,<br>nicht das Maximum.</em></h2>
+                <p class="section-lead">AI-Pieces-Produkte wurden gebaut, um regulatorische Anforderungen zu übertreffen — nicht nur, um sie zu erfüllen. Hier sind die wichtigsten Rahmenwerke, die für unsere Produkte gelten, und wie wir sie auslegen.</p>
+
+                <div class="reg-grid">
+                    <div class="reg-card gdpr">
+                        <span class="reg-badge">DSGVO</span>
+                        <h3>Datenschutz-Grundverordnung</h3>
+                        <p>Anwendbar auf alle AI-Pieces-Produkte. Entwickelt in Kerry, Irland — innerhalb der EU — ist DSGVO-Konformität kein nachträglicher Einfall. AES-256-Verschlüsselung erfüllt die Anforderung von Artikel 32 an „angemessene technische Maßnahmen". Zero-Knowledge-Architektur bedeutet, dass wir keine Verletzung von Nutzerdaten erleiden können, weil wir sie nicht in entschlüsselbarer Form halten.</p>
+                        <p>DSGVO-Artikel 5(1)(b): Zweckbindung. Wir erheben Standortdaten ausschließlich, um sie der eigenen Familie des Familienmitglieds anzuzeigen — und zu keinem anderen Zweck.</p>
+                        <a href="https://gdpr-info.eu/art-5-gdpr/" target="_blank" rel="noopener">↳ DSGVO Artikel 5 — Grundsätze für die Verarbeitung personenbezogener Daten</a><br>
+                        <a href="https://gdpr-info.eu/art-32-gdpr/" target="_blank" rel="noopener" style="margin-top:5px;display:inline-block;">↳ DSGVO Artikel 32 — Sicherheit der Verarbeitung</a>
+                    </div>
+                    <div class="reg-card hipaa">
+                        <span class="reg-badge">HIPAA</span>
+                        <h3>Health Insurance Portability and Accountability Act</h3>
+                        <p>Anwendbar auf HealthCompass und CareCompass. Die HIPAA Security Rule (45 CFR §164.312) verlangt von erfassten Stellen und ihren Geschäftspartnern, technische Schutzmaßnahmen einschließlich Zugangskontrollen und Verschlüsselung umzusetzen. HealthCompass ist darauf ausgelegt, diese Standards zu erfüllen — mit AES-256-Verschlüsselung für geschützte Gesundheitsdaten (PHI), Ende-zu-Ende-verschlüsselter Nachrichtenzustellung und einem an §164.312(b) ausgerichteten Prüfprotokoll.</p>
+                        <p>Die HIPAA Privacy Rule regelt zusätzlich zulässige Offenlegungen. HealthCompass ist als Kanal zwischen klinischem Personal und berechtigten Angehörigen konzipiert — und arbeitet innerhalb des HIPAA-Rahmens für Behandlung, Zahlung und Betrieb (TPO).</p>
+                        <a href="https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html" target="_blank" rel="noopener">↳ HHS HIPAA Security Rule — 45 CFR §164.312</a>
+                    </div>
+                    <div class="reg-card coppa">
+                        <span class="reg-badge">COPPA</span>
+                        <h3>Children's Online Privacy Protection Act</h3>
+                        <p>FamilyCompass bedient ausdrücklich Familien mit Kindern. COPPA verlangt eine überprüfbare elterliche Einwilligung, bevor personenbezogene Daten von Kindern unter 13 Jahren erhoben werden. FamilyCompass setzt Abläufe für elterliche Einwilligung um, zeigt keinem Nutzer Werbung an und erhebt Standortdaten von Kindern nur innerhalb des verschlüsselten Familienkreises — niemals zum Verkauf an Dritte oder zum Profiling.</p>
+                        <p>Die FTC aktualisierte die COPPA-Regeln im April 2024, um eine <em>gesonderte elterliche Einwilligung</em> zu verlangen, bevor Kinderdaten an Dritte weitergegeben werden. FamilyCompass gibt keine Daten an Dritte weiter — architektonisch, nicht nur per Richtlinie.</p>
+                        <a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa" target="_blank" rel="noopener">↳ FTC COPPA-Regel — aktualisiert April 2024</a>
+                    </div>
+                    <div class="reg-card ccpa">
+                        <span class="reg-badge">CCPA / CPRA</span>
+                        <h3>California Consumer Privacy Act / Privacy Rights Act</h3>
+                        <p>Das umfassendste US-Datenschutzgesetz auf Bundesstaatsebene. Es gewährt Verbrauchern das Recht zu erfahren, welche Daten erhoben werden, das Recht auf Löschung und das Recht, dem Verkauf personenbezogener Daten zu widersprechen. Forschung zeigt, dass die große Mehrheit der Nutzer von Standortteilungs-Apps nicht weiß, dass ihre Daten verkauft werden — die Widerspruchsraten in der Branche liegen durchgehend unter 5 % der aktiven Nutzerbasis, was darauf hindeutet, dass Bewusstsein und nicht Einwilligung das Kernproblem ist.</p>
+                        <p>FamilyCompass hat keine Daten, deren Verkauf widersprochen werden müsste — denn wir haben von vornherein kein Programm zum Datenverkauf. Nutzer haben vollen Zugriff auf ihre verschlüsselten Daten und können ihr Konto sowie alle zugehörigen Daten jederzeit löschen.</p>
+                        <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener">↳ Generalstaatsanwalt von Kalifornien — CCPA / CPRA</a>
+                    </div>
+                </div>
+
+                <div class="citation-block" style="margin-top:40px;">
+                    <blockquote>„Oregon wurde der zweite Bundesstaat, der den Verkauf präziser Geolokalisierungsdaten von Verbrauchern verbietet."</blockquote>
+                    <p class="citation-source"><a href="https://iapp.org/news/a/emerging-trends-insights-from-public-enforcement-of-us-state-privacy-laws" target="_blank" rel="noopener">Capitol Forum, Juni 2024 — über die von Gouverneurin Tina Kotek unterzeichnete Änderung des Oregon Consumer Privacy Act. In Texas und Kalifornien laufen Klagen gegen die Standortdatenhändlerindustrie.</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ SECTION V — PEER REVIEWED ══ -->
+        <section class="band" id="peer-reviewed">
+            <div class="container">
+                <hr class="section-rule">
+                <p class="section-number">Abschnitt V</p>
+                <h2 class="section-title">Von Fachleuten begutachtete<br><em>Forschungsgrundlage.</em></h2>
+                <p class="section-lead">Die folgenden Arbeiten prägen direkt die Design- und Funktionsentscheidungen in AI-Pieces-Produkten. Das sind keine dekorativen Zitate — sie sind der Grund, warum bestimmte Funktionen existieren.</p>
+
+                <article class="paper-card">
+                    <div class="paper-journal">Wiley · JOMF</div>
+                    <div class="paper-content">
+                        <h3><a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jomf.13020" target="_blank" rel="noopener">Familienkommunikationsmuster und kindliches Wohlbefinden</a></h3>
+                        <div class="paper-meta">Journal of Marriage and Family · 2024 · Wiley-Blackwell</div>
+                        <p class="paper-abstract">Längsschnittstudie dazu, wie Familienkommunikationsmuster — Konsistenz, Qualität und Häufigkeit — die Entwicklungsergebnisse von Kindern direkt vorhersagen. Begründet den Fokus von FamilyCompass auf strukturierte, reibungsarme Kommunikationswerkzeuge statt auf offene Social-Media-artige Funktionen.</p>
+                    </div>
+                </article>
+
+                <article class="paper-card">
+                    <div class="paper-journal">NIH · PMC</div>
+                    <div class="paper-content">
+                        <h3><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8456013/" target="_blank" rel="noopener">Digitale Koordination und Reduktion familiären Stresses</a></h3>
+                        <div class="paper-meta">National Institutes of Health, PubMed Central · 2021</div>
+                        <p class="paper-abstract">Stellt fest, dass 68 % des familiären Stresses durch Missverständnisse bei der Logistik entstehen — nicht durch Beziehungskonflikte. Dieser eine Befund erklärt, warum KI-Konflikterkennung, gemeinsamer Kalender und Echtzeit-Standort den Kern von FamilyCompass bilden statt sozialer oder emotionaler Funktionen.</p>
+                    </div>
+                </article>
+
+                <article class="paper-card">
+                    <div class="paper-journal">Science Direct · JFS</div>
+                    <div class="paper-content">
+                        <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S1876201821000514" target="_blank" rel="noopener">Zeitnutzung in modernen Familien: Koordination vs. Verbundenheit</a></h3>
+                        <div class="paper-meta">Journal of Family Studies · ScienceDirect · 2023</div>
+                        <p class="paper-abstract">Zeittagebuchanalyse, die zeigt, dass Familien überproportional viel Zeit für Koordinationsaufwand zulasten von wertvoller gemeinsamer Zeit aufwenden. Die Time-Travel-Engine von FamilyCompass — die optimale Verfügbarkeitsfenster der Familie automatisch sichtbar macht — ist eine direkte Antwort auf diesen Befund.</p>
+                    </div>
+                </article>
+
+                <article class="paper-card">
+                    <div class="paper-journal">Gottman Institute</div>
+                    <div class="paper-content">
+                        <h3><a href="https://www.gottman.com/about/research/" target="_blank" rel="noopener">Die Mathematik der Beziehungen — 40 Jahre Beobachtungsforschung</a></h3>
+                        <div class="paper-meta">The Gottman Institute · Seattle, Washington · 1973–heute</div>
+                        <p class="paper-abstract">Dr. John Gottmans über 40 Jahre Beobachtungsforschung zum Beziehungserfolg, die das Verhältnis von 5:1 positiven zu negativen Interaktionen als Hauptprädiktor für Beziehungsgesundheit identifiziert. Die Wohlbefindens-Funktionen des Nutzer-Dashboards, Check-in-Impulse und Erinnerungen an positive Interaktionen gründen direkt in diesem Werk. Gottmans Forschung erreicht eine Vorhersagegenauigkeit von 94 % für Beziehungsergebnisse allein aus Kommunikationsmustern.</p>
+                    </div>
+                </article>
+
+                <article class="paper-card">
+                    <div class="paper-journal">Pew Research</div>
+                    <div class="paper-content">
+                        <h3><a href="https://www.pewresearch.org/internet/2023/10/18/how-americans-view-data-privacy/" target="_blank" rel="noopener">Wie Amerikaner den Datenschutz sehen</a></h3>
+                        <div class="paper-meta">Pew Research Center · Oktober 2023 · n=5.101 US-Erwachsene</div>
+                        <p class="paper-abstract">72 % der US-Erwachsenen glauben, es sollte mehr staatliche Regulierung dessen geben, was Unternehmen mit personenbezogenen Daten tun dürfen. Nur 7 % wollen weniger. 37 % der modernen Familien leben über verschiedene Städte verteilt. Begründet direkt die Zero-Knowledge-Architektur und die ausdrückliche Positionierung von FamilyCompass als datenschutzorientierte Alternative zu datenverkaufenden etablierten Anbietern.</p>
+                    </div>
+                </article>
+
+                <article class="paper-card">
+                    <div class="paper-journal">Esther Perel</div>
+                    <div class="paper-content">
+                        <h3><a href="https://estherperel.com/research" target="_blank" rel="noopener">Begehren, Verbindung und moderne Beziehungsforschung</a></h3>
+                        <div class="paper-meta">Esther Perel · Mating in Captivity, The State of Affairs · 2006–heute</div>
+                        <p class="paper-abstract">Perels Forschung zur Spannung zwischen Sicherheit (Bindung, Vertrautheit) und Begehren (Geheimnis, Neuheit) in langfristigen Beziehungen prägt den Wohlbefindens-Ansatz von FamilyCompass — insbesondere die Betonung individuellen Freiraums und persönlicher Nutzer-Dashboards innerhalb eines gemeinsamen Familiensystems statt vollständiger Überwachung.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ══ SECTION VI — ANCIENT WISDOM MAP ══ -->
+        <section class="map-section" id="ancient">
+            <div class="container">
+                <hr class="section-rule">
+                <p class="section-number">Abschnitt VI</p>
+                <h2 class="section-title" style="text-align:center;">4.000 Jahre<br><em>Wissen über Familienkoordination.</em></h2>
+                <p class="section-lead" style="text-align:center;max-width:780px;margin-left:auto;margin-right:auto;">
+                    Moderne, von Fachleuten begutachtete Forschung gibt es seit Jahrzehnten. Doch Familienkoordination wurde von jeder Zivilisation der Menschheitsgeschichte untersucht, diskutiert, kodifiziert und gelebt. Die antiken Griechen, Römer, Maya, Inka, Chinesen, Wikinger und 16 weitere Zivilisationen hinterließen detaillierte schriftliche Aufzeichnungen über Haushaltsführung, Familienpflichten und häusliche Koordination. FamilyCompass schöpft aus all dem. <strong>Klicken Sie auf eine beliebige Region, um die antiken Texte zu erkunden.</strong>
+                </p>
+
+                <div class="map-container">
+                    <div class="map-wrapper">
+                        <picture>
+                            <source srcset="../world-map-base.webp" type="image/webp">
+                            <img src="../world-map-base.png" alt="Blasse Weltkarte, die Regionen antiker Zivilisationen hervorhebt, deren Texte zur Familienkoordination FamilyCompass geprägt haben" class="map-image" width="2560" height="1375" loading="lazy">
+                        </picture>
+                        <div class="regions-overlay">
+                            <div class="region-box region-norse" data-region="norse">Wikinger</div>
+                            <div class="region-box region-rome" data-region="rome">Rom</div>
+                            <div class="region-box region-greece" data-region="greece">Griechenland</div>
+                            <div class="region-box region-hebrew" data-region="hebrew">Hebräisch</div>
+                            <div class="region-box region-babylon" data-region="babylon">Babylon</div>
+                            <div class="region-box region-egypt" data-region="egypt">Ägypten</div>
+                            <div class="region-box region-persia" data-region="persia">Persien</div>
+                            <div class="region-box region-arabia" data-region="arabia">Arabien</div>
+                            <div class="region-box region-ethiopia" data-region="ethiopia">Äthiopien</div>
+                            <div class="region-box region-nubia" data-region="nubia">Nubien</div>
+                            <div class="region-box region-africa" data-region="africa">Subsahara-<br>Afrika</div>
+                            <div class="region-box region-native-north" data-region="native-north">Indigene<br>Nordamerikas</div>
+                            <div class="region-box region-pirates" data-region="pirates">Piraten-<br>republik</div>
+                            <div class="region-box region-aztec" data-region="aztec">Azteken</div>
+                            <div class="region-box region-maya" data-region="maya">Maya</div>
+                            <div class="region-box region-inca" data-region="inca">Inka</div>
+                            <div class="region-box region-mapuche" data-region="mapuche">Mapuche</div>
+                            <div class="region-box region-india" data-region="india">Indien</div>
+                            <div class="region-box region-china" data-region="china">China</div>
+                            <div class="region-box region-korea" data-region="korea">Korea</div>
+                            <div class="region-box region-japan" data-region="japan">Japan</div>
+                            <div class="region-box region-polynesia" data-region="polynesia">Polynesien</div>
+                            <div class="region-box region-maori" data-region="maori">Māori</div>
+                        </div>
+                    </div>
+                    <div style="text-align:center;margin-top:18px;font-family:-apple-system,sans-serif;font-size:0.88rem;color:var(--gold);font-weight:600;">
+                        🌍 Klicken Sie auf eine beliebige Region, um antike Texte zur Familienkoordination zu erkunden
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ CTA ══ -->
+        <section class="band text-center" id="cta">
+            <div class="container-narrow">
+                <h2 class="section-title" style="text-align:center;">An der Beta teilnehmen.<br><em>Die Forschung erleben.</em></h2>
+                <p style="font-size:1.1rem;color:var(--brown-mid);max-width:560px;margin:0 auto 35px;line-height:1.8;">FamilyCompass befindet sich derzeit in aktiver Beta mit Familien in vier Ländern. Die obige Forschung ist heute in der App lebendig.</p>
+                <a href="index.html#beta-signup-section" class="btn btn-primary">An der FamilyCompass-Beta teilnehmen</a>
+                <a href="features.html" class="btn btn-outline">Alle Funktionen ansehen</a>
+                <p style="margin-top:20px;font-size:0.85rem;color:var(--brown-mid);font-family:-apple-system,sans-serif;">✅ 30 Tage kostenlos testen · ✅ Keine Kreditkarte erforderlich · ✅ Kein Datenverkauf · ✅ Ende-zu-Ende-verschlüsselt</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Produkt</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Funktionen</a></li>
+                        <li><a href="how-it-works.html">So funktioniert's</a></li>
+                        <li><a href="subscriptions.html">Preise</a></li>
+                        <li><a href="index.html#beta-signup-section">App herunterladen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Unternehmen</h4>
+                    <ul class="footer-links">
+                        <li><a href="about-founder.html">Über die Gründerin</a></li>
+                        <li><a href="research.html">Unsere Forschung</a></li>
+                        <li><a href="research.html">Blog</a></li>
+                    </ul>
+                </div><div class="footer-section">
+                    <h4>Ratgeber</h4>
+                    <ul class="footer-links">
+                        <li><a href="family-coordination-app.html">Familienkoordinations-App</a></li>
+                        <li><a href="private-alternative-to-life360.html">Private Life360-Alternative</a></li>
+                        <li><a href="how-to-coordinate-care-for-an-elderly-parent.html">Pflege eines älteren Elternteils koordinieren</a></li>
+                        <li><a href="example-when-is-it-time-for-a-care-home.html">Wann ist die Zeit für ein Pflegeheim?</a></li>
+                        <li><a href="family-medication-tracking-app.html">Medikamentenverwaltung für Familien</a></li>
+                        <li><a href="co-parenting-app-private.html">Private Co-Parenting-App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Datenschutz &amp; Vertrauen</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Datenschutzerklärung</a></li>
+                        <li><a href="privacy.html">Sicherheit</a></li>
+                        <li><a href="terms.html">Nutzungsbedingungen</a></li>
+                        <li><a href="privacy.html">COPPA-Konformität</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Hilfe-Center</a></li>
+                        <li><a href="support.html">Kontakt</a></li>
+                        <li><a href="support.html">Feedback senden</a></li>
+                        <li><a href="mailto:support@aipieces.org">E-Mail-Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin-bottom:14px;">
+                    <span class="lang-switcher" style="justify-content:center;">
+                        <a href="../research.html" hreflang="en">English</a><span>·</span><a href="research.html" hreflang="de" class="active">Deutsch</a><span>·</span><a href="../fr/research.html" hreflang="fr">Français</a><span>·</span><a href="../es/research.html" hreflang="es">Español</a>
+                    </span>
+                </p>
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Mit ❤️ für Familien überall gemacht.</p>
+                <p style="margin-top:10px;font-size:0.8rem;">
+                    FamilyCompass · HealthCompass · CareCompass · EduCompass ·
+                    Datenschutz zuerst, von Grund auf · Entwickelt in Kerry, Irland · DSGVO-konform
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ══ MODAL ══ -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()" aria-label="Schließen">×</button>
+            <h2 class="modal-title" id="modal-title"></h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+    const researchData = {
+        greece: { title: "Antikes Griechenland", texts: [
+            { title: "Oeconomicus", author: "Xenophon", date: "ca. 430–354 v. Chr.", takeaway: "Einer der frühesten ausdrücklichen Texte zur Haushaltsführung — ein Dialog über die Arbeitsteilung zwischen Mann und Frau, die häusliche Ökonomie, das Gesinde und die Tugend." },
+            { title: "Politik (Buch I)", author: "Aristoteles", date: "384–322 v. Chr.", takeaway: "Behandelt den Haushalt (oikos) als Grundlage der Polis; erörtert die Rollen von Mann, Frau, Kindern, Sklaven und die Haushaltsökonomie. Die Familie als erste und wesentlichste politische Einheit." },
+            { title: "Werke und Tage", author: "Hesiod", date: "ca. 700 v. Chr.", takeaway: "Frühe poetische Anleitung zu Landleben und Haushaltsarbeit; moralisiert über Fleiß, Familienpflicht und Arbeitsethik — einer der ältesten praktischen Leitfäden zur Haushaltsführung." },
+            { title: "Der Staat, Die Gesetze", author: "Platon", date: "427–347 v. Chr.", takeaway: "Erörtert Familienstruktur, Kindererziehung und gemeinschaftliche Haushalte in idealen Staaten. Platons radikale Neugestaltung von Familienrollen bleibt ein Bezugspunkt für jede spätere Familientheorie." }
+        ]},
+        rome: { title: "Antikes Rom", texts: [
+            { title: "De Agri Cultura (Über den Ackerbau)", author: "Cato der Ältere", date: "234–149 v. Chr.", takeaway: "Das älteste erhaltene vollständige lateinische Prosawerk — ein praktisches Handbuch zur Verwaltung von Gut und Haushalt, einschließlich der Verwaltung von Sklaven, Eigentum und Familienrollen." },
+            { title: "De Re Rustica", author: "Varro", date: "116–27 v. Chr.", takeaway: "Erweitert die ländliche Verwaltung und die Rolle der Ehefrauen bei der Erhaltung des häuslichen Bereichs. Systematische Behandlung der Haushaltsökonomie." },
+            { title: "Selbstbetrachtungen", author: "Mark Aurel", date: "ca. 170–180 n. Chr.", takeaway: "Die Familie erscheint als Quelle moralischen Vorbilds und sozialer Verpflichtung — Dankbarkeit gegenüber Eltern und Vorfahren, Mahnungen, gegenüber Verwandten gerecht zu handeln. Stoischer Zugang zur Familienpflicht." }
+        ]},
+        egypt: { title: "Altes Ägypten", texts: [
+            { title: "Die Lehre des Ptahhotep", author: "Ptahhotep", date: "ca. 2400 v. Chr.", takeaway: "Einer der ältesten bekannten geschriebenen Texte der Menschheitsgeschichte — Weisheitsliteratur mit Ratschlägen zu Ehe, Respekt innerhalb von Familien, Mäßigung und häuslicher Ordnung. Vor fast 4.500 Jahren geschrieben." },
+            { title: "Die Lehre des Ani", author: "Ani", date: "ca. 1300 v. Chr.", takeaway: "Erörtert, wie ein Mann seine Frau behandeln und sein Heim führen sollte — betont Güte, die Bereitstellung von Nahrung und die Erziehung von Kindern. Der weltweit älteste bekannte Eheratgeber." }
+        ]},
+        babylon: { title: "Mesopotamien (Babylon)", texts: [
+            { title: "Codex Hammurapi", author: "Hammurapi", date: "ca. 1792–1750 v. Chr.", takeaway: "Einer der ältesten und vollständigsten Gesetzeskodizes — förmliche Regeln zu Ehe, Scheidung, Vaterschaft, Erbe und Haushaltshaftung. Zeigt, wie das Recht vor 3.800 Jahren Familie und häusliche Beziehungen regelte." },
+            { title: "Die Unterweisungen des Šuruppak", author: "Šuruppak", date: "ca. 2600–2500 v. Chr.", takeaway: "Möglicherweise die älteste bekannte geschriebene Literatur — Weisheitsratschläge für Söhne zu Haushaltspflichten, Respekt vor den Eltern, Verwaltung von Eigentum und Gesinde." }
+        ]},
+        india: { title: "Altes Indien", texts: [
+            { title: "Manusmṛti (Gesetze des Manu)", author: "Verschiedene Autoren", date: "ca. 2. Jh. v. Chr. – 2. Jh. n. Chr.", takeaway: "Umfangreiche Vorschriften für Haushaltspflichten, kastenbasierte Rollen, Ehe, Erbe und rituelle Verpflichtungen — Familie und Haushalt als Kerneinheiten der gesellschaftlichen Ordnung." },
+            { title: "Sigālovāda Sutta", author: "Buddha", date: "Antiker buddhistischer Text", takeaway: "Praktischer „Laienkodex" — wechselseitige Pflichten: fünf Wege, wie Kinder ihren Eltern dienen sollen; Pflichten der Eltern gegenüber Kindern; Pflichten der Ehegatten zueinander. Ein bemerkenswert frühes Rahmenwerk für Familienkoordination." }
+        ]},
+        china: { title: "Altes China", texts: [
+            { title: "Gespräche (Lunyu)", author: "Konfuzius", date: "ca. 551–479 v. Chr.", takeaway: "Die Familie (kindliche Pietät, xiào) ist das Vorbild für ethische Bildung und gesellschaftliche Ordnung — Verpflichtungen gegenüber Eltern und Vorfahren prägen die öffentliche Tugend. Für Konfuzius ist Familienkoordination das Fundament jeder Zivilisation." }
+        ]},
+        hebrew: { title: "Hebräisch / Jüdisch", texts: [
+            { title: "Tora (Pentateuch), Sprüche 31", author: "Verschiedene Autoren", date: "Antike Texte", takeaway: "Familienpflichten, elterliche Autorität, Gesetze zu Ehe, Kindern und Erbe. Sprüche 31 zeichnet die fähige Hausverwalterin, die Haushaltsversorgung, Handel und Familienfürsorge führt — eine der ältesten umfassenden Beschreibungen der Familienführung." }
+        ]},
+        persia: { title: "Altes Persien (Zoroastrisch)", texts: [
+            { title: "Avesta (Yasna, Vendidad)", author: "Zarathustra", date: "ca. 2.–1. Jahrtausend v. Chr.", takeaway: "Familienpflichten eingebettet in Frömmigkeit, rituelle Verpflichtungen und gesellschaftliche Ordnung; betont moralisches Verhalten, häusliches Ritual, Abstammung und Pflichten gegenüber Verwandten. Eine der ältesten lebenden Religionstraditionen der Welt." }
+        ]},
+        arabia: { title: "Vorislamisches Arabien & Islam", texts: [
+            { title: "Koran", author: "Islamische Schrift", date: "7. Jh. n. Chr.", takeaway: "Gebietet Güte gegenüber den Eltern, die Verantwortung des Vaters, für stillende Mütter zu sorgen, Familienversorgung und Pflichten der Kinderbetreuung. Die Familie ist ein heiliges anvertrautes Gut (amāna)." },
+            { title: "Hadith", author: "Aussprüche des Propheten Mohammed", date: "7. Jh. n. Chr.", takeaway: "„Das Paradies liegt zu Füßen der Mutter." „Die Besten unter euch sind die, die am besten zu ihren Familien sind." Ein Rahmenwerk für Familienbeziehungen, gegründet auf gegenseitigem Respekt und gegenseitiger Verpflichtung." }
+        ]},
+        ethiopia: { title: "Antikes Äthiopien / Aksum", texts: [
+            { title: "Kebra Nagast", author: "Aus älteren Überlieferungen zusammengestellt", date: "14. Jahrhundert", takeaway: "Erzählungen, die königliche Familienlinien mit häuslicher Tugend verbinden; die Familie als heilige Kette, zentral für häusliche wie politische Stabilität. Der Gründungstext der äthiopischen Christenheit zur Familie." }
+        ]},
+        nubia: { title: "Antike nubische Königreiche", texts: [
+            { title: "Königin Amanitore", author: "Hieroglyphen, Ikonografie und Tempelsprache aus Meroë und Wad ban Naga", date: "1. Jh. n. Chr.", takeaway: "Familie als persönliche, politische und göttliche Einheit. Ein moralisches Band und eine Säule der Regierungsführung — die Familie als Vorbild für den Staat." }
+        ]},
+        africa: { title: "Subsahara-afrikanische Gesellschaften", texts: [
+            { title: "Mündliche Überlieferungen (Griot-Erzählungen)", author: "Verschiedene Griots und Erzähler", date: "Antike bis Gegenwart", takeaway: "Familie, Abstammung, Clan und häusliche Rollen, bewahrt durch mündliche Überlieferung — der Griot als Familienhistoriker und Koordinator. Der Haushalt ist der Ort des Handwerks, der Kindererziehung, des Abstammungsgedächtnisses und der sozialen Pflicht." }
+        ]},
+        japan: { title: "Altes Japan", texts: [
+            { title: "Kojiki", author: "Ō no Yasumaro", date: "712 n. Chr.", takeaway: "Japans älteste Chronik — mythische und halbhistorische Erzählungen, die die Familie als zentral für Abstammung, Erbfolge und häusliche Ordnung zeigen. Betont elterliche Autorität, Erbe und häusliche rituelle Verpflichtungen." }
+        ]},
+        korea: { title: "Korea — Gojoseon", texts: [
+            { title: "Samguk Yusa", author: "Buddhistischer Mönch Iryeon (aus den Dangun-Wanggeom-Legenden)", date: "Legenden von 2333 v. Chr., niedergeschrieben 1281 n. Chr.", takeaway: "Hongik Ingan: „dem Menschenwohl in weitem Sinne dienen." Koreas Gründungsphilosophie — die Familie und die Gemeinschaft als Fundament der Zivilisation." }
+        ]},
+        polynesia: { title: "Polynesien (Hawaiʻi)", texts: [
+            { title: "Mündliche Genealogien, Gesänge, Moʻolelo", author: "Verschiedene mündliche Überlieferungen", date: "Antike Überlieferungen", takeaway: "Großfamilien (ʻohana) verwalten Land, Nahrungsproduktion, Kinderbetreuung und Handwerk. Häusliche Pflichten verflochten mit spirituellen und sozialen Verpflichtungen — die ʻohana als grundlegende Einheit der hawaiianischen Gesellschaft." }
+        ]},
+        maori: { title: "Māori (Neuseeland)", texts: [
+            { title: "Waiata, Whakapapa, mündliche Überlieferungen", author: "Verschiedene mündliche Überlieferungen", date: "Antike Überlieferungen", takeaway: "Die whānau (Großfamilie) ist grundlegend. Häusliche Rollen: Kindererziehung, Nahrungsbeschaffung und -verarbeitung, Weben und Schnitzen, Pflege der Älteren. Das Familienleben ist gemeinschaftlich und mit Abstammung, Land und Ritual verbunden." }
+        ]},
+        'native-north': { title: "Indigene Nordamerikas (Irokesen/Huronen)", texts: [
+            { title: "Mündliche Überlieferung / Wampum-Aufzeichnungen", author: "Verschiedene Nationen", date: "Antike Überlieferungen", takeaway: "Die Verwandtschaft ist matrilinear; das häusliche Leben umfasst Ackerbau, Kinderbetreuung, Nahrungszubereitung und Altenpflege. Die Großfamilie ist die zentrale soziale Einheit — häusliche Arbeit verflochten mit sozialen und spirituellen Pflichten." }
+        ]},
+        maya: { title: "Maya (Mittelamerika)", texts: [
+            { title: "Popol Vuh", author: "Kʼicheʼ-Maya", date: "ca. 16. Jh. (aus mündlichen Überlieferungen)", takeaway: "Schöpfungsmythen, die Heldenzwillinge und Genealogie spiegeln wider, wie Abstammung, Gemeinschaft, Ritual und Familienpflicht zentral sind. Haushalt und Verwandtschaftsgruppe in mythische Zeit eingebettet — einer der großen Familienursprungstexte der Welt." }
+        ]},
+        aztec: { title: "Azteken / Nahua (Mesoamerika)", texts: [
+            { title: "Codex Florentinus", author: "Aus Nahua-Quellen zusammengestellt von Fray Sahagún", date: "16. Jahrhundert", takeaway: "Dokumentiert das häusliche Leben vor dem Kontakt: Familienrollen, häusliche Arbeiten, geschlechtsbasierte Arbeitsteilung, Kindererziehung und Haushaltsrituale als integraler Teil der Nahua-Gesellschaft. Eine der umfassendsten ethnografischen Aufzeichnungen einer antiken Zivilisation." }
+        ]},
+        pirates: { title: "Republik der Piraten", texts: [
+            { title: "Piratenkodex", author: "Blackbeard (Edward Teach) und Benjamin Hornigold", date: "1720", takeaway: "Jeder Mann hat in wichtigen Angelegenheiten eine Stimme. Gleicher Anspruch auf die Vorräte. Licht aus um acht Uhr. Stück, Pistolen und Entermesser sauber und einsatzbereit halten. — Ein bemerkenswert frühes demokratisches Regelwerk, angewandt auf eine Gemeinschaft von Ausgestoßenen, das zeigt, dass selbst die randständigsten Gemeinschaften förmliche Koordinationssysteme entwickeln." }
+        ]},
+        inca: { title: "Inka (Südamerika)", texts: [
+            { title: "El Primer Nueva Corónica y Buen Gobierno", author: "Felipe Guamán Poma de Ayala", date: "Frühes 17. Jahrhundert", takeaway: "Hält die soziale Struktur der Inka fest. Das ayllu (erweiterte Verwandtschaftsgruppe/Familie) zeigt Haushaltsarbeit, ergänzende Geschlechterrollen — Weben und Nahrungsverarbeitung dienten der häuslichen Stabilität sowie sozialen und rituellen Verpflichtungen." }
+        ]},
+        mapuche: { title: "Antike Mapuche", texts: [
+            { title: "Az-Mapu", author: "Generationenübergreifendes Lernen", date: "Seit 600 v. Chr.", takeaway: "Bei den Mapuche ist die Familie das Herz von Gemeinschaft und Identität. Die Verbindung zum Heimatland (Mapu) und zum Familienhaus (ruka) als heiliger Raum und Teil der Identität. Das Lernen davon, wie Eltern und Großeltern leben — einschließlich der kunstvollen Webkunst und des Ahnenwissens (kimün). Familie und Land sind untrennbar; für seine Verwandten zu sorgen heißt, für die Erde zu sorgen." }
+        ]},
+        norse: { title: "Nordisch / Wikinger", texts: [
+            { title: "Prosa- und Lieder-Edda", author: "Snorri Sturluson und verschiedene Dichter", date: "ca. 1220 n. Chr. (Zusammenstellung)", takeaway: "Mythen, die Familienbeziehungen unter den Göttern zeigen — Themen von Treue, Verrat, Erbe und Rache. Die Hávamál enthält Haushaltsweisheit über Beziehungen, Vertrauen und soziale Verpflichtungen. Die Götter als dysfunktionale Familie sind die größte Einsicht der nordischen Literatur." },
+            { title: "Njáls saga", author: "Anonym", date: "13. Jahrhundert", takeaway: "Veranschaulicht, wie Haushalte funktionierten: Ehe, Erbe, generationenübergreifende Rollen, häusliche Verwaltung besonders durch Frauen. Hofstelle, Nahrungslagerung, Kindererziehung und Verwandtschaftspflichten stehen im Mittelpunkt." },
+            { title: "Laxdæla saga", author: "Anonym", date: "13. Jahrhundert", takeaway: "Schildert häusliche Verantwortung, Ehe, Haushaltsehre, Erbe und Konfliktlösung innerhalb von Großfamilien. Frauen als Verwalterinnen von Haushalten und Verwandtschaftsbeziehungen stehen im Mittelpunkt — eine überraschend moderne Darstellung." }
+        ]}
+    };
+
+    function showModal(regionKey) {
+        const data = researchData[regionKey];
+        if (!data) return;
+        document.getElementById('modal-title').textContent = data.title;
+        let html = '';
+        data.texts.forEach(t => {
+            html += `<div class="text-entry">
+                <div class="text-title">${t.title}</div>
+                <div class="text-author">${t.author}</div>
+                <div class="text-date">${t.date}</div>
+                <div class="text-takeaway">${t.takeaway}</div>
+            </div>`;
+        });
+        document.getElementById('modal-body').innerHTML = html;
+        document.getElementById('modal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('modal').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.region-box').forEach(r => {
+        r.addEventListener('click', () => showModal(r.getAttribute('data-region')));
+    });
+
+    document.getElementById('modal').addEventListener('click', e => {
+        if (e.target.id === 'modal') closeModal();
+    });
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // Scroll animations
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.style.opacity = '1';
+                e.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.07 });
+
+    document.querySelectorAll('.why-card, .data-story-card, .reg-card, .paper-card, .tool-card, .stat-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        io.observe(el);
+    });
+    </script>
+</body>
+</html>

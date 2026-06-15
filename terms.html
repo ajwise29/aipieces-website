@@ -8,6 +8,11 @@
     <meta name="author" content="AI Pieces Ltd">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://aipieces.org/terms.html">
+    <link rel="alternate" hreflang="en" href="https://aipieces.org/terms.html">
+    <link rel="alternate" hreflang="de" href="https://aipieces.org/de/terms.html">
+    <link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/terms.html">
+    <link rel="alternate" hreflang="es" href="https://aipieces.org/es/terms.html">
+    <link rel="alternate" hreflang="x-default" href="https://aipieces.org/terms.html">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aipieces.org/terms.html">
@@ -56,6 +61,12 @@
 
         .footer { background: rgba(0,0,0,0.1); padding: 40px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; color: #5a4a3a; }
         @media (max-width: 768px) { .nav-links { display: none; } .doc h1 { font-size: 2rem; } }
+    
+        .lang-switcher { display: inline-flex; gap: 6px; align-items: center; font-size: 0.85rem; font-family: -apple-system, sans-serif; }
+        .lang-switcher a { color: #5a4a3a; text-decoration: none; font-weight: 600; padding: 2px 5px; border-radius: 4px; }
+        .lang-switcher a.active { color: #8b6914; background: rgba(139,105,20,0.1); }
+        .lang-switcher a:hover { color: #8b6914; }
+        .lang-switcher span { color: rgba(90,74,58,0.4); }
     </style>
 </head>
 <body>
@@ -77,6 +88,7 @@
                     <li><a href="how-it-works.html">How It Works</a></li>
                     <li><a href="privacy.html">Privacy</a></li>
                     <li><a href="support.html">Support</a></li>
+                                    <li class="lang-switcher" aria-label="Select language"><a href="terms.html" hreflang="en" class="active">EN</a><span>·</span><a href="de/terms.html" hreflang="de">DE</a><span>·</span><a href="fr/terms.html" hreflang="fr">FR</a><span>·</span><a href="es/terms.html" hreflang="es">ES</a></li>
                 </ul>
             </nav>
         </div>
