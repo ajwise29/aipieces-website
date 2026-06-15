@@ -351,9 +351,9 @@
             .platform-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
-            .hero { padding: 120px 0 60px; }
-            .hero-title { font-size: 2.5rem; }
-            .compass-image { width: 220px; height: 220px; }
+            .hero { padding: 110px 0 40px; }
+            .hero-title { font-size: 2.3rem; }
+            .hero-subtitle { font-size: 1.15rem; }
             .nav-links { display: none; }
             .featured-article { padding: 30px 25px; }
             .featured-article h3 { font-size: 1.6rem; }
@@ -373,12 +373,12 @@
                 </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="family-coordination-app.html">Guides</a></li>
                     <li><a href="research.html">Research</a></li>
                     <li><a href="features.html">Features</a></li>
                     <li><a href="subscriptions.html">Subscription</a></li>
                     <li><a href="about-founder.html">Founder Story</a></li>
                     <li><a href="how-it-works.html">How It Works</a></li>
-                    <li><a href="family-coordination-app.html">Guides</a></li>
                     <li><a href="privacy.html">Privacy</a></li>
                     <li><a href="support.html">Support</a></li>
                 </ul>
@@ -389,62 +389,61 @@
     <main>
 
         <!-- ══ HERO ══ -->
-        <section class="hero" id="home" aria-label="AI Pieces home">
+        <section class="hero" id="home" aria-label="FamilyCompass home">
             <div class="container">
-                <div class="compass-container">
+                <a href="index.html" class="hero-brand-mark" aria-label="AI Pieces">
                     <picture>
                         <source srcset="compass-hero-600.webp" type="image/webp">
                         <img src="compass-hero-600.png"
-                             alt="AI Pieces brand emblem: a golden compass rose representing FamilyCompass, HealthCompass, CareCompass and EduCompass"
-                             class="compass-image"
+                             alt="AI Pieces brand emblem: a golden compass rose"
                              loading="eager"
-                             fetchpriority="high"
-                             width="300" height="300">
+                             width="56" height="56">
                     </picture>
+                    <span>AI Pieces</span>
+                </a>
+                <h1 class="hero-title">FamilyCompass — One Private App for Everything Your Family Shares</h1>
+                <p class="hero-subtitle">
+                    Replace separate location, calendar, messaging and care apps with a single
+                    end-to-end encrypted app. Coordinate your family — no one else sees your data.
+                </p>
+                <div class="hero-cta-row">
+                    <a href="#beta-signup-section" class="btn btn-primary">Join the FamilyCompass Beta</a>
+                    <a href="how-it-works.html" class="btn btn-secondary">See How It Works</a>
                 </div>
-                <h1 class="hero-title">AIPieces</h1>
-                <p class="hero-subtitle">Intelligent Coordination &amp; Care</p>
                 <div class="research-badge">Built on 40+ years of family relationship research</div>
             </div>
-        </section>
-
-        <!-- ══ PLATFORM INTRO ══ -->
-        <section class="platform-intro" aria-label="AI Pieces platform overview">
-            <div class="container">
-                <p>
-                    <strong>AI Pieces</strong> is a privacy-first coordination platform from Kerry, Ireland. We build four products —
-                    <strong>FamilyCompass</strong>, <strong>HealthCompass</strong>,
-                    <strong>CareCompass</strong>, and <strong>EduCompass</strong> — all sharing
-                    one military-grade encrypted foundation. No data selling. No surveillance.
-                    Your data stays yours.
-                </p>
-                <p class="platform-tagline">One encrypted platform · Four products · Four sectors</p>
+            <div class="hero-photo">
+                <picture>
+                    <source srcset="familypatio.webp" type="image/webp">
+                    <img src="familypatio.jpg"
+                         alt="Three generations of a family together outdoors"
+                         loading="eager"
+                         fetchpriority="high"
+                         width="1000" height="480">
+                </picture>
             </div>
         </section>
 
-        <!-- ══ 4 PRODUCT CARDS ══ -->
-        <section class="products-section" id="products" aria-label="AI Pieces products">
+        <!-- ══ FAMILYCOMPASS — LEAD PRODUCT ══ -->
+        <section class="fc-lead" id="familycompass" aria-label="FamilyCompass">
             <div class="container">
-                <div class="products-section-header">
-                    <h2>Four Products. One Platform.</h2>
-                    <p>
-                        <strong>FamilyCompass</strong>, <strong>HealthCompass</strong>,
-                        <strong>CareCompass</strong>, and <strong>EduCompass</strong> share
-                        one end-to-end encrypted codebase — delivering enterprise-grade security
-                        to every sector we serve.
-                    </p>
-                </div>
-
-                <div class="products-grid">
-
-                    <!-- FamilyCompass -->
-                    <article class="product-card family" aria-label="FamilyCompass">
+                <div class="fc-lead-grid">
+                    <div class="fc-lead-photo">
+                        <picture>
+                            <source srcset="mumteensofa.webp" type="image/webp">
+                            <img src="mumteensofa.jpg"
+                                 alt="A mother and her teenagers relaxing together on a sofa"
+                                 loading="lazy"
+                                 width="600" height="500">
+                        </picture>
+                    </div>
+                    <article class="fc-lead-card product-card family">
                         <span class="product-badge badge-beta">Beta Available — Summer 2026 Launch</span>
                         <h2 class="product-name">FamilyCompass</h2>
                         <p class="product-target">For privacy-conscious families &amp; military families</p>
                         <p class="product-description">
-                            The <strong>FamilyCompass app</strong> combines real-time GPS tracking, encrypted
-                            messaging, shared calendar, and emergency alerts —
+                            The <strong>FamilyCompass app</strong> combines real-time GPS location sharing, encrypted
+                            messaging, a shared calendar, and emergency alerts —
                             all end-to-end encrypted. Built on a zero-knowledge architecture: your family's
                             location is never accessible to us or anyone else.
                         </p>
@@ -462,6 +461,23 @@
                         <div class="product-cta-note">🚀 Currently in beta with testers across four countries. Join the waitlist for early access.</div>
                         <a href="#beta-signup-section" class="btn-product">Join FamilyCompass Beta</a>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ ALSO IN DEVELOPMENT — SECONDARY PRODUCTS ══ -->
+        <section class="products-section secondary-products" id="products" aria-label="Also in development from AI Pieces">
+            <div class="container">
+                <div class="products-section-header">
+                    <h2>Also in Development from AI Pieces</h2>
+                    <p>
+                        FamilyCompass shares its end-to-end encrypted foundation with three products built
+                        for institutions — <strong>HealthCompass</strong>, <strong>CareCompass</strong>,
+                        and <strong>EduCompass</strong>. These are earlier in development and open for pilots.
+                    </p>
+                </div>
+
+                <div class="products-grid">
 
                     <!-- HealthCompass -->
                     <article class="product-card health" aria-label="HealthCompass">
@@ -469,18 +485,17 @@
                         <h2 class="product-name">HealthCompass</h2>
                         <p class="product-target" style="color:#2e7d8a;">For hospital ICU, maternity &amp; paediatric departments</p>
                         <p class="product-description">
-                            <strong>HealthCompass</strong> is a HIPAA-compliant patient-family communication
-                            platform designed for hospital departments. It delivers encrypted family updates
-                            and real-time care notifications — without adding workload to already overstretched
-                            clinical staff.
+                            <strong>HealthCompass</strong> is a patient-family communication
+                            platform designed for hospital departments, built to meet HIPAA standards. It delivers
+                            encrypted family updates and real-time care notifications — without adding workload to
+                            already overstretched clinical staff.
                         </p>
                         <ul class="product-features" aria-label="HealthCompass features">
-                            <li>HIPAA-compliant encrypted family messaging</li>
+                            <li>Encrypted family messaging, designed to meet HIPAA standards</li>
                             <li>Real-time patient status updates for families</li>
                             <li>Significantly reduces repetitive family call volume</li>
                             <li>Removes admin burden from already overloaded staff</li>
                             <li>Integrates with existing hospital systems and workflows</li>
-                            <li>No more sitting at computers writing notes — mobile voice recording and photo-to-text (OCR) let staff capture updates instantly on the go</li>
                             <li>Family-facing mobile app — iOS &amp; Android</li>
                         </ul>
                         <div class="product-cta-note">📋 Register your interest — be among the first hospitals to pilot HealthCompass.</div>
@@ -504,7 +519,6 @@
                             <li>Medication and appointment notifications</li>
                             <li>Removes repetitive enquiry burden from already stretched staff</li>
                             <li>Integrates with existing care management workflows</li>
-                            <li>No more sitting at computers writing notes — mobile voice recording and photo-to-text (OCR) let carers capture updates instantly on the go</li>
                             <li>GDPR-compliant — scales from 20 to 200+ bed facilities</li>
                         </ul>
                         <div class="product-cta-note">📋 Register your interest — be among the first care homes to pilot CareCompass.</div>
@@ -525,7 +539,7 @@
                         <ul class="product-features" aria-label="EduCompass features">
                             <li>GDPR-compliant parent-teacher messaging</li>
                             <li>Shared school calendar &amp; event coordination</li>
-                            <li>Encrypted, auditable communications — fully compliant</li>
+                            <li>Encrypted, auditable communications</li>
                             <li>Student progress updates with family visibility</li>
                             <li>Removes daily communication admin burden from already busy teachers</li>
                             <li>Integrates with existing school management systems</li>
@@ -542,26 +556,26 @@
         <!-- ══ PLATFORM ADVANTAGES ══ -->
         <section class="platform-section" id="platform" aria-label="AI Pieces shared platform">
             <div class="container">
-                <h2 class="section-title">One Platform. Military-Grade Security. Four Verticals.</h2>
+                <h2 class="section-title">One Encrypted Platform. Four Products.</h2>
                 <p class="section-subtitle">
-                    All four AI Pieces products share a single encrypted codebase — delivering 70% code reuse
-                    and enterprise-grade security across every sector we serve.
+                    All four AI Pieces products share a single encrypted codebase — delivering high code reuse
+                    and consistent security engineering across every sector we serve.
                 </p>
                 <div class="platform-grid">
                     <div class="platform-card">
                         <div class="platform-icon">🔐</div>
                         <h3>AES-256 End-to-End Encryption</h3>
-                        <p>ECDH key exchange + Signal Protocol across all four products. Hardware-backed key storage via iOS Secure Enclave and Android StrongBox. Zero-knowledge architecture — even AI Pieces cannot read your data.</p>
+                        <p>Built with ECDH key exchange and the Signal Protocol, and hardware-backed key storage via iOS Secure Enclave and Android StrongBox. Designed around a zero-knowledge architecture — keys stay on your device, so AI Pieces cannot read your data.</p>
                     </div>
                     <div class="platform-card">
                         <div class="platform-icon">🏗️</div>
-                        <h3>70% Shared Codebase</h3>
-                        <p>React Native + Supabase backend. One platform serves four products — faster iteration, shared security hardening, and consistent enterprise-grade quality across every vertical.</p>
+                        <h3>Shared Encrypted Codebase</h3>
+                        <p>React Native + Supabase backend. One platform serves four products — faster iteration, shared security hardening, and consistent quality across every vertical.</p>
                     </div>
                     <div class="platform-card">
                         <div class="platform-icon">🌍</div>
-                        <h3>GDPR &amp; HIPAA Compliant</h3>
-                        <p>Built in Kerry, Ireland — inside the EU. GDPR-compliant from day one across all products. HealthCompass built to HIPAA standards. SOC 2 Type I/II certification in progress.</p>
+                        <h3>GDPR Compliant</h3>
+                        <p>Built in Kerry, Ireland — inside the EU. GDPR-compliant from day one across all products. HealthCompass is designed to meet HIPAA standards.</p>
                     </div>
                     <div class="platform-card">
                         <div class="platform-icon">📡</div>
@@ -571,7 +585,7 @@
                     <div class="platform-card">
                         <div class="platform-icon">🛡️</div>
                         <h3>Intrusion Detection Built In</h3>
-                        <p>Canary token monitoring, honeypot systems, and Row Level Security policies protect every user on every product. Unauthorised access attempts are detected and flagged automatically.</p>
+                        <p>Built with canary token monitoring, honeypot records, and Row Level Security policies designed to flag unauthorised access attempts across every product.</p>
                     </div>
                     <div class="platform-card">
                         <div class="platform-icon">📱</div>
