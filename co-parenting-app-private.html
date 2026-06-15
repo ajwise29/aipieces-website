@@ -10,9 +10,9 @@
   tool may suit them better. FamilyCompass is in beta and is NOT a legal
   evidence tool or a substitute for legal advice.
   ────────────────────────────────────────────────────────────────────
-  IMAGE PLACEHOLDERS: every <img> uses blog-family-hands.jpg as a stand-in.
-  SWAP for calm, warm images of a child with a parent — NO conflict
-  imagery. Update alt text to match when swapping.
+  IMAGES: real photos served via <picture> (WebP + optimised JPG
+  fallback), calm and cooperative — no conflict imagery. Hero is
+  girlmum.jpg; inline images are babydad and girlmum.
 -->
 <html lang="en">
 <head>
@@ -249,7 +249,10 @@
 
             <!-- PLACEHOLDER IMAGE — swap for a calm, warm photo of a child with a parent (NO conflict imagery) -->
             <figure class="hero-figure">
-                <img src="blog-family-hands.jpg" alt="A parent and child's hands together, calm and warm" loading="eager" decoding="async" width="1200" height="675">
+                <picture>
+                    <source srcset="girlmum.webp" type="image/webp">
+                    <img src="girlmum.jpg" alt="A mother and her daughter together outdoors" loading="eager" decoding="async" fetchpriority="high" width="1032" height="1600">
+                </picture>
                 <figcaption>Placeholder image — swap for a calm, warm photo of a child with a parent (1200×675).</figcaption>
             </figure>
 
@@ -265,7 +268,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for calm imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="A parent and child looking at a calendar together at home" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="babydad.webp" type="image/webp">
+                        <img src="babydad.jpg" alt="A father and his child at home" loading="lazy" decoding="async" width="1068" height="1600">
+                    </picture>
                     <figcaption>Placeholder image — calm, everyday coordination, not conflict.</figcaption>
                 </figure>
             </section>
@@ -286,7 +292,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for calm imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="Two parents amicably coordinating on their phones" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="girlmum.webp" type="image/webp">
+                        <img src="girlmum.jpg" alt="A mother and her daughter together outdoors" loading="lazy" decoding="async" width="1032" height="1600">
+                    </picture>
                     <figcaption>Placeholder image — cooperative, low-friction coordination.</figcaption>
                 </figure>
             </section>
@@ -308,7 +317,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for calm imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="A shared family calendar with a child's schedule" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="babydad.webp" type="image/webp">
+                        <img src="babydad.jpg" alt="A father and his child at home" loading="lazy" decoding="async" width="1068" height="1600">
+                    </picture>
                     <figcaption>Placeholder image — one shared calendar across two homes.</figcaption>
                 </figure>
             </section>

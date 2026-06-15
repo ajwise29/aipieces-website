@@ -15,8 +15,9 @@
   The app is explicitly NOT a medical device and NOT a substitute for a
   pharmacist, GP, or professional advice. Keep the disclaimers intact.
   ────────────────────────────────────────────────────────────────────
-  IMAGE PLACEHOLDERS: every <img> uses blog-family-hands.jpg as a
-  stand-in. SWAP for real warm, domestic imagery; update alt text.
+  IMAGES: real photos served via <picture> (WebP + optimised JPG
+  fallback). Hero is homemedication.jpg; inline images are
+  grannykidcooking and wheelchairgrandpafamily.
 -->
 <html lang="en">
 <head>
@@ -262,7 +263,10 @@
 
             <!-- PLACEHOLDER IMAGE — swap for a real warm, domestic family photo -->
             <figure class="hero-figure">
-                <img src="blog-family-hands.jpg" alt="Family members' hands together at a kitchen table" loading="eager" decoding="async" width="1200" height="675">
+                <picture>
+                    <source srcset="homemedication.webp" type="image/webp">
+                    <img src="homemedication.jpg" alt="An older man at home with a glass of water and his daily medication on the table" loading="eager" decoding="async" fetchpriority="high" width="1600" height="1067">
+                </picture>
                 <figcaption>Placeholder image — swap for a warm, domestic family photo (1200×675).</figcaption>
             </figure>
 
@@ -278,7 +282,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="A handwritten medication note on a kitchen counter" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="homemedication.webp" type="image/webp">
+                        <img src="homemedication.jpg" alt="An older man at home with a glass of water and his daily medication on the table" loading="lazy" decoding="async" width="1600" height="1067">
+                    </picture>
                     <figcaption>Placeholder image — the scattered-notes reality families know well.</figcaption>
                 </figure>
             </section>
@@ -299,7 +306,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="A phone showing a shared family medication record" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="grannykidcooking.webp" type="image/webp">
+                        <img src="grannykidcooking.jpg" alt="A grandparent and child in the kitchen at home" loading="lazy" decoding="async" width="1067" height="1600">
+                    </picture>
                     <figcaption>Placeholder image — one shared record everyone can read.</figcaption>
                 </figure>
             </section>
@@ -316,7 +326,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="Several family members each viewing the same shared record on their phones" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="wheelchairgrandpafamily.webp" type="image/webp">
+                        <img src="wheelchairgrandpafamily.jpg" alt="A family spending time with an older relative who uses a wheelchair" loading="lazy" decoding="async" width="1067" height="1600">
+                    </picture>
                     <figcaption>Placeholder image — care circles, with opt-in notifications.</figcaption>
                 </figure>
             </section>
@@ -333,7 +346,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="An older parent and a young child together at home" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="grannykidcooking.webp" type="image/webp">
+                        <img src="grannykidcooking.jpg" alt="A grandparent and child in the kitchen at home" loading="lazy" decoding="async" width="1067" height="1600">
+                    </picture>
                     <figcaption>Placeholder image — separate profiles across the generations.</figcaption>
                 </figure>
             </section>

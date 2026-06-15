@@ -3,10 +3,9 @@
   PILLAR PAGE · "How to Coordinate Care for an Elderly Parent"
   Built from content-page-template.html (static, crawler-first form).
   ────────────────────────────────────────────────────────────────────
-  IMAGE PLACEHOLDERS: every <img> on this page currently uses
-  blog-family-hands.jpg as a stand-in. SWAP THESE for real elderly-care
-  imagery (a parent with an adult child, a shared calendar, a medication
-  organiser, etc.) before/after launch. Update the alt text to match.
+  IMAGES: real photos served via <picture> (WebP + optimised JPG
+  fallback). Hero is wheelchairgrandpafamily.jpg; inline images are
+  grannykidcooking and mumgrandmakid.
   ────────────────────────────────────────────────────────────────────
   HONESTY NOTE: copy states FamilyCompass is in beta, is NOT a medical
   device, and does not replace professional care assessment. Medication
@@ -248,7 +247,10 @@
 
             <!-- PLACEHOLDER IMAGE — swap for real care imagery -->
             <figure class="hero-figure">
-                <img src="blog-family-hands.jpg" alt="An adult child holding the hands of an elderly parent" loading="eager" decoding="async" width="1200" height="675">
+                <picture>
+                    <source srcset="wheelchairgrandpafamily.webp" type="image/webp">
+                    <img src="wheelchairgrandpafamily.jpg" alt="An adult caring for an older family member who uses a wheelchair" loading="eager" decoding="async" fetchpriority="high" width="1067" height="1600">
+                </picture>
                 <figcaption>Placeholder image — swap for a warm, natural photo of a parent and adult child (1200×675).</figcaption>
             </figure>
 
@@ -264,7 +266,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real care imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="A family member writing notes while organising an elderly parent's care" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="grannykidcooking.webp" type="image/webp">
+                        <img src="grannykidcooking.jpg" alt="A grandparent and child preparing food together in a kitchen" loading="lazy" decoding="async" width="1067" height="1600">
+                    </picture>
                     <figcaption>Placeholder image — show the everyday reality of coordinating care.</figcaption>
                 </figure>
 
@@ -311,7 +316,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real care imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="An elderly parent and adult child looking at a phone together" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="mumgrandmakid.webp" type="image/webp">
+                        <img src="mumgrandmakid.jpg" alt="A mother, child and grandmother baking together in a kitchen" loading="lazy" decoding="async" width="1600" height="900">
+                    </picture>
                     <figcaption>Placeholder image — show consent and shared control, not surveillance.</figcaption>
                 </figure>
 

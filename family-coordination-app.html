@@ -8,9 +8,9 @@
   TODO comments for the Auditor session to fill once the target pages
   exist — do NOT hardcode hrefs to pages that don't exist yet.
   ────────────────────────────────────────────────────────────────────
-  IMAGE PLACEHOLDERS: every <img> uses blog-family-hands.jpg as a
-  stand-in. SWAP for real imagery — the hero wants a MULTI-GENERATIONAL
-  family photo. Update alt text to match when swapping.
+  IMAGES: real photos served via <picture> (WebP + optimised JPG
+  fallback). Hero is familypatio.jpg (multi-generational); inline images
+  are grannykidcooking, mumgrandmakid, wheelchairgrandpafamily and babydad.
   ────────────────────────────────────────────────────────────────────
   HONESTY NOTE: copy states FamilyCompass is in beta, is NOT a medical
   device, and does not replace professional care. Health/medication
@@ -251,7 +251,10 @@
 
             <!-- PLACEHOLDER IMAGE — swap for a real MULTI-GENERATIONAL family photo -->
             <figure class="hero-figure">
-                <img src="blog-family-hands.jpg" alt="Several generations of one family with their hands joined together" loading="eager" decoding="async" width="1200" height="675">
+                <picture>
+                    <source srcset="familypatio.webp" type="image/webp">
+                    <img src="familypatio.jpg" alt="Three generations of a family sitting together outdoors" loading="eager" decoding="async" fetchpriority="high" width="1600" height="1067">
+                </picture>
                 <figcaption>Placeholder image — swap for a warm, multi-generational family photo (1200×675).</figcaption>
             </figure>
 
@@ -267,7 +270,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="A phone showing a shared family calendar and messages" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="grannykidcooking.webp" type="image/webp">
+                        <img src="grannykidcooking.jpg" alt="A grandparent and child preparing food together in a kitchen" loading="lazy" decoding="async" width="1067" height="1600">
+                    </picture>
                     <figcaption>Placeholder image — show the single shared app in everyday use.</figcaption>
                 </figure>
             </section>
@@ -296,7 +302,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="People of different ages using a shared family app together" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="mumgrandmakid.webp" type="image/webp">
+                        <img src="mumgrandmakid.jpg" alt="A mother, child and grandmother baking together in a kitchen" loading="lazy" decoding="async" width="1600" height="900">
+                    </picture>
                     <figcaption>Placeholder image — show the breadth of who it serves.</figcaption>
                 </figure>
             </section>
@@ -315,7 +324,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="A parent and child sharing a phone, with a lock icon suggesting privacy" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="wheelchairgrandpafamily.webp" type="image/webp">
+                        <img src="wheelchairgrandpafamily.jpg" alt="A family spending time with an older relative who uses a wheelchair" loading="lazy" decoding="async" width="1067" height="1600">
+                    </picture>
                     <figcaption>Placeholder image — convey privacy and trust, not fear.</figcaption>
                 </figure>
             </section>
@@ -338,7 +350,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="A tidy phone home screen with one family app instead of many" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="babydad.webp" type="image/webp">
+                        <img src="babydad.jpg" alt="A father holding his baby" loading="lazy" decoding="async" width="1068" height="1600">
+                    </picture>
                     <figcaption>Placeholder image — the consolidation story, one app instead of many.</figcaption>
                 </figure>
             </section>

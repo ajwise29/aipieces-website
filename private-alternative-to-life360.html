@@ -3,9 +3,9 @@
   SPOKE PAGE · "A Private Alternative to Life360 for Families"
   Built from content-page-template.html (static, crawler-first form).
   ────────────────────────────────────────────────────────────────────
-  IMAGE PLACEHOLDERS: every <img> uses blog-family-hands.jpg as a
-  stand-in. SWAP for real imagery — hero wants a warm family-with-phones
-  photo. Update alt text to match when swapping.
+  IMAGES: real photos served via <picture> (WebP + optimised JPG
+  fallback). Hero is mumteensofa.jpg; inline images are familypatio
+  and girlmum.
   ────────────────────────────────────────────────────────────────────
   HONESTY NOTE: Life360 is described neutrally on facts only — no unfair
   disparagement. FamilyCompass is stated as in beta, no app-store listing
@@ -262,7 +262,10 @@
 
             <!-- PLACEHOLDER IMAGE — swap for a real warm family-with-phones photo -->
             <figure class="hero-figure">
-                <img src="blog-family-hands.jpg" alt="A family staying connected, hands joined together" loading="eager" decoding="async" width="1200" height="675">
+                <picture>
+                    <source srcset="mumteensofa.webp" type="image/webp">
+                    <img src="mumteensofa.jpg" alt="A mother and teenager relaxing together on a sofa at home" loading="eager" decoding="async" fetchpriority="high" width="1600" height="1067">
+                </picture>
                 <figcaption>Placeholder image — swap for a warm photo of a family staying connected (1200×675).</figcaption>
             </figure>
 
@@ -278,7 +281,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="A parent checking a family location app on a phone" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="familypatio.webp" type="image/webp">
+                        <img src="familypatio.jpg" alt="Three generations of a family sitting together outdoors" loading="lazy" decoding="async" width="1600" height="1067">
+                    </picture>
                     <figcaption>Placeholder image — the everyday reason families compare options.</figcaption>
                 </figure>
             </section>
@@ -295,7 +301,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="A phone showing an encrypted, family-only location view" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="girlmum.webp" type="image/webp">
+                        <img src="girlmum.jpg" alt="A mother and her daughter together outdoors" loading="lazy" decoding="async" width="1032" height="1600">
+                    </picture>
                     <figcaption>Placeholder image — convey encryption and family-only access.</figcaption>
                 </figure>
             </section>
@@ -312,7 +321,10 @@
 
                 <!-- PLACEHOLDER IMAGE — swap for real imagery -->
                 <figure class="inline-figure">
-                    <img src="blog-family-hands.jpg" alt="A shared family calendar and messages next to a map view" loading="lazy" decoding="async" width="900" height="600">
+                    <picture>
+                        <source srcset="familypatio.webp" type="image/webp">
+                        <img src="familypatio.jpg" alt="Three generations of a family sitting together outdoors" loading="lazy" decoding="async" width="1600" height="1067">
+                    </picture>
                     <figcaption>Placeholder image — show it's more than a map.</figcaption>
                 </figure>
             </section>
