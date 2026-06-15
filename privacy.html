@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — AI Pieces | FamilyCompass End-to-End Encryption &amp; Zero-Knowledge Architecture</title>
+    <meta name="description" content="FamilyCompass privacy policy. AES-256-GCM encryption, Signal Protocol messaging, zero-knowledge architecture. GDPR (EU), UK GDPR / DPA 2018, COPPA compliant. Your data cannot be accessed by AI Pieces — by design.">
+    <meta name="keywords" content="FamilyCompass privacy, end-to-end encryption, AES-256, GDPR, UK GDPR, COPPA, zero-knowledge, Signal Protocol, data protection, AI Pieces privacy policy">
+    <meta name="author" content="AI Pieces Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipieces.org/privacy.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aipieces.org/privacy.html">
+    <meta property="og:title" content="Privacy Policy — AI Pieces">
+    <meta property="og:description" content="Zero-knowledge architecture. AES-256-GCM. Signal Protocol. GDPR, UK GDPR, COPPA. We cannot read your data — architectural fact, not policy promise.">
+    <meta property="og:image" content="https://aipieces.org/compass.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold:        #8b6914;
+            --gold-light:  #d4af37;
+            --gold-pale:   #f5e9c4;
+            --brown-deep:  #3d2e1e;
+            --brown-mid:   #5a4a3a;
+            --cream:       #f5f1e8;
+            --cream-dark:  #e8ddd4;
+            --blue-cite:   #2c5f8a;
+            --blue-tech:   #1e4d78;
+            --teal:        #1a6b6b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            min-height: 100vh;
+            color: var(--brown-mid);
+            line-height: 1.7;
+        }
+
+        .container        { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .container-narrow { max-width: 860px;  margin: 0 auto; padding: 0 20px; }
+        .container-text   { max-width: 740px;  margin: 0 auto; padding: 0 20px; }
+
+        /* ── HEADER ── */
+        .header {
+            padding: 20px 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: -apple-system, sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); letter-spacing: 1px; text-decoration: none; }
+        .trust-badge {
+            background: rgba(139,105,20,0.1); color: var(--gold);
+            padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;
+            font-weight: 600; margin-left: 10px; font-family: -apple-system, sans-serif;
+        }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { font-family: -apple-system, sans-serif; text-decoration: none; color: var(--brown-mid); font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* ── HERO ── */
+        .hero {
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '§';
+            position: absolute;
+            top: 20px; right: -80px;
+            font-family: 'Playfair Display', serif;
+            font-size: 50rem;
+            color: rgba(139,105,20,0.025);
+            line-height: 1;
+            pointer-events: none;
+        }
+        .hero-eyebrow {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.78rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3px;
+            color: var(--gold); margin-bottom: 18px;
+        }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem; font-weight: 900; line-height: 1.1;
+            color: var(--brown-deep); margin-bottom: 24px;
+        }
+        .hero-title em { color: var(--gold); font-style: italic; }
+        .hero-sub {
+            font-size: 1.15rem; color: var(--brown-mid);
+            max-width: 640px; margin: 0 auto 45px; line-height: 1.75;
+        }
+
+        .compliance-strip {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+            margin-bottom: 20px;
+        }
+        .compliance-pill {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 1px; text-transform: uppercase;
+            padding: 7px 18px; border-radius: 50px;
+            background: rgba(139,105,20,0.1);
+            border: 1px solid rgba(139,105,20,0.25);
+            color: var(--gold);
+        }
+        .compliance-pill.tech {
+            background: rgba(28,78,120,0.08);
+            border-color: rgba(28,78,120,0.2);
+            color: var(--blue-tech);
+        }
+
+        /* ── SECTION CHROME ── */
+        .section-rule { border: none; border-top: 2px solid var(--gold); width: 60px; margin-bottom: 12px; opacity: 0.35; }
+        .section-number { font-family: -apple-system, sans-serif; font-size: 0.78rem; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 700; color: var(--brown-deep); line-height: 1.15; margin-bottom: 16px; }
+        .section-title em { color: var(--gold); font-style: italic; }
+        .section-lead { font-size: 1.05rem; color: var(--brown-mid); max-width: 720px; line-height: 1.8; margin-bottom: 50px; }
+
+        /* ── ARCHITECTURE OVERVIEW ── */
+        .arch-band {
+            background: var(--brown-deep);
+            padding: 80px 0;
+        }
+        .arch-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 2px; border-radius: 20px; overflow: hidden;
+            background: rgba(255,255,255,0.05);
+        }
+        .arch-cell {
+            padding: 36px 28px;
+            background: rgba(255,255,255,0.04);
+            transition: background 0.3s;
+        }
+        .arch-cell:hover { background: rgba(255,255,255,0.08); }
+        .arch-cell-label {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.68rem; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--gold-light);
+            margin-bottom: 14px; opacity: 0.7;
+        }
+        .arch-cell h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem; color: white; margin-bottom: 12px;
+        }
+        .arch-cell p {
+            font-size: 0.88rem; color: rgba(255,255,255,0.65);
+            line-height: 1.65;
+        }
+        .arch-cell-tag {
+            display: inline-block; margin-top: 16px;
+            font-family: -apple-system, sans-serif;
+            font-size: 0.68rem; font-weight: 700;
+            padding: 4px 10px; border-radius: 4px;
+            background: rgba(212,175,55,0.15); color: var(--gold-light);
+            letter-spacing: 0.5px;
+        }
+        .arch-cell-tag.blue {
+            background: rgba(44,95,138,0.25); color: #7ab3d4;
+        }
+
+        /* ── MAIN POLICY CONTENT ── */
+        .policy-band { padding: 90px 0; }
+        .policy-band:nth-child(even) { background: rgba(255,255,255,0.35); }
+
+        .policy-block { margin-bottom: 60px; }
+        .policy-block:last-child { margin-bottom: 0; }
+
+        .policy-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem; font-weight: 700;
+            color: var(--brown-deep); margin-bottom: 20px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid rgba(139,105,20,0.15);
+            display: flex; align-items: baseline; gap: 14px;
+        }
+        .policy-heading-num {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.72rem; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--gold); opacity: 0.8;
+            white-space: nowrap;
+        }
+
+        .policy-body {
+            font-size: 1.02rem; color: var(--brown-mid);
+            line-height: 1.85; margin-bottom: 20px;
+        }
+        .policy-body a {
+            color: var(--blue-cite);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--blue-cite);
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .policy-body a:hover { color: var(--gold); border-color: var(--gold); }
+
+        .policy-list {
+            list-style: none; margin: 16px 0 20px; padding: 0;
+        }
+        .policy-list li {
+            font-size: 0.98rem; color: var(--brown-mid);
+            line-height: 1.7; padding: 9px 0 9px 24px;
+            border-bottom: 1px solid rgba(139,105,20,0.07);
+            position: relative;
+        }
+        .policy-list li:last-child { border-bottom: none; }
+        .policy-list li::before {
+            content: '→';
+            position: absolute; left: 0;
+            color: var(--gold); font-size: 0.85rem;
+        }
+        .policy-list li strong {
+            font-weight: 600; color: var(--brown-deep);
+        }
+        .policy-list li a {
+            color: var(--blue-cite);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--blue-cite);
+        }
+        .policy-list li a:hover { color: var(--gold); }
+
+        /* ── CALLOUT BOXES ── */
+        .callout {
+            border-radius: 16px; padding: 26px 30px;
+            margin: 24px 0;
+        }
+        .callout-legal {
+            background: rgba(139,105,20,0.07);
+            border-left: 4px solid var(--gold);
+        }
+        .callout-tech {
+            background: rgba(28,78,120,0.06);
+            border-left: 4px solid var(--blue-tech);
+        }
+        .callout-zero {
+            background: rgba(26,107,107,0.07);
+            border-left: 4px solid var(--teal);
+        }
+        .callout-label {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.68rem; font-weight: 800; letter-spacing: 2px;
+            text-transform: uppercase; margin-bottom: 10px;
+        }
+        .callout-legal .callout-label { color: var(--gold); }
+        .callout-tech   .callout-label { color: var(--blue-tech); }
+        .callout-zero   .callout-label { color: var(--teal); }
+        .callout h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem; color: var(--brown-deep); margin-bottom: 10px;
+        }
+        .callout p {
+            font-size: 0.93rem; color: var(--brown-mid); line-height: 1.7; margin-bottom: 10px;
+        }
+        .callout p:last-child { margin-bottom: 0; }
+        .callout a {
+            color: var(--blue-cite); text-decoration: none;
+            border-bottom: 1px dotted var(--blue-cite);
+        }
+        .callout a:hover { color: var(--gold); }
+
+        /* ── RIGHTS TABLE ── */
+        .rights-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 18px; margin: 24px 0;
+        }
+        .right-card {
+            background: white; border-radius: 14px;
+            padding: 24px 22px;
+            border-top: 3px solid var(--gold);
+            box-shadow: 0 3px 14px rgba(139,105,20,0.07);
+            transition: transform 0.25s;
+        }
+        .right-card:hover { transform: translateY(-4px); }
+        .right-card h4 {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.88rem; font-weight: 700; color: var(--brown-deep);
+            margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .right-card p { font-size: 0.87rem; color: var(--brown-mid); line-height: 1.6; margin-bottom: 8px; }
+        .right-card .cite {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.7rem; color: var(--blue-cite);
+        }
+        .right-card .cite a { color: var(--blue-cite); text-decoration: none; }
+
+        /* ── JURISDICTION TABS ── */
+        .jurisdiction-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 0; border-radius: 16px; overflow: hidden;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.07);
+            margin: 30px 0 50px;
+        }
+        .jurisdiction-cell {
+            background: white; padding: 30px 24px;
+            border-right: 1px solid rgba(139,105,20,0.1);
+        }
+        .jurisdiction-cell:last-child { border-right: none; }
+        .jurisdiction-flag {
+            font-size: 1.8rem; margin-bottom: 10px;
+        }
+        .jurisdiction-name {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.72rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 1.5px;
+            color: var(--gold); margin-bottom: 10px;
+        }
+        .jurisdiction-cell h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem; color: var(--brown-deep); margin-bottom: 12px;
+        }
+        .jurisdiction-cell ul { list-style: none; padding: 0; }
+        .jurisdiction-cell ul li {
+            font-size: 0.85rem; color: var(--brown-mid);
+            padding: 5px 0; border-bottom: 1px solid rgba(139,105,20,0.06);
+            line-height: 1.5;
+        }
+        .jurisdiction-cell ul li:last-child { border-bottom: none; }
+        .jurisdiction-cell ul li a { color: var(--blue-cite); text-decoration: none; font-size: 0.8rem; }
+        .jurisdiction-cell ul li a:hover { color: var(--gold); }
+
+        /* ── CRYPTO TABLE ── */
+        .crypto-table {
+            width: 100%; border-collapse: collapse;
+            margin: 24px 0; border-radius: 12px;
+            overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .crypto-table thead { background: var(--brown-deep); }
+        .crypto-table thead th {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; color: rgba(255,255,255,0.65);
+            padding: 14px 18px; text-align: left;
+        }
+        .crypto-table tbody tr { background: white; border-bottom: 1px solid rgba(139,105,20,0.08); }
+        .crypto-table tbody tr:nth-child(even) { background: rgba(245,241,232,0.5); }
+        .crypto-table tbody tr:last-child { border-bottom: none; }
+        .crypto-table tbody td {
+            padding: 14px 18px; font-size: 0.88rem; color: var(--brown-mid); line-height: 1.5;
+        }
+        .crypto-table tbody td:first-child { font-weight: 700; color: var(--brown-deep); font-family: 'Courier New', monospace; font-size: 0.82rem; }
+        .crypto-table tbody td a { color: var(--blue-cite); text-decoration: none; font-size: 0.8rem; }
+        .crypto-table tbody td a:hover { color: var(--gold); }
+        .std-tag {
+            display: inline-block;
+            font-family: -apple-system, sans-serif;
+            font-size: 0.65rem; font-weight: 700;
+            padding: 2px 7px; border-radius: 3px;
+            background: rgba(44,95,138,0.1); color: var(--blue-tech);
+            letter-spacing: 0.5px; margin-left: 6px;
+        }
+
+        /* ── KEY STORAGE ── */
+        .hardware-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 20px; margin: 20px 0;
+        }
+        .hardware-card {
+            background: white; border-radius: 14px; padding: 26px 22px;
+            border: 1px solid rgba(139,105,20,0.12);
+            box-shadow: 0 3px 14px rgba(0,0,0,0.05);
+        }
+        .hardware-card-logo {
+            font-size: 1.8rem; margin-bottom: 10px;
+        }
+        .hardware-card h4 {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.88rem; font-weight: 700; color: var(--brown-deep);
+            margin-bottom: 8px;
+        }
+        .hardware-card p { font-size: 0.87rem; color: var(--brown-mid); line-height: 1.6; margin-bottom: 8px; }
+        .hardware-card a { color: var(--blue-cite); text-decoration: none; font-size: 0.78rem; }
+        .hardware-card a:hover { color: var(--gold); }
+
+        /* ── CONTACT BAND ── */
+        .contact-band {
+            background: linear-gradient(135deg, var(--brown-deep), #2c1a0e);
+            padding: 80px 0; text-align: center;
+        }
+        .contact-band h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem; color: var(--gold-light); margin-bottom: 16px;
+        }
+        .contact-band p { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 35px; line-height: 1.7; }
+
+        .contact-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 20px; max-width: 700px; margin: 0 auto;
+        }
+        .contact-item {
+            background: rgba(255,255,255,0.06);
+            border-radius: 14px; padding: 22px 18px; text-align: center;
+        }
+        .contact-item h4 {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px;
+        }
+        .contact-item a {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.88rem; color: var(--gold-light);
+            text-decoration: none;
+        }
+        .contact-item a:hover { text-decoration: underline; }
+
+        /* ── FOOTER ── */
+        .footer { background: rgba(0,0,0,0.1); padding: 60px 0 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { font-family: -apple-system, sans-serif; color: var(--gold); font-size: 1.1rem; margin-bottom: 15px; font-weight: 600; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+        .footer-links a { font-family: -apple-system, sans-serif; color: var(--brown-mid); text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: var(--brown-mid); font-family: -apple-system, sans-serif; }
+
+        html { scroll-behavior: smooth; }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 960px) {
+            .arch-grid { grid-template-columns: 1fr 1fr; }
+            .jurisdiction-grid { grid-template-columns: 1fr; }
+            .rights-grid { grid-template-columns: 1fr; }
+            .hardware-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.6rem; }
+            .section-title { font-size: 2rem; }
+            .nav-links { display: none; }
+            .arch-grid { grid-template-columns: 1fr; }
+            .crypto-table { font-size: 0.82rem; }
+            .crypto-table tbody td, .crypto-table thead th { padding: 10px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── HEADER ── -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html" class="logo">
+                    AIPieces
+                    <span class="trust-badge">Privacy First</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                    <li><a href="about-founder.html">Founder Story</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ── HERO ── -->
+        <section class="hero">
+            <div class="container-narrow" style="text-align:center;">
+                <p class="hero-eyebrow">Privacy Policy · AI Pieces Ltd · FamilyCompass</p>
+                <h1 class="hero-title">We cannot read<br>your data. <em>By design.</em></h1>
+                <p class="hero-sub">This is not a policy promise. It is an architectural fact. FamilyCompass uses zero-knowledge end-to-end encryption: cryptographic keys are generated and stored on your device hardware. AI Pieces, as a company, has no mechanism to access your family's location, messages, or calendar — even under legal compulsion.</p>
+
+                <div class="compliance-strip">
+                    <span class="compliance-pill">EU GDPR · Regulation 2016/679</span>
+                    <span class="compliance-pill">UK GDPR · DPA 2018</span>
+                    <span class="compliance-pill">US COPPA · FTC Rule</span>
+                    <span class="compliance-pill">GDPR Art. 25 · Privacy by Design</span>
+                </div>
+                <div class="compliance-strip" style="margin-top:0;">
+                    <span class="compliance-pill tech">AES-256-GCM · NIST FIPS 197</span>
+                    <span class="compliance-pill tech">Signal Protocol · X3DH + Double Ratchet</span>
+                    <span class="compliance-pill tech">ECDH P-256 · RFC 6090</span>
+                    <span class="compliance-pill tech">TLS 1.3 · RFC 8446</span>
+                    <span class="compliance-pill tech">iOS Secure Enclave · Android StrongBox</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── ARCHITECTURE SUMMARY ── -->
+        <section class="arch-band">
+            <div class="container">
+                <h2 style="font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold-light);text-align:center;margin-bottom:8px;">Zero-knowledge architecture.</h2>
+                <p style="font-family:'Source Serif 4',serif;text-align:center;color:rgba(255,255,255,0.6);margin-bottom:40px;font-size:0.95rem;">Three cryptographic layers. One result: your data is yours alone.</p>
+                <div class="arch-grid">
+                    <div class="arch-cell">
+                        <p class="arch-cell-label">Layer 01 · Key Generation</p>
+                        <h3>Hardware-Backed Key Storage</h3>
+                        <p>Cryptographic keys are generated inside the device's secure hardware enclave — iOS Secure Enclave or Android StrongBox. Keys never exist in application memory and cannot be extracted by software, including by AI Pieces code.</p>
+                        <span class="arch-cell-tag">Secure Enclave · StrongBox</span>
+                    </div>
+                    <div class="arch-cell">
+                        <p class="arch-cell-label">Layer 02 · Messaging Encryption</p>
+                        <h3>Signal Protocol End-to-End</h3>
+                        <p>All messages, voice calls, and video calls use the Signal Protocol: X3DH key agreement for session establishment, Double Ratchet algorithm for forward secrecy and post-compromise security, and per-message unique keys that are discarded after use.</p>
+                        <span class="arch-cell-tag blue">X3DH · Double Ratchet · PQXDH</span>
+                    </div>
+                    <div class="arch-cell">
+                        <p class="arch-cell-label">Layer 03 · Data at Rest &amp; Transit</p>
+                        <h3>AES-256-GCM + TLS 1.3</h3>
+                        <p>Location data, calendar events, and all stored family data are encrypted at rest using AES-256-GCM — a 256-bit symmetric authenticated encryption with associated data (AEAD) cipher. All transmission uses TLS 1.3, the current IETF standard for transport security.</p>
+                        <span class="arch-cell-tag">FIPS 197 · RFC 8446</span>
+                    </div>
+                    <div class="arch-cell">
+                        <p class="arch-cell-label">Layer 04 · Key Exchange</p>
+                        <h3>ECDH P-256 Key Agreement</h3>
+                        <p>Family group key exchange uses Elliptic Curve Diffie-Hellman (ECDH) over NIST P-256. Shared secrets are derived from public-key cryptography — no pre-shared secrets, no server-mediated key material. The server facilitates connection; it never sees plaintext keys.</p>
+                        <span class="arch-cell-tag blue">NIST SP 800-56A · RFC 6090</span>
+                    </div>
+                    <div class="arch-cell">
+                        <p class="arch-cell-label">Layer 05 · Database Security</p>
+                        <h3>Supabase RLS + Row-Level Encryption</h3>
+                        <p>The database enforces PostgreSQL Row Level Security (RLS) policies: no query can return a row belonging to a family other than the authenticated user's own. All sensitive columns store ciphertext, not plaintext, so even direct database access reveals no readable data.</p>
+                        <span class="arch-cell-tag">Postgres RLS · AES-256</span>
+                    </div>
+                    <div class="arch-cell">
+                        <p class="arch-cell-label">Layer 06 · Intrusion Detection</p>
+                        <h3>Canary Tokens + Honeypot Architecture</h3>
+                        <p>The system deploys canary tokens and honeypot entries throughout the database. Any unauthorised access attempt that traverses these records triggers an immediate alert — detecting intrusions that would otherwise be silent. This architecture exceeds standard security monitoring requirements.</p>
+                        <span class="arch-cell-tag">NIST SP 800-61 · Incident Detection</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── MAIN POLICY ── -->
+        <section class="policy-band">
+            <div class="container-text">
+                <hr class="section-rule">
+                <p class="section-number">Detailed Policy</p>
+                <h2 class="section-title" style="margin-bottom:14px;">Full Privacy Policy</h2>
+                <p style="font-family:-apple-system,sans-serif;font-size:0.8rem;color:var(--brown-mid);margin-bottom:50px;">
+                    <strong>Effective date:</strong> 26 February 2026 &nbsp;·&nbsp;
+                    <strong>Version:</strong> 3.0 &nbsp;·&nbsp;
+                    <strong>Data controller:</strong> AI Pieces Ltd, Kerry, Ireland &nbsp;·&nbsp;
+                    <strong>ICO Registration:</strong> Pending (UK) &nbsp;·&nbsp;
+                    <strong>DPC Registration:</strong> Pending (IE)
+                </p>
+
+                <!-- §1 Controller -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 1</span>
+                        Data Controller Identity
+                    </h3>
+                    <p class="policy-body">
+                        The data controller for FamilyCompass is <strong>AI Pieces Ltd</strong>, a company incorporated in Ireland, operating under the jurisdiction of the Data Protection Commission (DPC) of Ireland as the EU supervisory authority, and the Information Commissioner's Office (ICO) as the UK supervisory authority for UK data subjects.
+                    </p>
+                    <p class="policy-body">
+                        AI Pieces Ltd is subject to <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng" target="_blank" rel="noopener">Regulation (EU) 2016/679 (GDPR)</a>, the <a href="https://www.gov.uk/data-protection" target="_blank" rel="noopener">UK General Data Protection Regulation and Data Protection Act 2018</a>, and the United States Federal Trade Commission's <a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa" target="_blank" rel="noopener">Children's Online Privacy Protection Rule (COPPA)</a> in respect of its US users.
+                    </p>
+                    <div class="callout callout-legal">
+                        <p class="callout-label">Jurisdictional Note</p>
+                        <h4>Three regulatory frameworks, one standard of protection.</h4>
+                        <p>FamilyCompass is in active beta in the EU (Ireland, and other member states), the United Kingdom, and the United States. The most protective standard across all three frameworks is applied to all users regardless of location. Where EU GDPR, UK GDPR/DPA 2018, and US COPPA/FTC standards diverge, we implement the highest standard available.</p>
+                    </div>
+                </div>
+
+                <!-- §2 Jurisdictions -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 2</span>
+                        Applicable Law by Jurisdiction
+                    </h3>
+                    <div class="jurisdiction-grid">
+                        <div class="jurisdiction-cell">
+                            <div class="jurisdiction-flag">🇪🇺</div>
+                            <div class="jurisdiction-name">European Union</div>
+                            <h3>EU GDPR</h3>
+                            <ul>
+                                <li><a href="https://gdpr-info.eu/" target="_blank" rel="noopener">Regulation (EU) 2016/679</a> — full text</li>
+                                <li><a href="https://gdpr-info.eu/art-5-gdpr/" target="_blank" rel="noopener">Article 5</a> — Principles of processing</li>
+                                <li><a href="https://gdpr-info.eu/art-25-gdpr/" target="_blank" rel="noopener">Article 25</a> — Privacy by design &amp; default</li>
+                                <li><a href="https://gdpr-info.eu/art-32-gdpr/" target="_blank" rel="noopener">Article 32</a> — Security of processing</li>
+                                <li><a href="https://gdpr-info.eu/art-17-gdpr/" target="_blank" rel="noopener">Article 17</a> — Right to erasure</li>
+                                <li><a href="https://gdpr-info.eu/art-20-gdpr/" target="_blank" rel="noopener">Article 20</a> — Right to portability</li>
+                                <li>Supervisory authority: <a href="https://www.dataprotection.ie/" target="_blank" rel="noopener">DPC Ireland</a></li>
+                            </ul>
+                        </div>
+                        <div class="jurisdiction-cell">
+                            <div class="jurisdiction-flag">🇬🇧</div>
+                            <div class="jurisdiction-name">United Kingdom</div>
+                            <h3>UK GDPR / DPA 2018</h3>
+                            <ul>
+                                <li><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener">UK GDPR — ICO guidance</a></li>
+                                <li><a href="https://ico.org.uk/about-the-ico/what-we-do/legislation-we-cover/data-protection-act-2018/" target="_blank" rel="noopener">Data Protection Act 2018</a></li>
+                                <li><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/a-guide-to-lawful-basis/" target="_blank" rel="noopener">Lawful bases for processing</a></li>
+                                <li>Max fine: £17.5m or 4% global turnover</li>
+                                <li><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/" target="_blank" rel="noopener">Individual rights framework</a></li>
+                                <li>EU adequacy decision: granted 2021</li>
+                                <li>Supervisory authority: <a href="https://ico.org.uk/" target="_blank" rel="noopener">ICO</a></li>
+                            </ul>
+                        </div>
+                        <div class="jurisdiction-cell">
+                            <div class="jurisdiction-flag">🇺🇸</div>
+                            <div class="jurisdiction-name">United States</div>
+                            <h3>COPPA / FTC</h3>
+                            <ul>
+                                <li><a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa" target="_blank" rel="noopener">COPPA Rule — 16 CFR Part 312</a></li>
+                                <li><a href="https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions" target="_blank" rel="noopener">FTC COPPA compliance guide</a></li>
+                                <li><a href="https://www.ftc.gov/news-events/news/press-releases/2024/01/ftc-order-prohibits-data-broker-outlogic-formerly-x-mode-social-selling-sensitive-location-data" target="_blank" rel="noopener">FTC ban: X-Mode location data (2024)</a></li>
+                                <li>Verifiable parental consent required &lt;13</li>
+                                <li>No behavioural advertising to children</li>
+                                <li>Supervisory authority: <a href="https://www.ftc.gov/" target="_blank" rel="noopener">FTC</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- §3 Lawful Basis -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 3</span>
+                        Lawful Basis for Processing
+                    </h3>
+                    <p class="policy-body">
+                        Under <a href="https://gdpr-info.eu/art-6-gdpr/" target="_blank" rel="noopener">GDPR Article 6</a>, every processing activity requires a documented lawful basis. AI Pieces relies on the following:
+                    </p>
+                    <ul class="policy-list">
+                        <li><strong>Contract performance (Art. 6(1)(b)):</strong> Account creation, family group management, location sharing, calendar synchronisation, and messaging are necessary to perform the FamilyCompass service contract.</li>
+                        <li><strong>Explicit consent (Art. 6(1)(a) / Art. 9(2)(a)):</strong> Real-time GPS location sharing, biometric authentication enrolment, and health-adjacent data (elderly care monitoring, baby development tracking) require explicit, granular, revocable consent at the point of enabling each feature.</li>
+                        <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> Security monitoring, fraud prevention, and technical logging — balanced against user rights, with interests assessment documented and available on request.</li>
+                        <li><strong>Legal obligation (Art. 6(1)(c)):</strong> Retention of certain records where required by applicable law in Ireland, the UK, or the US.</li>
+                    </ul>
+                    <div class="callout callout-legal">
+                        <p class="callout-label">Special Category Data — GDPR Art. 9</p>
+                        <h4>Health and location data receive the highest legal protection.</h4>
+                        <p>Precise GPS location data, elderly care health monitoring outputs, and baby developmental data may constitute special category data under <a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank" rel="noopener">GDPR Article 9</a>. AI Pieces processes this data only on the basis of <strong>explicit consent</strong> (Art. 9(2)(a)). Consent is granular, specific, revocable at any time, and documented with timestamp and version of the consent text accepted. Withdrawal of consent does not affect the lawfulness of prior processing.</p>
+                    </div>
+                </div>
+
+                <!-- §4 Data We Process -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 4</span>
+                        Personal Data Processed
+                    </h3>
+                    <p class="policy-body">FamilyCompass processes the following categories of personal data, each with a documented purpose, retention period, and lawful basis:</p>
+                    <ul class="policy-list">
+                        <li><strong>Identity data:</strong> Display name, email address, family role. Purpose: account management and family group membership. Retention: duration of account plus 30 days after deletion request.</li>
+                        <li><strong>Location data:</strong> Real-time GPS coordinates, geofence trigger events, last-known location. Encrypted end-to-end — not readable by AI Pieces. Purpose: family compass feature. Consent-gated. Retention: configurable by user; default 24-hour rolling window.</li>
+                        <li><strong>Communication content:</strong> Messages, call metadata, shared media. Encrypted end-to-end using Signal Protocol. Content is not accessible to AI Pieces. Metadata (timestamp, sender ID — not content) retained for 72 hours for delivery assurance.</li>
+                        <li><strong>Calendar data:</strong> Events, schedules, availability. Encrypted at rest. Synced with device calendar only with explicit user permission. Retention: duration of account.</li>
+                        <li><strong>Technical data:</strong> App version, device OS type (not device ID), crash reports (anonymised). Purpose: service quality. No advertising identifiers are collected or processed.</li>
+                        <li><strong>Children's data (where applicable):</strong> Subject to COPPA and GDPR Art. 8 — processed only with verifiable parental consent for users under 13 (US) or under 16 (EU/UK default, may vary by member state).</li>
+                    </ul>
+                    <div class="callout callout-zero">
+                        <p class="callout-label">Data Minimisation — GDPR Art. 5(1)(c)</p>
+                        <h4>We collect the minimum necessary. Nothing more.</h4>
+                        <p>In accordance with the data minimisation principle under <a href="https://gdpr-info.eu/art-5-gdpr/" target="_blank" rel="noopener">GDPR Article 5(1)(c)</a> and the EDPB's <a href="https://edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-42019-article-25-data-protection-design-and_en" target="_blank" rel="noopener">Guidelines 4/2019 on Article 25</a>, FamilyCompass does not collect advertising identifiers, device fingerprints, contact lists, call logs from the device's native phone app, browsing history, or any data not directly necessary for family coordination functionality. Advertising SDKs are not integrated into the codebase.</p>
+                    </div>
+                </div>
+
+                <!-- §5 Cryptographic Standards -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 5</span>
+                        Cryptographic Standards &amp; Technical Security
+                    </h3>
+                    <p class="policy-body">
+                        The following cryptographic primitives and standards govern data security across FamilyCompass. All implementations conform to published, peer-reviewed specifications. No proprietary cryptography is used.
+                    </p>
+
+                    <table class="crypto-table">
+                        <thead>
+                            <tr>
+                                <th>Primitive</th>
+                                <th>Application</th>
+                                <th>Standard / Specification</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AES-256-GCM</td>
+                                <td>Data at rest: location records, calendar events, stored messages</td>
+                                <td><a href="https://csrc.nist.gov/pubs/fips/197/final" target="_blank" rel="noopener">NIST FIPS 197</a> (updated May 2023) <span class="std-tag">FIPS</span></td>
+                            </tr>
+                            <tr>
+                                <td>Signal Protocol (X3DH + Double Ratchet)</td>
+                                <td>End-to-end encrypted messaging, voice &amp; video calls</td>
+                                <td><a href="https://signal.org/docs/specifications/x3dh/" target="_blank" rel="noopener">X3DH Spec</a> · <a href="https://signal.org/docs/specifications/doubleratchet/" target="_blank" rel="noopener">Double Ratchet Spec</a> <span class="std-tag">Signal Foundation</span></td>
+                            </tr>
+                            <tr>
+                                <td>ECDH P-256</td>
+                                <td>Family group key exchange and session key derivation</td>
+                                <td><a href="https://csrc.nist.gov/publications/detail/sp/800-56a/rev3/final" target="_blank" rel="noopener">NIST SP 800-56A Rev. 3</a> · <a href="https://www.rfc-editor.org/rfc/rfc6090" target="_blank" rel="noopener">RFC 6090</a> <span class="std-tag">NIST</span></td>
+                            </tr>
+                            <tr>
+                                <td>TLS 1.3</td>
+                                <td>All network transmission between app and server</td>
+                                <td><a href="https://www.rfc-editor.org/rfc/rfc8446" target="_blank" rel="noopener">RFC 8446</a> (IETF, 2018) <span class="std-tag">IETF</span></td>
+                            </tr>
+                            <tr>
+                                <td>HKDF-SHA-256</td>
+                                <td>Key derivation function for session key material</td>
+                                <td><a href="https://www.rfc-editor.org/rfc/rfc5869" target="_blank" rel="noopener">RFC 5869</a> (IETF HMAC-based KDF) <span class="std-tag">IETF</span></td>
+                            </tr>
+                            <tr>
+                                <td>Ed25519 / Curve25519</td>
+                                <td>Identity key signing and ephemeral key agreement in Signal Protocol</td>
+                                <td><a href="https://www.rfc-editor.org/rfc/rfc8032" target="_blank" rel="noopener">RFC 8032</a> (Edwards-Curve DSA) <span class="std-tag">IETF</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="callout callout-tech">
+                        <p class="callout-label">Forward Secrecy &amp; Post-Compromise Security</p>
+                        <h4>The Double Ratchet algorithm provides continuous re-keying.</h4>
+                        <p>The <a href="https://signal.org/docs/specifications/doubleratchet/" target="_blank" rel="noopener">Signal Protocol Double Ratchet algorithm</a> derives a unique encryption key for every single message. Once a message is decrypted, the key is discarded. This means that even if an attacker obtained a device's current session state, they could not decrypt past messages (forward secrecy) and future messages would regain security after ratchet advancement (post-compromise security). This property is formalised in academic literature as "break-in recovery" and provides a materially stronger security model than static key encryption.</p>
+                    </div>
+
+                    <p class="policy-body" style="margin-top:28px;"><strong>Hardware-backed key storage — iOS and Android:</strong></p>
+                    <div class="hardware-grid">
+                        <div class="hardware-card">
+                            <div class="hardware-card-logo">🍎</div>
+                            <h4>iOS Secure Enclave</h4>
+                            <p>Cryptographic keys for FamilyCompass are generated inside the <strong>Apple Secure Enclave</strong> — a dedicated security subsystem with its own isolated memory and microkernel. Private keys never leave the enclave and are bound to the specific device. Even if the main iOS operating system were compromised, the Secure Enclave keys remain inaccessible.</p>
+                            <a href="https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web" target="_blank" rel="noopener">Apple Platform Security: Secure Enclave ↗</a>
+                        </div>
+                        <div class="hardware-card">
+                            <div class="hardware-card-logo">🤖</div>
+                            <h4>Android StrongBox</h4>
+                            <p>On Android, keys are stored in <strong>StrongBox Keymaster</strong> — a hardware security module within the main SoC (or a dedicated chip on qualifying devices) that implements the Android Keystore system. StrongBox operations occur in isolated hardware with tamper resistance, separate from the main application processor.</p>
+                            <a href="https://developer.android.com/training/articles/keystore" target="_blank" rel="noopener">Android Keystore System Documentation ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- §6 Data Retention -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 6</span>
+                        Data Retention &amp; Storage Limitation
+                    </h3>
+                    <p class="policy-body">
+                        Under the storage limitation principle of <a href="https://gdpr-info.eu/art-5-gdpr/" target="_blank" rel="noopener">GDPR Article 5(1)(e)</a>, personal data must not be retained longer than necessary for its stated purpose. AI Pieces implements the following retention schedule:
+                    </p>
+                    <ul class="policy-list">
+                        <li><strong>Real-time location data:</strong> User-configurable. Default: 24-hour rolling window. Maximum: 30 days. Location history beyond the user's retention setting is irreversibly deleted from all servers on a daily basis.</li>
+                        <li><strong>Encrypted message content:</strong> Stored only until delivered and acknowledged. Undelivered messages held maximum 30 days, then purged. Delivered messages: content lives only on end-user devices; server holds only encrypted delivery receipts for 72 hours.</li>
+                        <li><strong>Calendar events:</strong> Retained for the duration of the account. Permanently deleted within 30 days of account deletion request.</li>
+                        <li><strong>Authentication logs:</strong> 90 days for security monitoring purposes (legitimate interest lawful basis). Anonymised thereafter.</li>
+                        <li><strong>Crash reports and technical logs:</strong> 30 days, anonymised at ingestion (no linkage to user identity).</li>
+                        <li><strong>Account data post-deletion:</strong> All personal data purged within 30 calendar days of confirmed deletion request. Cryptographic keys are destroyed; encrypted records become permanently unrecoverable.</li>
+                    </ul>
+                </div>
+
+                <!-- §7 Data Subject Rights -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 7</span>
+                        Your Rights as a Data Subject
+                    </h3>
+                    <p class="policy-body">Under EU GDPR, UK GDPR/DPA 2018, and COPPA (for US users with children's accounts), you hold the following enforceable rights:</p>
+                    <div class="rights-grid">
+                        <div class="right-card">
+                            <h4>Right of Access</h4>
+                            <p>Obtain a copy of all personal data held about you and information about how it is processed. Fulfilled within one calendar month.</p>
+                            <p class="cite"><a href="https://gdpr-info.eu/art-15-gdpr/" target="_blank" rel="noopener">GDPR Art. 15</a> · <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/right-of-access/" target="_blank" rel="noopener">ICO: Right of access</a></p>
+                        </div>
+                        <div class="right-card">
+                            <h4>Right to Erasure</h4>
+                            <p>Request permanent deletion of all your personal data ("right to be forgotten"). Account deletion wipes all identifiable records within 30 days. Encrypted data becomes permanently inaccessible.</p>
+                            <p class="cite"><a href="https://gdpr-info.eu/art-17-gdpr/" target="_blank" rel="noopener">GDPR Art. 17</a> · <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/the-right-to-erasure/" target="_blank" rel="noopener">ICO: Right to erasure</a></p>
+                        </div>
+                        <div class="right-card">
+                            <h4>Right to Data Portability</h4>
+                            <p>Export your family's data in a structured, machine-readable format (JSON/CSV). Calendar events, location history within your retention window, and account data can be downloaded from within the app.</p>
+                            <p class="cite"><a href="https://gdpr-info.eu/art-20-gdpr/" target="_blank" rel="noopener">GDPR Art. 20</a></p>
+                        </div>
+                        <div class="right-card">
+                            <h4>Right to Rectification</h4>
+                            <p>Correct inaccurate or incomplete personal data held about you. Most data (display names, preferences) is editable directly in the app. Submit corrections for any server-held data to support@aipieces.org.</p>
+                            <p class="cite"><a href="https://gdpr-info.eu/art-16-gdpr/" target="_blank" rel="noopener">GDPR Art. 16</a></p>
+                        </div>
+                        <div class="right-card">
+                            <h4>Right to Restrict Processing</h4>
+                            <p>Request that processing of your data be restricted while a complaint or accuracy dispute is resolved. Processing limited to storage only during the restriction period.</p>
+                            <p class="cite"><a href="https://gdpr-info.eu/art-18-gdpr/" target="_blank" rel="noopener">GDPR Art. 18</a></p>
+                        </div>
+                        <div class="right-card">
+                            <h4>Right to Object</h4>
+                            <p>Object to processing based on legitimate interests at any time. AI Pieces will cease processing unless compelling legitimate grounds can be demonstrated that override your interests.</p>
+                            <p class="cite"><a href="https://gdpr-info.eu/art-21-gdpr/" target="_blank" rel="noopener">GDPR Art. 21</a></p>
+                        </div>
+                        <div class="right-card">
+                            <h4>Right to Withdraw Consent</h4>
+                            <p>Where processing is based on consent, you may withdraw that consent at any time. Withdrawal does not affect the lawfulness of processing prior to withdrawal. Location sharing, for example, can be disabled instantly within the app.</p>
+                            <p class="cite"><a href="https://gdpr-info.eu/art-7-gdpr/" target="_blank" rel="noopener">GDPR Art. 7(3)</a></p>
+                        </div>
+                        <div class="right-card">
+                            <h4>Parental Rights (COPPA / GDPR Art. 8)</h4>
+                            <p>Parents or guardians of children under 13 (US) or 16 (EU/UK) may review, correct, or delete their child's data at any time. Verifiable parental consent is required before any data processing for these users.</p>
+                            <p class="cite"><a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa" target="_blank" rel="noopener">COPPA 16 CFR Part 312</a> · <a href="https://gdpr-info.eu/art-8-gdpr/" target="_blank" rel="noopener">GDPR Art. 8</a></p>
+                        </div>
+                    </div>
+                    <p class="policy-body" style="margin-top:16px;">
+                        To exercise any of these rights, contact <a href="mailto:support@aipieces.org">support@aipieces.org</a>. Requests are fulfilled within one calendar month. Complex requests may be extended by a further two months with notification. Requests are fulfilled at no charge. You also have the right to lodge a complaint with your supervisory authority: <a href="https://www.dataprotection.ie/" target="_blank" rel="noopener">DPC Ireland</a> (EU), <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener">ICO</a> (UK), or <a href="https://www.ftc.gov/about-ftc/contact" target="_blank" rel="noopener">FTC</a> (US).
+                    </p>
+                </div>
+
+                <!-- §8 Third Parties -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 8</span>
+                        Third-Party Processors &amp; Data Sharing
+                    </h3>
+                    <p class="policy-body">
+                        AI Pieces does not sell, rent, trade, or share personal data with third parties for commercial purposes. No advertising networks, data brokers, or behavioural analytics platforms have access to user data. This is consistent with the <a href="https://www.ftc.gov/news-events/news/press-releases/2024/01/ftc-order-prohibits-data-broker-outlogic-formerly-x-mode-social-selling-sensitive-location-data" target="_blank" rel="noopener">FTC's January 2024 enforcement action</a> against location data brokers, and positions FamilyCompass in direct contrast to data-monetising family tracking applications.
+                    </p>
+                    <ul class="policy-list">
+                        <li><strong>Supabase (database and authentication infrastructure):</strong> Processes encrypted data only. Data processed under a Data Processing Agreement (DPA) compliant with GDPR Art. 28. Data residency: EU (Ireland/EU-West). Supabase has no access to plaintext family data. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy ↗</a></li>
+                        <li><strong>Apple Push Notification Service (APNs) / Google Firebase Cloud Messaging (FCM):</strong> Delivery of push notifications. Notification content is end-to-end encrypted; only a notification trigger (not content) passes through these services. Subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+                        <li><strong>Legal disclosure:</strong> AI Pieces will comply with valid legal process (court orders, warrants) as required by applicable law. Due to zero-knowledge architecture, the maximum we can provide is encrypted ciphertext. We will notify affected users of legal demands to the extent permitted by law, and will contest overbroad demands.</li>
+                    </ul>
+                    <div class="callout callout-zero">
+                        <p class="callout-label">Zero-Knowledge Consequence</p>
+                        <h4>A court order cannot unlock what we do not hold.</h4>
+                        <p>Because cryptographic keys are generated and stored in user device hardware (iOS Secure Enclave / Android StrongBox), AI Pieces holds only ciphertext on its servers. Compliance with a data disclosure order means delivering encrypted bytes that are computationally unreadable without the private keys held exclusively by the data subject. This is not a policy stance — it is the mathematical consequence of the architecture.</p>
+                    </div>
+                </div>
+
+                <!-- §9 International Transfers -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 9</span>
+                        International Data Transfers
+                    </h3>
+                    <p class="policy-body">
+                        FamilyCompass user data is stored in the European Union (Ireland / EU-West). Where data must transit to non-EEA countries (e.g., push notification delivery through US-based infrastructure), AI Pieces ensures that transfers comply with <a href="https://gdpr-info.eu/art-46-gdpr/" target="_blank" rel="noopener">GDPR Article 46</a> through: Standard Contractual Clauses (SCCs) adopted by the European Commission, adequacy decisions (the UK holds an EU adequacy decision granted in 2021), or Binding Corporate Rules where applicable.
+                    </p>
+                    <p class="policy-body">
+                        For UK-to-EU transfers, the EU's adequacy decision for the UK under <a href="https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en" target="_blank" rel="noopener">GDPR Article 45</a> permits data to flow without additional safeguards. For US-to-EU transfers involving US service processors, SCCs are in place for all data processing agreements.
+                    </p>
+                </div>
+
+                <!-- §10 Children -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 10</span>
+                        Children's Privacy — COPPA &amp; GDPR Art. 8
+                    </h3>
+                    <p class="policy-body">
+                        FamilyCompass includes features designed for family use that may involve children: geofence alerts for school arrivals, shared calendar entries, and messaging. AI Pieces takes children's privacy seriously across all applicable frameworks.
+                    </p>
+                    <ul class="policy-list">
+                        <li><strong>Age threshold — US:</strong> Under the <a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa" target="_blank" rel="noopener">COPPA Rule (16 CFR Part 312)</a>, verifiable parental consent is required before collecting any personal data from children under 13.</li>
+                        <li><strong>Age threshold — EU/UK:</strong> Under <a href="https://gdpr-info.eu/art-8-gdpr/" target="_blank" rel="noopener">GDPR Article 8</a>, consent for information society services requires parental authorisation for children under 16 (some EU member states permit lower thresholds down to 13; AI Pieces applies 16 as the default).</li>
+                        <li><strong>No behavioural advertising:</strong> Children's data is never used for advertising, profiling, or AI training. No advertising SDK is present in the codebase.</li>
+                        <li><strong>Parental access and deletion:</strong> Parents may at any time request access to, correction of, or deletion of their child's data by contacting support@aipieces.org with account verification.</li>
+                        <li><strong>Additional encryption:</strong> Children's data (location records, messages) receives the same AES-256-GCM and Signal Protocol protections as all other user data, with no derogations.</li>
+                    </ul>
+                </div>
+
+                <!-- §11 Privacy by Design -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 11</span>
+                        Privacy by Design &amp; Default — GDPR Art. 25
+                    </h3>
+                    <p class="policy-body">
+                        <a href="https://gdpr-info.eu/art-25-gdpr/" target="_blank" rel="noopener">GDPR Article 25</a> requires controllers to implement data protection by design and by default — taking into account state of the art, cost, and risk at the time of determining the means of processing. FamilyCompass was architected from first principles to satisfy and exceed this obligation:
+                    </p>
+                    <ul class="policy-list">
+                        <li><strong>Privacy by design:</strong> End-to-end encryption is not a feature that can be disabled — it is the underlying transport. Location sharing is disabled by default and requires active opt-in from each family member individually.</li>
+                        <li><strong>Privacy by default:</strong> The most privacy-protective settings are the defaults. GPS precision degrades gracefully when battery-saving mode is active. No data is shared with any family member without explicit configuration.</li>
+                        <li><strong>Data minimisation by design:</strong> The app requests only the permissions necessary for each feature (location access requested contextually, not at install). No omnibus permission requests on first launch.</li>
+                        <li><strong>EDPB compliance:</strong> Architecture is consistent with the European Data Protection Board's <a href="https://edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-42019-article-25-data-protection-design-and_en" target="_blank" rel="noopener">Guidelines 4/2019 on Article 25 Data Protection by Design and by Default</a>.</li>
+                    </ul>
+                </div>
+
+                <!-- §12 Security Incident Response -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 12</span>
+                        Security Incident Response
+                    </h3>
+                    <p class="policy-body">
+                        In the event of a personal data breach, AI Pieces will comply with the mandatory notification obligations under <a href="https://gdpr-info.eu/art-33-gdpr/" target="_blank" rel="noopener">GDPR Article 33</a> (notification to supervisory authority within 72 hours) and <a href="https://gdpr-info.eu/art-34-gdpr/" target="_blank" rel="noopener">Article 34</a> (notification to affected data subjects without undue delay where the breach is likely to result in high risk to their rights and freedoms). Identical obligations apply under <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/personal-data-breaches/personal-data-breaches-a-guide/" target="_blank" rel="noopener">UK GDPR</a>.
+                    </p>
+                    <div class="callout callout-tech">
+                        <p class="callout-label">Breach Impact Limitation</p>
+                        <h4>Zero-knowledge architecture fundamentally limits breach impact.</h4>
+                        <p>Because FamilyCompass stores only ciphertext on its servers, a server-side breach exposes no readable personal data. The only data accessible from a server breach would be: anonymised crash logs, encrypted binary blobs, and delivery metadata. Message content, location data, and calendar entries are inaccessible without the private keys held on user devices. This architectural property is the most effective single mitigation against breach impact available under current cryptographic practice — consistent with the <a href="https://csrc.nist.gov/publications/detail/sp/800-61/rev2/final" target="_blank" rel="noopener">NIST SP 800-61 Computer Security Incident Handling Guide</a>.</p>
+                    </div>
+                </div>
+
+                <!-- §13 Changes -->
+                <div class="policy-block reveal">
+                    <h3 class="policy-heading">
+                        <span class="policy-heading-num">§ 13</span>
+                        Changes to This Policy
+                    </h3>
+                    <p class="policy-body">
+                        Material changes to this Privacy Policy will be communicated via in-app notification and email at least 30 days before the effective date. The version history of this policy is maintained and previous versions are available on request. Continued use of FamilyCompass after the effective date of changes constitutes acceptance of the updated policy. Where changes require new consent (e.g., a new processing purpose), a fresh consent flow will be presented in-app.
+                    </p>
+                    <p class="policy-body" style="font-family:-apple-system,sans-serif;font-size:0.85rem;color:var(--brown-mid);opacity:0.8;">
+                        <strong>Effective date:</strong> 26 February 2026 &nbsp;·&nbsp;
+                        <strong>Last reviewed:</strong> 26 February 2026 &nbsp;·&nbsp;
+                        <strong>Version:</strong> 3.0 &nbsp;·&nbsp;
+                        <strong>Next scheduled review:</strong> 26 August 2026
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── CONTACT BAND ── -->
+        <section class="contact-band">
+            <div class="container">
+                <h2>Privacy questions &amp; rights requests.</h2>
+                <p>All privacy inquiries are answered within 72 hours. Rights requests (access, erasure, portability, restriction) are fulfilled within one calendar month under GDPR Article 12.</p>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h4>Privacy Officer</h4>
+                        <a href="mailto:support@aipieces.org">support@aipieces.org</a>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Data Protection Officer</h4>
+                        <a href="mailto:support@aipieces.org">support@aipieces.org</a>
+                    </div>
+                    <div class="contact-item">
+                        <h4>General Support</h4>
+                        <a href="mailto:support@aipieces.org">support@aipieces.org</a>
+                    </div>
+                </div>
+                <p style="margin-top:35px;font-family:-apple-system,sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.45);">
+                    Supervisory authorities: <a href="https://www.dataprotection.ie/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);">DPC Ireland (EU)</a> · <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);">ICO (UK)</a> · <a href="https://www.ftc.gov/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);">FTC (US)</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="subscription.html">Subscription</a></li>
+                        <li><a href="index.html#beta-signup-section">Download App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about-founder.html">About the Founder</a></li>
+                        <li><a href="research.html">Our Research</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Privacy &amp; Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="security.html">Security</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="coppa.html">COPPA Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="feedback.html">Send Feedback</a></li>
+                        <li><a href="mailto:support@aipieces.org">support@aipieces.org</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Made with ❤️ for families everywhere.</p>
+                <p style="margin-top:10px;font-size:0.8rem;">
+                    FamilyCompass · HealthCompass · CareCompass · EduCompass ·
+                    Privacy-first by design · Built in Kerry, Ireland · GDPR &amp; HIPAA compliant
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible');
+            });
+        }, { threshold: 0.07 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
+</body>
+</html>

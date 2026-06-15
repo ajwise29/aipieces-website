@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Pieces | AIPieces — FamilyCompass, HealthCompass, CareCompass, EduCompass | Privacy-First Coordination Platform</title>
+
+    <meta name="description" content="AI Pieces builds privacy-first coordination platforms: FamilyCompass for families, HealthCompass for hospitals, CareCompass for care homes, and EduCompass for schools. End-to-end encrypted. GDPR compliant. No data selling.">
+    <meta name="keywords" content="AI Pieces, AIPieces, FamilyCompass, HealthCompass, CareCompass, EduCompass, family coordination app, hospital patient communication, care home family platform, school parent communication, encrypted family tracker, GPS family app, privacy family app, military family app, end-to-end encrypted messaging, GDPR family app, HIPAA hospital communication, care home software, school communication platform">
+    <meta name="author" content="AI Pieces Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipieces.org/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://aipieces.org/#org",
+          "name": "AI Pieces",
+          "alternateName": ["AIPieces", "AI Pieces Ltd"],
+          "url": "https://aipieces.org",
+          "logo": "https://aipieces.org/compass.png",
+          "description": "AI Pieces builds privacy-first coordination platforms for families, hospitals, care homes, and schools.",
+          "foundingLocation": { "@type": "Place", "name": "Kerry, Ireland" },
+          "email": "support@aipieces.org",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "AI Pieces Products",
+            "itemListElement": [
+              { "@type": "SoftwareApplication", "name": "FamilyCompass", "applicationCategory": "LifestyleApplication", "operatingSystem": "iOS, Android", "description": "Privacy-first GPS tracking, encrypted messaging, shared calendar and emergency alerts for families. End-to-end encrypted — no data selling." },
+              { "@type": "SoftwareApplication", "name": "HealthCompass", "applicationCategory": "MedicalApplication", "operatingSystem": "iOS, Android, Web", "description": "HIPAA-compliant patient-family communication platform for hospital ICU, maternity, and paediatric departments." },
+              { "@type": "SoftwareApplication", "name": "CareCompass", "applicationCategory": "MedicalApplication", "operatingSystem": "iOS, Android, Web", "description": "Encrypted family communication platform for nursing homes and residential care facilities." },
+              { "@type": "SoftwareApplication", "name": "EduCompass", "applicationCategory": "EducationApplication", "operatingSystem": "iOS, Android, Web", "description": "GDPR-compliant parent-teacher coordination platform for private and international schools." }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://aipieces.org/#website",
+          "url": "https://aipieces.org",
+          "name": "AI Pieces",
+          "publisher": { "@id": "https://aipieces.org/#org" }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aipieces.org/">
+    <meta property="og:title" content="AI Pieces — FamilyCompass, HealthCompass, CareCompass, EduCompass">
+    <meta property="og:description" content="Privacy-first coordination platforms for families, hospitals, care homes, and schools. End-to-end encrypted. No data selling. GDPR & HIPAA compliant.">
+    <meta property="og:image" content="https://aipieces.org/compass.png">
+    <meta property="og:site_name" content="AI Pieces">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://aipieces.org/">
+    <meta name="twitter:title" content="AI Pieces — Privacy-First Coordination Platform">
+    <meta name="twitter:description" content="FamilyCompass, HealthCompass, CareCompass, EduCompass — one encrypted platform, four verticals.">
+    <meta name="twitter:image" content="https://aipieces.org/compass.png">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8ddd4 100%);
+            min-height: 100vh;
+            color: #5a4a3a;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* ── HEADER ── */
+        .header {
+            padding: 20px 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #8b6914; letter-spacing: 1px; text-decoration: none; }
+        .trust-badge {
+            background: rgba(139,105,20,0.1); color: #8b6914;
+            padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;
+            font-weight: 600; margin-left: 10px;
+        }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: #5a4a3a; font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: #8b6914; }
+
+        /* ── HERO ── */
+        .hero { text-align: center; padding: 140px 0 80px; }
+        .compass-container { position: relative; display: inline-block; margin-bottom: 40px; }
+        .compass-image {
+            width: 300px; height: 300px; border-radius: 50%;
+            box-shadow: 0 20px 60px rgba(139,105,20,0.3), 0 0 0 1px rgba(255,255,255,0.1);
+            object-fit: cover;
+            animation: gentle-float 3s ease-in-out infinite;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .compass-image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(139,105,20,0.4), 0 0 0 1px rgba(255,255,255,0.2);
+        }
+        .hero-title {
+            font-size: 3.5rem; font-weight: 800; margin-bottom: 20px;
+            background: linear-gradient(135deg, #8b6914, #d4af37);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text; letter-spacing: -1px;
+        }
+        .hero-subtitle { font-size: 1.5rem; color: #8b6914; margin-bottom: 20px; font-weight: 300; letter-spacing: 2px; }
+        .research-badge {
+            background: rgba(100,149,237,0.1); color: #4169E1;
+            padding: 8px 16px; border-radius: 25px; font-size: 0.9rem;
+            font-weight: 600; margin-bottom: 30px; display: inline-block;
+            border: 1px solid rgba(100,149,237,0.2);
+        }
+
+        /* ── PLATFORM INTRO ── */
+        .platform-intro { padding: 70px 0 20px; text-align: center; }
+        .platform-intro p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 15px; color: #5a4a3a; line-height: 1.7; }
+        .platform-tagline { font-size: 1rem; color: #8b6914; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 60px; }
+
+        /* ── 4 PRODUCT CARDS ── */
+        .products-section { padding: 20px 0 80px; }
+        .products-section-header { text-align: center; margin-bottom: 50px; }
+        .products-section-header h2 { font-size: 2.5rem; font-weight: 700; color: #8b6914; margin-bottom: 12px; }
+        .products-section-header p { font-size: 1.1rem; color: #5a4a3a; max-width: 650px; margin: 0 auto; }
+
+        .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+
+        .product-card {
+            background: rgba(255,255,255,0.25); border-radius: 24px; padding: 40px 35px;
+            backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);
+            transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden;
+        }
+        .product-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 24px 24px 0 0;
+        }
+        .product-card.family::before { background: linear-gradient(90deg, #8b6914, #d4af37); }
+        .product-card.health::before { background: linear-gradient(90deg, #2e7d8a, #4abcd0); }
+        .product-card.care::before   { background: linear-gradient(90deg, #6b4e8b, #a87dc5); }
+        .product-card.edu::before    { background: linear-gradient(90deg, #2d6a4f, #52b788); }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(139,105,20,0.2); }
+
+        .product-badge {
+            display: inline-block; font-size: 0.75rem; font-weight: 700;
+            padding: 4px 12px; border-radius: 20px; margin-bottom: 18px;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .badge-beta { background: rgba(139,105,20,0.12); color: #8b6914; }
+        .badge-soon { background: rgba(90,74,58,0.1); color: #5a4a3a; }
+
+        .product-name { font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; color: #3d2e1e; }
+        .product-target { font-size: 0.9rem; font-weight: 600; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .product-card.family .product-target { color: #8b6914; }
+        .product-card.health .product-target { color: #2e7d8a; }
+        .product-card.care   .product-target { color: #6b4e8b; }
+        .product-card.edu    .product-target { color: #2d6a4f; }
+
+        .product-description { font-size: 1rem; color: #5a4a3a; margin-bottom: 20px; line-height: 1.6; }
+
+        .product-features { list-style: none; margin-bottom: 25px; }
+        .product-features li {
+            font-size: 0.9rem; color: #5a4a3a; padding: 4px 0;
+            display: flex; align-items: flex-start; gap: 8px;
+        }
+        .product-features li::before { content: '→'; color: #8b6914; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+        .product-cta-note {
+            font-size: 0.9rem; color: #5a4a3a;
+            background: rgba(139,105,20,0.07);
+            padding: 10px 16px; border-radius: 10px; margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .btn-product {
+            display: inline-block; padding: 11px 26px; border-radius: 50px;
+            font-size: 0.95rem; font-weight: 600; text-decoration: none;
+            transition: all 0.3s; border: 2px solid;
+        }
+        .product-card.family .btn-product { border-color: #8b6914; color: #8b6914; }
+        .product-card.health .btn-product { border-color: #2e7d8a; color: #2e7d8a; }
+        .product-card.care   .btn-product { border-color: #6b4e8b; color: #6b4e8b; }
+        .product-card.edu    .btn-product { border-color: #2d6a4f; color: #2d6a4f; }
+        .btn-product:hover { background: rgba(139,105,20,0.08); transform: translateY(-2px); }
+
+        /* ── PLATFORM ADVANTAGES ── */
+        .platform-section {
+            background: rgba(255,255,255,0.12); backdrop-filter: blur(5px);
+            padding: 80px 0; margin: 20px 0;
+        }
+        .platform-section .section-title { text-align: center; font-size: 2.2rem; font-weight: 700; color: #8b6914; margin-bottom: 12px; }
+        .platform-section .section-subtitle { text-align: center; font-size: 1.1rem; color: #5a4a3a; max-width: 700px; margin: 0 auto 50px; }
+        .platform-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .platform-card {
+            background: rgba(255,255,255,0.15); border-radius: 18px; padding: 30px 25px; text-align: center;
+            border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px); transition: transform 0.3s;
+        }
+        .platform-card:hover { transform: translateY(-5px); }
+        .platform-icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .platform-card h3 { font-size: 1.2rem; font-weight: 700; color: #8b6914; margin-bottom: 10px; }
+        .platform-card p { font-size: 0.95rem; color: #5a4a3a; }
+
+        /* ── PRIVACY BANNER ── */
+        .privacy-banner {
+            background: rgba(65,105,225,0.08); border: 1px solid rgba(65,105,225,0.2);
+            border-radius: 15px; padding: 22px; margin: 40px auto; max-width: 700px; text-align: center;
+        }
+        .privacy-banner h3 { color: #4169E1; font-size: 1.05rem; margin-bottom: 8px; font-weight: 600; }
+        .privacy-banner p { font-size: 0.95rem; color: #5a4a3a; }
+
+        /* ── RESEARCH SECTION ── */
+        .research-section {
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);
+            padding: 80px 0; margin: 20px 0;
+        }
+        .research-title { text-align: center; font-size: 2.5rem; font-weight: 700; color: #8b6914; margin-bottom: 20px; }
+        .research-subtitle { text-align: center; font-size: 1.2rem; color: #5a4a3a; max-width: 800px; margin: 0 auto 50px; }
+
+        .featured-article {
+            background: linear-gradient(135deg, rgba(90,74,58,0.95), rgba(139,105,20,0.92));
+            border-radius: 20px; padding: 50px; margin: 40px 0;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: transform 0.3s, box-shadow 0.3s; color: white;
+        }
+        .featured-article:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(139,105,20,0.4); }
+        .article-date-badge {
+            background: rgba(255,255,255,0.2); color: white; padding: 8px 18px; border-radius: 25px;
+            font-size: 0.95rem; font-weight: 600; display: inline-block; margin-bottom: 25px;
+            backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);
+        }
+        .featured-article h3 { font-size: 2.2rem; font-weight: 800; color: white; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .featured-article p { font-size: 1.1rem; line-height: 1.8; color: rgba(255,255,255,0.95); margin-bottom: 30px; text-shadow: 0 1px 5px rgba(0,0,0,0.2); }
+        .read-more-btn {
+            display: inline-block; background: white; color: #8b6914; padding: 14px 35px;
+            border-radius: 50px; text-decoration: none; font-weight: 700;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: all 0.3s;
+        }
+        .read-more-btn:hover { background: #f5f1e8; transform: translateY(-3px); }
+
+        .research-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+            gap: 30px; margin-top: 50px;
+        }
+        .research-card {
+            background: rgba(255,255,255,0.15); border-radius: 20px; padding: 30px; text-align: center;
+            backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); transition: transform 0.3s;
+        }
+        .research-card:hover { transform: translateY(-5px); }
+        .research-stat { font-size: 2.5rem; font-weight: 800; color: #8b6914; margin-bottom: 10px; display: block; }
+        .research-text { font-size: 1rem; color: #5a4a3a; margin-bottom: 15px; }
+        .research-source { font-size: 0.8rem; color: #4169E1; font-weight: 500; }
+        .research-source a { color: #4169E1; text-decoration: none; }
+        .research-source a:hover { text-decoration: underline; }
+
+        /* ── BETA SIGNUP ── */
+        .beta-signup-form {
+            background: rgba(255,255,255,0.2); border-radius: 25px; padding: 40px;
+            margin: 40px auto; max-width: 700px; backdrop-filter: blur(10px);
+            border: 2px solid rgba(139,105,20,0.2); box-shadow: 0 10px 40px rgba(139,105,20,0.15);
+        }
+        #beta-form input:focus { outline: none; border-color: #8b6914; box-shadow: 0 0 0 3px rgba(139,105,20,0.1); }
+        #form-message { text-align: center; font-weight: 600; }
+        #form-message.success { color: #2e7d32; }
+        #form-message.error { color: #c62828; }
+
+        /* ── BUTTONS ── */
+        .btn {
+            padding: 15px 30px; border-radius: 50px; text-decoration: none;
+            font-weight: 600; transition: all 0.3s; border: none; cursor: pointer;
+            font-size: 1.1rem; display: inline-block;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #8b6914, #d4af37); color: white;
+            box-shadow: 0 10px 30px rgba(139,105,20,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(139,105,20,0.4); }
+        .btn-secondary { background: transparent; color: #8b6914; border: 2px solid #8b6914; }
+        .btn-secondary:hover { background: #8b6914; color: white; transform: translateY(-3px); }
+
+        /* ── SECTION GENERIC ── */
+        .section-title { text-align: center; font-size: 2.5rem; font-weight: 700; color: #8b6914; margin-bottom: 20px; }
+        .section-subtitle { text-align: center; font-size: 1.2rem; color: #5a4a3a; max-width: 600px; margin: 0 auto; }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: rgba(0,0,0,0.1); padding: 60px 0 40px;
+            text-align: center; border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { color: #8b6914; font-size: 1.1rem; margin-bottom: 15px; font-weight: 600; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+        .footer-links a { color: #5a4a3a; text-decoration: none; transition: color 0.3s; }
+        .footer-links a:hover { color: #8b6914; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: #5a4a3a; }
+
+        /* ── ANIMATIONS ── */
+        @keyframes gentle-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        html { scroll-behavior: smooth; }
+
+        /* ── MOBILE ── */
+        @media (max-width: 900px) {
+            .products-grid { grid-template-columns: 1fr; }
+            .platform-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .hero { padding: 120px 0 60px; }
+            .hero-title { font-size: 2.5rem; }
+            .compass-image { width: 220px; height: 220px; }
+            .nav-links { display: none; }
+            .featured-article { padding: 30px 25px; }
+            .featured-article h3 { font-size: 1.6rem; }
+            .container { padding: 0 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══ HEADER ══ -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html" class="logo">
+                    AIPieces
+                    <span class="trust-badge">Privacy First</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                    <li><a href="about-founder.html">Founder Story</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ══ HERO ══ -->
+        <section class="hero" id="home" aria-label="AI Pieces home">
+            <div class="container">
+                <div class="compass-container">
+                    <img src="compass.png"
+                         alt="AI Pieces compass — FamilyCompass, HealthCompass, CareCompass, EduCompass"
+                         class="compass-image"
+                         loading="eager"
+                         width="300" height="300">
+                </div>
+                <h1 class="hero-title">AIPieces</h1>
+                <p class="hero-subtitle">Intelligent Coordination &amp; Care</p>
+                <div class="research-badge">Built on 40+ years of family relationship research</div>
+            </div>
+        </section>
+
+        <!-- ══ PLATFORM INTRO ══ -->
+        <section class="platform-intro" aria-label="AI Pieces platform overview">
+            <div class="container">
+                <p>
+                    <strong>AI Pieces</strong> is a privacy-first coordination platform from Kerry, Ireland. We build four products —
+                    <strong>FamilyCompass</strong>, <strong>HealthCompass</strong>,
+                    <strong>CareCompass</strong>, and <strong>EduCompass</strong> — all sharing
+                    one military-grade encrypted foundation. No data selling. No surveillance.
+                    Your data stays yours.
+                </p>
+                <p class="platform-tagline">One encrypted platform · Four products · Four sectors</p>
+            </div>
+        </section>
+
+        <!-- ══ 4 PRODUCT CARDS ══ -->
+        <section class="products-section" id="products" aria-label="AI Pieces products">
+            <div class="container">
+                <div class="products-section-header">
+                    <h2>Four Products. One Platform.</h2>
+                    <p>
+                        <strong>FamilyCompass</strong>, <strong>HealthCompass</strong>,
+                        <strong>CareCompass</strong>, and <strong>EduCompass</strong> share
+                        one end-to-end encrypted codebase — delivering enterprise-grade security
+                        to every sector we serve.
+                    </p>
+                </div>
+
+                <div class="products-grid">
+
+                    <!-- FamilyCompass -->
+                    <article class="product-card family" aria-label="FamilyCompass">
+                        <span class="product-badge badge-beta">Beta Available — Summer 2026 Launch</span>
+                        <h2 class="product-name">FamilyCompass</h2>
+                        <p class="product-target">For privacy-conscious families &amp; military families</p>
+                        <p class="product-description">
+                            The <strong>FamilyCompass app</strong> combines real-time GPS tracking, encrypted
+                            messaging, shared calendar, encrypted voice and video calls, and emergency alerts —
+                            all end-to-end encrypted. Built on a zero-knowledge architecture: your family's
+                            location is never accessible to us or anyone else.
+                        </p>
+                        <ul class="product-features" aria-label="FamilyCompass features">
+                            <li>Real-time GPS &amp; compass location sharing for every family member</li>
+                            <li>End-to-end encrypted messaging, calls &amp; video</li>
+                            <li>Shared family calendar with intelligent conflict detection</li>
+                            <li>Encrypted photo sharing</li>
+                            <li>Smart grocery lists — notified automatically when a supermarket is detected via GPS</li>
+                            <li>Shared family grocery lists &amp; task management across every household member</li>
+                            <li>Home Dashboard covering gardening, nutrition, household tasks and more</li>
+                            <li>Personal User Dashboard with attention to physical &amp; mental wellbeing, hobbies, and daily routines</li>
+                            <li>Works on iOS &amp; Android — pure React Native</li>
+                        </ul>
+                        <div class="product-cta-note">🚀 Currently in beta with testers across four countries. Join the waitlist for early access.</div>
+                        <a href="#beta-signup-section" class="btn-product">Join FamilyCompass Beta</a>
+                    </article>
+
+                    <!-- HealthCompass -->
+                    <article class="product-card health" aria-label="HealthCompass">
+                        <span class="product-badge badge-soon">Coming Soon — 2026</span>
+                        <h2 class="product-name">HealthCompass</h2>
+                        <p class="product-target" style="color:#2e7d8a;">For hospital ICU, maternity &amp; paediatric departments</p>
+                        <p class="product-description">
+                            <strong>HealthCompass</strong> is a HIPAA-compliant patient-family communication
+                            platform designed for hospital departments. It delivers encrypted family updates
+                            and real-time care notifications — without adding workload to already overstretched
+                            clinical staff.
+                        </p>
+                        <ul class="product-features" aria-label="HealthCompass features">
+                            <li>HIPAA-compliant encrypted family messaging</li>
+                            <li>Real-time patient status updates for families</li>
+                            <li>Significantly reduces repetitive family call volume</li>
+                            <li>Removes admin burden from already overloaded staff</li>
+                            <li>Integrates with existing hospital systems and workflows</li>
+                            <li>No more sitting at computers writing notes — mobile voice recording and photo-to-text (OCR) let staff capture updates instantly on the go</li>
+                            <li>Family-facing mobile app — iOS &amp; Android</li>
+                        </ul>
+                        <div class="product-cta-note">📋 Register your interest — be among the first hospitals to pilot HealthCompass.</div>
+                        <a href="#beta-signup-section" class="btn-product" style="border-color:#2e7d8a;color:#2e7d8a;">Register Interest Here</a>
+                    </article>
+
+                    <!-- CareCompass -->
+                    <article class="product-card care" aria-label="CareCompass">
+                        <span class="product-badge badge-soon">Coming 2027</span>
+                        <h2 class="product-name">CareCompass</h2>
+                        <p class="product-target" style="color:#6b4e8b;">For nursing homes &amp; residential care facilities</p>
+                        <p class="product-description">
+                            <strong>CareCompass</strong> brings encrypted family communication to elderly care.
+                            It connects residents' families with care teams through secure, GDPR-compliant
+                            channels — reducing staff communication burden while keeping families meaningfully
+                            informed and engaged.
+                        </p>
+                        <ul class="product-features" aria-label="CareCompass features">
+                            <li>Encrypted family-to-care-team messaging</li>
+                            <li>Resident wellbeing updates for families</li>
+                            <li>Medication and appointment notifications</li>
+                            <li>Removes repetitive enquiry burden from already stretched staff</li>
+                            <li>Integrates with existing care management workflows</li>
+                            <li>No more sitting at computers writing notes — mobile voice recording and photo-to-text (OCR) let carers capture updates instantly on the go</li>
+                            <li>GDPR-compliant — scales from 20 to 200+ bed facilities</li>
+                        </ul>
+                        <div class="product-cta-note">📋 Register your interest — be among the first care homes to pilot CareCompass.</div>
+                        <a href="#beta-signup-section" class="btn-product" style="border-color:#6b4e8b;color:#6b4e8b;">Register Interest Here</a>
+                    </article>
+
+                    <!-- EduCompass -->
+                    <article class="product-card edu" aria-label="EduCompass">
+                        <span class="product-badge badge-soon">Coming 2027</span>
+                        <h2 class="product-name">EduCompass</h2>
+                        <p class="product-target" style="color:#2d6a4f;">For private schools &amp; international schools</p>
+                        <p class="product-description">
+                            <strong>EduCompass</strong> replaces fragmented school communication tools with a
+                            single GDPR-compliant, end-to-end encrypted platform — unifying parent-teacher-student
+                            coordination while eliminating the compliance risk that unencrypted messaging
+                            creates for schools.
+                        </p>
+                        <ul class="product-features" aria-label="EduCompass features">
+                            <li>GDPR-compliant parent-teacher messaging</li>
+                            <li>Shared school calendar &amp; event coordination</li>
+                            <li>Encrypted, auditable communications — fully compliant</li>
+                            <li>Student progress updates with family visibility</li>
+                            <li>Removes daily communication admin burden from already busy teachers</li>
+                            <li>Integrates with existing school management systems</li>
+                            <li>Supports nursery through secondary school</li>
+                        </ul>
+                        <div class="product-cta-note">📋 Register your interest — be among the first schools to pilot EduCompass.</div>
+                        <a href="#beta-signup-section" class="btn-product" style="border-color:#2d6a4f;color:#2d6a4f;">Register Interest Here</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ PLATFORM ADVANTAGES ══ -->
+        <section class="platform-section" id="platform" aria-label="AI Pieces shared platform">
+            <div class="container">
+                <h2 class="section-title">One Platform. Military-Grade Security. Four Verticals.</h2>
+                <p class="section-subtitle">
+                    All four AI Pieces products share a single encrypted codebase — delivering 70% code reuse
+                    and enterprise-grade security across every sector we serve.
+                </p>
+                <div class="platform-grid">
+                    <div class="platform-card">
+                        <div class="platform-icon">🔐</div>
+                        <h3>AES-256 End-to-End Encryption</h3>
+                        <p>ECDH key exchange + Signal Protocol across all four products. Hardware-backed key storage via iOS Secure Enclave and Android StrongBox. Zero-knowledge architecture — even AI Pieces cannot read your data.</p>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">🏗️</div>
+                        <h3>70% Shared Codebase</h3>
+                        <p>React Native + Supabase backend. One platform serves four products — faster iteration, shared security hardening, and consistent enterprise-grade quality across every vertical.</p>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">🌍</div>
+                        <h3>GDPR &amp; HIPAA Compliant</h3>
+                        <p>Built in Kerry, Ireland — inside the EU. GDPR-compliant from day one across all products. HealthCompass built to HIPAA standards. SOC 2 Type I/II certification in progress.</p>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">📡</div>
+                        <h3>Real-Time Everywhere</h3>
+                        <p>Supabase real-time subscriptions power live GPS, live messaging, and live calendar updates across all four products. Offline sync ensures functionality even without connectivity.</p>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">🛡️</div>
+                        <h3>Intrusion Detection Built In</h3>
+                        <p>Canary token monitoring, honeypot systems, and Row Level Security policies protect every user on every product. Unauthorised access attempts are detected and flagged automatically.</p>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">📱</div>
+                        <h3>iOS &amp; Android Native</h3>
+                        <p>Pure React Native — no shortcuts. Hardware-backed biometric authentication. Tested and deployed across both major platforms with mobile-first as a non-negotiable standard.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ RESEARCH SECTION ══ -->
+        <section class="research-section" id="research" aria-label="Research backing AI Pieces">
+            <div class="container">
+                <h2 class="research-title">Built on Scientific Evidence</h2>
+                <p class="research-subtitle">
+                    AI Pieces is grounded in decades of peer-reviewed research, ensuring every feature
+                    strengthens the relationships between families, patients, residents, and students.
+                </p>
+
+                <div class="featured-article">
+                    <span class="article-date-badge">January 20, 2026</span>
+                    <h3>The Science Behind Modern Family Coordination</h3>
+                    <p>
+                        I hated kindergarten. I was one of the youngest and the smallest, and the best toys were
+                        with the bigger kids. So, my dad often dropped me off at my grandmother on his way to work
+                        instead. I loved the time I spent with my grandmother.
+                    </p>
+                    <a href="research-blog-post01.html" class="read-more-btn">Read Full Article</a>
+                </div>
+
+                <div class="research-grid">
+                    <div class="research-card">
+                        <span class="research-stat">94%</span>
+                        <p class="research-text">of relationship success can be predicted through communication patterns — the foundation of every AI Pieces product.</p>
+                        <p class="research-source"><a href="https://www.gottman.com/about/research/" target="_blank" rel="noopener">The Gottman Institute</a></p>
+                    </div>
+                    <div class="research-card">
+                        <span class="research-stat">68%</span>
+                        <p class="research-text">of family stress comes from scheduling conflicts and logistics miscommunication — what FamilyCompass directly addresses.</p>
+                        <p class="research-source"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8456013/" target="_blank" rel="noopener">National Institutes of Health</a> · 2021</p>
+                    </div>
+                    <div class="research-card">
+                        <span class="research-stat">30%+</span>
+                        <p class="research-text">of nursing time is spent answering repetitive family calls — the core burden HealthCompass is designed to remove from clinical staff.</p>
+                        <p class="research-source">NHS &amp; hospital operations research · 2023</p>
+                    </div>
+                    <div class="research-card">
+                        <span class="research-stat">5:1</span>
+                        <p class="research-text">Ratio of positive to negative interactions needed for relationship success — built into every AI Pieces coordination feature.</p>
+                        <p class="research-source"><a href="https://www.gottman.com/about/the-gottman-method/" target="_blank" rel="noopener">The Gottman Institute</a> · Meta-analysis</p>
+                    </div>
+                    <div class="research-card">
+                        <span class="research-stat">15–20</span>
+                        <p class="research-text">parent communication tasks per teacher per day — the daily admin burden EduCompass replaces with encrypted, unified messaging.</p>
+                        <p class="research-source">UK Department of Education · Teacher Workload Survey · 2024</p>
+                    </div>
+                    <div class="research-card">
+                        <span class="research-stat">37%</span>
+                        <p class="research-text">of modern families live across different cities, requiring digital coordination tools that genuinely protect their privacy.</p>
+                        <p class="research-source"><a href="https://www.pewresearch.org/social-trends/" target="_blank" rel="noopener">Pew Research Center</a> · 2023</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ PRIVACY BANNER ══ -->
+        <section style="padding: 20px 0 60px;" aria-label="Privacy commitment">
+            <div class="container">
+                <div class="privacy-banner">
+                    <h3>🔒 End-to-End Encryption Across All Four Products</h3>
+                    <p>AES-256 encryption · ECDH + Signal Protocol · No data selling · GDPR &amp; HIPAA compliant · Hardware-backed key storage · You control everything</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ BETA SIGNUP ══ -->
+        <section style="padding: 20px 0 80px; text-align: center;" aria-label="FamilyCompass beta signup">
+            <div class="container">
+                <h2 class="section-title">Join FamilyCompass Beta · Start a Pilot</h2>
+                <p class="section-subtitle" style="margin-bottom: 30px;">
+                    FamilyCompass is in beta with testers across four countries — public launch Summer 2026.
+                    HealthCompass, CareCompass, and EduCompass are open for organisation pilots now.
+                </p>
+
+                <div id="beta-signup-section" class="beta-signup-form">
+                    <h3 style="color:#8b6914;margin-bottom:15px;font-size:1.4rem;">Join Our Beta Testing Program or Start a Pilot</h3>
+                    <p style="margin-bottom:25px;color:#5a4a3a;">
+                        Register your interest for <strong>FamilyCompass</strong> beta, or as a hospital, care home, or school ready to pilot <strong>HealthCompass</strong>, <strong>CareCompass</strong>, or <strong>EduCompass</strong>.
+                    </p>
+
+                    <form id="beta-form" style="max-width:500px;margin:0 auto;">
+                        <input
+                            type="email"
+                            id="beta-email"
+                            placeholder="Enter your email address"
+                            required
+                            aria-label="Email address for beta signup"
+                            style="width:100%;padding:15px;border:2px solid rgba(139,105,20,0.3);border-radius:50px;font-size:1rem;margin-bottom:15px;background:rgba(255,255,255,0.9);"
+                        />
+                        <button type="submit" class="btn btn-primary" style="width:100%;">
+                            Sign Up for Beta Access
+                        </button>
+                        <div id="form-message" style="margin-top:15px;font-size:0.9rem;"></div>
+                    </form>
+
+                    <div style="margin-top:20px;">
+                        <a href="how-it-works.html" class="btn btn-secondary">See How It Works</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#beta-signup-section">Download App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about-founder.html">About the Founder</a></li>
+                        <li><a href="research.html">Our Research</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Privacy &amp; Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="security.html">Security</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="coppa.html">COPPA Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="feedback.html">Send Feedback</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#8efdfbfefee1fcfaceefe7fee7ebedebfda0e1fce9">Email Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Made with ❤️ for families everywhere.</p>
+                <p style="margin-top:10px;font-size:0.8rem;">
+                    FamilyCompass · HealthCompass · CareCompass · EduCompass ·
+                    Privacy-first by design · Built in Kerry, Ireland · GDPR &amp; HIPAA compliant
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    window.scrollTo({ top: target.offsetTop - headerHeight, behavior: 'smooth' });
+                }
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.research-section, .platform-section, .products-section').forEach(s => {
+            s.style.opacity = '0';
+            s.style.transform = 'translateY(30px)';
+            s.style.transition = 'all 0.8s ease-out';
+            observer.observe(s);
+        });
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            let current = '';
+            sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+            navLinks.forEach(link => {
+                link.style.color = '#5a4a3a';
+                if (link.getAttribute('href') === `#${current}`) link.style.color = '#8b6914';
+            });
+        });
+
+        const tb = document.querySelector('.trust-badge');
+        if (tb) {
+            tb.addEventListener('mouseenter', () => tb.style.transform = 'scale(1.05)');
+            tb.addEventListener('mouseleave', () => tb.style.transform = 'scale(1)');
+        }
+
+        const SUPABASE_URL = 'https://pavjjiiztqxbfnxkqobc.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBhdmpqaWl6dHF4YmZueGtxb2JjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA2OTYyMjIsImV4cCI6MjA2NjI3MjIyMn0.wuluOl_EhKsFqXpqKwC7bVBMj5ganEOTdAEsyYWkMJI';
+
+        document.getElementById('beta-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const emailInput = document.getElementById('beta-email');
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            const messageDiv = document.getElementById('form-message');
+            const email = emailInput.value.trim();
+
+            if (!email || !email.includes('@')) {
+                messageDiv.className = 'error';
+                messageDiv.textContent = '❌ Please enter a valid email address';
+                return;
+            }
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            messageDiv.textContent = '';
+
+            try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/beta_signups`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({ email: email.toLowerCase(), created_at: new Date().toISOString() })
+                });
+
+                if (response.ok || response.status === 201) {
+                    messageDiv.className = 'success';
+                    messageDiv.textContent = "✅ You're on the list! We'll notify you when FamilyCompass beta opens.";
+                    emailInput.value = '';
+                    submitButton.textContent = 'Signed Up!';
+                    setTimeout(() => {
+                        submitButton.textContent = 'Sign Up for Beta Access';
+                        submitButton.disabled = false;
+                    }, 3000);
+                } else {
+                    const errorData = await response.json();
+                    if (errorData.code === '23505') {
+                        messageDiv.className = 'success';
+                        messageDiv.textContent = "✅ You're already on the list! We'll be in touch soon.";
+                    } else {
+                        throw new Error(errorData.message || 'Submission failed');
+                    }
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Sign Up for Beta Access';
+                }
+            } catch (error) {
+                messageDiv.className = 'error';
+                messageDiv.textContent = '❌ Something went wrong. Please try again or email support@aipieces.org';
+                submit

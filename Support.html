@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — AI Pieces | Help Centre</title>
+    <meta name="description" content="Get help with FamilyCompass, HealthCompass, CareCompass, or EduCompass. Contact support, browse FAQs, and access resources for all AI Pieces products.">
+    <meta name="keywords" content="AIPieces support, FamilyCompass help, HealthCompass support, CareCompass help, EduCompass support, AI Pieces help centre">
+    <link rel="canonical" href="https://aipieces.org/support.html">
+    <meta property="og:title" content="Support — AI Pieces">
+    <meta property="og:description" content="Get help with any AI Pieces product. We're here.">
+    <meta property="og:url" content="https://aipieces.org/support.html">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold:       #8b6914;
+            --gold-light: #d4af37;
+            --gold-pale:  #f5e9c4;
+            --brown-deep: #3d2e1e;
+            --brown-mid:  #5a4a3a;
+            --cream:      #f5f1e8;
+            --cream-dark: #e8ddd4;
+            --teal:       #1a6b6b;
+            --blue-cite:  #2c5f8a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            color: var(--brown-mid);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container        { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .container-narrow { max-width: 860px;  margin: 0 auto; padding: 0 20px; }
+
+        /* ── HEADER ── */
+        .header {
+            padding: 20px 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: -apple-system, sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); letter-spacing: 1px; text-decoration: none; }
+        .trust-badge {
+            background: rgba(139,105,20,0.1); color: var(--gold);
+            padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;
+            font-weight: 600; margin-left: 10px; font-family: -apple-system, sans-serif;
+        }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { font-family: -apple-system, sans-serif; text-decoration: none; color: var(--brown-mid); font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* ── HERO ── */
+        .hero {
+            padding: 150px 0 80px;
+            text-align: center;
+        }
+        .hero-eyebrow {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.82rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3px;
+            color: var(--gold); margin-bottom: 18px;
+            opacity: 0.9;
+        }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem; font-weight: 900; line-height: 1.1;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 24px;
+        }
+        .hero-title em { font-style: italic; }
+        .hero-body {
+            font-size: 1.2rem; color: var(--brown-deep);
+            max-width: 580px; margin: 0 auto 50px; line-height: 1.8;
+        }
+
+        /* ── SECTION CHROME ── */
+        .section-rule  { border: none; border-top: 2px solid var(--gold); width: 60px; margin-bottom: 12px; opacity: 0.5; }
+        .section-number { font-family: -apple-system, sans-serif; font-size: 0.78rem; color: var(--gold-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; font-weight: 700; }
+        .section-title  { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 700; color: var(--brown-deep); line-height: 1.15; margin-bottom: 18px; }
+        .section-title em { color: var(--gold); font-style: italic; }
+        .section-lead   { font-size: 1.05rem; color: var(--brown-mid); max-width: 680px; line-height: 1.8; margin-bottom: 50px; }
+
+        /* ── CONTACT CARD ── */
+        .contact-band {
+            background: rgba(255,255,255,0.5);
+            backdrop-filter: blur(8px);
+            padding: 80px 0;
+            border-top: 1px solid rgba(139,105,20,0.1);
+        }
+        .contact-card {
+            background: white;
+            border: 1px solid rgba(139,105,20,0.15);
+            border-radius: 24px;
+            padding: 60px;
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+            box-shadow: 0 8px 40px rgba(139,105,20,0.08);
+        }
+        .contact-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem; color: var(--brown-deep); margin-bottom: 16px;
+        }
+        .contact-card p {
+            font-size: 1.05rem; color: var(--brown-mid);
+            line-height: 1.8; margin-bottom: 36px;
+        }
+        .contact-email-link {
+            display: inline-block;
+            font-family: -apple-system, sans-serif;
+            font-size: 1.15rem; font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 2px solid rgba(139,105,20,0.3);
+            padding-bottom: 3px;
+            transition: border-color 0.3s;
+        }
+        .contact-email-link:hover { border-color: var(--gold); }
+        .response-note {
+            margin-top: 20px;
+            font-family: -apple-system, sans-serif;
+            font-size: 0.82rem; color: var(--brown-mid); opacity: 0.6;
+        }
+
+        /* ── SUBJECT TILES ── */
+        .subject-tiles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 40px;
+            text-align: left;
+        }
+        .subject-tile {
+            background: var(--cream);
+            border: 1px solid rgba(139,105,20,0.15);
+            border-radius: 14px;
+            padding: 18px 20px;
+            transition: background 0.3s, border-color 0.3s;
+            overflow: hidden;
+            min-width: 0;
+        }
+        .subject-tile:hover { background: var(--gold-pale); border-color: rgba(139,105,20,0.3); }
+        .subject-tile-label {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 8px;
+            display: block;
+        }
+        .subject-tile a {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.88rem; font-weight: 600;
+            color: var(--brown-deep);
+            text-decoration: none;
+            display: block;
+            line-height: 1.4;
+            word-break: break-word;
+        }
+        .subject-tile a:hover { color: var(--gold); }
+
+        /* ── FAQ ── */
+        .faq-band {
+            padding: 90px 0;
+            background: rgba(255,255,255,0.45);
+            backdrop-filter: blur(6px);
+        }
+        .faq-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .faq-group-title {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.75rem; font-weight: 800;
+            letter-spacing: 2.5px; text-transform: uppercase;
+            color: var(--gold-light); margin-bottom: 20px;
+        }
+        .faq-item {
+            border-bottom: 1px solid rgba(139,105,20,0.12);
+            padding: 18px 0;
+        }
+        .faq-item:first-of-type { border-top: 1px solid rgba(139,105,20,0.12); }
+        .faq-q {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.95rem; font-weight: 600;
+            color: var(--brown-deep);
+            display: flex; justify-content: space-between; align-items: center;
+            cursor: pointer; gap: 12px;
+        }
+        .faq-q::after {
+            content: '+';
+            font-size: 1.3rem; font-weight: 300;
+            color: var(--gold); flex-shrink: 0;
+            transition: transform 0.25s;
+        }
+        .faq-item.open .faq-q::after { transform: rotate(45deg); }
+        .faq-a {
+            font-size: 0.92rem; color: var(--brown-mid);
+            line-height: 1.7; max-height: 0; overflow: hidden;
+            transition: max-height 0.35s ease, padding-top 0.2s;
+        }
+        .faq-item.open .faq-a { max-height: 300px; padding-top: 12px; }
+
+        /* ── RESOURCES ── */
+        .resources-band { padding: 90px 0; }
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .resource-card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px 28px;
+            border-top: 4px solid var(--gold-light);
+            box-shadow: 0 4px 20px rgba(139,105,20,0.07);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .resource-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(139,105,20,0.12); }
+        .resource-icon { font-size: 2rem; margin-bottom: 16px; }
+        .resource-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem; color: var(--brown-deep); margin-bottom: 10px;
+        }
+        .resource-card p { font-size: 0.9rem; color: var(--brown-mid); line-height: 1.65; margin-bottom: 18px; }
+        .resource-link {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.85rem; font-weight: 700;
+            color: var(--gold); text-decoration: none;
+            border-bottom: 1px solid rgba(139,105,20,0.3);
+            padding-bottom: 2px; transition: border-color 0.3s;
+        }
+        .resource-link:hover { border-color: var(--gold); }
+
+        /* ── FOOTER ── */
+        .footer { background: rgba(0,0,0,0.1); padding: 60px 0 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { font-family: -apple-system, sans-serif; color: var(--gold); font-size: 1.1rem; margin-bottom: 15px; font-weight: 600; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+        .footer-links a { font-family: -apple-system, sans-serif; color: var(--brown-mid); text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: var(--brown-mid); font-family: -apple-system, sans-serif; }
+
+        html { scroll-behavior: smooth; }
+
+        .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .reveal.animate { opacity: 0; transform: translateY(22px); }
+        .reveal.animate.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 960px) {
+            .subject-tiles  { grid-template-columns: 1fr 1fr; }
+            .faq-columns    { grid-template-columns: 1fr; }
+            .resources-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .hero-title     { font-size: 2.6rem; }
+            .section-title  { font-size: 2rem; }
+            .nav-links      { display: none; }
+            .subject-tiles  { grid-template-columns: 1fr; }
+            .resources-grid { grid-template-columns: 1fr; }
+            .contact-card   { padding: 40px 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── HEADER ── -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html" class="logo">
+                    AIPieces
+                    <span class="trust-badge">Privacy First</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                    <li><a href="about-founder.html">Founder Story</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ── HERO ── -->
+        <section class="hero">
+            <div class="container-narrow">
+                <p class="hero-eyebrow">AI Pieces · Help Centre</p>
+                <h1 class="hero-title">We're here<br>to <em>help.</em></h1>
+                <p class="hero-body">
+                    Whether you're a beta tester, a family getting started, or an organisation exploring a pilot — one email address handles everything.
+                </p>
+            </div>
+        </section>
+
+        <!-- ── CONTACT ── -->
+        <section class="contact-band">
+            <div class="container">
+                <div class="contact-card">
+                    <h2>Get in touch</h2>
+                    <p>For all support, feedback, beta access questions, organisation pilots, and general enquiries — contact us at:</p>
+                    <a href="/cdn-cgi/l/email-protection#70030500001f02043011190019151315035e1f0217" class="contact-email-link"><span class="__cf_email__" data-cfemail="72010702021d000632131b021b171117015c1d0015">[email&#160;protected]</span></a>
+                    <p class="response-note">We respond within 48 hours · Monday–Friday</p>
+
+                    <div class="subject-tiles">
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">FamilyCompass</p>
+                            <a href="/cdn-cgi/l/email-protection#afdcdadfdfc0dddbefcec6dfc6cacccadc81c0ddc890dcdacdc5caccdb92e9cec2c6c3d6ecc0c2dfcedcdc8a9d9ffcdadfdfc0dddb">Beta access &amp; app issues</a>
+                        </div>
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">HealthCompass</p>
+                            <a href="/cdn-cgi/l/email-protection#eb989e9b9b84999fab8a829b828e888e98c584998cd4989e89818e889fd6a38e8a879f83a884869b8a9898ced9dbbb8287849fced9dbae859a9e829992">Hospital pilot enquiries</a>
+                        </div>
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">CareCompass</p>
+                            <a href="/cdn-cgi/l/email-protection#1f6c6a6f6f706d6b5f7e766f767a7c7a6c31706d78206c6a7d757a7c6b225c7e6d7a5c70726f7e6c6c3a2d2f4f7673706b3a2d2f5a716e6a766d66">Care home pilot enquiries</a>
+                        </div>
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">EduCompass</p>
+                            <a href="/cdn-cgi/l/email-protection#e0939590908f9294a08189908985838593ce8f9287df9395828a858394dda58495a38f8d90819393c5d2d0b0898c8f94c5d2d0a58e9195899299">School pilot enquiries</a>
+                        </div>
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">Privacy &amp; Data</p>
+                            <a href="/cdn-cgi/l/email-protection#5d2e282d2d322f291d3c342d34383e382e73322f3a622e283f37383e29600d2f342b3c3e24786f6d0f382c28382e29">Data access &amp; deletion requests</a>
+                        </div>
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">General</p>
+                            <a href="/cdn-cgi/l/email-protection#cab9bfbabaa5b8be8aaba3baa3afa9afb9e4a5b8adf5b9bfa8a0afa9bef78dafa4afb8aba6eff8fa8fa4bbbfa3b8b3">Feedback, press &amp; partnerships</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FAQ ── -->
+        <section class="faq-band" id="faq">
+            <div class="container">
+                <hr class="section-rule">
+                <p class="section-number">FAQs</p>
+                <h2 class="section-title">Common<br><em>questions.</em></h2>
+                <p class="section-lead">Answers to the questions we hear most. If yours isn't here, email us.</p>
+
+                <div class="faq-columns">
+                    <div>
+                        <p class="faq-group-title">FamilyCompass &amp; the App</p>
+
+                        <div class="faq-item">
+                            <div class="faq-q">How do I join the beta?</div>
+                            <div class="faq-a">Register your interest via the beta sign-up on our homepage, or email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="70030500001f02043011190019151315035e1f0217">[email&#160;protected]</a> with the subject "FamilyCompass Beta". We're currently onboarding testers across four countries and will confirm your access within 48 hours.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Is FamilyCompass available on iOS and Android?</div>
+                            <div class="faq-a">Yes. FamilyCompass is a native React Native app available on both iOS (TestFlight beta) and Android. General availability on the App Store and Google Play is planned for Summer 2026.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">How many family members can I add?</div>
+                            <div class="faq-a">The beta supports full family groups. Specific tier limits will be confirmed at general availability when pricing is announced.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Does it work without an internet connection?</div>
+                            <div class="faq-a">Core features require connectivity for real-time location and messaging. Last-known locations and cached calendar data remain accessible offline. Full offline mode is on the technical roadmap.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">What is the Time Travel Engine?</div>
+                            <div class="faq-a">The Time Travel Engine is FamilyCompass's AI-powered calendar conflict detection system. It analyses family schedules — including pilot rosters, shift patterns, and school calendars — and flags conflicts before they happen, suggesting resolution options in real time.</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="faq-group-title">Privacy &amp; Security</p>
+
+                        <div class="faq-item">
+                            <div class="faq-q">Can AI Pieces see my family's location data?</div>
+                            <div class="faq-a">No. FamilyCompass uses zero-knowledge architecture with AES-256-GCM end-to-end encryption and hardware-backed key storage (iOS Secure Enclave, Android StrongBox). Encryption keys never leave your device. AI Pieces cannot access your location or message data — not through policy, but through architectural design.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Does AI Pieces sell data?</div>
+                            <div class="faq-a">Never. AI Pieces does not sell, share, or monetise user data. Our business model is subscription-based. Your data has no commercial value to us — by design.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Is children's data protected?</div>
+                            <div class="faq-a">Yes. FamilyCompass is COPPA-compliant for users under 13. Children's data is end-to-end encrypted, never used for profiling or advertising, and subject to parental access and deletion rights at any time. Contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2f5c5a5f5f405d5b6f4e465f464a4c4a5c01405d48">[email&#160;protected]</a> for any parental data requests.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">How do I request deletion of my data?</div>
+                            <div class="faq-a">Email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aad9dfdadac5d8deeacbc3dac3cfc9cfd984c5d8cd">[email&#160;protected]</a> with the subject "Data Deletion Request" and your account email. We will action the request within 30 days in accordance with GDPR Article 17. You will receive written confirmation upon completion.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Is AI Pieces GDPR compliant?</div>
+                            <div class="faq-a">Yes. AI Pieces Ltd is registered in Ireland and built within the EU. GDPR compliance is a baseline requirement, not an afterthought. The full Privacy Policy is available at <a href="privacy.html" style="color:var(--gold);">aipieces.org/privacy</a>.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── RESOURCES ── -->
+        <section class="resources-band">
+            <div class="container">
+                <hr class="section-rule">
+                <p class="section-number">Resources</p>
+                <h2 class="section-title">Further<br><em>reading.</em></h2>
+                <p class="section-lead">Everything you need to understand how AI Pieces works, what it costs, and why it's built the way it is.</p>
+
+                <div class="resources-grid">
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">🔬</div>
+                        <h3>Research</h3>
+                        <p>The peer-reviewed evidence base underpinning every product. Why family coordination is a documented health stressor, why hospital family calls cost clinical time, and why school communication is a GDPR risk.</p>
+                        <a href="research.html" class="resource-link">Read the research →</a>
+                    </div>
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">✦</div>
+                        <h3>Features</h3>
+                        <p>A complete feature breakdown for FamilyCompass, HealthCompass, CareCompass, and EduCompass. GPS, encryption, calendar, messaging, OCR, emergency alerts, and more.</p>
+                        <a href="features.html" class="resource-link">View all features →</a>
+                    </div>
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">📊</div>
+                        <h3>Real Impact</h3>
+                        <p>Honest, research-grounded estimates of what each product changes — with transparent assumptions. Time saved per family, nursing time recaptured, staff attrition impact, Ofsted readiness.</p>
+                        <a href="how-it-works.html" class="resource-link">See the impact →</a>
+                    </div>
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">🔒</div>
+                        <h3>Privacy Policy</h3>
+                        <p>Full GDPR-compliant privacy policy. What we collect, what we don't, how encryption works, your rights under GDPR, COPPA, and UK law, and how to exercise them.</p>
+                        <a href="privacy.html" class="resource-link">Read the policy →</a>
+                    </div>
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">🗓️</div>
+                        <h3>Subscription</h3>
+                        <p>All four products, their target sectors, features, and beta access information. Pricing for all products will be announced at general availability.</p>
+                        <a href="subscription.html" class="resource-link">View products →</a>
+                    </div>
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">👤</div>
+                        <h3>Founder Story</h3>
+                        <p>Why this company exists. The healthcare systems background, the research approach, and the architectural conviction that privacy is not a feature — it is a foundation.</p>
+                        <a href="about-founder.html" class="resource-link">Read the story →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="subscription.html">Subscription</a></li>
+                        <li><a href="index.html#beta-signup-section">Download App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about-founder.html">About the Founder</a></li>
+                        <li><a href="research.html">Our Research</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Privacy &amp; Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="security.html">Security</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="coppa.html">COPPA Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Help Centre</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="feedback.html">Send Feedback</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#f4878184849b8680b4959d849d91979187da9b8693"><span class="__cf_email__" data-cfemail="86f5f3f6f6e9f4f2c6e7eff6efe3e5e3f5a8e9f4e1">[email&#160;protected]</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Made with ❤️ for families ev

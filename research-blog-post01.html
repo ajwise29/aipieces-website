@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Science Behind Modern Family Coordination | AIPieces Research</title>
+    <meta name="description" content="Discover how 40+ years of family relationship research informs FamilyCompass features for reducing stress and improving work-family balance.">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8ddd4 100%);
+            min-height: 100vh;
+            color: #5a4a3a;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #8b6914;
+            text-decoration: none;
+        }
+
+        .article-container {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 120px auto 60px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(139, 105, 20, 0.15);
+        }
+
+        .article-date {
+            color: #8b6914;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: inline-block;
+            background: rgba(139, 105, 20, 0.1);
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+
+        .article-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #8b6914;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #5a4a3a;
+        }
+
+        .article-content p {
+            margin-bottom: 25px;
+        }
+
+        .article-content a {
+            color: #4169E1;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(65, 105, 225, 0.3);
+            transition: border-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .article-content a:hover {
+            border-bottom: 2px solid #4169E1;
+        }
+
+        .research-image {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: 40px auto;
+            display: block;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #8b6914;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .comment-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 50px;
+            margin: 60px auto;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .comment-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .comment-badge {
+            background: rgba(220, 53, 69, 0.1);
+            color: #dc3545;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .comment-count {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #5a4a3a;
+            margin-bottom: 40px;
+        }
+
+        .comment-form-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #5a4a3a;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #5a4a3a;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid rgba(139, 105, 20, 0.2);
+            border-radius: 10px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #8b6914;
+            box-shadow: 0 0 0 3px rgba(139, 105, 20, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #dc3545;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto 0;
+            box-shadow: 0 10px 30px rgba(220, 53, 69, 0.3);
+        }
+
+        .submit-btn:hover {
+            background: #c82333;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(220, 53, 69, 0.4);
+        }
+
+        .existing-comments {
+            margin-top: 50px;
+        }
+
+        .comment-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .comment-author-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .comment-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #8b6914;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .comment-meta {
+            flex: 1;
+        }
+
+        .comment-author-name {
+            font-weight: 700;
+            color: #5a4a3a;
+            font-size: 1.05rem;
+            margin-bottom: 5px;
+        }
+
+        .comment-date {
+            font-size: 0.85rem;
+            color: rgba(90, 74, 58, 0.7);
+        }
+
+        .comment-text {
+            color: #5a4a3a;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .comment-reply-btn {
+            background: transparent;
+            color: #5a4a3a;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 5px 0;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .comment-reply-btn:hover {
+            color: #8b6914;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #8b6914;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .article-container {
+                padding: 40px 25px;
+                margin: 100px 10px 40px;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-content {
+                font-size: 1rem;
+            }
+
+            .comment-section {
+                padding: 30px 20px;
+            }
+
+            .comment-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">AIPieces</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <a href="index.html#research" class="back-link">← Back to Home</a>
+        
+        <article class="article-container">
+            <div class="article-date">January 20, 2026</div>
+            <h1 class="article-title">The Science Behind Modern Family Coordination</h1>
+            
+            <div class="article-content">
+                <p>I hated kindergarten. I was one of the youngest and the smallest, and the best toys were with the bigger kids. So, my dad often dropped me off at my grandmother on his way to work instead. I loved the time I spent with my grandmother. In the US, over <a href="https://www.sciencedirect.com/science/article/abs/pii/S0190740925002166?via%3Dihub" target="_blank" rel="noopener">80% of grandparents</a> report they do this kind of caring.</p>
+
+                <p>That was decades ago, but the trend has only increased: "with the long-term caregiving responsibilities increasing from 39.3% in 2012 to 49.3% in 2021" (<a href="https://www.grandfamilies.org/Portals/0/Documents/General%20Kinship%20Publications/Census-Grandfamilies-Report-2021.pdf" target="_blank" rel="noopener">Grandfamilies Report 2021</a>).</p>
+
+                <p>My mum worked part-time, and my grandmothers helped raise us. They stayed over, shared the household, picked up tasks - quietly filling the gaps that made family life work. Now, years later, the involvement of women in the workplace has only increased and whilst I am planning a future with children, I actively plan to have my parents involved. That is <a href="https://www.sciencedirect.com/science/article/abs/pii/S0266613822000274" target="_blank" rel="noopener">the worldwide trend</a>: we need women in the workplace, and for that to be possible, families need grandparents to help care for children.</p> 
+                 
+                <p>That is what the Family Compass enables.</p>
+                  
+                <p>Family Compass provides easy task sharing with age-specific alignments, shared calendars, files, locations, and everything else relating to childcare. There is no other app currently out there that deals with as many tasks around childcare at once whilst also focusing on <em> all individuals involved </em>, not just the child. My Family Compass has a user dashboard for each child, listing their individual hobbies, <em> wish lists </em> , tasks, wellbeing requirements. But then, all of that for all the adults, too. They have wish lists, tasks and wellbeing requirements, too, and they matter just as much.</p>
+                
+                <p>When I was little and my dad put me to bed and told me goodnight stories, he had just come back from work in the evening and finished the day with working from his home office after those goodnight stories. And now, years later, that is often the norm for both parents. That proves to be a fundamental challenge: building a career and being a perfect parent at the same time. It almost sounds impossible, especially with all those societal pressures out there. "We find that women experience a lower work-family balance the more they feel pressure to be a perfect mother, and that this lower experienced balance is related to lower career ambitions." (<a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.02113/full" target="_blank" rel="noopener">Frontiers in Psychology, 2018</a>)</p>
+
+                <img src="blog-career-chart.png" alt="Work-family balance and career ambitions research diagram" class="research-image">
+                <p class="image-caption">The relationship between pressure to be a perfect mother, work-family balance, and career ambitions</p>
+
+                <p>For that reason, Family Compass does not just look at the child's wellbeing, but the dads and mums too, with built-in support mechanisms. Family Compass has automated calendar conflict detectors and syncs between multiple calendars to support parents to both go to that meeting but also pick up kids from school and automate this conflict to not experience the stress when it is too late.</p>
+
+                <p>A lot of women's stress comes from the perception that: "Men's opportunities to invest in domestic tasks are limited" (<a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1741-3729.2005.00323.x" target="_blank" rel="noopener">Journal of Marriage and Family, 2005</a>). For that reason Family Compass has a clear dashboard that focuses what parents can do for the children with full transparency dashboards to show when there is not full equality happening among parents—mum took care of 8 household and childcare tasks this week and dad took care of 3. When there is a clear list of shared tasks with good reminders, this reduces gatekeeping and enables fathers to be more confident to take an active role in parenting and work things out together. When grandparents or other family members are involved too, this load is shared even wider and there is less pressure on the individual. There is also no need to "ask for help" as the tasks are out there and anyone in the family account can see them and put their name against them.</p>
+
+                <p>Mothers often spend <a href="https://www.pewresearch.org/social-trends/2013/10/08/parents-time-with-kids-more-rewarding-than-paid-work-and-more-exhausting/" target="_blank" rel="noopener">over 30 hours per week with childcare and homecare</a>. Family Compass divides that time for full transparency into clear tasks that can be shared and better managed. <a href="https://www.esri.ie/publications/the-intra-household-distribution-of-administrative-burdens" target="_blank" rel="noopener">Admin tasks</a> are often already divided in the family, but Family Compass lifts that admin burden even further. With Family Compass' excellent encryption standards, it is safe for anyone who receives the admin post at home or per email, to upload those as a photo to a task that is early identified and therefore can be managed with less stress and less unnecessary communication. A task gets listed, received and done. No talks about admin needed.</p>
+
+                <img src="blog-family-hands.jpg" alt="Parent and child hands" class="research-image">
+                <p class="image-caption">Strengthening family bonds through intelligent coordination</p>
+
+                <p>Chores, admin, hobbies, careers, childcare—there is a lot going on for families. When I was a child and perhaps even more today, I hated the stress surrounding it all, but the outcome is beautiful. A shared family dinner, having family around during my musical plays, celebrating the holidays together, just a good time together.</p> 
+                 
+                <p>That is why Family Compass exists. It minimizes the admin, coordinates and shares the necessary and automatically allocates and counts the Golden Hour, <a href="https://journals.sagepub.com/doi/abs/10.1177/036319909602100102" target="_blank" rel="noopener">the quality time</a> we spend with our families.</p>
+            
+                <p>Sign up to the Beta testing of the Family Compass and Let your family be your North Star.</p> 
+                  
+                </p><em>Alina</em></p>
+            
+          </div>
+        </article>
+
+        <section class="comment-section">
+            <div class="comment-header">
+                <div class="comment-badge">Comments</div>
+                <h2 class="comment-count">0 Comments</h2>
+            </div>
+
+            <form id="comment-form">
+                <h3 class="comment-form-title">Post a Comment</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="name">NAME</label>
+                    <input type="text" id="name" class="form-input" placeholder="Name, surname" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">EMAIL</label>
+                    <input type="email" id="email" class="form-input" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="comment">COMMENT</label>
+                    <textarea id="comment" class="form-textarea" placeholder="Your comment" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+
+            <div id="existing-comments" class="existing-comments">
+                <!-- Comments will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const SUPABASE_URL = 'https://pavjjiiztqxbfnxkqobc.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBhdmpqaWl6dHF4YmZueGtxb2JjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA2OTYyMjIsImV4cCI6MjA2NjI3MjIyMn0.wuluOl_EhKsFqXpqKwC7bVBMj5ganEOTdAEsyYWkMJI';
+
+        // Load existing comments
+        async function loadComments() {
+            try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/blog_comments?article_id=eq.post01&order=created_at.desc`, {
+                    headers: {
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+                    }
+                });
+
+                if (response.ok) {
+                    const comments = await response.json();
+                    displayComments(comments);
+                    updateCommentCount(comments.length);
+                }
+            } catch (error) {
+                console.error('Error loading comments:', error);
+            }
+        }
+
+        function displayComments(comments) {
+            const container = document.getElementById('existing-comments');
+            
+            if (comments.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: rgba(90, 74, 58, 0.6); font-style: italic;">Be the first to comment on this article.</p>';
+                return;
+            }
+
+            container.innerHTML = comments.map(comment => `
+                <div class="comment-card">
+                    <div class="comment-author-section">
+                        <div class="comment-avatar">${comment.author_name.charAt(0).toUpperCase()}</div>
+                        <div class="comment-meta">
+                            <div class="comment-author-name">${escapeHtml(comment.author_name)}</div>
+                            <div class="comment-date">${formatDate(comment.created_at)}</div>
+                        </div>
+                    </div>
+                    <div class="comment-text">${escapeHtml(comment.comment_text)}</div>
+                    <button class="comment-reply-btn">Reply</button>
+                </div>
+            `).join('');
+        }
+
+        function updateCommentCount(count) {
+            document.querySelector('.comment-count').textContent = `${count} Comment${count !== 1 ? 's' : ''}`;
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffMs = now - date;
+            const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            
+            if (diffDays === 0) {
+                const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+                if (diffHours === 0) {
+                    const diffMins = Math.floor(diffMs / (1000 * 60));
+                    return `${diffMins} minute${diffMins !== 1 ? 's' : ''} ago`;
+                }
+                return `${diffHours} hour${diffHours !== 1 ? 's' : ''} ago`;
+            } else if (diffDays === 1) {
+                return 'Yesterday at ' + date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+            } else if (diffDays < 7) {
+                return `${diffDays} days ago at ${date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}`;
+            }
+            return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Handle comment submission
+        document.getElementById('comment-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const comment = document.getElementById('comment').value.trim();
+            const submitBtn = e.target.querySelector('.submit-btn');
+
+            if (!name || !email || !comment) return;
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+
+            try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/blog_comments`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        article_id: 'post01',
+                        author_name: name,
+                        author_email: email,
+                        comment_text: comment,
+                        created_at: new Date().toISOString()
+                    })
+                });
+
+                if (response.ok || response.status === 201) {
+                    document.getElementById('name').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('comment').value = '';
+                    submitBtn.textContent = 'Comment Posted!';
+                    
+                    setTimeout(() => {
+                        submitBtn.textContent = 'Submit';
+                        submitBtn.disabled = false;
+                        loadComments();
+                    }, 2000);
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                console.error('Comment submission error:', error);
+                alert('Failed to post comment. Please try again.');
+                submitBtn.textContent = 'Submit';
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Load comments on page load
+        loadComments();
+    </script>
+</body>
+</html>
