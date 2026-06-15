@@ -297,6 +297,12 @@
             .resources-grid { grid-template-columns: 1fr; }
             .contact-card   { padding: 40px 28px; }
         }
+
+        /* support banner photo */
+        .support-photo { max-width: 900px; margin: 0 auto 10px; padding: 0 24px; }
+        .support-photo figure { margin: 0; }
+        .support-photo img { display: block; width: 100%; height: auto; max-height: 340px; object-fit: cover; border-radius: 22px; box-shadow: 0 16px 40px rgba(61,46,30,0.18); }
+        .support-photo figcaption { font-family: -apple-system, sans-serif; font-size: 0.85rem; color: var(--brown-mid); text-align: center; margin-top: 14px; }
     </style>
 </head>
 <body>
@@ -336,6 +342,17 @@
                 </p>
             </div>
         </section>
+
+        <!-- ── BANNER PHOTO ── -->
+        <div class="support-photo">
+            <figure>
+                <picture>
+                    <source srcset="familypatio.webp" type="image/webp">
+                    <img src="familypatio.jpg" alt="A multi-generational family relaxing together on a patio" loading="lazy" decoding="async" width="1600" height="900">
+                </picture>
+                <figcaption>Real people, real questions — we read every message ourselves.</figcaption>
+            </figure>
+        </div>
 
         <!-- ── CONTACT ── -->
         <section class="contact-band">

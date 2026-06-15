@@ -292,6 +292,11 @@
             .expertise-grid { grid-template-columns: 1fr; }
             .product-strip-inner { grid-template-columns: 1fr 1fr; }
         }
+
+        /* story photo */
+        .story-photo { margin: 36px 0 8px; }
+        .story-photo img { display: block; width: 100%; height: auto; max-height: 420px; object-fit: cover; border-radius: 22px; box-shadow: 0 16px 40px rgba(61,46,30,0.18); }
+        .story-photo figcaption { font-family: -apple-system, sans-serif; font-size: 0.85rem; color: var(--brown-mid); text-align: center; margin-top: 14px; font-style: italic; }
     </style>
 </head>
 <body>
@@ -348,6 +353,14 @@
                     <p>I was at a tech conference in London — AI making life easier, the usual — when my phone buzzed. My baby niece had just been born. The first baby in our family. While the speakers talked about efficiency and automation, I was trying to figure out how to get home, whether my brother's flight would land in time, and why coordinating four adults who love each other had somehow become a full-time job.</p>
 
                     <p>My sister and her new family live abroad. I was in a different city. My brother is a pilot — he often doesn't know until the last minute whether his route will extend for several more days. 37% of families now live across different cities. We are one of them. The challenge is not love. The challenge is logistics.</p>
+
+                    <figure class="story-photo">
+                        <picture>
+                            <source srcset="pregnantfamily.webp" type="image/webp">
+                            <img src="pregnantfamily.jpg" alt="A large multi-generational family gathered together outdoors, welcoming a new baby" loading="lazy" decoding="async" width="1600" height="1067">
+                        </picture>
+                        <figcaption>The first baby in the family — and the coordination puzzle that started everything.</figcaption>
+                    </figure>
 
                     <div class="pull-quote">
                         <p>"The problem isn't that we don't care about each other. The problem is that coordination consumes too much of the time we could spend actually being together."</p>

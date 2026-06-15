@@ -176,6 +176,13 @@
         figure.inline-figure img { width:100%; height:auto; border-radius:16px; display:block;
             box-shadow:0 12px 34px rgba(139,105,20,0.15); aspect-ratio:3/2; object-fit:cover; }
 
+        /* phone screenshot figure (real app proof) */
+        figure.phone-figure { margin:30px 0; text-align:center; }
+        figure.phone-figure .phone-frame { display:inline-block; background:#1c140c; border-radius:30px;
+            padding:9px; box-shadow:0 16px 40px rgba(61,46,30,0.26); max-width:270px; }
+        figure.phone-figure img { width:100%; height:auto; border-radius:23px; display:block; }
+        figure.phone-figure figcaption { font-size:0.86rem; color:var(--ink-soft); margin-top:14px; }
+
         .disclaimer { font-size:0.9rem; color:var(--ink-soft); background:rgba(255,255,255,0.4);
             border:1px solid var(--rule); border-radius:12px; padding:16px 18px; margin:26px 0; }
 
@@ -267,12 +274,14 @@
 
                 <p class="body">FamilyCompass replaces that pile with one app the whole family shares. The point isn't more features; it's everything in one private place.</p>
 
-                <!-- PLACEHOLDER IMAGE — swap for real imagery -->
-                <figure class="inline-figure">
-                    <picture>
-                        <source srcset="grannykidcooking.webp" type="image/webp">
-                        <img src="grannykidcooking.jpg" alt="A grandparent and child preparing food together in a kitchen" loading="lazy" decoding="async" width="1067" height="1600">
-                    </picture>
+                <figure class="phone-figure">
+                    <div class="phone-frame">
+                        <picture>
+                            <source srcset="messagesCompass.webp" type="image/webp">
+                            <img src="messagesCompass.png" alt="FamilyCompass end-to-end encrypted family chat — photos, plans and a shared calendar event in one private thread the whole family can see" loading="lazy" decoding="async" width="540" height="1170">
+                        </picture>
+                    </div>
+                    <figcaption>The encrypted family chat — photos, plans and calendar events in one private thread, instead of scattered across separate apps.</figcaption>
                 </figure>
             </section>
 
