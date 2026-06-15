@@ -216,7 +216,7 @@
             <div class="container-narrow">
                 <p class="hero-eyebrow">AI Pieces · Full Feature Breakdown</p>
                 <h1 class="hero-title">Every feature.<br><em>Full detail.</em></h1>
-                <p class="hero-body">Four deeply capable products — FamilyCompass, HealthCompass, CareCompass, and EduCompass — all on one military-grade encrypted platform. Here is exactly what is built, how it works, and why it matters.</p>
+                <p class="hero-body">Four deeply capable products — FamilyCompass, HealthCompass, CareCompass, and EduCompass — all on one encrypted platform. Here is exactly what is built, how it works, and why it matters.</p>
                 <div class="encryption-strip">
                     <span class="enc-tag">AES-256-GCM</span>
                     <span class="enc-tag">ECDH P-256</span>
@@ -363,8 +363,8 @@
             <div class="container">
                 <hr class="section-rule">
                 <p class="section-number">Security Architecture</p>
-                <h2 class="section-title">Military-grade.<br><em>By design.</em></h2>
-                <p class="section-lead">Every piece of data in every AI Pieces product is protected by the same security stack used in military and intelligence-grade applications.</p>
+                <h2 class="section-title">Encrypted.<br><em>By design.</em></h2>
+                <p class="section-lead">Every piece of data in every AI Pieces product is protected by the same end-to-end encryption stack — built with strong, modern cryptography from the ground up.</p>
                 <div class="security-grid">
                     <div class="security-card"><div class="security-card-icon">🔑</div><h3>AES-256-GCM Encryption</h3><p>All family data — messages, location, health records, calendar — encrypted using AES-256 in Galois/Counter Mode. AEAD provides both confidentiality and message authentication. Encryption occurs on-device before any data leaves your phone.</p><div class="code-snippet">crypto.subtle.generateKey({ name: "AES-GCM", length: 256 })</div><ul class="mini-list"><li>128-bit random IV per encryption operation</li><li>Authentication tag prevents tampering</li><li>Zero-knowledge — encrypted ciphertext only stored server-side</li></ul></div>
                     <div class="security-card"><div class="security-card-icon">🤝</div><h3>ECDH P-256 Key Exchange</h3><p>When a new family member joins, their device generates a unique ECDH P-256 key pair. The family AES key is encrypted using the new member's public key via ECDH shared secret derivation — key transmission never occurs in plaintext.</p><div class="code-snippet">crypto.subtle.generateKey({ name: "ECDH", namedCurve: "P-256" })</div><ul class="mini-list"><li>Private key never leaves the device</li><li>Public keys stored in Supabase for key exchange only</li><li>Forward secrecy via per-session derived keys</li></ul></div>
@@ -383,7 +383,7 @@
                     <hr class="section-rule">
                     <p class="section-number">Product 02</p>
                     <span class="product-badge-pill badge-health">HealthCompass</span>
-                    <h2 class="section-title">Hospital patient-family communication —<br><em>encrypted, HIPAA-compliant, staff-friendly.</em></h2>
+                    <h2 class="section-title">Hospital patient-family communication —<br><em>encrypted, designed to meet HIPAA standards, staff-friendly.</em></h2>
                     <p class="section-lead">Built on the FamilyCompass encrypted stack, adapted for clinical environments. Eliminates the single biggest drain on nurse time — repetitive family phone calls — without adding a single minute of admin burden.</p>
                     <div class="institution-card health">
                         <h3>Clinical Staff Features</h3>
@@ -392,7 +392,7 @@
                             <div class="two-col-sub"><h4>📱 Mobile-First, No Computers Required</h4><ul class="inst-list"><li>Mobile voice recording — speak a patient update, app converts to structured clinical note via on-device speech-to-text</li><li>Photo-to-text OCR captures handwritten notes, medication charts, or wound photos from the bedside</li><li>One-tap status updates — "Stable", "Resting", "In Surgery", "Awake" — broadcast to family instantly without typing</li><li>Batch update mode — update multiple patient families in under 2 minutes at shift handover</li><li>Offline mode queues all updates for delivery when connectivity returns</li></ul></div>
                             <div class="two-col-sub"><h4>🔗 System Integration</h4><ul class="inst-list"><li>REST API integration with Epic, Cerner, and Meditech for automated admission/discharge triggers</li><li>HL7 FHIR-compatible data structures for patient records and status updates</li><li>Single Sign-On for hospital staff — integrates with Active Directory / Azure AD</li><li>HIPAA audit trail — every family notification logged with timestamp, staff ID, and content hash</li><li>Custom department configuration — ICU, maternity, and paediatric workflows configured independently</li></ul></div>
                             <div class="two-col-sub"><h4>👨‍👩‍👧 Family-Facing Features</h4><ul class="inst-list"><li>Real-time encrypted push notifications to family members' smartphones</li><li>Structured update feed replaces phone calls — "11:30am: Settled after procedure, resting comfortably"</li><li>Controlled visiting window notifications — family informed of visiting hours and room changes</li><li>Encrypted family messaging channel to nursing station</li><li>Multi-language family app — critical for international patients</li></ul></div>
-                            <div class="two-col-sub"><h4>📊 Compliance &amp; Analytics</h4><ul class="inst-list"><li>HIPAA-compliant end-to-end encryption — same AES-256-GCM / ECDH stack as FamilyCompass</li><li>Zero-knowledge architecture — AI Pieces cannot read patient data</li><li>Department-level dashboards for nursing directors — update frequency and call reduction metrics</li><li>Automated CQC/JCI inspection readiness reports</li><li>GDPR-compliant patient consent workflows with digital consent logging</li></ul></div>
+                            <div class="two-col-sub"><h4>📊 Compliance &amp; Analytics</h4><ul class="inst-list"><li>End-to-end encryption designed to meet HIPAA standards — same AES-256-GCM / ECDH stack as FamilyCompass</li><li>Zero-knowledge architecture — AI Pieces cannot read patient data</li><li>Department-level dashboards for nursing directors — update frequency and call reduction metrics</li><li>Automated CQC/JCI inspection readiness reports</li><li>GDPR-compliant patient consent workflows with digital consent logging</li></ul></div>
                         </div>
                     </div>
                 </div>
