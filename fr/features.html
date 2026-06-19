@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonctionnalités — AI Pieces | FamilyCompass, HealthCompass, CareCompass, EduCompass</title>
+    <meta name="description" content="Présentation complète des fonctionnalités des produits AI Pieces : localisation GPS FamilyCompass, messagerie chiffrée, planification par IA, soins de bébé, soins aux personnes âgées, intégration des objets connectés — ainsi que HealthCompass, CareCompass, EduCompass pour les institutions. Chiffré de bout en bout en AES-256.">
+    <meta name="author" content="AI Pieces Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipieces.org/fr/features.html">
+    <link rel="alternate" hreflang="en" href="https://aipieces.org/features.html">
+    <link rel="alternate" hreflang="de" href="https://aipieces.org/de/features.html">
+    <link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/features.html">
+    <link rel="alternate" hreflang="es" href="https://aipieces.org/es/features.html">
+    <link rel="alternate" hreflang="x-default" href="https://aipieces.org/features.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aipieces.org/fr/features.html">
+    <meta property="og:title" content="Fonctionnalités d'AI Pieces">
+    <meta property="og:description" content="Présentation complète des fonctionnalités des quatre produits AI Pieces.">
+    <meta property="og:image" content="https://aipieces.org/share-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold:        #8b6914;
+            --gold-light:  #d4af37;
+            --gold-pale:   #f5e9c4;
+            --brown-deep:  #3d2e1e;
+            --brown-mid:   #5a4a3a;
+            --cream:       #f5f1e8;
+            --cream-dark:  #e8ddd4;
+            --teal:        #2e7d8a;
+            --teal-light:  #4abcd0;
+            --purple:      #6b4e8b;
+            --purple-light:#a87dc5;
+            --green:       #2d6a4f;
+            --green-light: #52b788;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Serif 4', Georgia, serif; background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); min-height: 100vh; color: var(--brown-mid); line-height: 1.7; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .container-narrow { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+        .header { padding: 20px 0; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.2); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: -apple-system, sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); letter-spacing: 1px; text-decoration: none; }
+        .trust-badge { background: rgba(139,105,20,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-left: 10px; font-family: -apple-system, sans-serif; }
+        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+        .nav-links a { font-family: -apple-system, sans-serif; text-decoration: none; color: var(--brown-mid); font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--gold); }
+        .lang-switcher { display: flex; gap: 6px; align-items: center; font-size: 0.85rem; font-family: -apple-system, sans-serif; }
+        .lang-switcher a { color: var(--brown-mid); text-decoration: none; font-weight: 600; padding: 2px 5px; border-radius: 4px; }
+        .lang-switcher a.active { color: var(--gold); background: rgba(139,105,20,0.1); }
+        .lang-switcher a:hover { color: var(--gold); }
+        .lang-switcher span { color: rgba(90,74,58,0.4); }
+
+        .hero { padding: 150px 0 80px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: '✦'; position: absolute; top: 60px; right: -40px; font-size: 40rem; color: rgba(139,105,20,0.025); line-height: 1; pointer-events: none; }
+        .hero-eyebrow { font-family: -apple-system, sans-serif; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--gold); margin-bottom: 18px; }
+        .hero-title { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 900; line-height: 1.1; color: var(--brown-deep); margin-bottom: 24px; }
+        .hero-title em { color: var(--gold-light); font-style: italic; }
+        .hero-body { font-size: 1.2rem; color: var(--brown-mid); max-width: 720px; margin: 0 auto 36px; line-height: 1.8; }
+        .encryption-strip { display: inline-flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+        .enc-tag { font-family: -apple-system, sans-serif; font-size: 0.72rem; font-weight: 700; background: rgba(139,105,20,0.1); color: var(--gold); border: 1px solid rgba(139,105,20,0.2); padding: 5px 12px; border-radius: 6px; letter-spacing: 0.5px; }
+        .product-tabs { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; padding: 10px 0 0; }
+        .tab-btn { font-family: -apple-system, sans-serif; padding: 10px 22px; border-radius: 50px; font-size: 0.88rem; font-weight: 600; cursor: pointer; border: 2px solid; transition: all 0.25s; text-decoration: none; display: inline-block; }
+        .tab-btn.family { border-color: var(--gold);   color: var(--gold); }
+        .tab-btn.health { border-color: var(--teal);   color: var(--teal); }
+        .tab-btn.care   { border-color: var(--purple); color: var(--purple); }
+        .tab-btn.edu    { border-color: var(--green);  color: var(--green); }
+        .tab-btn:hover  { transform: translateY(-2px); opacity: 0.85; }
+
+        .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 60px 0; }
+        .stat-box { background: white; border-radius: 20px; padding: 32px 20px; text-align: center; box-shadow: 0 4px 20px rgba(139,105,20,0.07); border-top: 4px solid var(--gold-light); }
+        .stat-number { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 900; color: var(--gold); display: block; margin-bottom: 8px; }
+        .stat-label { font-family: -apple-system, sans-serif; font-size: 0.82rem; color: var(--brown-mid); font-weight: 600; line-height: 1.4; }
+
+        .section-rule   { border: none; border-top: 2px solid var(--gold); width: 60px; margin-bottom: 12px; opacity: 0.4; }
+        .section-number { font-family: -apple-system, sans-serif; font-size: 0.78rem; color: var(--gold-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; font-weight: 700; }
+        .section-title  { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 700; color: var(--brown-deep); line-height: 1.15; margin-bottom: 16px; }
+        .section-title em { color: var(--gold); font-style: italic; }
+        .section-lead   { font-size: 1.05rem; color: var(--brown-mid); max-width: 700px; line-height: 1.8; margin-bottom: 50px; }
+        .product-badge-pill { font-family: -apple-system, sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; padding: 5px 16px; border-radius: 20px; display: inline-block; margin-bottom: 14px; }
+        .badge-family { background: rgba(139,105,20,0.12); color: var(--gold); }
+        .badge-health { background: rgba(46,125,138,0.12);  color: var(--teal); }
+        .badge-care   { background: rgba(107,78,139,0.12);  color: var(--purple); }
+        .badge-edu    { background: rgba(45,106,79,0.12);   color: var(--green); }
+
+        .block-heading { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; color: var(--brown-deep); margin-bottom: 28px; display: flex; align-items: center; gap: 12px; }
+        .block-heading::before { content: ''; display: inline-block; width: 4px; height: 28px; background: linear-gradient(to bottom, var(--gold), var(--gold-light)); border-radius: 2px; flex-shrink: 0; }
+
+        .feature-band { padding: 70px 0; }
+        .feature-band.tinted { background: rgba(255,255,255,0.45); backdrop-filter: blur(5px); }
+        .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .feature-card { background: white; border-radius: 20px; padding: 30px 26px; border-top: 4px solid var(--gold-light); box-shadow: 0 4px 20px rgba(139,105,20,0.07); transition: transform 0.3s, box-shadow 0.3s; }
+        .feature-card:hover { transform: translateY(-6px); box-shadow: 0 18px 45px rgba(139,105,20,0.13); }
+        .feature-card-icon { font-size: 2rem; margin-bottom: 14px; }
+        .feature-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--brown-deep); margin-bottom: 10px; }
+        .feature-card p { font-size: 0.9rem; color: var(--brown-mid); line-height: 1.65; margin-bottom: 14px; }
+        .tech-tag { font-family: -apple-system, sans-serif; display: inline-block; font-size: 0.68rem; font-weight: 700; background: rgba(139,105,20,0.08); color: var(--gold); border: 1px solid rgba(139,105,20,0.18); padding: 3px 9px; border-radius: 5px; margin: 2px 2px 0 0; letter-spacing: 0.3px; }
+        .tech-tag.teal   { background: rgba(46,125,138,0.08);  color: var(--teal);   border-color: rgba(46,125,138,0.2); }
+        .tech-tag.purple { background: rgba(107,78,139,0.08);  color: var(--purple); border-color: rgba(107,78,139,0.2); }
+        .tech-tag.green  { background: rgba(45,106,79,0.08);   color: var(--green);  border-color: rgba(45,106,79,0.2); }
+
+        .feature-shot { margin: 8px auto 44px; max-width: 320px; }
+        .feature-shot .phone-frame { background: #1c140c; border-radius: 34px; padding: 10px; box-shadow: 0 18px 50px rgba(61,46,30,0.28); max-width: 320px; margin: 0 auto; }
+        .feature-shot .phone-frame img { display: block; width: 100%; height: auto; border-radius: 26px; }
+        .feature-shot figcaption { font-family: -apple-system, sans-serif; font-size: 0.82rem; color: var(--brown-mid); text-align: center; margin-top: 16px; line-height: 1.5; max-width: 300px; margin-left: auto; margin-right: auto; }
+
+        .security-band { background: linear-gradient(135deg, var(--brown-deep), #2c1a0e); padding: 90px 0; color: white; }
+        .security-band .section-title { color: var(--gold-light); }
+        .security-band .section-lead  { color: rgba(255,255,255,0.75); }
+        .security-band .section-number { color: rgba(212,175,55,0.6); }
+        .security-band .section-rule { border-color: var(--gold-light); }
+        .security-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .security-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 30px 26px; transition: background 0.3s; }
+        .security-card:hover { background: rgba(255,255,255,0.11); }
+        .security-card-icon { font-size: 2rem; margin-bottom: 14px; }
+        .security-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--gold-light); margin-bottom: 10px; }
+        .security-card p { font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.65; margin-bottom: 14px; }
+        .code-snippet { background: rgba(0,0,0,0.35); border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-size: 0.75rem; color: var(--gold-light); margin-bottom: 14px; border: 1px solid rgba(212,175,55,0.2); word-break: break-all; }
+        .mini-list { list-style: none; }
+        .mini-list li { font-family: -apple-system, sans-serif; font-size: 0.84rem; padding: 3px 0; display: flex; align-items: flex-start; gap: 8px; color: rgba(255,255,255,0.75); }
+        .mini-list li::before { content: '→'; color: var(--gold-light); font-weight: 700; flex-shrink: 0; }
+
+        .institution-band { padding: 80px 0; }
+        .institution-band.tinted { background: rgba(255,255,255,0.45); backdrop-filter: blur(5px); }
+        .institution-card { background: white; border-radius: 24px; padding: 48px; box-shadow: 0 8px 40px rgba(0,0,0,0.07); position: relative; overflow: hidden; }
+        .institution-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+        .institution-card.health::before { background: linear-gradient(90deg, var(--teal), var(--teal-light)); }
+        .institution-card.care::before   { background: linear-gradient(90deg, var(--purple), var(--purple-light)); }
+        .institution-card.edu::before    { background: linear-gradient(90deg, var(--green), var(--green-light)); }
+        .institution-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 800; color: var(--brown-deep); margin-bottom: 6px; }
+        .institution-card .subtitle { font-size: 1rem; color: var(--brown-mid); margin-bottom: 36px; font-style: italic; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .two-col-sub h4 { font-family: -apple-system, sans-serif; font-size: 0.88rem; font-weight: 700; color: var(--gold); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
+        .inst-list { list-style: none; }
+        .inst-list li { font-size: 0.9rem; color: var(--brown-mid); padding: 5px 0; border-bottom: 1px solid rgba(139,105,20,0.07); display: flex; align-items: flex-start; gap: 9px; line-height: 1.55; }
+        .inst-list li:last-child { border-bottom: none; }
+        .inst-list li::before { content: '✓'; font-weight: 700; font-size: 0.82rem; flex-shrink: 0; margin-top: 1px; }
+        .institution-card.health .inst-list li::before { color: var(--teal); }
+        .institution-card.care   .inst-list li::before { color: var(--purple); }
+        .institution-card.edu    .inst-list li::before { color: var(--green); }
+
+        .cta-band { background: linear-gradient(135deg, var(--brown-deep), #5a3a1a); padding: 80px 0; text-align: center; }
+        .cta-band h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold-light); margin-bottom: 14px; }
+        .cta-band p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 560px; margin: 0 auto 35px; line-height: 1.7; }
+        .btn { font-family: -apple-system, sans-serif; padding: 14px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s; display: inline-block; margin: 8px; font-size: 1rem; }
+        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: white; box-shadow: 0 8px 25px rgba(139,105,20,0.35); }
+        .btn-primary:hover { transform: translateY(-3px); }
+        .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.4); }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); }
+
+        .footer { background: rgba(0,0,0,0.1); padding: 60px 0 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { font-family: -apple-system, sans-serif; color: var(--gold); font-size: 1.1rem; margin-bottom: 15px; font-weight: 600; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+        .footer-links a { font-family: -apple-system, sans-serif; color: var(--brown-mid); text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: var(--brown-mid); font-family: -apple-system, sans-serif; }
+
+        html { scroll-behavior: smooth; }
+
+        @media (max-width: 960px) {
+            .feature-grid { grid-template-columns: repeat(2, 1fr); }
+            .security-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-row { grid-template-columns: repeat(2, 1fr); }
+            .two-col { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.6rem; }
+            .section-title { font-size: 2rem; }
+            .nav-links { display: none; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .security-grid { grid-template-columns: 1fr; }
+            .stat-row { grid-template-columns: repeat(2, 1fr); }
+            .institution-card { padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navigation principale">
+                <a href="index.html" class="logo">AIPieces<span class="trust-badge">Confidentialité d'abord</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="family-coordination-app.html">Guides</a></li>
+                    <li><a href="research.html">Recherche</a></li>
+                    <li><a href="features.html">Fonctionnalités</a></li>
+                    <li><a href="subscriptions.html">Abonnement</a></li>
+                    <li><a href="about-founder.html">Histoire de la fondatrice</a></li>
+                    <li><a href="how-it-works.html">Comment ça marche</a></li>
+                    <li><a href="privacy.html">Confidentialité</a></li>
+                    <li><a href="support.html">Assistance</a></li>
+                    <li class="lang-switcher" aria-label="Choisir la langue">
+                        <a href="../features.html" hreflang="en">EN</a><span>·</span><a href="../de/features.html" hreflang="de">DE</a><span>·</span><a href="features.html" hreflang="fr" class="active">FR</a><span>·</span><a href="../es/features.html" hreflang="es">ES</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero" id="top">
+            <div class="container-narrow">
+                <p class="hero-eyebrow">AI Pieces · Présentation complète des fonctionnalités</p>
+                <h1 class="hero-title">Chaque fonctionnalité.<br><em>Dans le détail.</em></h1>
+                <p class="hero-body">Quatre produits extrêmement complets — FamilyCompass, HealthCompass, CareCompass et EduCompass — tous sur une seule plateforme chiffrée. Voici exactement ce qui a été conçu, comment cela fonctionne et pourquoi cela compte.</p>
+                <div class="encryption-strip">
+                    <span class="enc-tag">AES-256-GCM</span>
+                    <span class="enc-tag">ECDH P-256</span>
+                    <span class="enc-tag">Protocole Signal</span>
+                    <span class="enc-tag">Clés assistées par matériel</span>
+                    <span class="enc-tag">Zero-Knowledge</span>
+                </div>
+                <div class="product-tabs">
+                    <a href="#familycompass" class="tab-btn family">🧭 FamilyCompass</a>
+                    <a href="#healthcompass" class="tab-btn health">🏥 HealthCompass</a>
+                    <a href="#carecompass"   class="tab-btn care">💜 CareCompass</a>
+                    <a href="#educompass"    class="tab-btn edu">🎓 EduCompass</a>
+                    <a href="#security"      class="tab-btn family">🔐 Sécurité</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="stat-row">
+                    <div class="stat-box"><span class="stat-number">12</span><span class="stat-label">membres de la famille par compte</span></div>
+                    <div class="stat-box"><span class="stat-number">21+</span><span class="stat-label">objets connectés &amp; appareils de santé pris en charge</span></div>
+                    <div class="stat-box"><span class="stat-number">72 h</span><span class="stat-label">de conservation des métadonnées de messages, puis suppression</span></div>
+                    <div class="stat-box"><span class="stat-number">256 bits</span><span class="stat-label">chiffrement AES-GCM sur toutes les données</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAMILYCOMPASS -->
+        <section id="familycompass">
+            <div class="container" style="padding-top:60px;">
+                <hr class="section-rule">
+                <p class="section-number">Produit 01</p>
+                <span class="product-badge-pill badge-family">FamilyCompass</span>
+                <h2 class="section-title">L'application familiale privée<br>la plus <em>complète</em> jamais conçue.</h2>
+                <p class="section-lead">Toutes les fonctionnalités dont vous avez besoin pour une famille de 12 personnes, à travers toutes les étapes de la vie — du nouveau-né aux parents âgés. Chiffré de bout en bout en permanence. Rien n'est vendu. Rien n'est partagé.</p>
+            </div>
+
+            <div class="feature-band">
+                <div class="container">
+                    <h3 class="block-heading">GPS &amp; intelligence de localisation</h3>
+                    <div class="feature-grid">
+                        <div class="feature-card"><div class="feature-card-icon">🧭</div><h3>Vue boussole en temps réel</h3><p>Une boussole animée en direct indique la direction et la distance vers chaque membre de la famille simultanément. Chaque membre dispose d'une aiguille personnalisée avec couleur, nom et activité actuelle. Mise à jour toutes les 10 à 30 secondes via des abonnements en temps réel Supabase chiffrés.</p><span class="tech-tag">Supabase Realtime</span><span class="tech-tag">AES-256-GCM</span><span class="tech-tag">GPS en arrière-plan</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">📍</div><h3>Géorepérage illimité</h3><p>Définissez un nombre illimité de zones nommées — Maison, École, Travail, Salle de sport, Grands-parents — avec un rayon réglable (minimum 100 m) et une durée de présence. Un membre de la famille peut être averti lorsqu'une personne entre ou quitte une zone ; cela fonctionne lorsque cette personne a l'application en cours d'exécution sur son téléphone. Prend en charge 9 catégories de lieux prédéfinies plus des libellés personnalisés.</p><span class="tech-tag">Zones illimitées</span><span class="tech-tag">Rayon 100 m+</span><span class="tech-tag">Présence 5 min</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🛒</div><h3>Notifications de courses intelligentes</h3><p>Le GPS détecte automatiquement lorsqu'un membre de la famille entre dans un supermarché. La liste de courses familiale partagée s'affiche aussitôt. Articles synchronisés en temps réel et chiffrés sur tous les appareils.</p><span class="tech-tag">Détection POI</span><span class="tech-tag">Sync. temps réel</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">📊</div><h3>Moteur d'intelligence de localisation</h3><p>Identifie automatiquement le contexte d'un lieu — hôpital, école, aéroport, restaurant, commerces — et fait remonter les informations familiales pertinentes. Comprend les rôles professionnels pour filtrer les données de localisation pertinentes à partager.</p><span class="tech-tag">Classification ML</span><span class="tech-tag">Apprentissage de motifs</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🔋</div><h3>GPS en arrière-plan optimisé pour la batterie</h3><p>La précision du GPS est ajustée dynamiquement selon la plateforme. Un filtre de distance de 10 m évite les mises à jour inutiles. Service de localisation en arrière-plan distinct avec un intervalle de 30 secondes. Une file de synchronisation hors ligne met en attente les données de localisation en l'absence de connexion.</p><span class="tech-tag">iOS Secure Enclave</span><span class="tech-tag">Android StrongBox</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🧓</div><h3>Alertes de localisation pour zones sûres</h3><p>Voyez où se trouvent les membres de la famille et recevez une notification lorsqu'une personne entre ou quitte une zone que vous choisissez. Cela fonctionne lorsque cette personne a l'application en cours d'exécution sur son téléphone. C'est une fonction de partage de localisation et de coordination que vous configurez, et non un service de surveillance médicale ni une garantie de sécurité.</p><span class="tech-tag">Alerte géorepérage</span><span class="tech-tag">Notification chiffrée</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-band tinted">
+                <div class="container">
+                    <h3 class="block-heading">Communications chiffrées</h3>
+                    <div class="feature-grid">
+                        <div class="feature-card"><div class="feature-card-icon">💬</div><h3>Messagerie chiffrée de bout en bout</h3><p>Les messages texte sont chiffrés en AES-256-GCM avec une clé familiale partagée. Échange de clés via ECDH P-256. Même Supabase ne stocke que du texte chiffré. Les messages prennent en charge le texte, les notes vocales et les photos.</p><span class="tech-tag">AES-256-GCM</span><span class="tech-tag">ECDH P-256</span><span class="tech-tag">Protocole Signal</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">📷</div><h3>Partage de photos chiffré</h3><p>Les photos sont chiffrées côté client avant l'envoi. Elles sont stockées sous forme de texte chiffré dans Supabase Storage. Les vignettes sont générées localement et transmises chiffrées. L'OCR convertit des plannings ou documents papier en texte grâce au ML embarqué.</p><span class="tech-tag">Chiffrement côté client</span><span class="tech-tag">OCR embarqué</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">📄</div><h3>OCR de reçus &amp; documents</h3><p>Photographiez n'importe quel reçu papier, ticket de courses, courrier scolaire ou ordonnance. L'OCR embarqué (react-native-mlkit-ocr) en extrait le texte instantanément. Le contenu est chiffré et synchronisé avec la catégorie familiale pertinente.</p><span class="tech-tag">OCR embarqué</span><span class="tech-tag">MLKit</span><span class="tech-tag">Sync. chiffrée</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🔔</div><h3>Notifications push intelligentes</h3><p>Livrées via un serveur push chiffré avec repli SMS Twilio pour les notifications hautement prioritaires. La charge utile de la notification est chiffrée de bout en bout. Préférences de notification, heures de silence et niveaux de priorité configurables par membre.</p><span class="tech-tag">Push chiffré</span><span class="tech-tag">Repli SMS Twilio</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🌐</div><h3>Prise en charge de 15 langues</h3><p>Internationalisation complète de l'interface en 15 langues avec prise en charge du RTL. Essentiel pour les familles de militaires et les familles dispersées à l'international. Toutes les chaînes traduites sont stockées localement — aucun appel d'API de traduction susceptible d'exposer le contenu.</p><span class="tech-tag">15 langues</span><span class="tech-tag">Prise en charge RTL</span><span class="tech-tag">i18n local</span></div>
+                    </div>
+                    <figure class="feature-shot">
+                        <div class="phone-frame">
+                            <picture>
+                                <source srcset="../messagesCompass.webp" type="image/webp">
+                                <img src="../messagesCompass.png"
+                                     alt="Discussion familiale chiffrée dans FamilyCompass montrant le partage de photos et un événement de calendrier partagé"
+                                     loading="lazy"
+                                     width="540" height="1200">
+                            </picture>
+                        </div>
+                        <figcaption>La discussion familiale chiffrée — partagez photos, fichiers et événements de calendrier dans un seul fil privé visible par toute la famille.</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="feature-band">
+                <div class="container">
+                    <h3 class="block-heading">Calendrier &amp; planification par IA</h3>
+                    <div class="feature-grid">
+                        <div class="feature-card"><div class="feature-card-icon">📅</div><h3>Plusieurs sources de calendrier</h3><p>Se synchronise simultanément avec le calendrier iOS, Google Agenda, Outlook et les rappels natifs de l'appareil. Tous les événements importés sont rechiffrés avec la clé familiale. La passerelle de calendrier détecte intelligemment les conflits entre sources.</p><span class="tech-tag">Calendrier iOS</span><span class="tech-tag">Google Agenda</span><span class="tech-tag">Outlook</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🧠</div><h3>Détection de conflits par IA</h3><p>Un modèle de ML analyse les événements qui se chevauchent, les temps de trajet entre lieux et les plannings imprévisibles (travailleurs postés, pilotes, personnel médical). Il signale les conflits avant qu'ils ne surviennent et suggère des créneaux optimaux de replanification.</p><span class="tech-tag">ML embarqué</span><span class="tech-tag">Analyse de motifs</span><span class="tech-tag">Suggestions intelligentes</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">⏱️</div><h3>Moteur Time Travel</h3><p>Un algorithme de planification propriétaire projette les créneaux de disponibilité de la famille dans le futur. Affiche en temps réel « Toute la famille de nouveau libre à 17h30 ». Tient compte automatiquement des membres répartis sur plusieurs fuseaux horaires.</p><span class="tech-tag">TimeTravelEngine.ts</span><span class="tech-tag">Multi-fuseaux</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🏫</div><h3>Coordination des événements scolaires</h3><p>Couche de calendrier scolaire dédiée par enfant — événements scolaires, activités récurrentes, besoins éducatifs particuliers, engagements bénévoles, gestion des contacts avec les enseignants. Se synchronise automatiquement avec les imports scolaires via PDF/OCR.</p><span class="tech-tag">Calendrier par enfant</span><span class="tech-tag">Besoins particuliers</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🏥</div><h3>Coordination des rendez-vous médicaux</h3><p>Suit les rendez-vous médicaux à venir et récurrents par membre de la famille, avec antécédents de santé complets, médicaments, allergies, informations d'assurance et besoins de transport. Les désignations chiffrées de personne de confiance sont stockées en toute sécurité.</p><span class="tech-tag">Données de santé chiffrées</span><span class="tech-tag">RDV récurrents</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🔁</div><h3>Traitement des plannings professionnels</h3><p>Module dédié aux travailleurs postés, pilotes, personnel soignant et militaires aux horaires irréguliers. Importe les plannings PDF via OCR, traite les rotations et diffuse une disponibilité anonymisée sans révéler de détails opérationnels.</p><span class="tech-tag">Import OCR</span><span class="tech-tag">Rotations</span><span class="tech-tag">OPSEC</span></div>
+                    </div>
+                    <figure class="feature-shot">
+                        <div class="phone-frame">
+                            <picture>
+                                <source srcset="../medicalapptCompass.webp" type="image/webp">
+                                <img src="../medicalapptCompass.png"
+                                     alt="Liste des rendez-vous médicaux d'un membre de la famille dans FamilyCompass"
+                                     loading="lazy"
+                                     width="540" height="1200">
+                            </picture>
+                        </div>
+                        <figcaption>Un aperçu partagé des rendez-vous médicaux d'un membre de la famille — pour que toutes les personnes qui coordonnent les soins voient les mêmes informations.</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="feature-band tinted">
+                <div class="container">
+                    <h3 class="block-heading">Santé, bien-être &amp; suivi des constantes</h3>
+                    <div class="feature-grid">
+                        <div class="feature-card"><div class="feature-card-icon">⌚</div><h3>Intégration des objets connectés — plus de 21 appareils</h3><p>Se connecte à Apple Watch, Fitbit, Garmin, Polar, Withings, Samsung Galaxy Watch, WHOOP, Oura Ring et plus de 13 autres appareils via HealthKit et Google Fit. Fréquence cardiaque, phases de sommeil, oxygène sanguin, VFC et scores de stress dans un tableau de bord santé familial chiffré.</p><span class="tech-tag">HealthKit</span><span class="tech-tag">Google Fit</span><span class="tech-tag">21+ appareils</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">💊</div><h3>Registre des médicaments</h3><p>Des notes de médicaments par membre — posologie, fréquence, médecin prescripteur et dates de péremption — réunies en un seul endroit partagé. Rappels de coordination optionnels que vous définissez vous-même. Conserve un registre partagé de ce que la famille a consigné, afin que toutes les personnes qui aident voient les mêmes informations. Prend en charge des traitements complexes à plusieurs médicaments. FamilyCompass est un outil de coordination et de tenue de registre, et non un dispositif médical.</p><span class="tech-tag">Notes de posologie</span><span class="tech-tag">Registres partagés</span><span class="tech-tag">Rappels chiffrés</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">👤</div><h3>Tableau de bord personnel</h3><p>Un espace individuel de santé et de bien-être par membre de la famille : objectifs d'activité physique, bilans de bien-être mental, suivi des loisirs, qualité du sommeil, hydratation et journal d'humeur. Des invites fondées sur la recherche, conçues pour favoriser des interactions familiales positives.</p><span class="tech-tag">Suivi du bien-être</span><span class="tech-tag">Journal d'humeur</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🥗</div><h3>Nutrition longévité &amp; planification des repas</h3><p>Planification des repas fondée sur la science selon les principes de la nutrition de longévité (régime méditerranéen, protocoles « Blue Zone », anti-inflammatoires). Gère les allergies, exigences alimentaires et objectifs caloriques par membre. Génère automatiquement des listes de courses à partir des plans de repas.</p><span class="tech-tag">Nutrition longévité</span><span class="tech-tag">Gestion des allergies</span><span class="tech-tag">Listes de courses auto.</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🏠</div><h3>Tableau de bord du foyer familial</h3><p>Gestion unifiée du foyer : listes de tâches partagées, listes de courses, calendriers de jardinage, suivi de l'entretien de la maison et budget du foyer avec intégration de l'OCR des reçus. Le tout chiffré et synchronisé en temps réel.</p><span class="tech-tag">Gestion des tâches</span><span class="tech-tag">Suivi du budget</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">🐕</div><h3>Coordination des soins aux animaux</h3><p>Profils de soins complets pour les animaux du foyer : horaires d'alimentation, besoins d'exercice, contacts vétérinaires, besoins en médicaments, plans d'urgence et instructions comportementales particulières. Tous les membres de la famille peuvent consulter et mettre à jour les tâches de soins aux animaux.</p><span class="tech-tag">Horaires d'alimentation</span><span class="tech-tag">Contacts vétérinaires</span><span class="tech-tag">Médicaments animaux</span></div>
+                    </div>
+                    <figure class="feature-shot">
+                        <div class="phone-frame">
+                            <picture>
+                                <source srcset="../medicationCompass.webp" type="image/webp">
+                                <img src="../medicationCompass.png"
+                                     alt="Vue du registre des médicaments d'un membre de la famille dans FamilyCompass"
+                                     loading="lazy"
+                                     width="540" height="1200">
+                            </picture>
+                        </div>
+                        <figcaption>Tenez un registre partagé des médicaments d'un membre de la famille, afin que toutes les personnes qui aident voient les mêmes informations.</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="feature-band">
+                <div class="container">
+                    <h3 class="block-heading">Soins de bébé &amp; développement de l'enfant</h3>
+                    <div class="feature-grid">
+                        <div class="feature-card"><div class="feature-card-icon">🍼</div><h3>Coordination du sommeil &amp; de l'alimentation</h3><p>Suit les tétées des nouveau-nés et nourrissons (sein, biberon, aliments solides) avec volume, durée et horaire. Le suivi du sommeil enregistre les cycles veille/sommeil et la durée des siestes. Partagé en temps réel entre coparents et personnes qui s'occupent de l'enfant. Signale les schémas inhabituels pour rester attentif à la santé.</p><span class="tech-tag">Journal des tétées</span><span class="tech-tag">Cycles de sommeil</span><span class="tech-tag">Sync. coparents</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">📈</div><h3>Suivi des étapes du développement</h3><p>Listes de contrôle des étapes adaptées à l'âge (normes de développement de l'OMS) de la naissance à l'adolescence. Suit la motricité, le langage, le développement social et les étapes cognitives. Courbes de croissance pour le poids, la taille et le périmètre crânien par rapport aux courbes de percentiles.</p><span class="tech-tag">Normes OMS</span><span class="tech-tag">Courbes de croissance</span><span class="tech-tag">Suivi des percentiles</span></div>
+                        <div class="feature-card"><div class="feature-card-icon">💉</div><h3>Carnet de vaccination &amp; de santé</h3><p>Suivi complet du calendrier vaccinal aligné sur les calendriers NHS/CDC. Stocke tous les dossiers de santé pédiatrique, orientations vers des spécialistes et bilans de développement. Chiffré et exportable pour les consultations chez le médecin traitant ou le pédiatre.</p><span class="tech-tag">Calendrier NHS/CDC</span><span class="tech-tag">Dossiers chiffrés</span><span class="tech-tag">Export médecin</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECURITY -->
+        <section id="security" class="security-band">
+            <div class="container">
+                <hr class="section-rule">
+                <p class="section-number">Architecture de sécurité</p>
+                <h2 class="section-title">Chiffré.<br><em>Par conception.</em></h2>
+                <p class="section-lead">Chaque donnée de chaque produit AI Pieces est protégée par la même pile de chiffrement de bout en bout — bâtie de A à Z avec une cryptographie moderne et robuste.</p>
+                <div class="security-grid">
+                    <div class="security-card"><div class="security-card-icon">🔑</div><h3>Chiffrement AES-256-GCM</h3><p>Toutes les données familiales — messages, localisation, dossiers de santé, calendrier — sont chiffrées en AES-256 en mode Galois/Counter. L'AEAD assure à la fois la confidentialité et l'authentification des messages. Le chiffrement a lieu sur l'appareil avant que la moindre donnée ne quitte votre téléphone.</p><div class="code-snippet">crypto.subtle.generateKey({ name: "AES-GCM", length: 256 })</div><ul class="mini-list"><li>IV aléatoire de 128 bits par opération de chiffrement</li><li>Le tag d'authentification empêche toute altération</li><li>Zero-knowledge — seul le texte chiffré est stocké côté serveur</li></ul></div>
+                    <div class="security-card"><div class="security-card-icon">🤝</div><h3>Échange de clés ECDH P-256</h3><p>Lorsqu'un nouveau membre rejoint la famille, son appareil génère une paire de clés ECDH P-256 unique. La clé familiale AES est chiffrée via la dérivation d'un secret partagé ECDH avec la clé publique du nouveau membre — la transmission de clé n'a jamais lieu en clair.</p><div class="code-snippet">crypto.subtle.generateKey({ name: "ECDH", namedCurve: "P-256" })</div><ul class="mini-list"><li>La clé privée ne quitte jamais l'appareil</li><li>Les clés publiques sont stockées dans Supabase uniquement pour l'échange de clés</li><li>Confidentialité persistante via des clés dérivées par session</li></ul></div>
+                    <div class="security-card"><div class="security-card-icon">🏦</div><h3>Stockage des clés assisté par matériel</h3><p>Les clés privées sont stockées exclusivement dans des modules de sécurité matériels — iOS Secure Enclave et Android StrongBox. Les clés sont liées à l'appareil et ne peuvent être extraites, même si l'appareil est compromis.</p><div class="code-snippet">securityLevel: Keychain.SECURITY_LEVEL.SECURE_HARDWARE</div><ul class="mini-list"><li>iOS : Secure Enclave (coprocesseur ARM dédié)</li><li>Android : HSM StrongBox ou repli TEE</li><li>ACCESSIBLE.WHEN_UNLOCKED_THIS_DEVICE_ONLY</li></ul></div>
+                    <div class="security-card"><div class="security-card-icon">🛡️</div><h3>Row Level Security (RLS)</h3><p>Les politiques Row Level Security de Supabase garantissent que chaque requête de base de données est limitée à l'identifiant familial de l'utilisateur authentifié. Aucun accès aux données d'une autre famille n'est possible au niveau de la base de données, même avec un JWT valide.</p><div class="code-snippet">CREATE POLICY family_isolation ON location_updates USING (family_id = auth.uid())</div><ul class="mini-list"><li>Application au niveau PostgreSQL</li><li>S'applique à toutes les tables : messages, localisations, santé, calendrier</li><li>Audité contre les schémas d'injection SQL</li></ul></div>
+                    <div class="security-card"><div class="security-card-icon">🪤</div><h3>Détection d'intrusion — jetons canari</h3><p>Le service de jetons canari intègre des marqueurs uniques et invisibles dans les structures de données sensibles. Si des données sont consultées en dehors des flux normaux de l'application, le canari déclenche immédiatement une alerte chiffrée. Des enregistrements pièges (honeypot) surveillent toute énumération non autorisée.</p><div class="code-snippet">CanaryTokenService + IntrusionDetectionService</div><ul class="mini-list"><li>Fil-piège silencieux sur les enregistrements familiaux sensibles</li><li>Les lignes pièges détectent le scraping automatisé</li><li>Alerte chiffrée à l'administration de la famille en cas de déclenchement</li></ul></div>
+                    <div class="security-card"><div class="security-card-icon">🔏</div><h3>Authentification biométrique</h3><p>FaceID, TouchID et l'authentification biométrique Android sont requis avant tout déchiffrement de données familiales. Liaison biométrique assistée par matériel via react-native-keychain. Les données familiales ne peuvent être lues sans vérification biométrique.</p><div class="code-snippet">BiometricAuth.ts — ACCESSIBLE.WHEN_UNLOCKED_THIS_DEVICE_ONLY</div><ul class="mini-list"><li>iOS : FaceID / TouchID via Secure Enclave</li><li>Android : Biometric Manager + StrongBox</li><li>Aucune donnée en clair accessible avant authentification</li></ul></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HEALTHCOMPASS -->
+        <section id="healthcompass">
+            <div class="institution-band">
+                <div class="container">
+                    <hr class="section-rule">
+                    <p class="section-number">Produit 02</p>
+                    <span class="product-badge-pill badge-health">HealthCompass</span>
+                    <h2 class="section-title">Communication hôpital-patient-famille —<br><em>chiffrée, conçue pour répondre aux normes HIPAA, adaptée au personnel.</em></h2>
+                    <p class="section-lead">Bâtie sur la pile chiffrée de FamilyCompass, adaptée aux environnements cliniques. Élimine la plus grande perte de temps pour le personnel soignant — les appels téléphoniques répétés des proches — sans ajouter la moindre minute de charge administrative.</p>
+                    <div class="institution-card health">
+                        <h3>Fonctionnalités pour le personnel clinique</h3>
+                        <p class="subtitle">Conçu pour le personnel soignant des soins intensifs, de la maternité, de la pédiatrie et de la chirurgie</p>
+                        <div class="two-col">
+                            <div class="two-col-sub"><h4>📱 Mobile d'abord, aucun ordinateur requis</h4><ul class="inst-list"><li>Enregistrement vocal mobile — dictez une mise à jour patient, l'application la convertit en note clinique structurée via la reconnaissance vocale embarquée</li><li>L'OCR photo-vers-texte capture notes manuscrites, feuilles de médication ou photos de plaies au chevet</li><li>Mises à jour d'état en un geste — « Stable », « Au repos », « En chirurgie », « Éveillé » — diffusées aux proches instantanément, sans saisie</li><li>Mode de mise à jour groupée — mettez à jour plusieurs familles de patients en moins de 2 minutes lors de la relève</li><li>Le mode hors ligne met en file toutes les mises à jour pour les livrer au retour de la connexion</li></ul></div>
+                            <div class="two-col-sub"><h4>🔗 Intégration aux systèmes</h4><ul class="inst-list"><li>Intégration par API REST avec Epic, Cerner et Meditech pour des déclencheurs automatiques d'admission/sortie</li><li>Structures de données compatibles HL7 FHIR pour les dossiers patients et mises à jour d'état</li><li>Authentification unique (SSO) pour le personnel hospitalier — intégration avec Active Directory / Azure AD</li><li>Piste d'audit HIPAA — chaque notification aux proches journalisée avec horodatage, identifiant du personnel et empreinte du contenu</li><li>Configuration personnalisée par service — flux des soins intensifs, de la maternité et de la pédiatrie configurés indépendamment</li></ul></div>
+                            <div class="two-col-sub"><h4>👨‍👩‍👧 Fonctionnalités pour les proches</h4><ul class="inst-list"><li>Notifications push chiffrées en temps réel sur les smartphones des proches</li><li>Un fil de mises à jour structuré remplace les appels téléphoniques — « 11h30 : apaisé après l'intervention, se repose confortablement »</li><li>Notifications de plages de visite encadrées — les proches sont informés des horaires de visite et des changements de chambre</li><li>Canal de messagerie chiffré pour les proches vers le poste de soins</li><li>Application multilingue pour les proches — essentielle pour les patients internationaux</li></ul></div>
+                            <div class="two-col-sub"><h4>📊 Conformité &amp; analyse</h4><ul class="inst-list"><li>Chiffrement de bout en bout conçu pour répondre aux normes HIPAA — même pile AES-256-GCM / ECDH que FamilyCompass</li><li>Architecture zero-knowledge — AI Pieces ne peut pas lire les données des patients</li><li>Tableaux de bord par service pour la direction des soins — indicateurs de fréquence de mise à jour et de réduction des appels</li><li>Rapports automatiques de préparation aux inspections CQC/JCI</li><li>Flux de consentement des patients conformes au RGPD avec journalisation numérique du consentement</li></ul></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARECOMPASS -->
+        <section id="carecompass">
+            <div class="institution-band tinted">
+                <div class="container">
+                    <hr class="section-rule">
+                    <p class="section-number">Produit 03</p>
+                    <span class="product-badge-pill badge-care">CareCompass</span>
+                    <h2 class="section-title">Communication chiffrée avec les proches<br>pour <em>les maisons de retraite &amp; les soins résidentiels.</em></h2>
+                    <p class="section-lead">CareCompass apporte la confidentialité et la sécurité de FamilyCompass au secteur du grand âge — en reliant les familles des résidents aux équipes de soins sans alourdir un personnel soignant déjà sous tension.</p>
+                    <div class="institution-card care">
+                        <h3>Fonctionnalités pour le personnel soignant</h3>
+                        <p class="subtitle">Conçu pour les maisons de retraite, les résidences services et les établissements de soins résidentiels (20 à plus de 200 lits)</p>
+                        <div class="two-col">
+                            <div class="two-col-sub"><h4>📱 Des mises à jour sans effort par le personnel</h4><ul class="inst-list"><li>Enregistrement vocal mobile et OCR photo — les soignants saisissent les mises à jour des résidents au chevet, sans ordinateur</li><li>Mises à jour quotidiennes sur le bien-être (humeur, appétit, activité, lien social) envoyées aux proches par notification chiffrée</li><li>Journalisation de l'administration des médicaments avec horodatage et identifiant du soignant pour la documentation de conformité</li><li>Journalisation photo des soins de plaies et observations de santé — chiffrée, visible uniquement par les proches autorisés et le personnel clinique</li><li>Outil de mise à jour groupée pour la tournée du matin — mettez à jour toutes les familles de résidents pendant ou juste après la tournée</li></ul></div>
+                            <div class="two-col-sub"><h4>🏠 Localisation &amp; coordination des résidents</h4><ul class="inst-list"><li>Alertes de localisation pour zones sûres — le personnel configure des zones choisies, et les soignants et proches désignés peuvent être avertis lorsqu'un résident entre ou quitte une zone ; fonctionne lorsque le résident a l'application en cours d'exécution sur son téléphone</li><li>Intégration des objets connectés — fait remonter les données d'activité et de bien-être qu'un appareil connecté (Apple Watch, Garmin, Withings) choisit de partager</li><li>Journalisation de l'administration des médicaments — le personnel consigne ce qui a été administré, afin que l'équipe de soins et les proches voient le même registre partagé</li><li>Cascade de contacts d'urgence — notifications chiffrées envoyées aux niveaux de proches dans un ordre défini</li><li>Suivi des activités — repas, séances de kinésithérapie et activités sociales journalisés et partagés avec les proches</li></ul></div>
+                            <div class="two-col-sub"><h4>👨‍👩‍👧 Implication des familles</h4><ul class="inst-list"><li>Fil de mises à jour quotidien chiffré — les proches voient ce que leur parent a mangé, comment il a dormi, à quelles activités il a participé</li><li>Messagerie chiffrée des proches vers l'équipe de soins — remplace les appels qui interrompent le personnel pendant les soins</li><li>Coordination des visites — les familles réservent des visites, l'équipe de soins confirme, sans téléphone qui sonne dans le vide</li><li>Accès multi-familles avec cloisonnement de la confidentialité — chaque proche ne voit que les données de son parent</li><li>Notifications de rendez-vous médicaux — les familles sont informées automatiquement des rendez-vous à venir</li></ul></div>
+                            <div class="two-col-sub"><h4>📋 Conformité &amp; préparation aux inspections</h4><ul class="inst-list"><li>Conforme au RGPD dès le départ — conçu en Irlande, hébergement des données dans l'UE disponible</li><li>Documentation pour les inspections CQC (R.-U.) / HIQA (Irlande) — registres automatiques de communication des soins avec horodatages</li><li>Gestion du consentement — consentement familial numérique pour la communication et le partage de données, journalisé et auditable</li><li>Piste d'audit de l'activité du personnel — chaque mise à jour journalisée avec identifiant du soignant et horaire</li><li>Politiques de conservation des données configurables par établissement, conformément aux exigences réglementaires</li></ul></div>
+                        </div>
+                        <p class="subtitle" style="margin-top:24px;"><strong>Veuillez noter :</strong> CareCompass est un outil de coordination et de tenue de registre, et non un dispositif médical ; il ne remplace ni un avis médical ou de soin professionnel, ni la surveillance clinique, ni les propres procédures de sécurité d'un établissement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCOMPASS -->
+        <section id="educompass">
+            <div class="institution-band">
+                <div class="container">
+                    <hr class="section-rule">
+                    <p class="section-number">Produit 04</p>
+                    <span class="product-badge-pill badge-edu">EduCompass</span>
+                    <h2 class="section-title">Communication chiffrée conforme au RGPD<br>pour <em>les écoles de toutes sortes.</em></h2>
+                    <p class="section-lead">EduCompass remplace une communication scolaire fragmentée et non conforme — en unifiant la coordination entre parents, enseignants et élèves sur une plateforme chiffrée à laquelle les écoles peuvent réellement faire confiance.</p>
+                    <div class="institution-card edu">
+                        <h3>Plateforme de communication scolaire</h3>
+                        <p class="subtitle">Conçu pour les écoles publiques, privées, internationales, confessionnelles et spécialisées — de la maternelle au secondaire</p>
+                        <div class="two-col">
+                            <div class="two-col-sub"><h4>👩‍🏫 Fonctionnalités pour les enseignants</h4><ul class="inst-list"><li>Messagerie chiffrée parents-enseignants — remplace les chaînes d'e-mails, les groupes WhatsApp et les appels téléphoniques</li><li>Diffusion d'annonces de classe — un seul message à tous les parents concernés, livré instantanément</li><li>Mises à jour par notes vocales mobiles — les enseignants enregistrent des mises à jour audio depuis la classe, sans saisie</li><li>Mises à jour sur les progrès des élèves avec des modèles structurés, partagées avec les parents en toute sécurité</li><li>Notifications de devoirs et travaux avec intégration au calendrier</li><li>Planification des rencontres parents-professeurs avec confirmation et rappels automatiques</li></ul></div>
+                            <div class="two-col-sub"><h4>👨‍👩‍👧 Fonctionnalités pour les parents</h4><ul class="inst-list"><li>Fil de notifications unifié — toute la communication scolaire en un seul endroit chiffré</li><li>Messagerie directe chiffrée vers des enseignants ou personnels administratifs précis</li><li>Calendrier de l'enfant — événements scolaires, examens, sorties et clubs synchronisés automatiquement avec FamilyCompass</li><li>Signalement des absences — soumettez les absences avec motif, directement journalisées dans le système scolaire</li><li>Flux de paiement et de consentement aux sorties avec signatures numériques sécurisées remplaçant les formulaires papier</li><li>Prise en charge de plusieurs enfants — fils distincts par enfant avec indication claire du niveau de classe</li></ul></div>
+                            <div class="two-col-sub"><h4>🏫 Administration scolaire</h4><ul class="inst-list"><li>Connecteurs SIG — Arbor, SIMS, iSAMS, Veracross — pour la synchronisation automatique des listes</li><li>Conforme au RGPD dès le départ — les données des parents ne sont jamais partagées avec des annonceurs ; piste d'audit complète du consentement</li><li>Outils de communication de masse pour les inscriptions, événements et annonces d'urgence</li><li>Gestion des autorisations et de la protection de l'enfance — rôles de communication du personnel appliqués au niveau de la plateforme</li><li>Préparation aux inspections ISI / Ofsted — registres de communication disponibles pour l'examen de protection de l'enfance</li><li>Tableau de bord analytique — taux d'engagement des parents, accusés de lecture, fréquence de communication</li></ul></div>
+                            <div class="two-col-sub"><h4>🔐 Conformité &amp; sécurité</h4><ul class="inst-list"><li>Conforme à l'article 32 du RGPD — mesures techniques appropriées, dont le chiffrement AES-256</li><li>Conforme à la COPPA pour les données des élèves de moins de 13 ans — flux de consentement parental intégrés</li><li>Contrôles de protection de l'enfance alignés sur le KCSIE (R.-U., « Keeping Children Safe in Education »)</li><li>Options d'hébergement des données — serveurs UE / R.-U. pour les exigences de conformité</li><li>Droit à l'effacement pris en charge — suppression des données des parents sur demande avec enregistrement d'audit</li><li>Aucune publicité, aucun profilage de données, aucune revente de données — jamais</li></ul></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="container">
+                <h2>Prêt à le voir<br>en action ?</h2>
+                <p>FamilyCompass est désormais en bêta. HealthCompass, CareCompass et EduCompass acceptent les inscriptions aux projets pilotes 2026–2027.</p>
+                <a href="index.html#beta-signup-section" class="btn btn-primary">Rejoindre la bêta FamilyCompass</a>
+                <a href="mailto:support@aipieces.org?subject=Demande%20de%20projet%20pilote" class="btn btn-outline">Lancer un projet pilote — Organisations</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><h4>Produit</h4><ul class="footer-links"><li><a href="features.html">Fonctionnalités</a></li><li><a href="how-it-works.html">Comment ça marche</a></li><li><a href="subscriptions.html">Abonnement</a></li><li><a href="index.html#beta-signup-section">Télécharger l'application</a></li></ul></div>
+                <div class="footer-section"><h4>Entreprise</h4><ul class="footer-links"><li><a href="about-founder.html">À propos de la fondatrice</a></li><li><a href="research.html">Notre recherche</a></li><li><a href="research.html">Blog</a></li></ul></div>
+                <div class="footer-section"><h4>Guides</h4><ul class="footer-links"><li><a href="family-coordination-app.html">Application de coordination familiale</a></li><li><a href="private-alternative-to-life360.html">Alternative privée à Life360</a></li><li><a href="how-to-coordinate-care-for-an-elderly-parent.html">Coordonner les soins d'un parent âgé</a></li><li><a href="example-when-is-it-time-for-a-care-home.html">Quand est-il temps de choisir une maison de retraite ?</a></li><li><a href="family-medication-tracking-app.html">Suivi des médicaments en famille</a></li><li><a href="co-parenting-app-private.html">Application de coparentalité privée</a></li></ul></div>
+                <div class="footer-section"><h4>Confidentialité &amp; confiance</h4><ul class="footer-links"><li><a href="privacy.html">Politique de confidentialité</a></li><li><a href="privacy.html">Sécurité</a></li><li><a href="terms.html">Conditions d'utilisation</a></li><li><a href="privacy.html">Conformité COPPA</a></li></ul></div>
+                <div class="footer-section"><h4>Assistance</h4><ul class="footer-links"><li><a href="support.html">Centre d'aide</a></li><li><a href="support.html">Nous contacter</a></li><li><a href="support.html">Envoyer un retour</a></li><li><a href="mailto:support@aipieces.org">support@aipieces.org</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin-bottom:14px;">
+                    <span class="lang-switcher" style="justify-content:center;">
+                        <a href="../features.html" hreflang="en">English</a><span>·</span><a href="../de/features.html" hreflang="de">Deutsch</a><span>·</span><a href="features.html" hreflang="fr" class="active">Français</a><span>·</span><a href="../es/features.html" hreflang="es">Español</a>
+                    </span>
+                </p>
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Fait avec ❤️ pour les familles du monde entier.</p>
+                <p style="margin-top:10px;font-size:0.8rem;">FamilyCompass · HealthCompass · CareCompass · EduCompass · Confidentialité d'abord, par conception · Conçu à Kerry, en Irlande · Conforme au RGPD</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.feature-card, .security-card, .stat-box, .institution-card').forEach(el => {
+            el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            io.observe(el);
+        });
+    </script>
+</body>
+</html>

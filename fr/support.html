@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistance — AI Pieces | Centre d'aide</title>
+    <meta name="description" content="Obtenez de l'aide pour FamilyCompass, HealthCompass, CareCompass ou EduCompass. Contactez l'assistance, parcourez les FAQ et accédez aux ressources de tous les produits AI Pieces.">
+    <link rel="canonical" href="https://aipieces.org/fr/support.html">
+    <link rel="alternate" hreflang="en" href="https://aipieces.org/support.html">
+    <link rel="alternate" hreflang="de" href="https://aipieces.org/de/support.html">
+    <link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/support.html">
+    <link rel="alternate" hreflang="es" href="https://aipieces.org/es/support.html">
+    <link rel="alternate" hreflang="x-default" href="https://aipieces.org/support.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Comment rejoindre la bêta ?", "acceptedAnswer": { "@type": "Answer", "text": "Manifestez votre intérêt via l'inscription bêta sur notre page d'accueil, ou écrivez à support@aipieces.org avec l'objet « FamilyCompass Beta ». Nous intégrons actuellement des testeurs dans quatre pays et confirmerons votre accès sous 48 heures." } },
+        { "@type": "Question", "name": "FamilyCompass est-il disponible sur iOS et Android ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. FamilyCompass est une application React Native native disponible à la fois sur iOS (bêta TestFlight) et Android. La disponibilité générale sur l'App Store et Google Play est prévue pour l'été 2026." } },
+        { "@type": "Question", "name": "Combien de membres de la famille puis-je ajouter ?", "acceptedAnswer": { "@type": "Answer", "text": "La bêta prend en charge des groupes familiaux complets. Les limites précises par formule seront confirmées à la disponibilité générale, lors de l'annonce des tarifs." } },
+        { "@type": "Question", "name": "Fonctionne-t-il sans connexion Internet ?", "acceptedAnswer": { "@type": "Answer", "text": "Les fonctionnalités principales nécessitent une connexion pour la localisation et la messagerie en temps réel. Les dernières positions connues et les données de calendrier en cache restent accessibles hors ligne. Un mode hors ligne complet figure sur la feuille de route technique." } },
+        { "@type": "Question", "name": "Qu'est-ce que le moteur Time Travel ?", "acceptedAnswer": { "@type": "Answer", "text": "Le moteur Time Travel est le système de détection de conflits de calendrier de FamilyCompass, propulsé par l'IA. Il analyse les plannings familiaux — y compris les rosters de pilotes, les rotations de postes et les calendriers scolaires — et signale les conflits avant qu'ils ne surviennent, en suggérant des options de résolution en temps réel." } },
+        { "@type": "Question", "name": "AI Pieces peut-il voir les données de localisation de ma famille ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. FamilyCompass utilise une architecture zero-knowledge avec un chiffrement de bout en bout AES-256-GCM et un stockage des clés assisté par matériel (iOS Secure Enclave, Android StrongBox). Les clés de chiffrement ne quittent jamais votre appareil. AI Pieces ne peut pas accéder à vos données de localisation ou de messagerie — non par politique, mais par conception architecturale." } },
+        { "@type": "Question", "name": "AI Pieces vend-il des données ?", "acceptedAnswer": { "@type": "Answer", "text": "Jamais. AI Pieces ne vend, ne partage ni ne monétise les données des utilisateurs. Notre modèle économique repose sur l'abonnement. Vos données n'ont aucune valeur commerciale pour nous — par conception." } },
+        { "@type": "Question", "name": "Les données des enfants sont-elles protégées ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. FamilyCompass est conforme à la COPPA pour les utilisateurs de moins de 13 ans. Les données des enfants sont chiffrées de bout en bout, ne sont jamais utilisées pour le profilage ou la publicité, et sont soumises aux droits d'accès et de suppression parentaux à tout moment. Contactez support@aipieces.org pour toute demande parentale relative aux données." } },
+        { "@type": "Question", "name": "Comment demander la suppression de mes données ?", "acceptedAnswer": { "@type": "Answer", "text": "Écrivez à support@aipieces.org avec l'objet « Demande de suppression de données » et l'e-mail de votre compte. Nous traiterons la demande dans les 30 jours conformément à l'article 17 du RGPD. Vous recevrez une confirmation écrite une fois la suppression effectuée." } },
+        { "@type": "Question", "name": "AI Pieces est-il conforme au RGPD ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. AI Pieces Ltd est enregistrée en Irlande et conçue au sein de l'UE. La conformité au RGPD est une exigence de base, pas une réflexion après coup. La politique de confidentialité complète est disponible sur aipieces.org/fr/privacy." } }
+      ]
+    }
+    </script>
+
+    <meta property="og:title" content="Assistance — AI Pieces">
+    <meta property="og:description" content="Obtenez de l'aide pour tout produit AI Pieces. Nous sommes là.">
+    <meta property="og:url" content="https://aipieces.org/fr/support.html">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold:       #8b6914;
+            --gold-light: #d4af37;
+            --gold-pale:  #f5e9c4;
+            --brown-deep: #3d2e1e;
+            --brown-mid:  #5a4a3a;
+            --cream:      #f5f1e8;
+            --cream-dark: #e8ddd4;
+            --teal:       #1a6b6b;
+            --blue-cite:  #2c5f8a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            color: var(--brown-mid);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container        { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .container-narrow { max-width: 860px;  margin: 0 auto; padding: 0 20px; }
+
+        .header {
+            padding: 20px 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: -apple-system, sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); letter-spacing: 1px; text-decoration: none; }
+        .trust-badge {
+            background: rgba(139,105,20,0.1); color: var(--gold);
+            padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;
+            font-weight: 600; margin-left: 10px; font-family: -apple-system, sans-serif;
+        }
+        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+        .nav-links a { font-family: -apple-system, sans-serif; text-decoration: none; color: var(--brown-mid); font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--gold); }
+        .lang-switcher { display: flex; gap: 6px; align-items: center; font-size: 0.85rem; font-family: -apple-system, sans-serif; }
+        .lang-switcher a { color: var(--brown-mid); text-decoration: none; font-weight: 600; padding: 2px 5px; border-radius: 4px; }
+        .lang-switcher a.active { color: var(--gold); background: rgba(139,105,20,0.1); }
+        .lang-switcher a:hover { color: var(--gold); }
+        .lang-switcher span { color: rgba(90,74,58,0.4); }
+
+        .hero { padding: 150px 0 80px; text-align: center; }
+        .hero-eyebrow { font-family: -apple-system, sans-serif; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--gold); margin-bottom: 18px; opacity: 0.9; }
+        .hero-title { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 900; line-height: 1.1; background: linear-gradient(135deg, var(--gold), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 24px; }
+        .hero-title em { font-style: italic; }
+        .hero-body { font-size: 1.2rem; color: var(--brown-deep); max-width: 580px; margin: 0 auto 50px; line-height: 1.8; }
+
+        .section-rule  { border: none; border-top: 2px solid var(--gold); width: 60px; margin-bottom: 12px; opacity: 0.5; }
+        .section-number { font-family: -apple-system, sans-serif; font-size: 0.78rem; color: var(--gold-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; font-weight: 700; }
+        .section-title  { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 700; color: var(--brown-deep); line-height: 1.15; margin-bottom: 18px; }
+        .section-title em { color: var(--gold); font-style: italic; }
+        .section-lead   { font-size: 1.05rem; color: var(--brown-mid); max-width: 680px; line-height: 1.8; margin-bottom: 50px; }
+
+        .contact-band { background: rgba(255,255,255,0.5); backdrop-filter: blur(8px); padding: 80px 0; border-top: 1px solid rgba(139,105,20,0.1); }
+        .contact-card { background: white; border: 1px solid rgba(139,105,20,0.15); border-radius: 24px; padding: 60px; text-align: center; max-width: 720px; margin: 0 auto; box-shadow: 0 8px 40px rgba(139,105,20,0.08); }
+        .contact-card h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--brown-deep); margin-bottom: 16px; }
+        .contact-card p { font-size: 1.05rem; color: var(--brown-mid); line-height: 1.8; margin-bottom: 36px; }
+        .contact-email-link { display: inline-block; font-family: -apple-system, sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--gold); text-decoration: none; border-bottom: 2px solid rgba(139,105,20,0.3); padding-bottom: 3px; transition: border-color 0.3s; }
+        .contact-email-link:hover { border-color: var(--gold); }
+        .response-note { margin-top: 20px; font-family: -apple-system, sans-serif; font-size: 0.82rem; color: var(--brown-mid); opacity: 0.6; }
+
+        .subject-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; text-align: left; }
+        .subject-tile { background: var(--cream); border: 1px solid rgba(139,105,20,0.15); border-radius: 14px; padding: 18px 20px; transition: background 0.3s, border-color 0.3s; overflow: hidden; min-width: 0; }
+        .subject-tile:hover { background: var(--gold-pale); border-color: rgba(139,105,20,0.3); }
+        .subject-tile-label { font-family: -apple-system, sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
+        .subject-tile a { font-family: -apple-system, sans-serif; font-size: 0.88rem; font-weight: 600; color: var(--brown-deep); text-decoration: none; display: block; line-height: 1.4; word-break: break-word; }
+        .subject-tile a:hover { color: var(--gold); }
+
+        .faq-band { padding: 90px 0; background: rgba(255,255,255,0.45); backdrop-filter: blur(6px); }
+        .faq-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .faq-group-title { font-family: -apple-system, sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 20px; }
+        .faq-item { border-bottom: 1px solid rgba(139,105,20,0.12); padding: 18px 0; }
+        .faq-item:first-of-type { border-top: 1px solid rgba(139,105,20,0.12); }
+        .faq-q { font-family: -apple-system, sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--brown-deep); display: flex; justify-content: space-between; align-items: center; cursor: pointer; gap: 12px; }
+        .faq-q::after { content: '+'; font-size: 1.3rem; font-weight: 300; color: var(--gold); flex-shrink: 0; transition: transform 0.25s; }
+        .faq-item.open .faq-q::after { transform: rotate(45deg); }
+        .faq-a { font-size: 0.92rem; color: var(--brown-mid); line-height: 1.7; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding-top 0.2s; }
+        .faq-item.open .faq-a { max-height: 320px; padding-top: 12px; }
+
+        .resources-band { padding: 90px 0; }
+        .resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .resource-card { background: white; border-radius: 20px; padding: 32px 28px; border-top: 4px solid var(--gold-light); box-shadow: 0 4px 20px rgba(139,105,20,0.07); transition: transform 0.3s, box-shadow 0.3s; }
+        .resource-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(139,105,20,0.12); }
+        .resource-icon { font-size: 2rem; margin-bottom: 16px; }
+        .resource-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--brown-deep); margin-bottom: 10px; }
+        .resource-card p { font-size: 0.9rem; color: var(--brown-mid); line-height: 1.65; margin-bottom: 18px; }
+        .resource-link { font-family: -apple-system, sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(139,105,20,0.3); padding-bottom: 2px; transition: border-color 0.3s; }
+        .resource-link:hover { border-color: var(--gold); }
+
+        .footer { background: rgba(0,0,0,0.1); padding: 60px 0 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { font-family: -apple-system, sans-serif; color: var(--gold); font-size: 1.1rem; margin-bottom: 15px; font-weight: 600; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+        .footer-links a { font-family: -apple-system, sans-serif; color: var(--brown-mid); text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: var(--brown-mid); font-family: -apple-system, sans-serif; }
+
+        html { scroll-behavior: smooth; }
+
+        .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .reveal.animate { opacity: 0; transform: translateY(22px); }
+        .reveal.animate.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 960px) {
+            .subject-tiles  { grid-template-columns: 1fr 1fr; }
+            .faq-columns    { grid-template-columns: 1fr; }
+            .resources-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .hero-title     { font-size: 2.6rem; }
+            .section-title  { font-size: 2rem; }
+            .nav-links      { display: none; }
+            .subject-tiles  { grid-template-columns: 1fr; }
+            .resources-grid { grid-template-columns: 1fr; }
+            .contact-card   { padding: 40px 28px; }
+        }
+
+        .support-photo { max-width: 900px; margin: 0 auto 10px; padding: 0 24px; }
+        .support-photo figure { margin: 0; }
+        .support-photo img { display: block; width: 100%; height: auto; max-height: 340px; object-fit: cover; border-radius: 22px; box-shadow: 0 16px 40px rgba(61,46,30,0.18); }
+        .support-photo figcaption { font-family: -apple-system, sans-serif; font-size: 0.85rem; color: var(--brown-mid); text-align: center; margin-top: 14px; }
+    </style>
+</head>
+<body>
+
+    <!-- ── HEADER ── -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navigation principale">
+                <a href="index.html" class="logo">
+                    AIPieces
+                    <span class="trust-badge">Confidentialité d'abord</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="family-coordination-app.html">Guides</a></li>
+                    <li><a href="research.html">Recherche</a></li>
+                    <li><a href="features.html">Fonctionnalités</a></li>
+                    <li><a href="subscriptions.html">Abonnement</a></li>
+                    <li><a href="about-founder.html">Histoire de la fondatrice</a></li>
+                    <li><a href="how-it-works.html">Comment ça marche</a></li>
+                    <li><a href="privacy.html">Confidentialité</a></li>
+                    <li><a href="support.html">Assistance</a></li>
+                    <li class="lang-switcher" aria-label="Choisir la langue">
+                        <a href="../support.html" hreflang="en">EN</a><span>·</span><a href="../de/support.html" hreflang="de">DE</a><span>·</span><a href="support.html" hreflang="fr" class="active">FR</a><span>·</span><a href="../es/support.html" hreflang="es">ES</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ── HERO ── -->
+        <section class="hero">
+            <div class="container-narrow">
+                <p class="hero-eyebrow">AI Pieces · Centre d'aide</p>
+                <h1 class="hero-title">Nous sommes<br>là pour <em>aider.</em></h1>
+                <p class="hero-body">
+                    Que vous soyez testeur bêta, une famille qui débute ou une organisation qui explore un projet pilote — une seule adresse e-mail s'occupe de tout.
+                </p>
+            </div>
+        </section>
+
+        <!-- ── BANNER PHOTO ── -->
+        <div class="support-photo">
+            <figure>
+                <picture>
+                    <source srcset="../familypatio.webp" type="image/webp">
+                    <img src="../familypatio.jpg" alt="Une famille multigénérationnelle se détendant ensemble sur une terrasse" loading="lazy" decoding="async" width="1600" height="900">
+                </picture>
+                <figcaption>De vraies personnes, de vraies questions — nous lisons chaque message nous-mêmes.</figcaption>
+            </figure>
+        </div>
+
+        <!-- ── CONTACT ── -->
+        <section class="contact-band">
+            <div class="container">
+                <div class="contact-card">
+                    <h2>Entrer en contact</h2>
+                    <p>Pour toute assistance, retour, question sur l'accès bêta, projets pilotes des organisations et demandes générales — contactez-nous à :</p>
+                    <a href="mailto:support@aipieces.org" class="contact-email-link">support@aipieces.org</a>
+                    <p class="response-note">Nous répondons sous 48 heures · du lundi au vendredi</p>
+
+                    <div class="subject-tiles">
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">FamilyCompass</p>
+                            <a href="mailto:support@aipieces.org?subject=FamilyCompass">Accès bêta &amp; problèmes d'application</a>
+                        </div>
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">HealthCompass</p>
+                            <a href="mailto:support@aipieces.org?subject=HealthCompass">Demandes de projets pilotes hospitaliers</a>
+                        </div>
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">CareCompass</p>
+                            <a href="mailto:support@aipieces.org?subject=CareCompass">Demandes de projets pilotes en maison de retraite</a>
+                        </div>
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">EduCompass</p>
+                            <a href="mailto:support@aipieces.org?subject=EduCompass">Demandes de projets pilotes scolaires</a>
+                        </div>
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">Confidentialité &amp; données</p>
+                            <a href="mailto:support@aipieces.org?subject=Confidentialite">Demandes d'accès &amp; de suppression des données</a>
+                        </div>
+                        <div class="subject-tile">
+                            <p class="subject-tile-label">Général</p>
+                            <a href="mailto:support@aipieces.org?subject=General">Retours, presse &amp; partenariats</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FAQ ── -->
+        <section class="faq-band" id="faq">
+            <div class="container">
+                <hr class="section-rule">
+                <p class="section-number">FAQ</p>
+                <h2 class="section-title">Questions<br><em>fréquentes.</em></h2>
+                <p class="section-lead">Les réponses aux questions que nous entendons le plus. Si la vôtre n'y figure pas, écrivez-nous.</p>
+
+                <div class="faq-columns">
+                    <div>
+                        <p class="faq-group-title">FamilyCompass &amp; l'application</p>
+
+                        <div class="faq-item">
+                            <div class="faq-q">Comment rejoindre la bêta ?</div>
+                            <div class="faq-a">Manifestez votre intérêt via l'inscription bêta sur notre page d'accueil, ou écrivez à <a href="mailto:support@aipieces.org">support@aipieces.org</a> avec l'objet « FamilyCompass Beta ». Nous intégrons actuellement des testeurs dans quatre pays et confirmerons votre accès sous 48 heures.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">FamilyCompass est-il disponible sur iOS et Android ?</div>
+                            <div class="faq-a">Oui. FamilyCompass est une application React Native native disponible à la fois sur iOS (bêta TestFlight) et Android. La disponibilité générale sur l'App Store et Google Play est prévue pour l'été 2026.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Combien de membres de la famille puis-je ajouter ?</div>
+                            <div class="faq-a">La bêta prend en charge des groupes familiaux complets. Les limites précises par formule seront confirmées à la disponibilité générale, lors de l'annonce des tarifs.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Fonctionne-t-il sans connexion Internet ?</div>
+                            <div class="faq-a">Les fonctionnalités principales nécessitent une connexion pour la localisation et la messagerie en temps réel. Les dernières positions connues et les données de calendrier en cache restent accessibles hors ligne. Un mode hors ligne complet figure sur la feuille de route technique.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Qu'est-ce que le moteur Time Travel ?</div>
+                            <div class="faq-a">Le moteur Time Travel est le système de détection de conflits de calendrier de FamilyCompass, propulsé par l'IA. Il analyse les plannings familiaux — y compris les rosters de pilotes, les rotations de postes et les calendriers scolaires — et signale les conflits avant qu'ils ne surviennent, en suggérant des options de résolution en temps réel.</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="faq-group-title">Confidentialité &amp; sécurité</p>
+
+                        <div class="faq-item">
+                            <div class="faq-q">AI Pieces peut-il voir les données de localisation de ma famille ?</div>
+                            <div class="faq-a">Non. FamilyCompass utilise une architecture zero-knowledge avec un chiffrement de bout en bout AES-256-GCM et un stockage des clés assisté par matériel (iOS Secure Enclave, Android StrongBox). Les clés de chiffrement ne quittent jamais votre appareil. AI Pieces ne peut pas accéder à vos données de localisation ou de messagerie — non par politique, mais par conception architecturale.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">AI Pieces vend-il des données ?</div>
+                            <div class="faq-a">Jamais. AI Pieces ne vend, ne partage ni ne monétise les données des utilisateurs. Notre modèle économique repose sur l'abonnement. Vos données n'ont aucune valeur commerciale pour nous — par conception.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Les données des enfants sont-elles protégées ?</div>
+                            <div class="faq-a">Oui. FamilyCompass est conforme à la COPPA pour les utilisateurs de moins de 13 ans. Les données des enfants sont chiffrées de bout en bout, ne sont jamais utilisées pour le profilage ou la publicité, et sont soumises aux droits d'accès et de suppression parentaux à tout moment. Contactez <a href="mailto:support@aipieces.org">support@aipieces.org</a> pour toute demande parentale relative aux données.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Comment demander la suppression de mes données ?</div>
+                            <div class="faq-a">Écrivez à <a href="mailto:support@aipieces.org">support@aipieces.org</a> avec l'objet « Demande de suppression de données » et l'e-mail de votre compte. Nous traiterons la demande dans les 30 jours conformément à l'article 17 du RGPD. Vous recevrez une confirmation écrite une fois la suppression effectuée.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">AI Pieces est-il conforme au RGPD ?</div>
+                            <div class="faq-a">Oui. AI Pieces Ltd est enregistrée en Irlande et conçue au sein de l'UE. La conformité au RGPD est une exigence de base, pas une réflexion après coup. La politique de confidentialité complète est disponible sur <a href="privacy.html" style="color:var(--gold);">aipieces.org/fr/privacy</a>.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── RESOURCES ── -->
+        <section class="resources-band">
+            <div class="container">
+                <hr class="section-rule">
+                <p class="section-number">Ressources</p>
+                <h2 class="section-title">Pour aller<br><em>plus loin.</em></h2>
+                <p class="section-lead">Tout ce qu'il vous faut pour comprendre comment fonctionne AI Pieces, ce qu'il coûte et pourquoi il est conçu comme il l'est.</p>
+
+                <div class="resources-grid">
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">🔬</div>
+                        <h3>Recherche</h3>
+                        <p>La base de preuves évaluée par des pairs qui sous-tend chaque produit. Pourquoi la coordination familiale est un facteur de stress documenté pour la santé, pourquoi les appels des proches à l'hôpital coûtent du temps clinique, et pourquoi la communication scolaire est un risque RGPD.</p>
+                        <a href="research.html" class="resource-link">Lire la recherche →</a>
+                    </div>
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">✦</div>
+                        <h3>Fonctionnalités</h3>
+                        <p>Une présentation complète des fonctionnalités de FamilyCompass, HealthCompass, CareCompass et EduCompass. GPS, chiffrement, calendrier, messagerie, OCR et plus encore.</p>
+                        <a href="features.html" class="resource-link">Voir toutes les fonctionnalités →</a>
+                    </div>
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">📊</div>
+                        <h3>Impact réel</h3>
+                        <p>Des estimations honnêtes, fondées sur la recherche, de ce que chaque produit change — avec des hypothèses transparentes. Temps économisé par famille, temps soignant récupéré, impact sur l'attrition du personnel, préparation Ofsted.</p>
+                        <a href="how-it-works.html" class="resource-link">Voir l'impact →</a>
+                    </div>
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">🔒</div>
+                        <h3>Politique de confidentialité</h3>
+                        <p>Politique de confidentialité complète et conforme au RGPD. Ce que nous collectons, ce que nous ne collectons pas, comment fonctionne le chiffrement, vos droits au titre du RGPD, de la COPPA et du droit britannique, et comment les exercer.</p>
+                        <a href="privacy.html" class="resource-link">Lire la politique →</a>
+                    </div>
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">🗓️</div>
+                        <h3>Abonnement</h3>
+                        <p>Les quatre produits, leurs secteurs cibles, fonctionnalités et informations sur l'accès bêta. Les tarifs de tous les produits seront annoncés à la disponibilité générale.</p>
+                        <a href="subscriptions.html" class="resource-link">Voir les produits →</a>
+                    </div>
+                    <div class="resource-card reveal">
+                        <div class="resource-icon">👤</div>
+                        <h3>Histoire de la fondatrice</h3>
+                        <p>Pourquoi cette entreprise existe. Le parcours dans les systèmes de santé, l'approche fondée sur la recherche et la conviction architecturale que la confidentialité n'est pas une fonctionnalité — c'est un fondement.</p>
+                        <a href="about-founder.html" class="resource-link">Lire l'histoire →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Fonctionnalités</a></li>
+                        <li><a href="how-it-works.html">Comment ça marche</a></li>
+                        <li><a href="subscriptions.html">Abonnement</a></li>
+                        <li><a href="index.html#beta-signup-section">Télécharger l'application</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Entreprise</h4>
+                    <ul class="footer-links">
+                        <li><a href="about-founder.html">À propos de la fondatrice</a></li>
+                        <li><a href="research.html">Notre recherche</a></li>
+                        <li><a href="research.html">Blog</a></li>
+                    </ul>
+                </div><div class="footer-section">
+                    <h4>Guides</h4>
+                    <ul class="footer-links">
+                        <li><a href="family-coordination-app.html">Application de coordination familiale</a></li>
+                        <li><a href="private-alternative-to-life360.html">Alternative privée à Life360</a></li>
+                        <li><a href="how-to-coordinate-care-for-an-elderly-parent.html">Coordonner les soins d'un parent âgé</a></li>
+                        <li><a href="example-when-is-it-time-for-a-care-home.html">Quand est-il temps de choisir une maison de retraite ?</a></li>
+                        <li><a href="family-medication-tracking-app.html">Suivi des médicaments en famille</a></li>
+                        <li><a href="co-parenting-app-private.html">Application de coparentalité privée</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Confidentialité &amp; confiance</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Politique de confidentialité</a></li>
+                        <li><a href="privacy.html">Sécurité</a></li>
+                        <li><a href="terms.html">Conditions d'utilisation</a></li>
+                        <li><a href="privacy.html">Conformité COPPA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Assistance</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Centre d'aide</a></li>
+                        <li><a href="support.html">Nous contacter</a></li>
+                        <li><a href="support.html">Envoyer un retour</a></li>
+                        <li><a href="mailto:support@aipieces.org">support@aipieces.org</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin-bottom:14px;">
+                    <span class="lang-switcher" style="justify-content:center;">
+                        <a href="../support.html" hreflang="en">English</a><span>·</span><a href="../de/support.html" hreflang="de">Deutsch</a><span>·</span><a href="support.html" hreflang="fr" class="active">Français</a><span>·</span><a href="../es/support.html" hreflang="es">Español</a>
+                    </span>
+                </p>
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Fait avec ❤️ pour les familles du monde entier.</p>
+                <p style="margin-top:10px;font-size:0.8rem;">
+                    FamilyCompass · HealthCompass · CareCompass · EduCompass ·
+                    Confidentialité d'abord, par conception · Conçu à Kerry, en Irlande · Conforme au RGPD
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                q.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

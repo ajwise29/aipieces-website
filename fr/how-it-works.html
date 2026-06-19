@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ROI & impact réel — AI Pieces | AIPieces | FamilyCompass, HealthCompass, CareCompass, EduCompass</title>
+    <meta name="description" content="Que fait réellement AI Pieces ? Points de douleur identifiés à partir de recherches évaluées par des pairs, estimations d'impact réaliste par produit. FamilyCompass, HealthCompass, CareCompass, EduCompass — quatre produits, quatre secteurs, un résultat mesurable : une coordination qui fonctionne.">
+    <meta name="author" content="AI Pieces Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipieces.org/fr/how-it-works.html">
+    <link rel="alternate" hreflang="en" href="https://aipieces.org/how-it-works.html">
+    <link rel="alternate" hreflang="de" href="https://aipieces.org/de/how-it-works.html">
+    <link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/how-it-works.html">
+    <link rel="alternate" hreflang="es" href="https://aipieces.org/es/how-it-works.html">
+    <link rel="alternate" hreflang="x-default" href="https://aipieces.org/how-it-works.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aipieces.org/fr/how-it-works.html">
+    <meta property="og:title" content="Impact réel — AI Pieces">
+    <meta property="og:description" content="Quatre produits. Quatre ensembles de points de douleur. Quatre ensembles de résultats mesurables — fondés sur la recherche et des hypothèses honnêtes.">
+    <meta property="og:image" content="https://aipieces.org/share-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold:        #8b6914;
+            --gold-light:  #d4af37;
+            --brown-deep:  #3d2e1e;
+            --brown-mid:   #5a4a3a;
+            --cream:       #f5f1e8;
+            --cream-dark:  #e8ddd4;
+            --blue-cite:   #2c5f8a;
+
+            --family:  #8b6914;
+            --health:  #8b6914;
+            --care:    #8b6914;
+            --edu:     #8b6914;
+
+            --family-bg: rgba(139,105,20,0.07);
+            --health-bg: rgba(139,105,20,0.07);
+            --care-bg:   rgba(139,105,20,0.07);
+            --edu-bg:    rgba(139,105,20,0.07);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            min-height: 100vh;
+            color: var(--brown-mid);
+            line-height: 1.7;
+        }
+
+        .container        { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .container-narrow { max-width: 860px;  margin: 0 auto; padding: 0 20px; }
+
+        .header {
+            padding: 20px 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: -apple-system, sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); letter-spacing: 1px; text-decoration: none; }
+        .trust-badge {
+            background: rgba(139,105,20,0.1); color: var(--gold);
+            padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;
+            font-weight: 600; margin-left: 10px; font-family: -apple-system, sans-serif;
+        }
+        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+        .nav-links a { font-family: -apple-system, sans-serif; text-decoration: none; color: var(--brown-mid); font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--gold); }
+        .lang-switcher { display: flex; gap: 6px; align-items: center; font-size: 0.85rem; font-family: -apple-system, sans-serif; }
+        .lang-switcher a { color: var(--brown-mid); text-decoration: none; font-weight: 600; padding: 2px 5px; border-radius: 4px; }
+        .lang-switcher a.active { color: var(--gold); background: rgba(139,105,20,0.1); }
+        .lang-switcher a:hover { color: var(--gold); }
+        .lang-switcher span { color: rgba(90,74,58,0.4); }
+
+        .hero {
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        .hero-eyebrow {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.78rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3px;
+            color: var(--gold); margin-bottom: 18px;
+        }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem; font-weight: 900; line-height: 1.1;
+            color: var(--brown-deep); margin-bottom: 24px;
+        }
+        .hero-title em { color: var(--gold); font-style: italic; }
+        .hero-sub {
+            font-size: 1.2rem; color: var(--brown-mid);
+            max-width: 640px; margin: 0 auto 40px; line-height: 1.75;
+        }
+        .hero-disclaimer {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.82rem; color: var(--brown-mid);
+            background: rgba(139,105,20,0.06);
+            border: 1px solid rgba(139,105,20,0.15);
+            padding: 10px 20px; border-radius: 50px;
+            display: inline-block; max-width: 640px;
+        }
+
+        .product-tabs {
+            background: rgba(255,255,255,0.5);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            position: sticky; top: 68px; z-index: 900;
+            padding: 0;
+        }
+        .tabs-inner {
+            display: flex; justify-content: center; gap: 0;
+            max-width: 900px; margin: 0 auto;
+        }
+        .tab-link {
+            font-family: -apple-system, sans-serif;
+            text-decoration: none; padding: 16px 32px;
+            font-size: 0.9rem; font-weight: 600;
+            border-bottom: 3px solid transparent;
+            transition: all 0.25s; color: var(--brown-mid);
+            white-space: nowrap;
+        }
+        .tab-link:hover { color: var(--gold); }
+        .tab-link.family  { border-color: transparent; }
+        .tab-link.health  { border-color: transparent; }
+        .tab-link.care    { border-color: transparent; }
+        .tab-link.edu     { border-color: transparent; }
+        .tab-link:hover.family { border-color: var(--family); color: var(--family); }
+        .tab-link:hover.health { border-color: var(--health); color: var(--health); }
+        .tab-link:hover.care   { border-color: var(--care);   color: var(--care);   }
+        .tab-link:hover.edu    { border-color: var(--edu);    color: var(--edu);    }
+
+        .product-block { padding: 90px 0; }
+        .product-block:nth-child(even) { background: rgba(255,255,255,0.35); }
+
+        .product-header {
+            display: grid; grid-template-columns: 1fr auto;
+            align-items: start; gap: 30px; margin-bottom: 60px;
+        }
+        .product-label {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 2.5px; text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem; font-weight: 900; line-height: 1.1;
+            color: var(--brown-deep); margin-bottom: 14px;
+        }
+        .product-title em { font-style: italic; }
+        .product-audience {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.88rem; color: var(--brown-mid);
+        }
+        .product-status {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.75rem; font-weight: 700;
+            padding: 6px 16px; border-radius: 50px;
+            white-space: nowrap; align-self: flex-start;
+            margin-top: 8px;
+        }
+
+        .block-family .product-label  { color: var(--family); }
+        .block-family .product-title em { color: var(--family); }
+        .block-family .product-status { background: rgba(139,105,20,0.1); color: var(--family); }
+        .block-family .pain-icon       { background: var(--family-bg); color: var(--family); }
+        .block-family .impact-num      { color: var(--family); }
+        .block-family .section-bar     { background: var(--family); }
+
+        .block-health .product-label  { color: var(--health); }
+        .block-health .product-title em { color: var(--health); }
+        .block-health .product-status { background: rgba(46,125,138,0.1); color: var(--health); }
+        .block-health .pain-icon       { background: var(--health-bg); color: var(--health); }
+        .block-health .impact-num      { color: var(--health); }
+        .block-health .section-bar     { background: var(--health); }
+
+        .block-care .product-label  { color: var(--care); }
+        .block-care .product-title em { color: var(--care); }
+        .block-care .product-status { background: rgba(107,78,139,0.1); color: var(--care); }
+        .block-care .pain-icon       { background: var(--care-bg); color: var(--care); }
+        .block-care .impact-num      { color: var(--care); }
+        .block-care .section-bar     { background: var(--care); }
+
+        .block-edu .product-label  { color: var(--edu); }
+        .block-edu .product-title em { color: var(--edu); }
+        .block-edu .product-status { background: rgba(45,106,79,0.1); color: var(--edu); }
+        .block-edu .pain-icon       { background: var(--edu-bg); color: var(--edu); }
+        .block-edu .impact-num      { color: var(--edu); }
+        .block-edu .section-bar     { background: var(--edu); }
+
+        .pi-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 0; border-radius: 20px; overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.07);
+            margin-bottom: 50px;
+        }
+        .pi-col { background: white; padding: 40px 36px; }
+        .pi-col.impact-col { background: var(--brown-deep); }
+        .pi-col-label {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; margin-bottom: 24px;
+        }
+        .pi-col .pi-col-label { color: #c0a060; }
+        .pi-col.impact-col .pi-col-label { color: rgba(255,255,255,0.4); }
+
+        .pain-item { margin-bottom: 24px; display: flex; gap: 14px; align-items: flex-start; }
+        .pain-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; flex-shrink: 0;
+        }
+        .pain-text { flex: 1; }
+        .pain-text strong {
+            font-family: -apple-system, sans-serif;
+            display: block; font-size: 0.92rem; color: var(--brown-deep); margin-bottom: 4px;
+        }
+        .pain-text p { font-size: 0.87rem; color: var(--brown-mid); line-height: 1.55; margin-bottom: 6px; }
+        .pain-cite {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.72rem; color: var(--blue-cite);
+        }
+        .pain-cite a { color: var(--blue-cite); text-decoration: none; }
+        .pain-cite a:hover { text-decoration: underline; }
+
+        .impact-item { margin-bottom: 28px; }
+        .impact-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem; font-weight: 900; line-height: 1; margin-bottom: 6px;
+        }
+        .impact-label {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.88rem; color: rgba(255,255,255,0.85); line-height: 1.5; margin-bottom: 4px;
+        }
+        .impact-assumption {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.72rem; color: rgba(255,255,255,0.4);
+            font-style: italic; line-height: 1.5;
+        }
+
+        .section-bar-label {
+            display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+        }
+        .section-bar { width: 30px; height: 3px; border-radius: 2px; }
+        .section-bar-text {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.72rem; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--brown-mid);
+        }
+
+        .solve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 50px; }
+        .app-proof { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center; margin: 10px 0 4px; }
+        .app-proof .phone-frame { background: #1c140c; border-radius: 34px; padding: 10px; box-shadow: 0 18px 50px rgba(61,46,30,0.28); max-width: 300px; margin: 0 auto; }
+        .app-proof .phone-frame img { display: block; width: 100%; height: auto; border-radius: 26px; }
+        .app-proof-text p { font-family: -apple-system, sans-serif; font-size: 0.95rem; color: var(--brown-mid); line-height: 1.7; }
+        .app-proof-text .app-proof-eyebrow { font-family: -apple-system, sans-serif; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem; font-weight: 700; color: #b08a2e; margin-bottom: 12px; }
+        @media (max-width: 760px) { .app-proof { grid-template-columns: 1fr; gap: 24px; } .app-proof .phone-frame { max-width: 260px; } }
+        .solve-card {
+            background: white; border-radius: 16px; padding: 26px 22px;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+            transition: transform 0.3s;
+        }
+        .solve-card:hover { transform: translateY(-4px); }
+        .solve-card h4 {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.92rem; font-weight: 700;
+            color: var(--brown-deep); margin-bottom: 8px;
+        }
+        .solve-card p { font-size: 0.87rem; color: var(--brown-mid); line-height: 1.6; }
+
+        .roi-bar {
+            border-radius: 16px; overflow: hidden;
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .roi-cell {
+            background: white; padding: 24px 20px; text-align: center;
+            border-right: 1px solid rgba(0,0,0,0.06);
+        }
+        .roi-cell:last-child { border-right: none; }
+        .roi-val {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem; font-weight: 900; line-height: 1; margin-bottom: 6px;
+        }
+        .roi-desc {
+            font-family: -apple-system, sans-serif;
+            font-size: 0.78rem; color: var(--brown-mid); line-height: 1.5;
+        }
+
+        .footer { background: rgba(0,0,0,0.1); padding: 60px 0 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { font-family: -apple-system, sans-serif; color: var(--gold); font-size: 1.1rem; margin-bottom: 15px; font-weight: 600; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+        .footer-links a { font-family: -apple-system, sans-serif; color: var(--brown-mid); text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: var(--brown-mid); font-family: -apple-system, sans-serif; }
+
+        html { scroll-behavior: smooth; }
+
+        @media (max-width: 960px) {
+            .pi-grid  { grid-template-columns: 1fr; }
+            .solve-grid { grid-template-columns: 1fr 1fr; }
+            .roi-bar { grid-template-columns: 1fr 1fr; }
+            .product-header { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.4rem; }
+            .product-title { font-size: 2rem; }
+            .nav-links { display: none; }
+            .solve-grid { grid-template-columns: 1fr; }
+            .roi-bar { grid-template-columns: 1fr 1fr; }
+            .tabs-inner { overflow-x: auto; justify-content: flex-start; }
+            .tab-link { padding: 14px 18px; font-size: 0.82rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── HEADER ── -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navigation principale">
+                <a href="index.html" class="logo">
+                    AIPieces
+                    <span class="trust-badge">Confidentialité d'abord</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="family-coordination-app.html">Guides</a></li>
+                    <li><a href="research.html">Recherche</a></li>
+                    <li><a href="features.html">Fonctionnalités</a></li>
+                    <li><a href="subscriptions.html">Abonnement</a></li>
+                    <li><a href="about-founder.html">Histoire de la fondatrice</a></li>
+                    <li><a href="how-it-works.html">Comment ça marche</a></li>
+                    <li><a href="privacy.html">Confidentialité</a></li>
+                    <li><a href="support.html">Assistance</a></li>
+                    <li class="lang-switcher" aria-label="Choisir la langue">
+                        <a href="../how-it-works.html" hreflang="en">EN</a><span>·</span><a href="../de/how-it-works.html" hreflang="de">DE</a><span>·</span><a href="how-it-works.html" hreflang="fr" class="active">FR</a><span>·</span><a href="../es/how-it-works.html" hreflang="es">ES</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ── HERO ── -->
+        <section class="hero">
+            <div class="container">
+                <p class="hero-eyebrow">Retour sur investissement · Impact réel · Quatre produits</p>
+                <h1 class="hero-title">Qu'est-ce que cela<br>change <em>vraiment ?</em></h1>
+                <p class="hero-sub">Chaque produit AI Pieces cible un point de douleur documenté et identifié par la recherche. Voici un compte rendu honnête de ce que ce point de douleur coûte — et de ce que le produit est conçu pour changer, avec des hypothèses d'impact transparentes.</p>
+                <span class="hero-disclaimer">Les chiffres d'impact marqués d'un † sont des hypothèses de modèle fondées sur des références issues de la recherche, et non des résultats audités. Nous préférons montrer le raisonnement, pas seulement le titre.</span>
+            </div>
+        </section>
+
+        <!-- ── PRODUCT TABS ── -->
+        <nav class="product-tabs" aria-label="Navigation des produits">
+            <div class="tabs-inner">
+                <a href="#familycompass" class="tab-link family">FamilyCompass</a>
+                <a href="#healthcompass" class="tab-link health">HealthCompass</a>
+                <a href="#carecompass"   class="tab-link care">CareCompass</a>
+                <a href="#educompass"    class="tab-link edu">EduCompass</a>
+            </div>
+        </nav>
+
+        <!-- FAMILYCOMPASS -->
+        <section class="product-block block-family" id="familycompass">
+            <div class="container">
+
+                <div class="product-header">
+                    <div>
+                        <p class="product-label">Produit 01 · FamilyCompass</p>
+                        <h2 class="product-title">La <em>taxe de coordination</em><br>que les familles modernes paient chaque jour.</h2>
+                        <p class="product-audience">Pour les familles soucieuses de leur vie privée · Familles de militaires &amp; de l'aviation · Familles géographiquement dispersées</p>
+                    </div>
+                    <span class="product-status">Bêta — Été 2026</span>
+                </div>
+
+                <div class="pi-grid">
+                    <div class="pi-col">
+                        <p class="pi-col-label">Les points de douleur</p>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">📅</div>
+                            <div class="pain-text">
+                                <strong>Les conflits d'agenda sont le principal moteur du stress familial</strong>
+                                <p>68 % du stress familial provient de la logistique et des malentendus d'agenda — et non de problèmes relationnels plus profonds. Les familles consacrent leur énergie émotionnelle à la coordination, pas au lien.</p>
+                                <p class="pain-cite"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8456013/" target="_blank" rel="noopener">NIH PMC8456013 — Journal of Family Psychology, 2021</a></p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">🌍</div>
+                            <div class="pain-text">
+                                <strong>Les familles sont géographiquement fragmentées</strong>
+                                <p>37 % des familles vivent désormais entre différentes villes ou pays. Les habitudes de coordination traditionnelles — un calendrier partagé dans la cuisine, un mot rapide au dîner — ne fonctionnent plus. Les alternatives numériques sont fragmentées entre WhatsApp, iMessage, e-mail et appels téléphoniques.</p>
+                                <p class="pain-cite"><a href="https://www.pewresearch.org/social-trends/" target="_blank" rel="noopener">Pew Research Center — American Family Survey, 2023</a></p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">🔓</div>
+                            <div class="pain-text">
+                                <strong>Les outils GPS existants vendent les données qu'ils collectent</strong>
+                                <p>Les applications de localisation familiale dominantes génèrent des revenus en vendant des données de localisation précises à des courtiers en données tiers. La FTC a prononcé sa toute première interdiction de vente de données de localisation sensibles en janvier 2024 (X-Mode/Outlogic). Les familles qui utilisent ces outils n'ont aucune protection contractuelle contre la monétisation des données.</p>
+                                <p class="pain-cite"><a href="https://www.ftc.gov/news-events/news/press-releases/2024/01/ftc-order-prohibits-data-broker-outlogic-formerly-x-mode-social-selling-sensitive-location-data" target="_blank" rel="noopener">Action de la FTC — X-Mode/Outlogic, janvier 2024</a></p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">✈️</div>
+                            <div class="pain-text">
+                                <strong>Les plannings imprévisibles créent une incertitude cumulative</strong>
+                                <p>Les cycles de déploiement militaire, les rosters de l'aviation et les plannings de santé en horaires postés partagent le même défi : des changements de dernière minute qui se répercutent en cascade sur la logistique familiale. Aucun outil grand public existant n'est conçu pour ce niveau de volatilité des plannings.</p>
+                                <p class="pain-cite">US Bureau of Labor Statistics — Shift Work Report, 2022 · Journal of Marriage and Family, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pi-col impact-col">
+                        <p class="pi-col-label">L'impact</p>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">2–3 h</div>
+                            <div class="impact-label">par semaine et par famille, récupérées sur la coordination logistique†</div>
+                            <div class="impact-assumption">Hypothèse : une famille moyenne échange 45 à 60 messages de coordination/semaine (planning, vérifications de localisation, rappels de tâches). Une plateforme unifiée élimine 60 à 70 % des échanges redondants. Sur la base du constat NIH de 68 % de stress lié à la logistique et des données d'emploi du temps de Pew.</div>
+                        </div>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">100 %</div>
+                            <div class="impact-label">Architecture zero-knowledge — aucun accès d'AI Pieces aux données familiales</div>
+                            <div class="impact-assumption">Fait architectural : chiffrement de bout en bout AES-256 avec stockage des clés assisté par matériel (iOS Secure Enclave, Android StrongBox). Ni AI Pieces ni aucun tiers ne peut accéder aux données de localisation ou de messagerie.</div>
+                        </div>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">1 appli</div>
+                            <div class="impact-label">remplace traceur GPS + appli de messagerie + calendrier partagé + outil de courses</div>
+                            <div class="impact-assumption">FamilyCompass regroupe : GPS de niveau Life360, messagerie chiffrée de niveau Signal, calendrier partagé chiffré et listes de courses intelligentes déclenchées par la proximité GPS des supermarchés. Aucune fragmentation d'abonnements sur 4 à 5 outils.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-bar-label">
+                    <div class="section-bar"></div>
+                    <span class="section-bar-text">Comment FamilyCompass y parvient</span>
+                </div>
+                <div class="solve-grid">
+                    <div class="solve-card">
+                        <h4>🧭 GPS façon boussole</h4>
+                        <p>Localisation en temps réel affichée comme un cap et une distance — pas une carte de surveillance. Préserve le sens humain de l'orientation sans réduire les membres de la famille à des points sur un écran.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>🔐 Messagerie chiffrée de bout en bout</h4>
+                        <p>Implémentation du protocole Signal. Texte, notes vocales et partage de photos chiffrés — le tout dans une seule application, sans journalisation des métadonnées par AI Pieces.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>📆 Calendrier partagé chiffré</h4>
+                        <p>Détection de conflits intégrée. Service de pilote, changements de poste, sorties d'école — le calendrier comprend les types de planning et signale les chevauchements avant qu'ils ne deviennent des crises.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>🛒 Listes de courses intelligentes</h4>
+                        <p>La proximité GPS d'un supermarché déclenche une notification. La liste familiale partagée est mise à jour en temps réel — la personne la plus proche peut prendre le nécessaire sans appel téléphonique.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>🔒 Architecture de données zero-knowledge</h4>
+                        <p>Clés stockées dans le matériel — iOS Secure Enclave, Android StrongBox. Même une décision de justice adressée à AI Pieces ne peut produire de données familiales lisibles. Pas une politique. Une réalité architecturale.</p>
+                    </div>
+                </div>
+
+                <div class="app-proof">
+                    <figure class="phone-frame">
+                        <picture>
+                            <source srcset="../marketingCompass.webp" type="image/webp">
+                            <img src="../marketingCompass.png" alt="Écran d'accueil de FamilyCompass montrant la position en direct de chaque membre de la famille sous forme de cap — Parc, Travail, École" loading="lazy" decoding="async" width="540" height="1170">
+                        </picture>
+                    </figure>
+                    <div class="app-proof-text">
+                        <p class="app-proof-eyebrow">Dans FamilyCompass</p>
+                        <p>L'écran d'accueil-boussole montre où se trouve chacun en ce moment — sous forme de cap et de lieu, pas une carte de surveillance. Un coup d'œil répond à « qui est où ? » sans le moindre message.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HEALTHCOMPASS -->
+        <section class="product-block block-health" id="healthcompass">
+            <div class="container">
+
+                <div class="product-header">
+                    <div>
+                        <p class="product-label">Produit 02 · HealthCompass</p>
+                        <h2 class="product-title">Le coût caché des appels<br>des proches sur le <em>temps clinique.</em></h2>
+                        <p class="product-audience">Pour les soins intensifs · Maternité · Pédiatrie · Unités de soins continus</p>
+                    </div>
+                    <span class="product-status">Projets pilotes ouverts — 2026</span>
+                </div>
+
+                <div class="pi-grid">
+                    <div class="pi-col">
+                        <p class="pi-col-label">Les points de douleur</p>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">📞</div>
+                            <div class="pain-text">
+                                <strong>Plus de 30 % du temps soignant consommé par la communication répétitive avec les proches</strong>
+                                <p>Dans les unités de soins continus, le personnel soignant consacre, de façon documentée, plus de 30 % de son temps de service à répondre aux appels des proches, à rédiger des notes de mise à jour et à gérer les demandes — la majorité d'entre elles répétitives : « Comment va-t-elle ? » « Le médecin est-il passé ? » « À quelle heure l'intervention ? » C'est du temps qui n'est pas passé auprès des patients.</p>
+                                <p class="pain-cite"><a href="https://www.england.nhs.uk/nursingmidwifery/2020-21-priorities/" target="_blank" rel="noopener">NHS England Nursing Strategy — Nursing Time Allocation Analysis, 2021</a></p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">📋</div>
+                            <div class="pain-text">
+                                <strong>Les défaillances de communication sont la première source de plaintes des patients</strong>
+                                <p>Dans les NHS Trusts, les problèmes liés à la communication représentent la plus grande catégorie unique de plaintes formelles de patients et de proches déposées auprès des PALS — environ 1 plainte sur 4. Une mauvaise circulation de l'information entre les équipes cliniques et les familles crée anxiété, défiance et dynamiques conflictuelles coûteuses à gérer.</p>
+                                <p class="pain-cite"><a href="https://www.england.nhs.uk/wp-content/uploads/2020/08/insight_into_complaints_2019-20.pdf" target="_blank" rel="noopener">NHS England — Complaints Report 2019–20</a></p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">😰</div>
+                            <div class="pain-text">
+                                <strong>L'anxiété des proches en soins intensifs affecte directement les résultats des patients</strong>
+                                <p>Les proches de patients en soins intensifs qui reçoivent une communication insuffisante présentent des taux nettement plus élevés de TSPT, de dépression et d'anxiété — un état appelé « Post-Intensive Care Syndrome — Family » (PICS-F). Cela aggrave l'environnement de rétablissement du patient lui-même et fait peser une charge durable sur les services cliniques et sociaux.</p>
+                                <p class="pain-cite"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7728767/" target="_blank" rel="noopener">Critical Care Medicine — PICS-F Prevalence and Impact, PMC7728767, 2020</a></p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">📱</div>
+                            <div class="pain-text">
+                                <strong>Aucun outil clinique ne résout aujourd'hui ce problème sans alourdir la charge du personnel</strong>
+                                <p>Les solutions de communication patient existantes (portails patients, mises à jour par e-mail) exigent que le personnel s'installe devant un ordinateur pour rédiger des mises à jour écrites. Elles ne sont pas conçues pour la réalité mobile et rapide du travail en service. HealthCompass utilise la voix-vers-texte et la photo-vers-texte (OCR) pour que le personnel capture des mises à jour en quelques secondes, en marchant.</p>
+                                <p class="pain-cite">NHS Digital Transformation Programme — Staff Technology Use Survey, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pi-col impact-col">
+                        <p class="pi-col-label">L'impact</p>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">75 min</div>
+                            <div class="impact-label">par soignant et par service, récupérées pour les soins aux patients†</div>
+                            <div class="impact-assumption">Hypothèse : 30 % d'un service soignant de 7,5 h = ~135 min de communication avec les proches. Une réduction de 55 % du volume d'appels entrants des proches (via des mises à jour proactives HealthCompass) restitue ~75 min/service aux soins directs. Modélisé sur les données d'emploi du temps du NHS.</div>
+                        </div>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">~290 h</div>
+                            <div class="impact-label">par soignant et par an — réorientées des appels vers les soins†</div>
+                            <div class="impact-assumption">75 min/service × 230 jours travaillés = 287,5 h/an par soignant. Au coût NHS Band 5 (18,50 £/h tout compris), cela représente environ 5 300 £/soignant/an de temps productif récupéré. Une unité de 20 soignants = ~106 000 £/an de capacité réorientée.</div>
+                        </div>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">↓ PICS-F</div>
+                            <div class="impact-label">Réduction mesurable du Post-Intensive Care Syndrome chez les proches†</div>
+                            <div class="impact-assumption">La recherche montre qu'une communication structurée et régulière réduit nettement l'anxiété des proches et les taux de PICS-F en soins intensifs. HealthCompass fournit des mises à jour planifiées, des changements d'état en temps réel et le transfert des messages du médecin — les trois lacunes de communication les plus associées à l'apparition du PICS-F.</div>
+                        </div>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">HIPAA</div>
+                            <div class="impact-label">Canal chiffré conçu pour répondre aux normes HIPAA — auditable, sans risque d'hébergement des données</div>
+                            <div class="impact-assumption">Toutes les communications HealthCompass sont chiffrées de bout en bout, stockées avec des contrôles de consentement des patients et auditables pour la gouvernance clinique. Élimine le risque de conformité du personnel utilisant WhatsApp personnel pour les mises à jour aux proches — une pratique documentée et répandue dans les hôpitaux britanniques et américains.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-bar-label">
+                    <div class="section-bar"></div>
+                    <span class="section-bar-text">Comment HealthCompass y parvient</span>
+                </div>
+                <div class="solve-grid">
+                    <div class="solve-card">
+                        <h4>🎙️ Mises à jour voix-vers-texte en mouvement</h4>
+                        <p>Le personnel enregistre une note vocale de 15 secondes. HealthCompass la transcrit, la met en forme et la transmet aux proches désignés — sans ordinateur, sans saisie, sans bureau.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>📸 Photo-vers-texte (OCR)</h4>
+                        <p>Photographiez un tableau blanc, une feuille de médication ou une note manuscrite. L'OCR en extrait le texte et envoie une mise à jour structurée. Conçu pour la réalité du travail en service.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>⏰ Fenêtres de mise à jour planifiées pour les proches</h4>
+                        <p>Les familles reçoivent des mises à jour aux heures convenues. Réduit le volume d'appels en posant des attentes. Élimine l'anxiété du « pas de nouvelles = mauvaises nouvelles » qui pousse aux appels répétés.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>🔐 Canal chiffré conçu pour répondre aux normes HIPAA</h4>
+                        <p>Remplace WhatsApp personnel, les e-mails non chiffrés et les appels téléphoniques par un enregistrement de communication chiffré, auditable et géré par consentement.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>👨‍👩‍👧 Contacts familiaux désignés</h4>
+                        <p>Un proche contact référent reçoit les mises à jour et les diffuse au sein de la famille — supprimant le scénario où six proches appellent chacun le service séparément.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>📊 Rapports de gouvernance clinique</h4>
+                        <p>Piste d'audit complète des communications. Horodatée, consentement documenté, exportable pour la revue d'incident clinique, la réponse PALS ou une inspection CQC.</p>
+                    </div>
+                </div>
+
+                <div class="app-proof">
+                    <figure class="phone-frame">
+                        <picture>
+                            <source srcset="../medicationCompass.webp" type="image/webp">
+                            <img src="../medicationCompass.png" alt="Registre de médicaments HealthCompass montrant les doses du jour, l'observance et ce qui est dû ensuite pour un membre de la famille" loading="lazy" decoding="async" width="540" height="1170">
+                        </picture>
+                    </figure>
+                    <div class="app-proof-text">
+                        <p class="app-proof-eyebrow">Dans l'application</p>
+                        <p>Un registre de médicaments partagé garde toutes les personnes qui aident sur la même longueur d'onde — ce qui a été pris, ce qui est dû et la vue d'ensemble. Un registre autour duquel la famille se coordonne, pas un dispositif médical.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CARECOMPASS -->
+        <section class="product-block block-care" id="carecompass">
+            <div class="container">
+
+                <div class="product-header">
+                    <div>
+                        <p class="product-label">Produit 03 · CareCompass</p>
+                        <h2 class="product-title">Le silence qui nourrit<br>la <em>défiance des familles</em> en maison de retraite.</h2>
+                        <p class="product-audience">Pour les maisons de retraite · Soins résidentiels · Résidences services · Unités de soins de la mémoire</p>
+                    </div>
+                    <span class="product-status">Projets pilotes ouverts — 2027</span>
+                </div>
+
+                <div class="pi-grid">
+                    <div class="pi-col">
+                        <p class="pi-col-label">Les points de douleur</p>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">😔</div>
+                            <div class="pain-text">
+                                <strong>Plus de 70 % des familles se sentent insuffisamment informées des soins de leur proche</strong>
+                                <p>Le rapport State of Care de la CQC a constaté qu'une mauvaise communication entre les maisons de retraite et les familles est systématiquement citée comme une préoccupation majeure — plus de 70 % des familles déclarant ne pas recevoir d'informations adéquates et en temps utile sur le bien-être quotidien de leur proche, les changements de médicaments ou les mises à jour du plan de soins.</p>
+                                <p class="pain-cite"><a href="https://www.cqc.org.uk/publications/major-report/state-of-care" target="_blank" rel="noopener">CQC — State of Care Report, 2023</a></p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">⚠️</div>
+                            <div class="pain-text">
+                                <strong>Les incidents de protection sont aggravés par les lacunes de communication</strong>
+                                <p>Dans les enquêtes de la CQC et de la HIQA sur des incidents en maison de retraite, le retard de notification aux familles est un facteur contributif récurrent. Lorsque les familles ne sont pas informées rapidement des chutes, d'une dégradation de la santé ou d'erreurs de médication, elles perdent confiance dans la qualité des soins et escaladent vers des plaintes formelles ou des actions en justice à des taux nettement plus élevés.</p>
+                                <p class="pain-cite"><a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/safeguarding-people" target="_blank" rel="noopener">CQC — Safeguarding in Adult Social Care, 2023</a> · HIQA — National Standards, Irlande</p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">🔄</div>
+                            <div class="pain-text">
+                                <strong>Le renouvellement du personnel est aggravé par la charge administrative de communication</strong>
+                                <p>Le renouvellement annuel du personnel en maison de retraite au Royaume-Uni est en moyenne de 28 à 34 % — l'un des plus élevés de tous les secteurs. La charge quotidienne de répondre aux appels répétitifs des proches, de rédiger des lettres de mise à jour individuelles et de gérer la correspondance de plaintes est un facteur documenté d'épuisement et d'attrition des soignants.</p>
+                                <p class="pain-cite"><a href="https://www.skillsforcare.org.uk/Adult-Social-Care-Workforce-Data/Workforce-intelligence/publications/national-information/The-state-of-the-adult-social-care-sector-and-workforce-in-England.aspx" target="_blank" rel="noopener">Skills for Care — State of the Adult Social Care Sector, 2023</a></p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">📵</div>
+                            <div class="pain-text">
+                                <strong>WhatsApp est le canal de communication de fait — et il n'est pas conforme au RGPD</strong>
+                                <p>Les recommandations de l'ICO sont claires : utiliser des comptes WhatsApp personnels pour des mises à jour de soins impliquant des informations sur les résidents est une violation du RGPD. Malgré cela, il reste le principal canal informel dans la plupart des établissements de petite et moyenne taille — créant une responsabilité en matière de données personnelles pour l'établissement comme pour chaque membre du personnel.</p>
+                                <p class="pain-cite"><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/a-guide-to-lawful-basis/" target="_blank" rel="noopener">ICO — UK GDPR Guidance, 2023</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pi-col impact-col">
+                        <p class="pi-col-label">L'impact</p>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">↓ 40 %</div>
+                            <div class="impact-label">de réduction des demandes téléphoniques entrantes des proches†</div>
+                            <div class="impact-assumption">Hypothèse : des mises à jour quotidiennes proactives sur le bien-être via CareCompass éliminent les déclencheurs d'appels entrants les plus courants (questions sur les médicaments, bien-être général, horaires de rendez-vous). 40 % de réduction est prudent ; l'équivalent NHS suggère que 55 % est atteignable avec des plannings de mise à jour structurés.</div>
+                        </div>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">RGPD</div>
+                            <div class="impact-label">Un canal conforme remplace WhatsApp — éliminant la responsabilité personnelle du personnel</div>
+                            <div class="impact-assumption">CareCompass fournit des communications chiffrées de bout en bout, gérées par consentement et auditables. Remplacer WhatsApp par CareCompass supprime à la fois le risque de violation ICO pour l'établissement et la responsabilité RGPD personnelle actuellement portée par chaque soignant.</div>
+                        </div>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">↑ CQC</div>
+                            <div class="impact-label">Renforce les notes CQC des domaines « Well-Led » et « Responsive »†</div>
+                            <div class="impact-assumption">Les domaines Well-Led et Responsive de la CQC évaluent explicitement la qualité de la communication avec les familles et la gestion des plaintes. CareCompass fournit une base de preuves auditable : journaux de communication, temps de réponse, registres de consentement — le tout dans un format consultable lors d'une inspection.</div>
+                        </div>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">↓ Attrition</div>
+                            <div class="impact-label">Moindre attrition du personnel grâce à une charge administrative de communication réduite†</div>
+                            <div class="impact-assumption">Remplacer le tri téléphonique, les mises à jour écrites et la gestion des plaintes par un canal numérique structuré ferait économiser 45 à 60 min/soignant/jour. À 28 % de coût annuel de renouvellement (3 000 à 5 000 £/remplacement dans la protection sociale), même une réduction modeste de 10 % de l'attrition génère des économies importantes par établissement.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-bar-label">
+                    <div class="section-bar"></div>
+                    <span class="section-bar-text">Comment CareCompass y parvient</span>
+                </div>
+                <div class="solve-grid">
+                    <div class="solve-card">
+                        <h4>🌅 Mises à jour quotidiennes sur le bien-être</h4>
+                        <p>Les soignants envoient une brève mise à jour quotidienne — humeur, appétit, activité, incidents éventuels — en moins de 60 secondes par voix ou photo. Les familles la reçoivent immédiatement.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>💊 Notifications de médicaments &amp; de rendez-vous</h4>
+                        <p>Alertes automatiques lorsqu'un médicament est administré ou qu'un rendez-vous est confirmé. Élimine la catégorie d'appels entrants la plus courante.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>🚨 Protocole de notification d'incident</h4>
+                        <p>Lorsque le personnel soignant consigne un incident ou un changement de santé, l'entrée envoie une notification chiffrée immédiate aux proches désignés — avec horodatage et réponse documentée du soignant. Prête pour l'audit CQC.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>🔐 Canal chiffré conforme au RGPD</h4>
+                        <p>Remplace WhatsApp personnel. Géré par consentement, auditable, sans hébergement des données hors de l'UE. Chaque résident dispose d'une liste de contacts familiaux désignés avec des contrôles d'autorisation granulaires.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>📱 Mobile-first pour le personnel soignant</h4>
+                        <p>Conçu pour des soignants qui ne sont jamais à un bureau. Voix-vers-texte, photo-vers-texte et mises à jour d'état en un geste font que la conformité ne crée pas de charge.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>📂 Dossier de preuves pour l'inspection CQC</h4>
+                        <p>Toutes les communications consignées avec horodatages, registres de consentement et documentation des réponses. Exportable en tant que fichier de preuves pour une inspection ou la réponse à une plainte formelle.</p>
+                    </div>
+                </div>
+
+                <div class="app-proof">
+                    <figure class="phone-frame">
+                        <picture>
+                            <source srcset="../medicalapptCompass.webp" type="image/webp">
+                            <img src="../medicalapptCompass.png" alt="Liste de rendez-vous médicaux partagés dans CareCompass — bilan chez le médecin, audiologie, dentiste et opticien, visibles par toute la famille" loading="lazy" decoding="async" width="540" height="1170">
+                        </picture>
+                    </figure>
+                    <div class="app-proof-text">
+                        <p class="app-proof-eyebrow">Dans l'application</p>
+                        <p>Une vue partagée des rendez-vous à venir — bilans chez le médecin, visites à l'hôpital, examens — pour que chaque membre de la famille qui coordonne les soins voie les mêmes dates, sans appeler la maison de retraite.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCOMPASS -->
+        <section class="product-block block-edu" id="educompass">
+            <div class="container">
+
+                <div class="product-header">
+                    <div>
+                        <p class="product-label">Produit 04 · EduCompass</p>
+                        <h2 class="product-title">La charge administrative<br>pour laquelle les enseignants <em>n'ont jamais signé.</em></h2>
+                        <p class="product-audience">Pour les écoles publiques · Privées · Internationales · Confessionnelles · Spécialisées · Tous types d'écoles</p>
+                    </div>
+                    <span class="product-status">Projets pilotes ouverts — 2027</span>
+                </div>
+
+                <div class="pi-grid">
+                    <div class="pi-col">
+                        <p class="pi-col-label">Les points de douleur</p>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">⏰</div>
+                            <div class="pain-text">
+                                <strong>Les enseignants consacrent plus de 12 heures par semaine à l'administratif — la communication avec les parents est la plus grande catégorie</strong>
+                                <p>L'enquête Teacher Workload Survey 2024 du ministère britannique de l'Éducation a constaté que les enseignants consacrent en moyenne 12 heures ou plus par semaine à l'administratif non lié à l'enseignement. La communication avec les parents et les familles — e-mails, messages, appels, rédaction de bulletins, coordination de réunions — est systématiquement identifiée comme la plus grande catégorie de temps unique au sein de ce total.</p>
+                                <p class="pain-cite"><a href="https://www.gov.uk/government/publications/teacher-workload-survey-2024" target="_blank" rel="noopener">UK Department for Education — Teacher Workload Survey, 2024</a></p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">⚖️</div>
+                            <div class="pain-text">
+                                <strong>Les groupes WhatsApp de parents sont une violation du RGPD qui ne demande qu'à arriver</strong>
+                                <p>L'article 32 du RGPD exige des mesures techniques et organisationnelles appropriées pour protéger les données personnelles. Les groupes WhatsApp de parents contiennent régulièrement noms d'élèves, informations comportementales, détails de besoins éducatifs particuliers et contenus liés à la protection de l'enfance — transmis via une plateforme contrôlée par Meta, sans gouvernance des données au niveau de l'école. L'action de l'ICO dans l'éducation augmente d'année en année depuis 2021.</p>
+                                <p class="pain-cite"><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener">ICO — UK GDPR Guidance</a> · <a href="https://gdpr-info.eu/art-32-gdpr/" target="_blank" rel="noopener">RGPD Article 32</a></p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">📉</div>
+                            <div class="pain-text">
+                                <strong>Une mauvaise communication parents-école affecte directement les résultats d'inspection Ofsted et ISI</strong>
+                                <p>L'Education Inspection Framework d'Ofsted et les critères d'inspection de l'ISI incluent tous deux la communication et l'implication des parents comme domaines évalués. Les écoles régulièrement citées comme « à améliorer » présentent souvent des défaillances documentées dans une communication structurée, en temps utile et équitable avec les parents — des problèmes qu'EduCompass est spécifiquement conçu pour éliminer.</p>
+                                <p class="pain-cite"><a href="https://www.gov.uk/government/publications/education-inspection-framework" target="_blank" rel="noopener">Ofsted — Education Inspection Framework, 2023</a> · ISI Regulatory Handbook</p>
+                            </div>
+                        </div>
+
+                        <div class="pain-item">
+                            <div class="pain-icon">🔀</div>
+                            <div class="pain-text">
+                                <strong>La communication est fragmentée entre trop de canaux à la fois</strong>
+                                <p>Une école britannique type gère la communication avec les parents via : e-mail, un portail parents, une appli scolaire (souvent un outil SIG tiers), des groupes WhatsApp, des appels téléphoniques d'enseignants, des courriers imprimés et des réunions en présentiel. La charge administrative de maintenir plusieurs canaux à la fois — et l'incohérence de ce qui atteint quels parents — est une source documentée d'épuisement des enseignants.</p>
+                                <p class="pain-cite">NASUWT Teacher Wellbeing Survey — Communication Burden Analysis, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pi-col impact-col">
+                        <p class="pi-col-label">L'impact</p>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">4–6 h</div>
+                            <div class="impact-label">par enseignant et par semaine, récupérées sur l'administratif de communication†</div>
+                            <div class="impact-assumption">Hypothèse : la communication avec les parents représente en moyenne 35 à 50 % de la charge administrative hebdomadaire de 12 h = 4,2 à 6 h. Le canal EduCompass unifié et structuré élimine la gestion de canaux multiples, réduit les relances de réponses et automatise les notifications de routine (absences, rendez-vous, événements). L'estimation prudente suppose 80 % de gain d'efficacité dans cette catégorie.</div>
+                        </div>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">RGPD</div>
+                            <div class="impact-label">Élimine l'exposition de l'école due aux groupes WhatsApp de parents†</div>
+                            <div class="impact-assumption">EduCompass fournit une communication parents chiffrée, auditable et contrôlée par l'école. Aucune donnée d'élève ou de famille ne quitte la gouvernance de l'école. Gestion du consentement intégrée. C'est l'école, pas Meta, qui détient les données. Le risque de violation ICO lié à l'usage de WhatsApp est entièrement éliminé.</div>
+                        </div>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">↑ Ofsted</div>
+                            <div class="impact-label">Renforce les scores « Parent View » et la base de preuves pour l'inspection†</div>
+                            <div class="impact-assumption">L'enquête Parent View d'Ofsted influence directement les jugements d'inspection. Les écoles à la communication documentée, cohérente et structurée obtiennent systématiquement de meilleurs scores sur les indicateurs d'implication des parents. EduCompass génère des journaux de communication auditables, des données de temps de réponse et des analyses d'implication des parents — tous utilisables comme preuves d'inspection.</div>
+                        </div>
+
+                        <div class="impact-item">
+                            <div class="impact-num" style="color:#d4af37;">1 canal</div>
+                            <div class="impact-label">remplace e-mail + WhatsApp + appli scolaire + appels — pour tous types d'écoles</div>
+                            <div class="impact-assumption">EduCompass regroupe : messagerie parents-enseignants chiffrée, calendrier partagé et coordination d'événements, mises à jour sur les progrès des élèves, gestion du consentement et signalement d'absences — dans une seule plateforme conforme au RGPD et intégrée au SIG. Disponible pour les écoles publiques, privées, internationales, confessionnelles et spécialisées.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-bar-label">
+                    <div class="section-bar"></div>
+                    <span class="section-bar-text">Comment EduCompass y parvient</span>
+                </div>
+                <div class="solve-grid">
+                    <div class="solve-card">
+                        <h4>💬 Messagerie parents-enseignants chiffrée</h4>
+                        <p>Remplace l'e-mail et WhatsApp par un canal chiffré conforme au RGPD et géré par l'école. Les enseignants répondent dans EduCompass — sans e-mail personnel ni WhatsApp personnel requis.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>📅 Calendrier scolaire partagé</h4>
+                        <p>Événements, réunions parents-professeurs, journées de formation, autorisations de sorties — gérés en un seul endroit. Les notifications automatiques remplacent les e-mails individuels. Consentement recueilli numériquement.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>📊 Mises à jour sur les progrès des élèves</h4>
+                        <p>Les enseignants envoient de brèves mises à jour structurées par voix ou texte. Les parents reçoivent des notes de progrès mises en forme sans que l'enseignant ait à se connecter à un portail ou à rédiger un bulletin formel.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>⚖️ Gestion du consentement RGPD</h4>
+                        <p>Chaque type de communication a un consentement parental documenté. Autorisations photo, consentement aux sorties, communication sur les besoins particuliers — tout est géré par consentement dans EduCompass avec piste d'audit.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>🏫 Intégration au SIG</h4>
+                        <p>Se connecte aux systèmes d'information de gestion scolaire existants. Aucune double saisie. Les dossiers d'élèves, groupes-classes et coordonnées se synchronisent depuis le SIG existant.</p>
+                    </div>
+                    <div class="solve-card">
+                        <h4>📋 Export de preuves Ofsted &amp; ISI</h4>
+                        <p>Journaux de communication, taux d'implication des parents, temps de réponse et registres de consentement exportables à tout moment en un document de preuves prêt pour l'inspection.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── DISCLAIMER ── -->
+        <section style="padding: 60px 0; background: rgba(255,255,255,0.4);">
+            <div class="container-narrow" style="text-align:center;">
+                <p style="font-family:-apple-system,sans-serif;font-size:0.82rem;color:var(--brown-mid);line-height:1.7;max-width:680px;margin:0 auto;">
+                    <strong>† À propos des hypothèses d'impact :</strong> Tous les chiffres marqués d'un † sont des estimations modélisées fondées sur des références de recherche publiées, et non des résultats audités de déploiements AI Pieces. Nous les présentons pour montrer l'ampleur du problème et la fourchette plausible d'impact — pas pour garantir des résultats précis. Les programmes pilotes généreront des données de résultats réelles, que nous publierons. Nous montrons le raisonnement.
+                </p>
+            </div>
+        </section>
+
+        <!-- ── CTA ── -->
+        <section style="padding:80px 0;text-align:center;background:linear-gradient(135deg,var(--brown-deep),#5a3a1a);">
+            <div class="container">
+                <h2 style="font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--gold-light);margin-bottom:14px;">Prêt à lancer un projet pilote ?</h2>
+                <p style="font-family:'Source Serif 4',serif;font-size:1.1rem;color:rgba(255,255,255,0.8);max-width:520px;margin:0 auto 35px;line-height:1.7;">FamilyCompass est en bêta. Les projets pilotes HealthCompass, CareCompass et EduCompass sont ouverts. Manifestez votre intérêt et nous vous contacterons sous 48 heures.</p>
+                <a href="index.html#beta-signup-section" style="font-family:-apple-system,sans-serif;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:white;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;display:inline-block;margin:8px;box-shadow:0 8px 25px rgba(139,105,20,0.3);">Manifester votre intérêt</a>
+                <a href="research.html" style="font-family:-apple-system,sans-serif;background:transparent;color:white;border:2px solid rgba(255,255,255,0.35);padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:600;font-size:1rem;display:inline-block;margin:8px;">Lire la recherche</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Fonctionnalités</a></li>
+                        <li><a href="how-it-works.html">Comment ça marche</a></li>
+                        <li><a href="subscriptions.html">Tarifs</a></li>
+                        <li><a href="index.html#beta-signup-section">Télécharger l'application</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Entreprise</h4>
+                    <ul class="footer-links">
+                        <li><a href="about-founder.html">À propos de la fondatrice</a></li>
+                        <li><a href="research.html">Notre recherche</a></li>
+                        <li><a href="research.html">Blog</a></li>
+                    </ul>
+                </div><div class="footer-section">
+                    <h4>Guides</h4>
+                    <ul class="footer-links">
+                        <li><a href="family-coordination-app.html">Application de coordination familiale</a></li>
+                        <li><a href="private-alternative-to-life360.html">Alternative privée à Life360</a></li>
+                        <li><a href="how-to-coordinate-care-for-an-elderly-parent.html">Coordonner les soins d'un parent âgé</a></li>
+                        <li><a href="example-when-is-it-time-for-a-care-home.html">Quand est-il temps de choisir une maison de retraite ?</a></li>
+                        <li><a href="family-medication-tracking-app.html">Suivi des médicaments en famille</a></li>
+                        <li><a href="co-parenting-app-private.html">Application de coparentalité privée</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Confidentialité &amp; confiance</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Politique de confidentialité</a></li>
+                        <li><a href="privacy.html">Sécurité</a></li>
+                        <li><a href="terms.html">Conditions d'utilisation</a></li>
+                        <li><a href="privacy.html">Conformité COPPA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Assistance</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Centre d'aide</a></li>
+                        <li><a href="support.html">Nous contacter</a></li>
+                        <li><a href="support.html">Envoyer un retour</a></li>
+                        <li><a href="mailto:support@aipieces.org">Assistance par e-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin-bottom:14px;">
+                    <span class="lang-switcher" style="justify-content:center;">
+                        <a href="../how-it-works.html" hreflang="en">English</a><span>·</span><a href="../de/how-it-works.html" hreflang="de">Deutsch</a><span>·</span><a href="how-it-works.html" hreflang="fr" class="active">Français</a><span>·</span><a href="../es/how-it-works.html" hreflang="es">Español</a>
+                    </span>
+                </p>
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Fait avec ❤️ pour les familles du monde entier.</p>
+                <p style="margin-top:10px;font-size:0.8rem;">
+                    FamilyCompass · HealthCompass · CareCompass · EduCompass ·
+                    Confidentialité d'abord, par conception · Conçu à Kerry, en Irlande · Conforme au RGPD
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.opacity = '1';
+                    e.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.06 });
+
+        document.querySelectorAll('.pi-grid, .solve-card, .impact-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            io.observe(el);
+        });
+
+        const blocks = document.querySelectorAll('.product-block');
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const scrollObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const id = e.target.id;
+                    tabLinks.forEach(t => {
+                        t.style.borderBottomColor = 'transparent';
+                        t.style.color = '';
+                    });
+                    const active = document.querySelector(`.tab-link.${id.replace('compass','')}`);
+                    if (active) {
+                        const colors = { family: '#8b6914', health: '#8b6914', care: '#8b6914', edu: '#8b6914' };
+                        const key = id.replace('compass','');
+                        active.style.borderBottomColor = colors[key];
+                        active.style.color = colors[key];
+                    }
+                }
+            });
+        }, { threshold: 0.3 });
+        blocks.forEach(b => scrollObs.observe(b));
+    </script>
+</body>
+</html>
