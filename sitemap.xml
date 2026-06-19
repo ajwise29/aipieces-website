@@ -35,6 +35,17 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/"/>
   </url>
   <url>
+    <loc>https://aipieces.org/es/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/"/>
+  </url>
+  <url>
     <loc>https://aipieces.org/features.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -58,6 +69,17 @@
   </url>
   <url>
     <loc>https://aipieces.org/fr/features.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/features.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/features.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/features.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/features.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/features.html"/>
+  </url>
+  <url>
+    <loc>https://aipieces.org/es/features.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -101,6 +123,17 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/how-it-works.html"/>
   </url>
   <url>
+    <loc>https://aipieces.org/es/how-it-works.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/how-it-works.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/how-it-works.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/how-it-works.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/how-it-works.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/how-it-works.html"/>
+  </url>
+  <url>
     <loc>https://aipieces.org/subscriptions.html</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -124,6 +157,17 @@
   </url>
   <url>
     <loc>https://aipieces.org/fr/subscriptions.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/subscriptions.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/subscriptions.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/subscriptions.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/subscriptions.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/subscriptions.html"/>
+  </url>
+  <url>
+    <loc>https://aipieces.org/es/subscriptions.html</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -167,6 +211,17 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/privacy.html"/>
   </url>
   <url>
+    <loc>https://aipieces.org/es/privacy.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/privacy.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/privacy.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/privacy.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/privacy.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/privacy.html"/>
+  </url>
+  <url>
     <loc>https://aipieces.org/support.html</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -190,6 +245,17 @@
   </url>
   <url>
     <loc>https://aipieces.org/fr/support.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/support.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/support.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/support.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/support.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/support.html"/>
+  </url>
+  <url>
+    <loc>https://aipieces.org/es/support.html</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -233,6 +299,17 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/research.html"/>
   </url>
   <url>
+    <loc>https://aipieces.org/es/research.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/research.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/research.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/research.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/research.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/research.html"/>
+  </url>
+  <url>
     <loc>https://aipieces.org/research-blog-post01.html</loc>
     <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -256,6 +333,17 @@
   </url>
   <url>
     <loc>https://aipieces.org/fr/research-blog-post01.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/research-blog-post01.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/research-blog-post01.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/research-blog-post01.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/research-blog-post01.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/research-blog-post01.html"/>
+  </url>
+  <url>
+    <loc>https://aipieces.org/es/research-blog-post01.html</loc>
     <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -299,6 +387,17 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/about-founder.html"/>
   </url>
   <url>
+    <loc>https://aipieces.org/es/about-founder.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/about-founder.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/about-founder.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/about-founder.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/about-founder.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/about-founder.html"/>
+  </url>
+  <url>
     <loc>https://aipieces.org/family-coordination-app.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -322,6 +421,17 @@
   </url>
   <url>
     <loc>https://aipieces.org/fr/family-coordination-app.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/family-coordination-app.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/family-coordination-app.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/family-coordination-app.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/family-coordination-app.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/family-coordination-app.html"/>
+  </url>
+  <url>
+    <loc>https://aipieces.org/es/family-coordination-app.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -365,6 +475,17 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/private-alternative-to-life360.html"/>
   </url>
   <url>
+    <loc>https://aipieces.org/es/private-alternative-to-life360.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/private-alternative-to-life360.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/private-alternative-to-life360.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/private-alternative-to-life360.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/private-alternative-to-life360.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/private-alternative-to-life360.html"/>
+  </url>
+  <url>
     <loc>https://aipieces.org/how-to-coordinate-care-for-an-elderly-parent.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -388,6 +509,17 @@
   </url>
   <url>
     <loc>https://aipieces.org/fr/how-to-coordinate-care-for-an-elderly-parent.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/how-to-coordinate-care-for-an-elderly-parent.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/how-to-coordinate-care-for-an-elderly-parent.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/how-to-coordinate-care-for-an-elderly-parent.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/how-to-coordinate-care-for-an-elderly-parent.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/how-to-coordinate-care-for-an-elderly-parent.html"/>
+  </url>
+  <url>
+    <loc>https://aipieces.org/es/how-to-coordinate-care-for-an-elderly-parent.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -431,6 +563,17 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/example-when-is-it-time-for-a-care-home.html"/>
   </url>
   <url>
+    <loc>https://aipieces.org/es/example-when-is-it-time-for-a-care-home.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/example-when-is-it-time-for-a-care-home.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/example-when-is-it-time-for-a-care-home.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/example-when-is-it-time-for-a-care-home.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/example-when-is-it-time-for-a-care-home.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/example-when-is-it-time-for-a-care-home.html"/>
+  </url>
+  <url>
     <loc>https://aipieces.org/family-medication-tracking-app.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -454,6 +597,17 @@
   </url>
   <url>
     <loc>https://aipieces.org/fr/family-medication-tracking-app.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/family-medication-tracking-app.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/family-medication-tracking-app.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/family-medication-tracking-app.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/family-medication-tracking-app.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/family-medication-tracking-app.html"/>
+  </url>
+  <url>
+    <loc>https://aipieces.org/es/family-medication-tracking-app.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -497,6 +651,17 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/co-parenting-app-private.html"/>
   </url>
   <url>
+    <loc>https://aipieces.org/es/co-parenting-app-private.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/co-parenting-app-private.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/co-parenting-app-private.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/co-parenting-app-private.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/co-parenting-app-private.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/co-parenting-app-private.html"/>
+  </url>
+  <url>
     <loc>https://aipieces.org/terms.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>yearly</changefreq>
@@ -520,6 +685,17 @@
   </url>
   <url>
     <loc>https://aipieces.org/fr/terms.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://aipieces.org/terms.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://aipieces.org/de/terms.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/terms.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://aipieces.org/es/terms.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/terms.html"/>
+  </url>
+  <url>
+    <loc>https://aipieces.org/es/terms.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

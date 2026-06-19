@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Llevar juntos el control de la medicación familiar — AI Pieces</title>
+    <meta name="description" content="FamilyCompass ayuda a las familias a llevar un registro compartido y privado de la medicación y los suplementos de todas las personas a las que cuidan. En beta.">
+    <meta name="author" content="AI Pieces Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipieces.org/es/family-medication-tracking-app.html">
+    <link rel="alternate" hreflang="en" href="https://aipieces.org/family-medication-tracking-app.html">
+    <link rel="alternate" hreflang="de" href="https://aipieces.org/de/family-medication-tracking-app.html">
+    <link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/family-medication-tracking-app.html">
+    <link rel="alternate" hreflang="es" href="https://aipieces.org/es/family-medication-tracking-app.html">
+    <link rel="alternate" hreflang="x-default" href="https://aipieces.org/family-medication-tracking-app.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI Pieces">
+    <meta property="og:url" content="https://aipieces.org/es/family-medication-tracking-app.html">
+    <meta property="og:title" content="Llevar juntos el control de la medicación familiar — AI Pieces">
+    <meta property="og:description" content="FamilyCompass ayuda a las familias a llevar un registro compartido y privado de la medicación y los suplementos de todas las personas a las que cuidan. En beta.">
+    <meta property="og:image" content="https://aipieces.org/share-card.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://aipieces.org/es/family-medication-tracking-app.html">
+    <meta name="twitter:title" content="Llevar juntos el control de la medicación familiar — AI Pieces">
+    <meta name="twitter:description" content="FamilyCompass ayuda a las familias a llevar un registro compartido y privado de la medicación y los suplementos de todas las personas a las que cuidan. En beta.">
+    <meta name="twitter:image" content="https://aipieces.org/share-card.jpg">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Puedo ver qué medicación ha anotado mi progenitor?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí. FamilyCompass mantiene un registro compartido, de modo que cuando alguien anota en la app que se ha administrado una dosis, todos en el círculo de cuidados pueden ver esa entrada. Es un registro de lo que su familia ha decidido anotar. No detecta dosis por sí misma y es una herramienta de coordinación, no un producto sanitario." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Avisa a toda la familia?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Puede configurar recordatorios para ayudar a su familia a mantener el registro al día, y elegir quién los recibe. Son simples avisos de coordinación que usted mismo define, no alertas clínicas, y no comprueban si una dosis se ha tomado realmente. Están para ayudar a la familia a mantenerse organizada en conjunto." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Los datos de salud son privados?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí. Los registros de medicación están cifrados de extremo a extremo y solo son visibles para los miembros de la familia del círculo de cuidados que usted elija. AI Pieces no puede leerlos, y nunca vendemos ni compartimos sus datos con anunciantes. Usted decide quién está incluido, y puede cambiarlo en cualquier momento." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Sustituye a un pastillero o a un farmacéutico?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. FamilyCompass es una herramienta de registro y coordinación compartida, no un sustituto de un pastillero, un farmacéutico o un médico. Ayuda a su familia a llevar y ver una nota compartida de lo que se ha anotado. Para consejos sobre medicación, dosis y horarios, fíese siempre de su farmacéutico o su médico." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Es un producto sanitario?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. FamilyCompass no es un producto sanitario. No diagnostica, monitoriza, trata ni previene ninguna afección, y no detecta ni avisa de dosis olvidadas o incorrectas. Es una app de coordinación familiar y de registro que ayuda a todos a ver lo que se ha anotado. No sustituye el asesoramiento médico profesional." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Está disponible ya?",
+              "acceptedAnswer": { "@type": "Answer", "text": "FamilyCompass está en beta e incorpora activamente familias en varios países. Es utilizable hoy, con algunas funciones aún en perfeccionamiento. Puede unirse a la beta ya para probar el registro de medicación compartido y el resto de la app con su propia familia." }
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "headline": "Llevar juntos el control de la medicación familiar",
+          "description": "FamilyCompass ayuda a las familias a llevar un registro compartido y privado de la medicación y los suplementos de todas las personas a las que cuidan. En beta.",
+          "image": "https://aipieces.org/share-card.jpg",
+          "datePublished": "2026-06-15",
+          "dateModified": "2026-06-15",
+          "author": { "@type": "Organization", "name": "AI Pieces", "url": "https://aipieces.org" },
+          "publisher": { "@type": "Organization", "name": "AI Pieces", "logo": { "@type": "ImageObject", "url": "https://aipieces.org/compass.png" } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://aipieces.org/es/family-medication-tracking-app.html" }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --ink:#4a3c2e; --ink-soft:#6b5a47; --gold:#8b6914; --gold-lt:#d4af37;
+            --rule:rgba(139,105,20,0.18); --lead-bg:rgba(255,255,255,0.55);
+            --h1:clamp(2rem,6vw,3.25rem); --h2:clamp(1.5rem,4.5vw,2.1rem);
+            --lead:clamp(1.12rem,2.6vw,1.3rem); --body:clamp(1.02rem,2.2vw,1.12rem);
+        }
+        body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+            background:linear-gradient(135deg,#f5f1e8 0%,#e8ddd4 100%); color:var(--ink);
+            line-height:1.7; -webkit-font-smoothing:antialiased; }
+        a { color:var(--gold); }
+        .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+        .header { padding:18px 0; background:rgba(255,255,255,0.1); backdrop-filter:blur(10px);
+            border-bottom:1px solid rgba(255,255,255,0.2); position:sticky; top:0; z-index:1000; }
+        .nav { display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-size:1.4rem; font-weight:700; color:var(--gold); letter-spacing:1px; text-decoration:none; }
+        .trust-badge { background:rgba(139,105,20,0.1); color:var(--gold); padding:4px 12px;
+            border-radius:20px; font-size:0.75rem; font-weight:600; margin-left:8px; }
+        .nav-links { display:flex; list-style:none; gap:22px; align-items:center; }
+        .nav-links a { text-decoration:none; color:var(--ink); font-weight:500; font-size:0.92rem; }
+        .nav-links a:hover { color:var(--gold); }
+        .lang-switcher { display:flex; gap:6px; align-items:center; font-size:0.82rem; }
+        .lang-switcher a { color:var(--ink); text-decoration:none; font-weight:600; padding:2px 5px; border-radius:4px; }
+        .lang-switcher a.active { color:var(--gold); background:rgba(139,105,20,0.1); }
+        .lang-switcher a:hover { color:var(--gold); }
+        .lang-switcher span { color:rgba(74,60,46,0.4); }
+
+        .article-wrap { max-width:760px; margin:0 auto; padding:0 22px; }
+        .eyebrow { margin:48px 0 14px; font-size:0.82rem; font-weight:700; letter-spacing:1.5px;
+            text-transform:uppercase; color:var(--gold); }
+        .page-h1 { font-size:var(--h1); font-weight:800; line-height:1.12; color:#3d2e1e;
+            letter-spacing:-0.5px; word-spacing:normal; margin-bottom:18px; }
+        .standfirst { font-size:var(--lead); color:var(--ink-soft); line-height:1.6; margin-bottom:8px; }
+        .byline { font-size:0.88rem; color:var(--ink-soft); margin:18px 0 6px; }
+
+        .hero-figure { margin:30px 0 10px; }
+        .hero-figure img { width:100%; height:auto; border-radius:20px; display:block;
+            box-shadow:0 18px 50px rgba(139,105,20,0.18); aspect-ratio:16/9; object-fit:cover; }
+        figcaption { font-size:0.85rem; color:var(--ink-soft); margin-top:10px; text-align:center; font-style:italic; }
+
+        .content-section { margin:56px 0; }
+        .section-h2 { font-size:var(--h2); font-weight:700; color:var(--gold); line-height:1.2;
+            margin-bottom:20px; letter-spacing:-0.3px; }
+        .direct-answer { font-size:var(--lead); line-height:1.6; color:#43372a; font-weight:450;
+            border-left:3px solid var(--gold-lt); background:var(--lead-bg);
+            padding:18px 22px; border-radius:0 12px 12px 0; margin-bottom:26px; }
+        .content-section p.body { font-size:var(--body); margin-bottom:20px; }
+        .content-section p.body:last-child { margin-bottom:0; }
+        .content-section ul.body { font-size:var(--body); margin:0 0 20px 1.1em; }
+        .content-section ul.body li { margin-bottom:8px; }
+
+        figure.inline-figure { margin:30px 0; }
+        figure.inline-figure img { width:100%; height:auto; border-radius:16px; display:block;
+            box-shadow:0 12px 34px rgba(139,105,20,0.15); aspect-ratio:3/2; object-fit:cover; }
+
+        figure.phone-figure { margin:30px 0; text-align:center; }
+        figure.phone-figure .phone-frame { display:inline-block; background:#1c140c; border-radius:30px;
+            padding:9px; box-shadow:0 16px 40px rgba(61,46,30,0.26); max-width:270px; }
+        figure.phone-figure img { width:100%; height:auto; border-radius:23px; display:block; }
+        figure.phone-figure figcaption { font-size:0.86rem; color:var(--ink-soft); margin-top:14px; }
+
+        .disclaimer { font-size:0.9rem; color:var(--ink-soft); background:rgba(255,255,255,0.4);
+            border:1px solid var(--rule); border-radius:12px; padding:16px 18px; margin:26px 0; }
+        .scope-box { background:rgba(255,255,255,0.5); border:1px solid var(--rule);
+            border-radius:16px; padding:6px 22px 14px; margin:24px 0; }
+        .scope-box .label { font-size:0.78rem; font-weight:700; letter-spacing:0.5px;
+            text-transform:uppercase; color:var(--gold); margin:16px 0 6px; }
+        .scope-box ul { list-style:none; margin:0; font-size:1rem; }
+        .scope-box ul li { padding:5px 0 5px 22px; position:relative; }
+        .scope-box ul.is li::before { content:'✓'; position:absolute; left:0; color:#2d6a4f; font-weight:800; }
+        .scope-box ul.isnt li::before { content:'✕'; position:absolute; left:0; color:#9a4a3a; font-weight:800; }
+
+        .faq-section { margin:64px 0 40px; }
+        .faq-section h2 { font-size:var(--h2); font-weight:700; color:var(--gold); margin-bottom:24px; }
+        .faq-item { border-bottom:1px solid var(--rule); padding:22px 0; }
+        .faq-item:first-of-type { border-top:1px solid var(--rule); }
+        .faq-q { font-size:1.15rem; font-weight:700; color:#3d2e1e; margin-bottom:10px; line-height:1.4; }
+        .faq-a { font-size:var(--body); color:var(--ink); }
+
+        .cta-strip { background:rgba(255,255,255,0.2); border:2px solid rgba(139,105,20,0.2);
+            border-radius:22px; padding:34px; margin:50px 0; text-align:center;
+            box-shadow:0 10px 40px rgba(139,105,20,0.12); }
+        .cta-strip h2 { font-size:1.5rem; color:var(--gold); margin-bottom:12px; }
+        .cta-strip p { color:var(--ink-soft); margin-bottom:22px; }
+        .btn { padding:14px 30px; border-radius:50px; text-decoration:none; font-weight:600;
+            display:inline-block; transition:transform 0.25s,box-shadow 0.25s;
+            background:linear-gradient(135deg,var(--gold),var(--gold-lt)); color:#fff;
+            box-shadow:0 10px 30px rgba(139,105,20,0.3); }
+        .btn:hover { transform:translateY(-3px); box-shadow:0 15px 40px rgba(139,105,20,0.4); }
+
+        .footer { background:rgba(0,0,0,0.1); padding:50px 0 36px; text-align:center;
+            border-top:1px solid rgba(255,255,255,0.1); margin-top:60px; }
+        .footer-content { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:36px; margin-bottom:34px; text-align:left; }
+        .footer-section h4 { color:var(--gold); font-size:1.05rem; margin-bottom:14px; }
+        .footer-links { display:flex; flex-direction:column; gap:9px; list-style:none; }
+        .footer-links a { color:var(--ink); text-decoration:none; }
+        .footer-links a:hover { color:var(--gold); }
+        .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;
+            font-size:0.88rem; color:var(--ink-soft); }
+
+        html { scroll-behavior:smooth; }
+        @media (max-width:768px) {
+            .nav-links { display:none; }
+            .article-wrap { padding:0 18px; }
+            .eyebrow { margin-top:32px; }
+            .content-section { margin:44px 0; }
+            .direct-answer { padding:16px 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══ HEADER ══ -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="index.html" class="logo">AIPieces <span class="trust-badge">La privacidad primero</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="family-coordination-app.html">Guías</a></li>
+                    <li><a href="research.html">Investigación</a></li>
+                    <li><a href="features.html">Funciones</a></li>
+                    <li><a href="how-it-works.html">Cómo funciona</a></li>
+                    <li><a href="privacy.html">Privacidad</a></li>
+                    <li><a href="support.html">Soporte</a></li>
+                    <li class="lang-switcher" aria-label="Seleccionar idioma">
+                        <a href="../family-medication-tracking-app.html" hreflang="en">EN</a><span>·</span><a href="../de/family-medication-tracking-app.html" hreflang="de">DE</a><span>·</span><a href="../fr/family-medication-tracking-app.html" hreflang="fr">FR</a><span>·</span><a href="family-medication-tracking-app.html" hreflang="es" class="active">ES</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="article-wrap">
+
+            <p class="eyebrow">Coordinación familiar</p>
+
+            <h1 class="page-h1">Llevar juntos el control de la medicación familiar</h1>
+
+            <p class="standfirst">Un registro compartido y privado de lo que se ha anotado, para que toda la familia esté al día sin que nadie lo lleve solo.</p>
+            <p class="byline">Por el equipo de AI Pieces · Actualizado el 15 de junio de 2026</p>
+
+            <figure class="hero-figure">
+                <picture>
+                    <source srcset="../homemedication.webp" type="image/webp">
+                    <img src="../homemedication.jpg" alt="Un hombre mayor en casa con un vaso de agua y su medicación diaria sobre la mesa" loading="eager" decoding="async" fetchpriority="high" width="1600" height="1067">
+                </picture>
+            </figure>
+
+            <!-- ── SECTION 1 ── -->
+            <section class="content-section">
+                <h2 class="section-h2">¿Por qué es tan difícil coordinar la medicación en una familia?</h2>
+
+                <p class="direct-answer">Porque la información está dispersa y las personas también. Un hermano hace la visita de la mañana, otro la de la tarde; los suplementos viven en una nota de la cocina, las recetas de repetición en la cabeza de alguien. Con varios cuidadores y sin un lugar compartido donde anotar las cosas, la familia pierde fácilmente el hilo de qué se ha anotado y quién lo anotó.</p>
+
+                <p class="body">La fricción cotidiana rara vez es dramática. Son dos personas que no saben si se escribió la misma nota, o un detalle que solo vivía en la memoria de una persona.</p>
+
+                <p class="body">Cuando no hay un registro compartido, la persona que da la casualidad de que se acuerda se convierte en la guardiana de todo. Es una carga silenciosa y constante de llevar a solas.</p>
+
+                <figure class="inline-figure">
+                    <picture>
+                        <source srcset="../homemedication.webp" type="image/webp">
+                        <img src="../homemedication.jpg" alt="Un hombre mayor en casa con un vaso de agua y su medicación diaria sobre la mesa" loading="lazy" decoding="async" width="1600" height="1067">
+                    </picture>
+                </figure>
+            </section>
+
+            <!-- ── SECTION 2 ── -->
+            <section class="content-section">
+                <h2 class="section-h2">¿Cómo ayuda un registro de medicación compartido?</h2>
+
+                <p class="direct-answer">Le da a la familia un único lugar donde anotar las cosas y un único lugar donde mirar. Cuando la persona presente anota que se ha administrado una dosis, todos en el círculo de cuidados pueden ver esa entrada, de modo que la familia mantiene un historial compartido y coherente en lugar de notas dispersas. Es un registro que todos pueden leer y un historial ordenado que puede llevar a un médico o farmacéutico.</p>
+
+                <p class="body">Un registro compartido sustituye las conjeturas por una nota escrita. Cualquiera del círculo puede ver lo que se ha anotado, en lugar de andar preguntando.</p>
+
+                <p class="body">También puede configurar recordatorios suaves para ayudar a la familia a mantener el registro al día: avisos que usted mismo elige, para estar organizados en conjunto.</p>
+
+                <div class="disclaimer">
+                    <strong>Tenga en cuenta:</strong> estos recordatorios son simples avisos de coordinación que usted define, no alertas clínicas. FamilyCompass registra lo que su familia decide anotar y no comprueba, detecta ni avisa de si una dosis se ha tomado realmente.
+                </div>
+
+                <figure class="phone-figure">
+                    <div class="phone-frame">
+                        <picture>
+                            <source srcset="../medicationCompass.webp" type="image/webp">
+                            <img src="../medicationCompass.png" alt="Registro de medicación compartido en FamilyCompass que muestra las dosis de hoy, lo anotado y lo siguiente que toca para un miembro de la familia" loading="lazy" decoding="async" width="540" height="1170">
+                        </picture>
+                    </div>
+                    <figcaption>El registro de medicación compartido en la app: un historial que todos en el círculo de cuidados pueden leer. Una herramienta de registro, no un producto sanitario.</figcaption>
+                </figure>
+            </section>
+
+            <!-- ── SECTION 3 ── -->
+            <section class="content-section">
+                <h2 class="section-h2">¿Puede verlo toda la familia?</h2>
+
+                <p class="direct-answer">Sí, las personas que usted elija. Un círculo de cuidados le permite invitar a los miembros de la familia y a los ayudantes de confianza que deban compartir el registro, para que todos vean las mismas entradas. Usted decide quién está incluido y quién, si es que alguien, recibe recordatorios. Todo está cifrado de extremo a extremo y solo es visible dentro de su círculo, de modo que los detalles de salud se mantienen privados dentro de la familia.</p>
+
+                <p class="body">Los círculos de cuidados ponen a todos al día sin un único guardián que tenga todos los detalles. Cada miembro usa su propia cuenta privada y cifrada.</p>
+
+                <p class="body">Las notificaciones son voluntarias: usted elige quién recibe recordatorios, para que no se avise a personas sobre cosas que no les corresponde gestionar. El uso compartido se mantiene bajo el control de la familia.</p>
+
+                <figure class="inline-figure">
+                    <picture>
+                        <source srcset="../wheelchairgrandpafamily.webp" type="image/webp">
+                        <img src="../wheelchairgrandpafamily.jpg" alt="Una familia pasando tiempo con un pariente mayor que usa silla de ruedas" loading="lazy" decoding="async" width="1067" height="1600">
+                    </picture>
+                </figure>
+            </section>
+
+            <!-- ── SECTION 4 ── -->
+            <section class="content-section">
+                <h2 class="section-h2">¿Funciona para progenitores mayores y niños?</h2>
+
+                <p class="direct-answer">Sí. FamilyCompass está pensada para toda la familia, así que puede mantener perfiles separados para las personas a las que cuida: <a href="how-to-coordinate-care-for-an-elderly-parent.html">un progenitor mayor</a>, un hijo o un adulto dependiente. Cada perfil tiene su propio registro compartido, de modo que la familia puede llevar notas de varias personas sin mezclarlas. Una sola app cubre las generaciones que usted cuida a la vez.</p>
+
+                <p class="body">Los perfiles según la edad hacen que el registro de un hijo y el de un progenitor se mantengan separados y claros, incluso cuando es la misma persona quien mantiene ambos al día.</p>
+
+                <p class="body">Para las personas dependientes que no pueden llevar su propio registro, la familia puede mantenerlo por ellas, con el mismo cifrado y la misma privacidad basada en el círculo.</p>
+
+                <figure class="inline-figure">
+                    <picture>
+                        <source srcset="../grannykidcooking.webp" type="image/webp">
+                        <img src="../grannykidcooking.jpg" alt="Un abuelo y un niño en la cocina de casa" loading="lazy" decoding="async" width="1067" height="1600">
+                    </picture>
+                </figure>
+            </section>
+
+            <!-- ── SECTION 5 · WHAT IT IS AND ISN'T ── -->
+            <section class="content-section">
+                <h2 class="section-h2">Qué es — y qué no es</h2>
+
+                <p class="direct-answer">Seamos del todo claros. FamilyCompass es una herramienta de coordinación familiar y de registro. Ayuda a su familia a anotar y ver una nota compartida de lo que se ha anotado. No es un producto sanitario, no detecta ni avisa de dosis olvidadas o incorrectas, y no sustituye a su farmacéutico, su médico ni ningún asesoramiento médico profesional. Esas decisiones corresponden siempre a un profesional.</p>
+
+                <div class="scope-box">
+                    <p class="label">Qué es</p>
+                    <ul class="is">
+                        <li>Un lugar compartido y privado para registrar lo que la familia ha anotado</li>
+                        <li>Una forma de que un círculo de cuidados vea el mismo historial de medicación</li>
+                        <li>Recordatorios opcionales que usted mismo configura para mantenerse organizado</li>
+                        <li>Un historial ordenado que puede llevar a un farmacéutico o a un médico</li>
+                    </ul>
+                    <p class="label">Qué no es</p>
+                    <ul class="isnt">
+                        <li>Un producto sanitario</li>
+                        <li>Una herramienta que detecta, comprueba o avisa de dosis olvidadas o incorrectas</li>
+                        <li>Un sustituto de un pastillero, un farmacéutico o un médico</li>
+                        <li>Una fuente de asesoramiento médico, pautas de dosificación o diagnóstico</li>
+                    </ul>
+                </div>
+
+                <div class="disclaimer">
+                    <strong>Importante:</strong> FamilyCompass registra solo lo que su familia decide introducir. No monitoriza la medicación, no detecta ni le alerta de dosis olvidadas o incorrectas, y no ofrece ninguna función médica ni de seguridad. No es un producto sanitario y no sustituye el asesoramiento profesional. Para todo lo relativo a medicación, dosis, interacciones u horarios, consulte siempre a su farmacéutico o a su médico.
+                </div>
+            </section>
+
+            <!-- ── SOFT BETA CTA ── -->
+            <section class="cta-strip">
+                <h2>Guarde los registros de su familia en un único lugar privado</h2>
+                <p>FamilyCompass está en beta e incorpora familias ya: un registro compartido y cifrado para las personas a las que cuida. Sin presión, y puede dejarla cuando quiera.</p>
+                <a class="btn" href="index.html#beta-signup-section">Unirse a la beta de FamilyCompass</a>
+            </section>
+
+            <!-- ── FAQ ── -->
+            <section class="faq-section" aria-label="Preguntas frecuentes">
+                <h2>Preguntas frecuentes</h2>
+
+                <div class="faq-item">
+                    <p class="faq-q">¿Puedo ver qué medicación ha anotado mi progenitor?</p>
+                    <p class="faq-a">Sí. FamilyCompass mantiene un registro compartido, de modo que cuando alguien anota en la app que se ha administrado una dosis, todos en el círculo de cuidados pueden ver esa entrada. Es un registro de lo que su familia ha decidido anotar. No detecta dosis por sí misma y es una herramienta de coordinación, no un producto sanitario.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-q">¿Avisa a toda la familia?</p>
+                    <p class="faq-a">Puede configurar recordatorios para ayudar a su familia a mantener el registro al día, y elegir quién los recibe. Son simples avisos de coordinación que usted mismo define, no alertas clínicas, y no comprueban si una dosis se ha tomado realmente. Están para ayudar a la familia a mantenerse organizada en conjunto.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-q">¿Los datos de salud son privados?</p>
+                    <p class="faq-a">Sí. Los registros de medicación están cifrados de extremo a extremo y solo son visibles para los miembros de la familia del círculo de cuidados que usted elija. AI Pieces no puede leerlos, y nunca vendemos ni compartimos sus datos con anunciantes. Usted decide quién está incluido, y puede cambiarlo en cualquier momento.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-q">¿Sustituye a un pastillero o a un farmacéutico?</p>
+                    <p class="faq-a">No. FamilyCompass es una herramienta de registro y coordinación compartida, no un sustituto de un pastillero, un farmacéutico o un médico. Ayuda a su familia a llevar y ver una nota compartida de lo que se ha anotado. Para consejos sobre medicación, dosis y horarios, fíese siempre de su farmacéutico o su médico.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-q">¿Es un producto sanitario?</p>
+                    <p class="faq-a">No. FamilyCompass no es un producto sanitario. No diagnostica, monitoriza, trata ni previene ninguna afección, y no detecta ni avisa de dosis olvidadas o incorrectas. Es una app de coordinación familiar y de registro que ayuda a todos a ver lo que se ha anotado. No sustituye el asesoramiento médico profesional.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-q">¿Está disponible ya?</p>
+                    <p class="faq-a">FamilyCompass está en beta e incorpora activamente familias en varios países. Es utilizable hoy, con algunas funciones aún en perfeccionamiento. Puede unirse a la beta ya para probar el registro de medicación compartido y el resto de la app con su propia familia.</p>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Producto</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Funciones</a></li>
+                        <li><a href="how-it-works.html">Cómo funciona</a></li>
+                        <li><a href="subscriptions.html">Precios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="about-founder.html">Sobre la fundadora</a></li>
+                        <li><a href="research.html">Nuestra investigación</a></li>
+                    </ul>
+                </div><div class="footer-section">
+                    <h4>Guías</h4>
+                    <ul class="footer-links">
+                        <li><a href="family-coordination-app.html">App de coordinación familiar</a></li>
+                        <li><a href="private-alternative-to-life360.html">Alternativa privada a Life360</a></li>
+                        <li><a href="how-to-coordinate-care-for-an-elderly-parent.html">Coordinar el cuidado de un progenitor mayor</a></li>
+                        <li><a href="example-when-is-it-time-for-a-care-home.html">¿Cuándo es el momento de una residencia?</a></li>
+                        <li><a href="family-medication-tracking-app.html">Seguimiento de medicación familiar</a></li>
+                        <li><a href="co-parenting-app-private.html">App de coparentalidad privada</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Privacidad &amp; confianza</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Política de privacidad</a></li>
+                        <li><a href="terms.html">Condiciones del servicio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Centro de ayuda</a></li>
+                        <li><a href="support.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin-bottom:14px;">
+                    <span class="lang-switcher" style="justify-content:center;">
+                        <a href="../family-medication-tracking-app.html" hreflang="en">English</a><span>·</span><a href="../de/family-medication-tracking-app.html" hreflang="de">Deutsch</a><span>·</span><a href="../fr/family-medication-tracking-app.html" hreflang="fr">Français</a><span>·</span><a href="family-medication-tracking-app.html" hreflang="es" class="active">Español</a>
+                    </span>
+                </p>
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Hecho con ❤️ para familias de todo el mundo.</p>
+                <p style="margin-top:10px;font-size:0.8rem;">La privacidad primero, por diseño · Desarrollado en Kerry, Irlanda · Conforme al RGPD</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
