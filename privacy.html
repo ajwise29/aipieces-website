@@ -563,8 +563,8 @@
                 <p class="section-number">Detailed Policy</p>
                 <h2 class="section-title" style="margin-bottom:14px;">Full Privacy Policy</h2>
                 <p style="font-family:-apple-system,sans-serif;font-size:0.8rem;color:var(--brown-mid);margin-bottom:50px;">
-                    <strong>Effective date:</strong> 26 February 2026 &nbsp;·&nbsp;
-                    <strong>Version:</strong> 3.0 &nbsp;·&nbsp;
+                    <strong>Effective date:</strong> 24 June 2026 &nbsp;·&nbsp;
+                    <strong>Version:</strong> 3.1 &nbsp;·&nbsp;
                     <strong>Data controller:</strong> AI Pieces Ltd, Kerry, Ireland &nbsp;·&nbsp;
                     <strong>ICO Registration:</strong> Pending (UK) &nbsp;·&nbsp;
                     <strong>DPC Registration:</strong> Pending (IE)
@@ -651,14 +651,14 @@
                     </p>
                     <ul class="policy-list">
                         <li><strong>Contract performance (Art. 6(1)(b)):</strong> Account creation, family group management, location sharing, calendar synchronisation, and messaging are necessary to perform the FamilyCompass service contract.</li>
-                        <li><strong>Explicit consent (Art. 6(1)(a) / Art. 9(2)(a)):</strong> Real-time GPS location sharing, biometric authentication enrolment, and health-adjacent data (elderly care monitoring, baby development tracking) require explicit, granular, revocable consent at the point of enabling each feature.</li>
+                        <li><strong>Explicit consent (Art. 6(1)(a) / Art. 9(2)(a)):</strong> Real-time GPS location sharing, biometric authentication enrolment, health &amp; fitness data accessed via Apple HealthKit (nutrition, workouts, sleep), and other health-adjacent data (elderly care monitoring, baby development tracking) require explicit, granular, revocable consent at the point of enabling each feature.</li>
                         <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> Security monitoring, fraud prevention, and technical logging — balanced against user rights, with interests assessment documented and available on request.</li>
                         <li><strong>Legal obligation (Art. 6(1)(c)):</strong> Retention of certain records where required by applicable law in Ireland, the UK, or the US.</li>
                     </ul>
                     <div class="callout callout-legal">
                         <p class="callout-label">Special Category Data — GDPR Art. 9</p>
                         <h4>Health and location data receive the highest legal protection.</h4>
-                        <p>Precise GPS location data, elderly care health monitoring outputs, and baby developmental data may constitute special category data under <a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank" rel="noopener">GDPR Article 9</a>. AI Pieces processes this data only on the basis of <strong>explicit consent</strong> (Art. 9(2)(a)). Consent is granular, specific, revocable at any time, and documented with timestamp and version of the consent text accepted. Withdrawal of consent does not affect the lawfulness of prior processing.</p>
+                        <p>Precise GPS location data, health &amp; fitness data read from Apple HealthKit (such as nutrition, workouts, and sleep), elderly care health monitoring outputs, and baby developmental data may constitute special category data under <a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank" rel="noopener">GDPR Article 9</a>. AI Pieces processes this data only on the basis of <strong>explicit consent</strong> (Art. 9(2)(a)). Health data is encrypted at rest, is never used for advertising or profiling, is never shared with our product-analytics processor, and is never used to train AI models. Consent is granular, specific, revocable at any time, and documented with timestamp and version of the consent text accepted. Withdrawal of consent does not affect the lawfulness of prior processing.</p>
                     </div>
                 </div>
 
@@ -674,7 +674,11 @@
                         <li><strong>Location data:</strong> Real-time GPS coordinates, geofence trigger events, last-known location. Encrypted end-to-end — not readable by AI Pieces. Purpose: family compass feature. Consent-gated. Retention: configurable by user; default 24-hour rolling window.</li>
                         <li><strong>Communication content:</strong> Messages and shared media. Encrypted end-to-end using Signal Protocol. Content is not accessible to AI Pieces. Metadata (timestamp, sender ID — not content) retained for 72 hours for delivery assurance.</li>
                         <li><strong>Calendar data:</strong> Events, schedules, availability. Encrypted at rest. Synced with device calendar only with explicit user permission. Retention: duration of account.</li>
+                        <li><strong>Health &amp; fitness data:</strong> Where you enable the relevant features, the app reads health &amp; fitness data via Apple HealthKit — such as nutrition, workouts, and sleep — and care- and development-related entries (elderly care monitoring, baby development tracking). Treated as special category data under <a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank" rel="noopener">GDPR Art. 9</a> and processed only with your explicit, revocable consent. Encrypted at rest. Never used for advertising or profiling, never shared with our analytics processor, and never used to train AI models. HealthKit data is never sold or shared for commercial purposes. Retention: duration of account, deleted on account closure.</li>
+                        <li><strong>Photos, media &amp; camera:</strong> Where you choose to attach a photo or use the camera (for example, profile images or media shared in messages), the app accesses your camera and/or photo library with your explicit permission. Shared media in messages is end-to-end encrypted using the Signal Protocol and is not accessible to AI Pieces. We access only the specific items you select — not your full photo library.</li>
+                        <li><strong>Subscription &amp; payment data:</strong> Paid subscriptions are processed by our payment provider, <strong>Stripe</strong>, via our website — not inside the app. AI Pieces does <strong>not</strong> receive or store your card number or full payment details; these are handled directly by Stripe. We store only your subscription status (e.g. plan and whether it is active) to provide the service. Purpose: contract performance and billing.</li>
                         <li><strong>Technical data:</strong> App version, device OS type (not device ID), crash reports (anonymised). Purpose: service quality. No advertising identifiers are collected or processed.</li>
+                        <li><strong>Anonymised product-usage analytics:</strong> Aggregate, non-identifying signals about <em>which features are used and how</em> — for example, which screens are opened or which actions are taken — so we can understand how the app is used and make it better. This data is fully anonymised: it is <strong>not</strong> linked back to your name, email, account, or any individual, and it never includes the content of your messages, your location, your calendar, or any health data. Purpose: product improvement only. We do not use it for advertising, profiling, or to build a profile of you, and it is never sold or shared for commercial purposes.</li>
                         <li><strong>Children's data (where applicable):</strong> Subject to COPPA and GDPR Art. 8 — processed only with verifiable parental consent for users under 13 (US) or under 16 (EU/UK default, may vary by member state).</li>
                     </ul>
                     <div class="callout callout-zero">
@@ -774,7 +778,7 @@
                         <li><strong>Calendar events:</strong> Retained for the duration of the account. Permanently deleted within 30 days of account deletion request.</li>
                         <li><strong>Authentication logs:</strong> 90 days for security monitoring purposes (legitimate interest lawful basis). Anonymised thereafter.</li>
                         <li><strong>Crash reports and technical logs:</strong> 30 days, anonymised at ingestion (no linkage to user identity).</li>
-                        <li><strong>Account data post-deletion:</strong> All personal data purged within 30 calendar days of confirmed deletion request. Cryptographic keys are destroyed; encrypted records become permanently unrecoverable.</li>
+                        <li><strong>Account data post-deletion:</strong> On a confirmed deletion request, your account is immediately deactivated and your identifying personal data (such as name and email) is erased, with your personal records purged across our database within 30 calendar days. A minimal, non-identifying record of the deletion may be retained to enforce the closure and meet our legal obligations. Some content shared within a family group (for example, messages already delivered to other members' devices) is removed on its normal retention schedule rather than instantly. Cryptographic keys are destroyed; encrypted records become permanently unrecoverable.</li>
                     </ul>
                 </div>
 
@@ -793,7 +797,7 @@
                         </div>
                         <div class="right-card">
                             <h4>Right to Erasure</h4>
-                            <p>Request permanent deletion of all your personal data ("right to be forgotten"). Account deletion wipes all identifiable records within 30 days. Encrypted data becomes permanently inaccessible.</p>
+                            <p>Request permanent deletion of all your personal data ("right to be forgotten"). Account deletion immediately deactivates your account and erases your identifying data, with personal records purged within 30 days (a minimal non-identifying deletion record may be kept to enforce closure and meet legal obligations). Encrypted data becomes permanently inaccessible.</p>
                             <p class="cite"><a href="https://gdpr-info.eu/art-17-gdpr/" target="_blank" rel="noopener">GDPR Art. 17</a> · <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/the-right-to-erasure/" target="_blank" rel="noopener">ICO: Right to erasure</a></p>
                         </div>
                         <div class="right-card">
@@ -839,11 +843,13 @@
                         Third-Party Processors &amp; Data Sharing
                     </h3>
                     <p class="policy-body">
-                        AI Pieces does not sell, rent, trade, or share personal data with third parties for commercial purposes. No advertising networks, data brokers, or behavioural analytics platforms have access to user data. This is consistent with the <a href="https://www.ftc.gov/news-events/news/press-releases/2024/01/ftc-order-prohibits-data-broker-outlogic-formerly-x-mode-social-selling-sensitive-location-data" target="_blank" rel="noopener">FTC's January 2024 enforcement action</a> against location data brokers, and positions FamilyCompass in direct contrast to data-monetising family tracking applications.
+                        AI Pieces does not sell, rent, trade, or share personal data with third parties for commercial purposes. No advertising networks or data brokers have access to user data. We use a single privacy-respecting product-analytics processor to understand, in fully anonymised and aggregate form, how features are used so we can improve the app — it receives no identifiable personal data and no message, location, calendar, or health content. This is consistent with the <a href="https://www.ftc.gov/news-events/news/press-releases/2024/01/ftc-order-prohibits-data-broker-outlogic-formerly-x-mode-social-selling-sensitive-location-data" target="_blank" rel="noopener">FTC's January 2024 enforcement action</a> against location data brokers, and positions FamilyCompass in direct contrast to data-monetising family tracking applications.
                     </p>
                     <ul class="policy-list">
                         <li><strong>Supabase (database and authentication infrastructure):</strong> Processes encrypted data only. Data processed under a Data Processing Agreement (DPA) compliant with GDPR Art. 28. Data residency: EU (Ireland/EU-West). Supabase has no access to plaintext family data. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy ↗</a></li>
                         <li><strong>Apple Push Notification Service (APNs) / Google Firebase Cloud Messaging (FCM):</strong> Delivery of push notifications. Notification content is end-to-end encrypted; only a notification trigger (not content) passes through these services. Subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+                        <li><strong>PostHog (privacy-respecting product analytics):</strong> Receives anonymised, aggregate product-usage events (which features and screens are used, and crash diagnostics) so we can understand how the app is used and improve it. It is <strong>not</strong> used for advertising or data brokering. It receives no identifiable personal data — no name, email, or account identity — and never any message, location, calendar, or health content. Data processed under a GDPR Art. 28 Data Processing Agreement. <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog Privacy Policy ↗</a></li>
+                        <li><strong>Stripe (payment processing):</strong> Paid subscriptions are processed by Stripe via our website. Stripe handles your payment details directly; AI Pieces does not receive or store your card number. We retain only your subscription status to provide the service. Processed under a GDPR Art. 28 Data Processing Agreement. <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe Privacy Policy ↗</a></li>
                         <li><strong>Legal disclosure:</strong> AI Pieces will comply with valid legal process (court orders, warrants) as required by applicable law. Due to zero-knowledge architecture, the maximum we can provide is encrypted ciphertext. We will notify affected users of legal demands to the extent permitted by law, and will contest overbroad demands.</li>
                     </ul>
                     <div class="callout callout-zero">
@@ -928,10 +934,10 @@
                         Material changes to this Privacy Policy will be communicated via in-app notification and email at least 30 days before the effective date. The version history of this policy is maintained and previous versions are available on request. Continued use of FamilyCompass after the effective date of changes constitutes acceptance of the updated policy. Where changes require new consent (e.g., a new processing purpose), a fresh consent flow will be presented in-app.
                     </p>
                     <p class="policy-body" style="font-family:-apple-system,sans-serif;font-size:0.85rem;color:var(--brown-mid);opacity:0.8;">
-                        <strong>Effective date:</strong> 26 February 2026 &nbsp;·&nbsp;
-                        <strong>Last reviewed:</strong> 26 February 2026 &nbsp;·&nbsp;
-                        <strong>Version:</strong> 3.0 &nbsp;·&nbsp;
-                        <strong>Next scheduled review:</strong> 26 August 2026
+                        <strong>Effective date:</strong> 24 June 2026 &nbsp;·&nbsp;
+                        <strong>Last reviewed:</strong> 24 June 2026 &nbsp;·&nbsp;
+                        <strong>Version:</strong> 3.1 &nbsp;·&nbsp;
+                        <strong>Next scheduled review:</strong> 24 December 2026
                     </p>
                 </div>
 
