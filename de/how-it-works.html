@@ -84,11 +84,45 @@
         .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
         .nav-links a { font-family: -apple-system, sans-serif; text-decoration: none; color: var(--brown-mid); font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
         .nav-links a:hover { color: var(--gold); }
-        .lang-switcher { display: flex; gap: 6px; align-items: center; font-size: 0.85rem; font-family: -apple-system, sans-serif; }
-        .lang-switcher a { color: var(--brown-mid); text-decoration: none; font-weight: 600; padding: 2px 5px; border-radius: 4px; }
-        .lang-switcher a.active { color: var(--gold); background: rgba(139,105,20,0.1); }
-        .lang-switcher a:hover { color: var(--gold); }
-        .lang-switcher span { color: rgba(90,74,58,0.4); }
+        /* ── LANGUAGE DROPDOWN ── */
+        .lang-switcher { position: relative; display: inline-block; font-family: -apple-system, sans-serif; font-size: 0.85rem; }
+        .lang-toggle {
+            display: inline-flex; align-items: center; gap: 5px;
+            background: rgba(139,105,20,0.08); color: #8b6914;
+            border: 1px solid rgba(139,105,20,0.2); border-radius: 20px;
+            padding: 4px 12px; font: inherit; font-weight: 600;
+            cursor: pointer; line-height: 1; white-space: nowrap;
+        }
+        .lang-toggle:hover, .lang-toggle[aria-expanded="true"] { background: rgba(139,105,20,0.15); }
+        .lang-toggle .lang-globe { font-size: 0.95em; }
+        .lang-toggle .lang-caret { font-size: 0.7em; transition: transform 0.2s; }
+        .lang-toggle[aria-expanded="true"] .lang-caret { transform: rotate(180deg); }
+        .lang-menu {
+            position: absolute; top: calc(100% + 6px); right: 0; min-width: 150px;
+            background: #fff; border: 1px solid rgba(139,105,20,0.15); border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(61,46,30,0.14); padding: 6px;
+            list-style: none; margin: 0; z-index: 1100;
+            opacity: 0; visibility: hidden; transform: translateY(-4px);
+            transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
+        }
+        .lang-switcher:hover .lang-menu,
+        .lang-switcher:focus-within .lang-menu,
+        .lang-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-menu li { padding: 0; border: none; }
+        .lang-menu a {
+            display: flex; align-items: center; justify-content: space-between; gap: 12px;
+            padding: 8px 12px; border-radius: 6px; text-decoration: none;
+            color: #5a4a3a; font-weight: 500; white-space: nowrap;
+        }
+        .lang-menu a:hover { background: rgba(139,105,20,0.08); color: #8b6914; }
+        .lang-menu a.active { color: #8b6914; background: rgba(139,105,20,0.1); font-weight: 700; }
+        .lang-menu a.active::after { content: "\2713"; font-size: 0.9em; }
+        /* footer placement: open upward, centered */
+        .footer .lang-switcher { display: inline-block; }
+        .footer .lang-menu { top: auto; bottom: calc(100% + 6px); right: 50%; transform: translate(50%, 4px); }
+        .footer .lang-switcher:hover .lang-menu,
+        .footer .lang-switcher:focus-within .lang-menu,
+        .footer .lang-menu.open { transform: translate(50%, 0); }
 
         /* ── HERO ── */
         .hero {
@@ -363,9 +397,7 @@
                     <li><a href="how-it-works.html">So funktioniert's</a></li>
                     <li><a href="privacy.html">Datenschutz</a></li>
                     <li><a href="support.html">Support</a></li>
-                    <li class="lang-switcher" aria-label="Sprache wählen">
-                        <a href="../how-it-works.html" hreflang="en">EN</a><span>·</span><a href="how-it-works.html" hreflang="de" class="active">DE</a><span>·</span><a href="../fr/how-it-works.html" hreflang="fr">FR</a><span>·</span><a href="../es/how-it-works.html" hreflang="es">ES</a>
-                    </li>
+                    <li class="lang-switcher" aria-label="Sprache wählen"><button type="button" class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Sprache wählen"><span class="lang-globe">🌐</span>DE<span class="lang-caret">▾</span></button><ul class="lang-menu"><li><a href="../how-it-works.html" hreflang="en">EN</a></li><li><a href="how-it-works.html" hreflang="de" class="active">DE</a></li><li><a href="../fr/how-it-works.html" hreflang="fr">FR</a></li><li><a href="../es/how-it-works.html" hreflang="es">ES</a></li></ul></li>
                 </ul>
             </nav>
         </div>
@@ -963,9 +995,7 @@
             </div>
             <div class="footer-bottom">
                 <p style="margin-bottom:14px;">
-                    <span class="lang-switcher" style="justify-content:center;">
-                        <a href="../how-it-works.html" hreflang="en">English</a><span>·</span><a href="how-it-works.html" hreflang="de" class="active">Deutsch</a><span>·</span><a href="../fr/how-it-works.html" hreflang="fr">Français</a><span>·</span><a href="../es/how-it-works.html" hreflang="es">Español</a>
-                    </span>
+                    <span class="lang-switcher"><button type="button" class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Sprache wählen"><span class="lang-globe">🌐</span>DE<span class="lang-caret">▾</span></button><ul class="lang-menu"><li><a href="../how-it-works.html" hreflang="en">English</a></li><li><a href="how-it-works.html" hreflang="de" class="active">Deutsch</a></li><li><a href="../fr/how-it-works.html" hreflang="fr">Français</a></li><li><a href="../es/how-it-works.html" hreflang="es">Español</a></li></ul></span>
                 </p>
                 <p>&copy; 2026 AI Pieces Ltd (AIPieces). Mit ❤️ für Familien überall gemacht.</p>
                 <p style="margin-top:10px;font-size:0.8rem;">
