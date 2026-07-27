@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get early access — FamilyCompass</title>
+    <meta name="description" content="One private app for your whole family. Join the FamilyCompass early-access list — private, end-to-end encrypted family coordination.">
+    <meta name="author" content="AI Pieces Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipieces.org/join">
+    <link rel="alternate" hreflang="en" href="https://aipieces.org/join">
+    <link rel="alternate" hreflang="de" href="https://aipieces.org/de/join">
+    <link rel="alternate" hreflang="fr" href="https://aipieces.org/fr/join">
+    <link rel="alternate" hreflang="es" href="https://aipieces.org/es/join">
+    <link rel="alternate" hreflang="x-default" href="https://aipieces.org/join">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Get early access — FamilyCompass">
+    <meta property="og:description" content="One private app for your whole family. Join the early-access list.">
+    <meta property="og:url" content="https://aipieces.org/join">
+    <meta property="og:image" content="https://aipieces.org/share-card.jpg">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(160deg, #faf6ef 0%, #f3ead9 100%);
+            color: #3a2f24;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a { color: inherit; }
+        .join-nav {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 20px 24px; max-width: 1080px; margin: 0 auto; width: 100%;
+        }
+        .join-nav .logo {
+            display: flex; align-items: center; gap: 10px;
+            font-weight: 700; color: #8b6914; text-decoration: none; font-size: 1.1rem;
+        }
+        .join-nav .logo img { width: 32px; height: 32px; }
+        .lang-switch { font-size: 0.9rem; }
+        .lang-switch a { text-decoration: none; color: #8a7a6a; padding: 0 4px; }
+        .lang-switch a.active { color: #8b6914; font-weight: 600; }
+
+        main {
+            flex: 1; display: flex; align-items: center; justify-content: center;
+            padding: 20px 24px 60px;
+        }
+        .join-card {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+            align-items: center; max-width: 1000px; width: 100%;
+        }
+        .join-hero img {
+            width: 100%; max-width: 460px; height: auto; display: block; margin: 0 auto;
+            filter: drop-shadow(0 20px 40px rgba(139,105,20,0.18));
+        }
+        .join-copy h1 {
+            font-size: 2.4rem; line-height: 1.15; color: #8b6914; margin-bottom: 18px;
+        }
+        .join-copy .sub {
+            font-size: 1.1rem; color: #5a4a3a; line-height: 1.6; margin-bottom: 32px;
+        }
+        #beta-form { max-width: 460px; }
+        #beta-form input {
+            width: 100%; padding: 15px; border: 2px solid rgba(139,105,20,0.3);
+            border-radius: 50px; font-size: 1rem; margin-bottom: 14px;
+            background: rgba(255,255,255,0.95);
+        }
+        #beta-form input:focus { outline: none; border-color: #8b6914; box-shadow: 0 0 0 3px rgba(139,105,20,0.1); }
+        #beta-form button {
+            width: 100%; padding: 15px; border: none; border-radius: 50px;
+            background: #8b6914; color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer;
+            transition: background 0.2s;
+        }
+        #beta-form button:hover:not(:disabled) { background: #755710; }
+        #beta-form button:disabled { opacity: 0.7; cursor: default; }
+        #form-message { margin-top: 14px; font-size: 0.92rem; min-height: 1.2em; }
+        #form-message.success { color: #2d6a4f; }
+        #form-message.error { color: #b23b3b; }
+        .privacy-note { margin-top: 18px; font-size: 0.82rem; color: #8a7a6a; line-height: 1.5; }
+        .privacy-note a { color: #8b6914; }
+
+        @media (max-width: 760px) {
+            .join-card { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+            .join-hero { order: -1; }
+            .join-hero img { max-width: 300px; }
+            .join-copy h1 { font-size: 1.9rem; }
+            #beta-form { margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="join-nav">
+        <a class="logo" href="/"><img src="compass.png" alt="AI Pieces compass logo" width="32" height="32">AI Pieces</a>
+        <div class="lang-switch">
+            <a href="/join" class="active">EN</a>
+            <a href="/de/join">DE</a>
+            <a href="/fr/join">FR</a>
+            <a href="/es/join">ES</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="join-card">
+            <div class="join-copy">
+                <h1>One private app for your whole family</h1>
+                <p class="sub">
+                    FamilyCompass brings location, calendar, messaging and care coordination into one place —
+                    private and end-to-end encrypted, so no one else sees your family's data. Join the early-access
+                    list and we'll email you the moment it opens, later this year.
+                </p>
+                <form id="beta-form">
+                    <input
+                        type="email"
+                        id="beta-email"
+                        placeholder="Enter your email address"
+                        required
+                        aria-label="Email address for early access"
+                    />
+                    <button type="submit">Get early access</button>
+                    <div id="form-message"></div>
+                </form>
+                <p class="privacy-note">
+                    We'll only email you about FamilyCompass early access. No spam, unsubscribe anytime.
+                    See our <a href="/privacy.html">privacy policy</a>.
+                </p>
+            </div>
+            <div class="join-hero">
+                <picture>
+                    <source srcset="compass-hero-600.webp" type="image/webp">
+                    <img src="compass-hero-600.png" alt="FamilyCompass app — private family coordination" width="600" height="600" loading="eager">
+                </picture>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const SUPABASE_URL = 'https://pavjjiiztqxbfnxkqobc.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBhdmpqaWl6dHF4YmZueGtxb2JjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA2OTYyMjIsImV4cCI6MjA2NjI3MjIyMn0.wuluOl_EhKsFqXpqKwC7bVBMj5ganEOTdAEsyYWkMJI';
+
+        document.getElementById('beta-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const emailInput = document.getElementById('beta-email');
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            const messageDiv = document.getElementById('form-message');
+            const email = emailInput.value.trim();
+
+            if (!email || !email.includes('@')) {
+                messageDiv.className = 'error';
+                messageDiv.textContent = '❌ Please enter a valid email address';
+                return;
+            }
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            messageDiv.textContent = '';
+
+            try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/beta_signups`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        email: email.toLowerCase(),
+                        created_at: new Date().toISOString(),
+                        locale: 'en',
+                        source: (new URLSearchParams(window.location.search).get('utm_source') || 'direct').slice(0, 100)
+                    })
+                });
+
+                if (response.ok || response.status === 201) {
+                    messageDiv.className = 'success';
+                    messageDiv.textContent = "✅ You're on the list! We'll notify you when FamilyCompass early access opens.";
+                    emailInput.value = '';
+                    submitButton.textContent = 'Signed Up!';
+                    setTimeout(() => {
+                        submitButton.textContent = 'Get early access';
+                        submitButton.disabled = false;
+                    }, 3000);
+                } else {
+                    const errorData = await response.json();
+                    if (errorData.code === '23505') {
+                        messageDiv.className = 'success';
+                        messageDiv.textContent = "✅ You're already on the list! We'll be in touch soon.";
+                    } else {
+                        throw new Error(errorData.message || 'Submission failed');
+                    }
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Get early access';
+                }
+            } catch (error) {
+                messageDiv.className = 'error';
+                messageDiv.textContent = '❌ Something went wrong. Please try again or email support@aipieces.org';
+                submitButton.disabled = false;
+                submitButton.textContent = 'Get early access';
+            }
+        });
+    </script>
+</body>
+</html>
