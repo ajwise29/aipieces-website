@@ -1,3 +1,71 @@
+# Text and Data Mining (TDM) reservation
+# AIPIECES LIMITED (trading as AI Pieces) expressly reserves the rights of
+# reproduction and extraction of all content on this website for the purposes
+# of text and data mining, under Article 4(3) of Directive (EU) 2019/790 and
+# the corresponding provisions of United Kingdom law. Use of this content to
+# train or develop machine-learning or generative AI models is prohibited
+# without our prior written licence. Contact: support@aipieces.org
+
+# Search engines: allowed (indexing for search results)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI training / data-mining crawlers: disallowed
+User-agent: GPTBot
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+# Everyone else: allowed
 User-agent: *
 Allow: /
 

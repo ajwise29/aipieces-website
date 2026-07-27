@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FamilyCompass Early Access - Private Family Organizer App</title>
+
+    <meta name="description" content="Get early access to FamilyCompass — one private, end-to-end encrypted app for your whole family's location, messaging, calendar, caregiving and photos. Launching October 2026. No data selling, ever.">
+    <meta name="author" content="AI Pieces Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipieces.org/early-access.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FamilyCompass",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS, Android",
+      "description": "One private, end-to-end encrypted app for your whole family — location sharing, encrypted messaging and calls, a shared calendar, caregiving and medications, and photo sharing. No data selling. Launching October 2026.",
+      "offers": { "@type": "Offer", "availability": "https://schema.org/PreOrder" },
+      "publisher": { "@type": "Organization", "name": "AI Pieces", "url": "https://aipieces.org" }
+    }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aipieces.org/early-access.html">
+    <meta property="og:title" content="FamilyCompass Early Access - Private Family Organizer App">
+    <meta property="og:description" content="One private, end-to-end encrypted app for everything your family shares. Get early access — launching October 2026. No data selling, ever.">
+    <meta property="og:image" content="https://aipieces.org/share-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="AI Pieces">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://aipieces.org/early-access.html">
+    <meta name="twitter:title" content="FamilyCompass Early Access - Private Family Organizer App">
+    <meta name="twitter:description" content="One private, end-to-end encrypted app for everything your family shares. Get early access — launching October 2026.">
+    <meta name="twitter:image" content="https://aipieces.org/share-card.jpg">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8ddd4 100%);
+            min-height: 100vh;
+            color: #5a4a3a;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* ── HEADER (reused from index.html) ── */
+        .header {
+            padding: 20px 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #8b6914; letter-spacing: 1px; text-decoration: none; }
+        .trust-badge {
+            background: rgba(139,105,20,0.1); color: #8b6914;
+            padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;
+            font-weight: 600; margin-left: 10px;
+        }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: #5a4a3a; font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: #8b6914; }
+
+        /* ── HERO ── */
+        .ea-hero { padding: 130px 0 40px; }
+        .ea-hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 50px; align-items: center; }
+        .ea-badge {
+            display: inline-block; font-size: 0.75rem; font-weight: 700;
+            padding: 5px 14px; border-radius: 20px; margin-bottom: 22px;
+            text-transform: uppercase; letter-spacing: 1px;
+            background: rgba(139,105,20,0.12); color: #8b6914;
+        }
+        .ea-hero h1 {
+            font-size: 3.2rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px;
+            background: linear-gradient(135deg, #8b6914, #d4af37);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text; line-height: 1.08;
+        }
+        .ea-hero .sub {
+            font-size: 1.3rem; color: #5a4a3a; font-weight: 300; max-width: 620px;
+            margin-bottom: 28px; line-height: 1.5;
+        }
+        .ea-hero-cta-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+
+        /* ── PHONE SHOT (reused pattern from index fc-lead) ── */
+        .ea-shot { max-width: 320px; margin: 0 auto; }
+        .ea-shot .phone-frame {
+            background: #1c140c; border-radius: 36px; padding: 11px;
+            box-shadow: 0 24px 60px rgba(61,46,30,0.32); max-width: 320px; margin: 0 auto;
+        }
+        .ea-shot .phone-frame img { display: block; width: 100%; height: auto; border-radius: 27px; }
+        .ea-shot figcaption {
+            font-size: 0.85rem; color: #5a4a3a; text-align: center; margin-top: 16px;
+            line-height: 1.5; max-width: 300px; margin-left: auto; margin-right: auto;
+        }
+
+        /* ── FEATURES ── */
+        .ea-features { padding: 30px 0 20px; }
+        .ea-features-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+            max-width: 1000px; margin: 0 auto;
+        }
+        .ea-feature {
+            background: rgba(255,255,255,0.25); border-radius: 18px; padding: 26px 24px;
+            border: 1px solid rgba(255,255,255,0.35); backdrop-filter: blur(10px);
+        }
+        .ea-feature .ico { font-size: 1.9rem; margin-bottom: 12px; display: block; }
+        .ea-feature h3 { font-size: 1.1rem; font-weight: 700; color: #3d2e1e; margin-bottom: 6px; }
+        .ea-feature p { font-size: 0.92rem; color: #5a4a3a; line-height: 1.55; }
+
+        /* ── LAUNCH LINE ── */
+        .ea-launch {
+            text-align: center; margin: 46px auto 10px; max-width: 640px;
+            font-size: 1.15rem; color: #8b6914; font-weight: 600;
+        }
+        .ea-launch span { font-weight: 300; color: #5a4a3a; display: block; font-size: 0.98rem; margin-top: 6px; }
+
+        /* ── SIGNUP FORM (reused from index beta-signup-form) ── */
+        .ea-form-wrap {
+            background: rgba(255,255,255,0.2); border-radius: 25px; padding: 40px;
+            margin: 30px auto 20px; max-width: 620px; backdrop-filter: blur(10px);
+            border: 2px solid rgba(139,105,20,0.2); box-shadow: 0 10px 40px rgba(139,105,20,0.15);
+            text-align: center;
+        }
+        .ea-form-wrap h2 { color: #8b6914; font-size: 1.5rem; margin-bottom: 12px; }
+        .ea-form-wrap .form-lead { color: #5a4a3a; margin-bottom: 24px; font-size: 1rem; }
+        #early-access-form { max-width: 480px; margin: 0 auto; }
+        #early-access-form input[type="email"] {
+            width: 100%; padding: 15px; border: 2px solid rgba(139,105,20,0.3);
+            border-radius: 50px; font-size: 1rem; margin-bottom: 15px;
+            background: rgba(255,255,255,0.9);
+        }
+        #early-access-form input[type="email"]:focus { outline: none; border-color: #8b6914; box-shadow: 0 0 0 3px rgba(139,105,20,0.1); }
+        #form-message { text-align: center; font-weight: 600; margin-top: 15px; font-size: 0.9rem; min-height: 1.2em; }
+        #form-message.success { color: #2e7d32; }
+        #form-message.error { color: #c62828; }
+        .ea-privacy-note { margin-top: 18px; font-size: 0.82rem; color: #8a7a6a; line-height: 1.5; }
+        .ea-privacy-note a { color: #8b6914; }
+
+        /* ── FOUNDER LINE ── */
+        .ea-founder { text-align: center; max-width: 640px; margin: 30px auto 0; font-size: 1rem; color: #5a4a3a; }
+        .ea-founder a { color: #8b6914; font-weight: 600; text-decoration: none; }
+        .ea-founder a:hover { text-decoration: underline; }
+
+        /* ── BUTTONS (reused from index.html) ── */
+        .btn {
+            padding: 15px 30px; border-radius: 50px; text-decoration: none;
+            font-weight: 600; transition: all 0.3s; border: none; cursor: pointer;
+            font-size: 1.1rem; display: inline-block;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #8b6914, #d4af37); color: white;
+            box-shadow: 0 10px 30px rgba(139,105,20,0.3);
+        }
+        .btn-primary:hover:not(:disabled) { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(139,105,20,0.4); }
+        .btn-primary:disabled { opacity: 0.75; cursor: default; }
+        .btn-secondary { background: transparent; color: #8b6914; border: 2px solid #8b6914; }
+        .btn-secondary:hover { background: #8b6914; color: white; transform: translateY(-3px); }
+        #early-access-form .btn { width: 100%; }
+
+        /* ── FOOTER (reused from index.html) ── */
+        .footer {
+            background: rgba(0,0,0,0.1); padding: 60px 0 40px;
+            text-align: center; border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { color: #8b6914; font-size: 1.1rem; margin-bottom: 15px; font-weight: 600; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+        .footer-links a { color: #5a4a3a; text-decoration: none; transition: color 0.3s; }
+        .footer-links a:hover { color: #8b6914; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: #5a4a3a; }
+
+        html { scroll-behavior: smooth; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .ea-hero-grid { grid-template-columns: 1fr; gap: 34px; text-align: center; }
+            .ea-hero .sub { margin-left: auto; margin-right: auto; }
+            .ea-hero-cta-row { justify-content: center; }
+            .ea-hero-shot { order: -1; }
+            .ea-features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .ea-hero { padding: 110px 0 30px; }
+            .ea-hero h1 { font-size: 2.3rem; }
+            .ea-hero .sub { font-size: 1.12rem; }
+            .nav-links { display: none; }
+            .container { padding: 0 15px; }
+            .ea-form-wrap { padding: 30px 22px; }
+        }
+        @media (max-width: 520px) {
+            .ea-features-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── LANGUAGE DROPDOWN (reused from index.html) ── */
+        .lang-switcher { position: relative; display: inline-block; font-family: -apple-system, sans-serif; font-size: 0.85rem; }
+        .lang-toggle {
+            display: inline-flex; align-items: center; gap: 5px;
+            background: rgba(139,105,20,0.08); color: #8b6914;
+            border: 1px solid rgba(139,105,20,0.2); border-radius: 20px;
+            padding: 4px 12px; font: inherit; font-weight: 600;
+            cursor: pointer; line-height: 1; white-space: nowrap;
+        }
+        .lang-toggle:hover, .lang-toggle[aria-expanded="true"] { background: rgba(139,105,20,0.15); }
+        .lang-toggle .lang-globe { font-size: 0.95em; }
+        .lang-toggle .lang-caret { font-size: 0.7em; transition: transform 0.2s; }
+        .lang-toggle[aria-expanded="true"] .lang-caret { transform: rotate(180deg); }
+        .lang-menu {
+            position: absolute; top: calc(100% + 6px); right: 0; min-width: 150px;
+            background: #fff; border: 1px solid rgba(139,105,20,0.15); border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(61,46,30,0.14); padding: 6px;
+            list-style: none; margin: 0; z-index: 1100;
+            opacity: 0; visibility: hidden; transform: translateY(-4px);
+            transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
+        }
+        .lang-switcher:hover .lang-menu,
+        .lang-switcher:focus-within .lang-menu,
+        .lang-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-menu li { padding: 0; border: none; }
+        .lang-menu a {
+            display: flex; align-items: center; justify-content: space-between; gap: 12px;
+            padding: 8px 12px; border-radius: 6px; text-decoration: none;
+            color: #5a4a3a; font-weight: 500; white-space: nowrap;
+        }
+        .lang-menu a:hover { background: rgba(139,105,20,0.08); color: #8b6914; }
+        .lang-menu a.active { color: #8b6914; background: rgba(139,105,20,0.1); font-weight: 700; }
+        .lang-menu a.active::after { content: "\2713"; font-size: 0.9em; }
+        .footer .lang-switcher { display: inline-block; }
+        .footer .lang-menu { top: auto; bottom: calc(100% + 6px); right: 50%; transform: translate(50%, 4px); }
+        .footer .lang-switcher:hover .lang-menu,
+        .footer .lang-switcher:focus-within .lang-menu,
+        .footer .lang-menu.open { transform: translate(50%, 0); }
+    </style>
+</head>
+<body>
+
+    <!-- ══ HEADER (reused from index.html) ══ -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html" class="logo">
+                    AIPieces
+                    <span class="trust-badge">Privacy First</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="family-coordination-app.html">Guides</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="subscriptions.html">Subscription</a></li>
+                    <li><a href="about-founder.html">Founder Story</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li class="lang-switcher" aria-label="Select language"><button type="button" class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language"><span class="lang-globe">🌐</span>EN<span class="lang-caret">▾</span></button><ul class="lang-menu"><li><a href="early-access.html" hreflang="en" class="active">EN</a></li><li><a href="de/" hreflang="de">DE</a></li><li><a href="fr/" hreflang="fr">FR</a></li><li><a href="es/" hreflang="es">ES</a></li></ul></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ══ HERO ══ -->
+        <section class="ea-hero">
+            <div class="container">
+                <div class="ea-hero-grid">
+                    <div class="ea-hero-copy">
+                        <span class="ea-badge">Early Access — Launching October 2026</span>
+                        <h1>One private app for everything your family shares</h1>
+                        <p class="sub">
+                            Replace separate location, calendar, messaging and care apps with a single
+                            end-to-end encrypted app. Built on a zero-knowledge architecture — your family's
+                            data is never accessible to us or anyone else, and we never sell it.
+                        </p>
+                        <div class="ea-hero-cta-row">
+                            <a href="#early-access" class="btn btn-primary">Get Early Access</a>
+                            <a href="how-it-works.html" class="btn btn-secondary">See How It Works</a>
+                        </div>
+                    </div>
+                    <figure class="ea-hero-shot ea-shot">
+                        <div class="phone-frame">
+                            <picture>
+                                <source srcset="marketingCompass.webp" type="image/webp">
+                                <img src="marketingCompass.png"
+                                     alt="FamilyCompass app showing every family member's location around one shared compass"
+                                     loading="eager" fetchpriority="high"
+                                     width="540" height="1200">
+                            </picture>
+                        </div>
+                        <figcaption>The actual FamilyCompass app — every family member's location around one shared compass.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ FEATURES ══ -->
+        <section class="ea-features" aria-label="What FamilyCompass does">
+            <div class="container">
+                <div class="ea-features-grid">
+                    <div class="ea-feature">
+                        <span class="ico" aria-hidden="true">🧭</span>
+                        <h3>Location &amp; compass</h3>
+                        <p>Real-time GPS location for every family member, around one shared compass.</p>
+                    </div>
+                    <div class="ea-feature">
+                        <span class="ico" aria-hidden="true">🔒</span>
+                        <h3>Encrypted messaging &amp; calls</h3>
+                        <p>End-to-end encrypted family messaging and calls — private by default.</p>
+                    </div>
+                    <div class="ea-feature">
+                        <span class="ico" aria-hidden="true">📅</span>
+                        <h3>Shared calendar</h3>
+                        <p>One family calendar with intelligent conflict detection, so nothing clashes.</p>
+                    </div>
+                    <div class="ea-feature">
+                        <span class="ico" aria-hidden="true">💊</span>
+                        <h3>Caregiving &amp; medications</h3>
+                        <p>Keep medications, appointments and care notes together for everyone you look after.</p>
+                    </div>
+                    <div class="ea-feature">
+                        <span class="ico" aria-hidden="true">📷</span>
+                        <h3>Photo sharing</h3>
+                        <p>Share family photos privately — encrypted, and never mined or sold.</p>
+                    </div>
+                    <div class="ea-feature">
+                        <span class="ico" aria-hidden="true">📱</span>
+                        <h3>One app, iOS &amp; Android</h3>
+                        <p>Everything your family shares in a single app — pure React Native, no data selling.</p>
+                    </div>
+                </div>
+
+                <p class="ea-launch">
+                    Launching October 2026
+                    <span>Already in use by families in five countries.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- ══ EARLY ACCESS FORM ══ -->
+        <section aria-label="FamilyCompass early access signup">
+            <div class="container">
+                <div id="early-access" class="ea-form-wrap">
+                    <h2>Get early access to FamilyCompass</h2>
+                    <p class="form-lead">Join the FamilyCompass early access list and we'll email you the moment it opens.</p>
+                    <form id="early-access-form">
+                        <input
+                            type="email"
+                            id="early-access-email"
+                            placeholder="Enter your email address"
+                            required
+                            aria-label="Email address for early access signup"
+                        />
+                        <button type="submit" class="btn btn-primary">Get Early Access</button>
+                        <div id="form-message"></div>
+                    </form>
+                    <p class="ea-privacy-note">
+                        We'll only email you about FamilyCompass early access. No spam, unsubscribe anytime.
+                        See our <a href="privacy.html">privacy policy</a>.
+                    </p>
+                </div>
+
+                <p class="ea-founder">
+                    FamilyCompass is built by a founder raising a family of her own — read
+                    <a href="about-founder.html">the story behind FamilyCompass</a>.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══ FOOTER (reused from index.html) ══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="early-access.html">Early Access</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="subscriptions.html">Pricing</a></li>
+                        <li><a href="/join">Download App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about-founder.html">About the Founder</a></li>
+                        <li><a href="research.html">Our Research</a></li>
+                        <li><a href="research.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Privacy &amp; Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="privacy.html">Security</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">COPPA Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Help Center</a></li>
+                        <li><a href="support.html">Contact Us</a></li>
+                        <li><a href="support.html">Send Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin-bottom:14px;"><span class="lang-switcher"><button type="button" class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language"><span class="lang-globe">🌐</span>EN<span class="lang-caret">▾</span></button><ul class="lang-menu"><li><a href="early-access.html" hreflang="en" class="active">English</a></li><li><a href="de/" hreflang="de">Deutsch</a></li><li><a href="fr/" hreflang="fr">Français</a></li><li><a href="es/" hreflang="es">Español</a></li></ul></span></p>
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Made with ❤️ for families everywhere.</p>
+                <p style="margin-top:10px;font-size:0.85rem;line-height:1.6;">AIPIECES LIMITED · Registered in Ireland · Company No. (CRO) 660628<br>Registered office: Cuascrome, Kimego West, Co. Kerry, Ireland</p>
+                <p style="margin-top:10px;font-size:0.8rem;">
+                    FamilyCompass · Privacy-first by design · Built in Kerry, Ireland · GDPR compliant
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth-scroll for in-page anchors (matches index.html behaviour).
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    window.scrollTo({ top: target.offsetTop - headerHeight, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ── Supabase early-access signup ──
+        // Identical client logic to the homepage form: same table, same anon key,
+        // same INSERT via PostgREST. Adds UTM fields captured from the query string.
+        const SUPABASE_URL = 'https://pavjjiiztqxbfnxkqobc.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBhdmpqaWl6dHF4YmZueGtxb2JjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA2OTYyMjIsImV4cCI6MjA2NjI3MjIyMn0.wuluOl_EhKsFqXpqKwC7bVBMj5ganEOTdAEsyYWkMJI';
+
+        // Read UTM params once from the incoming URL (e.g. the Instagram bio link
+        // https://aipieces.org/early-access.html?utm_source=instagram&utm_medium=bio).
+        const params = new URLSearchParams(window.location.search);
+        const utm = {
+            utm_source:   (params.get('utm_source')   || 'direct').slice(0, 100),
+            utm_medium:   (params.get('utm_medium')   || '').slice(0, 100),
+            utm_campaign: (params.get('utm_campaign') || '').slice(0, 100)
+        };
+
+        // POST a signup row. We prefer dedicated utm_* columns (see
+        // supabase/migrations/0004_beta_signups_utm.sql). If those columns do not
+        // exist yet, PostgREST returns 400 / PGRST204; we then transparently retry
+        // with the UTM data folded into the existing `source` column as JSON, so a
+        // signup is NEVER lost regardless of whether the migration has been run.
+        // Once 0004 is applied, the first attempt succeeds and the columns fill.
+        async function postSignup(email) {
+            const base = {
+                email: email.toLowerCase(),
+                created_at: new Date().toISOString(),
+                locale: 'en'
+            };
+            const send = (payload) => fetch(`${SUPABASE_URL}/rest/v1/beta_signups`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': SUPABASE_ANON_KEY,
+                    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            // Attempt 1: dedicated utm_* columns.
+            let response = await send({
+                ...base,
+                source: utm.utm_source,
+                utm_source: utm.utm_source,
+                utm_medium: utm.utm_medium,
+                utm_campaign: utm.utm_campaign
+            });
+
+            // Attempt 2 (fallback): columns not present yet — fold UTM into `source`.
+            if (response.status === 400) {
+                let missingColumn = false;
+                try {
+                    const err = await response.clone().json();
+                    missingColumn = err && (err.code === 'PGRST204' ||
+                        /utm_(source|medium|campaign)/.test(err.message || ''));
+                } catch (_) { /* non-JSON 400 — fall through as-is */ }
+                if (missingColumn) {
+                    response = await send({
+                        ...base,
+                        source: JSON.stringify(utm).slice(0, 500)
+                    });
+                }
+            }
+            return response;
+        }
+
+        document.getElementById('early-access-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const emailInput = document.getElementById('early-access-email');
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            const messageDiv = document.getElementById('form-message');
+            const email = emailInput.value.trim();
+
+            if (!email || !email.includes('@')) {
+                messageDiv.className = 'error';
+                messageDiv.textContent = '❌ Please enter a valid email address';
+                return;
+            }
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            messageDiv.textContent = '';
+
+            try {
+                const response = await postSignup(email);
+
+                if (response.ok || response.status === 201) {
+                    messageDiv.className = 'success';
+                    messageDiv.textContent = "✅ You're on the list! We'll notify you when FamilyCompass early access opens.";
+                    emailInput.value = '';
+                    submitButton.textContent = 'Signed Up!';
+                    setTimeout(() => {
+                        submitButton.textContent = 'Get Early Access';
+                        submitButton.disabled = false;
+                    }, 3000);
+                } else {
+                    const errorData = await response.json();
+                    if (errorData.code === '23505') {
+                        messageDiv.className = 'success';
+                        messageDiv.textContent = "✅ You're already on the list! We'll be in touch soon.";
+                    } else {
+                        throw new Error(errorData.message || 'Submission failed');
+                    }
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Get Early Access';
+                }
+            } catch (error) {
+                messageDiv.className = 'error';
+                messageDiv.textContent = '❌ Something went wrong. Please try again or email support@aipieces.org';
+                submitButton.disabled = false;
+                submitButton.textContent = 'Get Early Access';
+            }
+        });
+    </script>
+</body>
+</html>

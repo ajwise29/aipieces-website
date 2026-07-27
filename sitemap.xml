@@ -13,6 +13,12 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://aipieces.org/"/>
   </url>
   <url>
+    <loc>https://aipieces.org/early-access.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://aipieces.org/de/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
