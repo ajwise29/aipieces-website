@@ -232,6 +232,35 @@
         .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;
             font-size:0.88rem; color:var(--ink-soft); }
 
+        /* ── FREE PRINTABLE DOWNLOAD SECTION ── */
+        .printable-section { background:rgba(255,255,255,0.4); border:1px solid var(--rule);
+            border-radius:20px; padding:30px 30px 34px; margin:44px 0; }
+        .printable-grid { display:grid; grid-template-columns:360px 1fr; gap:30px; align-items:start; }
+        .printable-preview { margin:0; }
+        .printable-preview img { width:100%; max-width:360px; height:auto; border-radius:12px;
+            display:block; border:1px solid var(--rule); box-shadow:0 12px 30px rgba(139,105,20,0.16); }
+        .printable-preview figcaption { font-size:0.82rem; color:var(--ink-soft); margin-top:10px; text-align:center; font-style:italic; }
+        .printable-body p.body { font-size:var(--body); margin-bottom:18px; }
+        .printable-form { display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 12px; }
+        .printable-form input[type="email"] {
+            flex:1 1 220px; min-width:0; padding:13px 16px; font:inherit; font-size:1rem;
+            color:var(--ink); background:rgba(255,255,255,0.85);
+            border:1px solid var(--rule); border-radius:50px; }
+        .printable-form input[type="email"]:focus { outline:none; border-color:var(--gold-lt);
+            box-shadow:0 0 0 3px rgba(212,175,55,0.22); }
+        .printable-form button { padding:13px 26px; border:none; cursor:pointer; }
+        .printable-hp { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+        .printable-direct { font-size:0.95rem; color:var(--ink-soft); margin:4px 0 0; }
+        .printable-sent { display:none; background:var(--lead-bg); border-left:3px solid var(--gold-lt);
+            border-radius:0 12px 12px 0; padding:16px 20px; margin:6px 0 12px; }
+        .printable-sent h3 { font-size:1.05rem; color:var(--gold); margin-bottom:6px; }
+        .printable-closing { font-size:0.95rem; color:var(--ink-soft); margin-top:20px;
+            border-top:1px solid var(--rule); padding-top:18px; }
+        @media (max-width:640px) {
+            .printable-grid { grid-template-columns:1fr; }
+            .printable-preview img { margin:0 auto; }
+        }
+
         html { scroll-behavior:smooth; }
         @media (max-width:768px) {
             .nav-links { display:none; }
@@ -321,6 +350,61 @@
                     <img src="homemedication.jpg" alt="An older man at home with a glass of water and his daily medication on the table" loading="eager" decoding="async" fetchpriority="high" width="1600" height="1067">
                 </picture>
             </figure>
+
+            <!-- ── FREE PRINTABLE DOWNLOAD ──
+                 Email capture posts natively into a hidden iframe (no fetch, no CORS,
+                 no page redirect). Replace ZOHO_FORM_PERMALINK_URL and
+                 ZOHO_EMAIL_FIELD_NAME once the Zoho form exists. No tracking scripts. -->
+            <section class="printable-section" aria-labelledby="printable-heading">
+                <h2 class="section-h2" id="printable-heading">Free printable: Family Medication Log</h2>
+
+                <div class="printable-grid">
+                    <figure class="printable-preview">
+                        <img src="medication-log-preview.jpg" alt="Preview of the free printable family medication log, weekly dose sheet" loading="lazy" decoding="async" width="360" height="509">
+                    </figure>
+
+                    <div class="printable-body">
+                        <p class="body">A free A4 medication log for families and caregivers: a weekly dose sheet with tick boxes and initials, a current medications register, and a page for over-the-counter products, stopped medicines, allergies and key contacts. Three sheets, print at home.</p>
+
+                        <!-- Hidden target: native POST lands here instead of redirecting -->
+                        <iframe name="zoho_sink" style="display:none" title="hidden form target"></iframe>
+
+                        <form class="printable-form" action="https://forms.zohopublic.eu/supportaipi1/form/FamilyCompassEarlyAccess/formperma/h4zpEpEffsEEw8-_C05em1ayaYTzl0PV7gHygtEnUkY/htmlRecords/submit" method="POST" accept-charset="UTF-8" enctype="multipart/form-data" target="zoho_sink" aria-label="Email me the medication log">
+                            <!-- Zoho tracking fields, left empty; hidden-iframe pattern replaces redirection -->
+                            <input type="hidden" name="zf_referrer_name" value="">
+                            <input type="hidden" name="zf_redirect_url" value="">
+                            <input type="hidden" name="zc_gad" value="">
+                            <!-- Honeypot: real people leave this blank -->
+                            <label class="printable-hp" aria-hidden="true">Leave this field empty<input type="text" name="printable_hp" tabindex="-1" autocomplete="off"></label>
+                            <input type="email" name="Email" maxlength="255" placeholder="you@example.com" required aria-label="Your email address">
+                            <button type="submit" class="btn">Email me the log</button>
+                        </form>
+
+                        <div class="printable-sent" id="printable-sent" role="status">
+                            <h3>Sent. Here is your download:</h3>
+                            <p><a href="/downloads/family-medication-log.pdf" rel="noopener">Download the Family Medication Log (PDF)</a></p>
+                        </div>
+
+                        <p class="printable-direct">Prefer not to leave an email? <a href="/downloads/family-medication-log.pdf" rel="noopener">Download directly</a>.</p>
+
+                        <p class="printable-closing">This is a family coordination aid, not medical advice. The FamilyCompass app keeps the same record shared and up to date across your whole family.</p>
+                    </div>
+                </div>
+
+                <script>
+                (function () {
+                    var form = document.currentScript.parentNode.querySelector('.printable-form');
+                    var sent = document.getElementById('printable-sent');
+                    form.addEventListener('submit', function () {
+                        // Skip the reveal for bots that fill the honeypot
+                        if (form.querySelector('input[name="printable_hp"]').value) return;
+                        // Native submission proceeds into the hidden iframe; reveal the link here
+                        form.style.display = 'none';
+                        sent.style.display = 'block';
+                    });
+                })();
+                </script>
+            </section>
 
             <!-- ── SECTION 1 ── -->
             <section class="content-section">
