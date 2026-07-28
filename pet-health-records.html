@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pet Health Records App — FamilyCompass | Encrypted Pet Care for the Whole Family</title>
+
+    <meta name="description" content="FamilyCompass keeps encrypted pet health records for every pet: feeding, medication log, vaccinations with UK/WSAVA/US schedules, weight, behaviour and vet visits — one shared record.">
+    <meta name="author" content="AI Pieces Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipieces.org/pet-health-records.html">
+    <link rel="alternate" hreflang="en" href="https://aipieces.org/pet-health-records.html">
+    <link rel="alternate" hreflang="x-default" href="https://aipieces.org/pet-health-records.html">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aipieces.org/pet-health-records.html">
+    <meta property="og:title" content="Pet Health Records App — FamilyCompass">
+    <meta property="og:description" content="Encrypted pet health records for every pet in the family: feeding, medications, vaccinations, weight, behaviour and vet visits — one shared, dated record.">
+    <meta property="og:image" content="https://aipieces.org/share-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="AI Pieces">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://aipieces.org/pet-health-records.html">
+    <meta name="twitter:title" content="Pet Health Records App — FamilyCompass">
+    <meta name="twitter:description" content="Encrypted pet health records for every pet in the family: feeding, medications, vaccinations, weight, behaviour and vet visits — one shared, dated record.">
+    <meta name="twitter:image" content="https://aipieces.org/share-card.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FamilyCompass — Pet Health Records",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS, Android",
+      "description": "Encrypted pet health record-keeping inside FamilyCompass: per-pet dashboards, vaccination schedules with UK/WSAVA/US region toggle, medication and feeding logs, weight monitoring, behaviour notes and vet reports.",
+      "publisher": { "@type": "Organization", "name": "AI Pieces", "url": "https://aipieces.org" }
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8ddd4 100%);
+            min-height: 100vh;
+            color: #5a4a3a;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .container-narrow { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+        /* ── HEADER ── */
+        .header {
+            padding: 20px 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #8b6914; letter-spacing: 1px; text-decoration: none; }
+        .trust-badge {
+            background: rgba(139,105,20,0.1); color: #8b6914;
+            padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;
+            font-weight: 600; margin-left: 10px;
+        }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: #5a4a3a; font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: #8b6914; }
+
+        /* ── HERO ── */
+        .hero { text-align: center; padding: 140px 0 40px; }
+        .hero-eyebrow { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: #8b6914; margin-bottom: 18px; }
+        .hero-title {
+            font-size: 3.2rem; font-weight: 800; margin-bottom: 20px;
+            background: linear-gradient(135deg, #8b6914, #d4af37);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text; letter-spacing: -1px;
+        }
+        .hero-subtitle { font-size: 1.3rem; color: #5a4a3a; margin: 0 auto 28px; font-weight: 300; max-width: 760px; line-height: 1.55; }
+        .hero-cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px; }
+
+        /* ── BUTTONS ── */
+        .btn {
+            padding: 15px 30px; border-radius: 50px; text-decoration: none;
+            font-weight: 600; transition: all 0.3s; border: none; cursor: pointer;
+            font-size: 1.1rem; display: inline-block;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #8b6914, #d4af37); color: white;
+            box-shadow: 0 10px 30px rgba(139,105,20,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(139,105,20,0.4); }
+        .btn-secondary { background: transparent; color: #8b6914; border: 2px solid #8b6914; }
+        .btn-secondary:hover { background: #8b6914; color: white; transform: translateY(-3px); }
+
+        /* ── SECTION GENERIC ── */
+        .section { padding: 50px 0; }
+        .section-title { text-align: center; font-size: 2.3rem; font-weight: 700; color: #8b6914; margin-bottom: 16px; }
+        .section-subtitle { text-align: center; font-size: 1.1rem; color: #5a4a3a; max-width: 720px; margin: 0 auto 40px; }
+
+        /* ── FEATURE-CARD GRID (reuses product-card look) ── */
+        .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .card {
+            background: rgba(255,255,255,0.25); border-radius: 24px; padding: 36px 32px;
+            backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);
+            transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden;
+        }
+        .card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            border-radius: 24px 24px 0 0; background: linear-gradient(90deg, #8b6914, #d4af37);
+        }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(139,105,20,0.2); }
+        .card-icon { font-size: 2.2rem; margin-bottom: 14px; }
+        .card h3 { font-size: 1.35rem; font-weight: 800; margin-bottom: 10px; color: #3d2e1e; }
+        .card p { font-size: 0.98rem; color: #5a4a3a; margin-bottom: 14px; line-height: 1.6; }
+        .card-features { list-style: none; }
+        .card-features li {
+            font-size: 0.92rem; color: #5a4a3a; padding: 4px 0;
+            display: flex; align-items: flex-start; gap: 8px;
+        }
+        .card-features li::before { content: '→'; color: #8b6914; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+        .species-tag {
+            display: inline-block; font-size: 0.8rem; font-weight: 600;
+            background: rgba(139,105,20,0.08); color: #8b6914;
+            border: 1px solid rgba(139,105,20,0.18); padding: 4px 12px;
+            border-radius: 20px; margin: 3px 4px 3px 0;
+        }
+
+        /* ── TINTED BAND ── */
+        .band { background: rgba(255,255,255,0.35); backdrop-filter: blur(5px); }
+
+        /* ── STANDARDS SECTION ── */
+        .standards-intro { background: rgba(255,255,255,0.4); border: 1px solid rgba(139,105,20,0.18); border-radius: 18px; padding: 28px 30px; margin: 0 auto 36px; max-width: 900px; }
+        .standards-intro h3 { color: #8b6914; font-size: 1.15rem; margin-bottom: 10px; }
+        .standards-intro p { font-size: 0.98rem; margin-bottom: 12px; }
+        .standards-intro p:last-child { margin-bottom: 0; }
+
+        .compare-wrap { overflow-x: auto; margin: 0 auto 30px; max-width: 1100px; -webkit-overflow-scrolling: touch; }
+        table.compare { width: 100%; min-width: 720px; border-collapse: collapse; background: rgba(255,255,255,0.5); border-radius: 14px; overflow: hidden; }
+        table.compare th, table.compare td { text-align: left; padding: 14px 16px; font-size: 0.9rem; vertical-align: top; border-bottom: 1px solid rgba(139,105,20,0.12); }
+        table.compare thead th { background: rgba(139,105,20,0.12); color: #3d2e1e; font-weight: 700; }
+        table.compare th[scope="row"] { font-weight: 700; color: #8b6914; white-space: nowrap; }
+        table.compare tr:last-child td, table.compare tr:last-child th { border-bottom: none; }
+        table.compare a { color: #8b6914; font-weight: 600; text-decoration: none; }
+        table.compare a:hover { text-decoration: underline; }
+        .standards-note { font-size: 0.9rem; color: #5a4a3a; max-width: 900px; margin: 0 auto; font-style: italic; text-align: center; }
+
+        /* ── CROSS-LINK BAND ── */
+        .crosslink-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; margin: 0 auto; }
+        .crosslink-card {
+            background: rgba(255,255,255,0.3); border: 1px solid rgba(139,105,20,0.2);
+            border-radius: 18px; padding: 28px; text-align: center;
+        }
+        .crosslink-card h3 { color: #8b6914; font-size: 1.15rem; margin-bottom: 10px; }
+        .crosslink-card p { font-size: 0.95rem; margin-bottom: 18px; }
+
+        /* ── PRIVACY BANNER ── */
+        .privacy-banner {
+            background: rgba(65,105,225,0.08); border: 1px solid rgba(65,105,225,0.2);
+            border-radius: 15px; padding: 22px; margin: 0 auto; max-width: 760px; text-align: center;
+        }
+        .privacy-banner h3 { color: #4169E1; font-size: 1.05rem; margin-bottom: 8px; font-weight: 600; }
+        .privacy-banner p { font-size: 0.95rem; color: #5a4a3a; }
+
+        /* ── CTA STRIP ── */
+        .cta-strip {
+            background: rgba(255,255,255,0.2); border: 2px solid rgba(139,105,20,0.2);
+            border-radius: 22px; padding: 40px; margin: 20px auto 0; max-width: 760px; text-align: center;
+            box-shadow: 0 10px 40px rgba(139,105,20,0.12);
+        }
+        .cta-strip h2 { font-size: 1.7rem; color: #8b6914; margin-bottom: 12px; }
+        .cta-strip p { color: #5a4a3a; margin-bottom: 22px; }
+
+        /* ── DISCLAIMER ── */
+        .disclaimer {
+            font-size: 0.9rem; color: #6b5a47; background: rgba(255,255,255,0.4);
+            border: 1px solid rgba(139,105,20,0.18); border-radius: 12px;
+            padding: 16px 18px; margin: 30px auto 0; max-width: 900px;
+        }
+
+        /* ── SCREENSHOT NOTE ── */
+        .shot-note { text-align: center; font-size: 0.85rem; color: #6b5a47; font-style: italic; margin-top: 12px; }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: rgba(0,0,0,0.1); padding: 60px 0 40px;
+            text-align: center; border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 40px; margin-bottom: 40px; text-align: left; }
+        .footer-section h4 { color: #8b6914; font-size: 1.1rem; margin-bottom: 15px; font-weight: 600; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+        .footer-links a { color: #5a4a3a; text-decoration: none; transition: color 0.3s; }
+        .footer-links a:hover { color: #8b6914; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: #5a4a3a; }
+
+        html { scroll-behavior: smooth; }
+
+        /* ── MOBILE ── */
+        @media (max-width: 900px) {
+            .card-grid { grid-template-columns: 1fr; }
+            .crosslink-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .hero { padding: 120px 0 30px; }
+            .hero-title { font-size: 2.2rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .nav-links { display: none; }
+            .container { padding: 0 15px; }
+            .section-title { font-size: 1.8rem; }
+        }
+
+        /* ── LANGUAGE DROPDOWN ── */
+        .lang-switcher { position: relative; display: inline-block; font-family: -apple-system, sans-serif; font-size: 0.85rem; }
+        .lang-toggle {
+            display: inline-flex; align-items: center; gap: 5px;
+            background: rgba(139,105,20,0.08); color: #8b6914;
+            border: 1px solid rgba(139,105,20,0.2); border-radius: 20px;
+            padding: 4px 12px; font: inherit; font-weight: 600;
+            cursor: pointer; line-height: 1; white-space: nowrap;
+        }
+        .lang-toggle:hover, .lang-toggle[aria-expanded="true"] { background: rgba(139,105,20,0.15); }
+        .lang-toggle .lang-globe { font-size: 0.95em; }
+        .lang-toggle .lang-caret { font-size: 0.7em; transition: transform 0.2s; }
+        .lang-toggle[aria-expanded="true"] .lang-caret { transform: rotate(180deg); }
+        .lang-menu {
+            position: absolute; top: calc(100% + 6px); right: 0; min-width: 150px;
+            background: #fff; border: 1px solid rgba(139,105,20,0.15); border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(61,46,30,0.14); padding: 6px;
+            list-style: none; margin: 0; z-index: 1100;
+            opacity: 0; visibility: hidden; transform: translateY(-4px);
+            transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
+        }
+        .lang-switcher:hover .lang-menu,
+        .lang-switcher:focus-within .lang-menu,
+        .lang-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-menu li { padding: 0; border: none; }
+        .lang-menu a {
+            display: flex; align-items: center; justify-content: space-between; gap: 12px;
+            padding: 8px 12px; border-radius: 6px; text-decoration: none;
+            color: #5a4a3a; font-weight: 500; white-space: nowrap;
+        }
+        .lang-menu a:hover { background: rgba(139,105,20,0.08); color: #8b6914; }
+        .lang-menu a.active { color: #8b6914; background: rgba(139,105,20,0.1); font-weight: 700; }
+        .lang-menu a.active::after { content: "\2713"; font-size: 0.9em; }
+        .footer .lang-switcher { display: inline-block; }
+        .footer .lang-menu { top: auto; bottom: calc(100% + 6px); right: 50%; transform: translate(50%, 4px); }
+        .footer .lang-switcher:hover .lang-menu,
+        .footer .lang-switcher:focus-within .lang-menu,
+        .footer .lang-menu.open { transform: translate(50%, 0); }
+    </style>
+</head>
+<body>
+
+    <!-- ══ HEADER ══ -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html" class="logo">
+                    AIPieces
+                    <span class="trust-badge">Privacy First</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="family-coordination-app.html">Guides</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="subscriptions.html">Subscription</a></li>
+                    <li><a href="about-founder.html">Founder Story</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li class="lang-switcher" aria-label="Select language"><button type="button" class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language"><span class="lang-globe">🌐</span>EN<span class="lang-caret">▾</span></button><ul class="lang-menu"><li><a href="pet-health-records.html" hreflang="en" class="active">EN</a></li></ul></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ══ HERO ══ -->
+        <section class="hero" aria-label="Pet health records">
+            <div class="container">
+                <p class="hero-eyebrow">FamilyCompass · Pet Health Records</p>
+                <h1 class="hero-title">Pet health records, made easy.</h1>
+                <p class="hero-subtitle">
+                    Every pet in the family gets a dashboard: feeding, medications, vaccinations, weight,
+                    behaviour and vet visits, in one dated, shared, encrypted record.
+                </p>
+                <div class="hero-cta-row">
+                    <a href="index.html#beta-signup-section" class="btn btn-primary">Join the FamilyCompass beta</a>
+                    <a href="#standards" class="btn btn-secondary">See the standards behind it</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ (a) A DASHBOARD PER PET ══ -->
+        <section class="section" aria-label="A dashboard per pet">
+            <div class="container">
+                <h2 class="section-title">A dashboard for every pet</h2>
+                <p class="section-subtitle">
+                    Each pet gets its own record — with species-specific features rather than one generic list.
+                    FamilyCompass supports nine pet types:
+                </p>
+                <div style="text-align:center;max-width:760px;margin:0 auto 20px;">
+                    <span class="species-tag">🐕 Dog</span>
+                    <span class="species-tag">🐈 Cat</span>
+                    <span class="species-tag">🐦 Bird</span>
+                    <span class="species-tag">🐟 Fish</span>
+                    <span class="species-tag">🐇 Rabbit</span>
+                    <span class="species-tag">🐹 Hamster</span>
+                    <span class="species-tag">🐴 Horse</span>
+                    <span class="species-tag">🦎 Reptile</span>
+                    <span class="species-tag">🐾 Other</span>
+                </div>
+                <p class="section-subtitle" style="margin-bottom:0;">
+                    Every dashboard holds breed-specific health watch lists, weight range and lifespan
+                    information, weight monitoring over time, symptom logging and a photo gallery per pet.
+                </p>
+                <!-- TODO: pet screenshot -->
+            </div>
+        </section>
+
+        <!-- ══ (b) VACCINATIONS THAT KNOW YOUR REGION ══ -->
+        <section class="section band" aria-label="Vaccinations that know your region">
+            <div class="container">
+                <h2 class="section-title">Vaccinations that know your region</h2>
+                <p class="section-subtitle">
+                    A UK / WSAVA / US region toggle organises the vaccination schedule the way your country does —
+                    separating core vaccines from lifestyle vaccines, and tracking due dates for each pet.
+                </p>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">💉</div>
+                        <h3>Core vs. lifestyle, made clear</h3>
+                        <ul class="card-features">
+                            <li>Region toggle: UK, WSAVA (global), or US guidance</li>
+                            <li>Core vaccines and lifestyle vaccines shown separately</li>
+                            <li>Due dates tracked per pet, so nothing is left to memory</li>
+                            <li>A dated vaccination history you can bring to any vet</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🗓️</div>
+                        <h3>Built around real schedules</h3>
+                        <ul class="card-features">
+                            <li>Schedule guidance follows the region you select</li>
+                            <li>Records stay yours, exportable for a vet visit or a move abroad</li>
+                            <li>Works alongside the breed health watch list on each dashboard</li>
+                            <li>See <a href="#standards">the standards behind it</a> below</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ (c) FEEDING, MEDICATION AND WEIGHT ══ -->
+        <section class="section" aria-label="Feeding, medication and weight">
+            <div class="container">
+                <h2 class="section-title">Feeding, medication and weight</h2>
+                <p class="section-subtitle">
+                    The everyday record that keeps everyone — and every vet visit — on the same page.
+                </p>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">🍽️</div>
+                        <h3>Feeding &amp; kcal target</h3>
+                        <ul class="card-features">
+                            <li>Log portions and feeding times across the household</li>
+                            <li>A kcal target calculated from the pet's logged weight</li>
+                            <li>Water intake tracking where it matters</li>
+                            <li>Everyone helping out sees the same feeding record</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">💊</div>
+                        <h3>Medication &amp; prescriptions</h3>
+                        <ul class="card-features">
+                            <li>Log medications and prescriptions with dose and the exact time given</li>
+                            <li>Weight monitoring over time on each dashboard</li>
+                            <li>A dated history, not a recollection, for your next consult</li>
+                            <li>A coordination and record-keeping tool, not a veterinary device</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ (d) DOGS ══ -->
+        <section class="section band" aria-label="For dogs">
+            <div class="container">
+                <h2 class="section-title">For dogs</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">🐕</div>
+                        <h3>Walks against a daily target</h3>
+                        <ul class="card-features">
+                            <li>Walk and exercise tracking against a daily minute target</li>
+                            <li>Training milestones as your dog learns them</li>
+                            <li>Grooming reminders and a feeding log</li>
+                            <li>Behaviour log, weight monitoring, vet visits and vaccinations</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📋</div>
+                        <h3>One record, shared</h3>
+                        <ul class="card-features">
+                            <li>Breed-specific health watch list, weight range and lifespan info</li>
+                            <li>Photo gallery to track condition over time</li>
+                            <li>Symptom logging with dates attached</li>
+                            <li>Primary vet and appointment tracking in one place</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- TODO: pet screenshot -->
+            </div>
+        </section>
+
+        <!-- ══ (e) CATS ══ -->
+        <section class="section" aria-label="For cats">
+            <div class="container">
+                <h2 class="section-title">For cats</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">🐈</div>
+                        <h3>Litter monitoring with faecal scoring</h3>
+                        <ul class="card-features">
+                            <li>Litter box monitoring with urine and stool events</li>
+                            <li>Faecal scoring to help flag changes such as UTI or constipation early</li>
+                            <li>Feeding and water tracking, and play sessions</li>
+                            <li>Grooming log, weight and behaviour observations</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📋</div>
+                        <h3>The full picture</h3>
+                        <ul class="card-features">
+                            <li>Vet visits and vaccinations tracked per cat</li>
+                            <li>Breed health watch list, weight range and lifespan info</li>
+                            <li>Photo gallery and symptom logging with dates</li>
+                            <li>A record-keeping tool that helps you notice patterns — not a diagnosis</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- TODO: pet screenshot -->
+            </div>
+        </section>
+
+        <!-- ══ (f) WEARABLE COLLARS ══ -->
+        <section class="section band" aria-label="Wearable collars">
+            <div class="container">
+                <h2 class="section-title">Wearable collar connections</h2>
+                <p class="section-subtitle">
+                    Bring in activity and location data from the collar your pet already wears. FamilyCompass
+                    connects with six wearables:
+                </p>
+                <div style="text-align:center;max-width:760px;margin:0 auto;">
+                    <span class="species-tag">Fi Smart Dog Collar</span>
+                    <span class="species-tag">Whistle GPS</span>
+                    <span class="species-tag">Tractive</span>
+                    <span class="species-tag">PetPace</span>
+                    <span class="species-tag">Link AKC</span>
+                    <span class="species-tag">Invoxia</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ (g) ONE-TAP SUMMARIES ══ -->
+        <section class="section" aria-label="Summaries for the vet, boarder or sitter">
+            <div class="container">
+                <h2 class="section-title">One-tap summaries</h2>
+                <p class="section-subtitle">
+                    Reports and summaries written for the person who needs them — the vet, the boarder or the
+                    sitter. A clean handover of feeding, medication, weight, vaccinations and vet contacts,
+                    dated and ready to share.
+                </p>
+                <!-- TODO: pet screenshot -->
+            </div>
+        </section>
+
+        <!-- ══ (h) PRIVATE BY DESIGN ══ -->
+        <section class="section band" aria-label="Private by design">
+            <div class="container">
+                <div class="privacy-banner">
+                    <h3>🔒 Private by design</h3>
+                    <p>
+                        Your pets' records are end-to-end encrypted — the same AES-256 end-to-end encryption
+                        that protects the rest of FamilyCompass. Keys stay on your device, so AI Pieces cannot
+                        read your data, and you control exactly who in your circle sees each pet.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ STANDARDS: GLOBAL STANDARDS, LOCAL RULES ══ -->
+        <section class="section" id="standards" aria-label="Standards of excellence in pet care">
+            <div class="container">
+                <h2 class="section-title">Global standards, local rules</h2>
+                <p class="section-subtitle">
+                    Good pet record-keeping isn't invented country by country. Most of it is standardised
+                    worldwide — then a handful of national rules sit on top. FamilyCompass is built to mirror
+                    exactly that: one global backbone, with a region toggle for the parts that genuinely differ.
+                </p>
+
+                <div class="standards-intro">
+                    <h3>What's the same almost everywhere</h3>
+                    <p>
+                        The <a href="https://wsava.org/global-guidelines/" target="_blank" rel="noopener">World Small Animal
+                        Veterinary Association (WSAVA)</a> publishes the global guidelines that vets from London to
+                        Berlin to Dallas to Mexico City work from. Its
+                        <a href="https://wsava.org/global-guidelines/vaccination-guidelines/" target="_blank" rel="noopener">Vaccination
+                        Guidelines</a> define the worldwide split between <em>core</em> vaccines (recommended for
+                        every pet) and <em>lifestyle</em> vaccines (based on risk and where a pet lives). Its
+                        <a href="https://wsava.org/global-guidelines/global-nutrition-guidelines/" target="_blank" rel="noopener">Global
+                        Nutrition Guidelines</a> standardise how weight and body condition are assessed — the same
+                        thinking behind a kcal target calculated from logged weight — and its
+                        <a href="https://wsava.org/global-guidelines/dental-guidelines/" target="_blank" rel="noopener">dental</a> and
+                        <a href="https://wsava.org/global-guidelines/global-pain-council/" target="_blank" rel="noopener">pain-management</a>
+                        guidelines are used internationally. That shared backbone is why a well-kept record travels:
+                        it means the same thing to a vet in any country.
+                    </p>
+                    <p>
+                        Structured record-keeping is standardised too. The
+                        <a href="https://www.aaha.org/for-veterinary-teams/dental-care/" target="_blank" rel="noopener">American Animal
+                        Hospital Association (AAHA)</a> and WSAVA both promote consistent, dated clinical histories —
+                        the record FamilyCompass helps a pet owner keep between visits.
+                    </p>
+                </div>
+
+                <p class="section-subtitle" style="margin-bottom:20px;">
+                    And what differs — a comparative view of the bodies that set the standard of excellence in
+                    each region, and where the rules genuinely diverge:
+                </p>
+
+                <div class="compare-wrap">
+                    <table class="compare">
+                        <thead>
+                            <tr>
+                                <th scope="col">Region</th>
+                                <th scope="col">Standard-setting bodies &amp; teaching institutions</th>
+                                <th scope="col">What's standardised (global backbone)</th>
+                                <th scope="col">What's nationally specific</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">United States</th>
+                                <td>
+                                    <a href="https://www.avma.org/" target="_blank" rel="noopener">American Veterinary Medical Association (AVMA)</a>,
+                                    <a href="https://www.aaha.org/" target="_blank" rel="noopener">AAHA</a>,
+                                    <a href="https://www.aavmc.org/" target="_blank" rel="noopener">AAVMC</a>;
+                                    teaching: <a href="https://vetmed.ucdavis.edu/" target="_blank" rel="noopener">UC Davis</a>,
+                                    <a href="https://www.vet.cornell.edu/" target="_blank" rel="noopener">Cornell</a>,
+                                    <a href="https://vetmed.tamu.edu/" target="_blank" rel="noopener">Texas A&amp;M</a>
+                                </td>
+                                <td>WSAVA core/lifestyle model; body-condition &amp; nutritional assessment; dated clinical records</td>
+                                <td>
+                                    <a href="https://www.aaha.org/pet-owner-resources/" target="_blank" rel="noopener">AAHA canine &amp; feline vaccination guidelines</a>;
+                                    rabies vaccination is legally mandated (state law); AAHA practice accreditation
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">United Kingdom</th>
+                                <td>
+                                    <a href="https://www.rcvs.org.uk/" target="_blank" rel="noopener">Royal College of Veterinary Surgeons (RCVS)</a>,
+                                    <a href="https://www.bva.co.uk/" target="_blank" rel="noopener">British Veterinary Association (BVA)</a>,
+                                    <a href="https://www.bsava.com/" target="_blank" rel="noopener">BSAVA</a>;
+                                    teaching: <a href="https://www.rvc.ac.uk/" target="_blank" rel="noopener">Royal Veterinary College</a>,
+                                    <a href="https://www.bristol.ac.uk/vet-school/" target="_blank" rel="noopener">Bristol</a>,
+                                    <a href="https://www.ed.ac.uk/vet" target="_blank" rel="noopener">Edinburgh (Dick Vet)</a>
+                                </td>
+                                <td>Same WSAVA vaccination &amp; nutrition backbone; body-condition scoring</td>
+                                <td>
+                                    Rabies-free status — no routine rabies vaccine; the
+                                    <a href="https://www.gov.uk/take-pet-abroad" target="_blank" rel="noopener">GOV.UK pet travel</a> scheme;
+                                    welfare guidance via <a href="https://www.pdsa.org.uk/" target="_blank" rel="noopener">PDSA</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ireland</th>
+                                <td>
+                                    <a href="https://www.vci.ie/" target="_blank" rel="noopener">Veterinary Council of Ireland (VCI)</a>,
+                                    <a href="https://www.veterinaryireland.ie/" target="_blank" rel="noopener">Veterinary Ireland</a>;
+                                    teaching: <a href="https://www.ucd.ie/vetmed/" target="_blank" rel="noopener">UCD School of Veterinary Medicine</a>
+                                </td>
+                                <td>WSAVA global guidelines; EU-harmonised welfare and record standards</td>
+                                <td>
+                                    EU Pet Passport; rabies-free island regime aligned with the UK; national microchip database rules
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Germany &amp; the EU</th>
+                                <td>
+                                    <a href="https://www.bundestieraerztekammer.de/" target="_blank" rel="noopener">Bundestierärztekammer (German Veterinary Association)</a>,
+                                    <a href="https://www.fecava.org/" target="_blank" rel="noopener">FECAVA (Federation of European Companion Animal Veterinary Associations)</a>;
+                                    teaching: <a href="https://www.vetmed.fu-berlin.de/en/" target="_blank" rel="noopener">FU Berlin</a>,
+                                    <a href="https://www.vetmeduni.ac.at/en/" target="_blank" rel="noopener">Vetmeduni Vienna</a>
+                                </td>
+                                <td>WSAVA/FECAVA vaccination &amp; nutrition guidelines; body-condition scoring</td>
+                                <td>
+                                    <a href="https://europa.eu/youreurope/citizens/travel/carry/animal-plant/index_en.htm" target="_blank" rel="noopener">EU Pet Passport &amp; EU Animal Health Law</a>;
+                                    mandatory rabies vaccination for travel; national <em>Impfempfehlungen</em> (StIKo Vet)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mexico &amp; Latin America</th>
+                                <td>
+                                    <a href="https://www.gob.mx/senasica" target="_blank" rel="noopener">SENASICA (Mexico)</a>,
+                                    <a href="https://wsava.org/regional-organizations/" target="_blank" rel="noopener">WSAVA regional associations</a>,
+                                    FIAVAC;
+                                    teaching: <a href="https://www.fmvz.unam.mx/" target="_blank" rel="noopener">UNAM FMVZ</a>,
+                                    <a href="https://www.fmvz.usp.br/" target="_blank" rel="noopener">USP (Brazil)</a>
+                                </td>
+                                <td>WSAVA core/lifestyle model &amp; nutrition guidelines followed regionally</td>
+                                <td>
+                                    Rabies is endemic in parts of the region, so rabies vaccination is emphasised as core;
+                                    national campaigns (e.g. Mexico's <em>Semana Nacional de Vacunación Antirrábica</em>)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="standards-note">
+                    FamilyCompass's UK / WSAVA / US region toggle is the practical expression of this: one global
+                    standard, with the regional differences the record actually needs. FamilyCompass is not
+                    affiliated with or endorsed by these organisations; the links are provided so you can read the
+                    standards for yourself.
+                </p>
+            </div>
+        </section>
+
+        <!-- ══ CTA ══ -->
+        <section class="section" aria-label="Join the beta">
+            <div class="container">
+                <div class="cta-strip">
+                    <h2>Bring every pet into one private record</h2>
+                    <p>FamilyCompass is in beta and onboarding families now — a shared, encrypted record for every pet you look after.</p>
+                    <a class="btn btn-primary" href="index.html#beta-signup-section">Join the FamilyCompass beta</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ CROSS-LINK BAND ══ -->
+        <section class="section band" aria-label="For professionals">
+            <div class="container">
+                <div class="crosslink-grid">
+                    <div class="crosslink-card">
+                        <h3>Are you a veterinary practice?</h3>
+                        <p>See how owners can arrive at your consult with complete, dated records.</p>
+                        <a class="btn btn-secondary" href="for-vets.html">FamilyCompass for vets</a>
+                    </div>
+                    <div class="crosslink-card">
+                        <h3>Do you board, sit or walk pets professionally?</h3>
+                        <p>See how every booking can arrive with the pet's full care record.</p>
+                        <a class="btn btn-secondary" href="for-pet-carers.html">FamilyCompass for pet carers</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ DISCLAIMER ══ -->
+        <section style="padding: 0 0 50px;" aria-label="Disclaimer">
+            <div class="container">
+                <div class="disclaimer">
+                    <strong>Please note:</strong> FamilyCompass is a record-keeping and coordination tool, not a
+                    veterinary device, and does not replace professional veterinary advice.
+                </div>
+                <p class="shot-note">Screenshots from the live Android app. Sample pet data shown.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="early-access.html">Early Access</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="subscriptions.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about-founder.html">About the Founder</a></li>
+                        <li><a href="research.html">Our Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Guides</h4>
+                    <ul class="footer-links">
+                        <li><a href="family-coordination-app.html">Family Coordination App</a></li>
+                        <li><a href="private-alternative-to-life360.html">Private Life360 Alternative</a></li>
+                        <li><a href="how-to-coordinate-care-for-an-elderly-parent.html">Coordinating Elderly Parent Care</a></li>
+                        <li><a href="family-medication-tracking-app.html">Family Medication Tracking</a></li>
+                        <li><a href="pet-health-records.html">Pet Health Records App</a></li>
+                        <li><a href="for-vets.html">For Veterinary Practices</a></li>
+                        <li><a href="for-pet-carers.html">For Pet Carers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Privacy &amp; Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="privacy.html">Security</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Help Centre</a></li>
+                        <li><a href="support.html">Contact Us</a></li>
+                        <li><a href="mailto:support@aipieces.org">support@aipieces.org</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin-bottom:14px;"><span class="lang-switcher"><button type="button" class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language"><span class="lang-globe">🌐</span>EN<span class="lang-caret">▾</span></button><ul class="lang-menu"><li><a href="pet-health-records.html" hreflang="en" class="active">English</a></li></ul></span></p>
+                <p>&copy; 2026 AI Pieces Ltd (AIPieces). Made with ❤️ for families everywhere.</p>
+                <p style="margin-top:10px;font-size:0.85rem;line-height:1.6;">AIPIECES LIMITED · Registered in Ireland · Company No. (CRO) 660628<br>Registered office: Cuascrome, Kimego West, Co. Kerry, Ireland</p>
+                <p style="margin-top:10px;font-size:0.8rem;">
+                    FamilyCompass · HealthCompass · CareCompass · EduCompass ·
+                    Privacy-first by design · Built in Kerry, Ireland · GDPR compliant
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    window.scrollTo({ top: target.offsetTop - headerHeight, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

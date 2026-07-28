@@ -18,7 +18,7 @@
       "name": "FamilyCompass",
       "applicationCategory": "LifestyleApplication",
       "operatingSystem": "iOS, Android",
-      "description": "One private, end-to-end encrypted app for your whole family — location sharing, encrypted messaging and calls, a shared calendar, caregiving and medications, and photo sharing. No data selling. Launching October 2026.",
+      "description": "One private, end-to-end encrypted app for your whole family — location sharing, encrypted messaging, a shared calendar, caregiving and medications, and photo sharing. No data selling. Launching October 2026.",
       "offers": { "@type": "Offer", "availability": "https://schema.org/PreOrder" },
       "publisher": { "@type": "Organization", "name": "AI Pieces", "url": "https://aipieces.org" }
     }
@@ -151,6 +151,19 @@
         #form-message.error { color: #c62828; }
         .ea-privacy-note { margin-top: 18px; font-size: 0.82rem; color: #8a7a6a; line-height: 1.5; }
         .ea-privacy-note a { color: #8b6914; }
+
+        /* ── INTEREST CHECKBOXES ── */
+        .ea-interests { border: none; margin: 0 0 15px; padding: 0; text-align: left; }
+        .ea-interests legend { font-size: 0.9rem; font-weight: 600; color: #5a4a3a; margin-bottom: 10px; padding: 0; }
+        .ea-interests legend span { font-weight: 400; color: #8a7a6a; }
+        .ea-interests label {
+            display: flex; align-items: flex-start; gap: 10px; padding: 8px 12px;
+            font-size: 0.95rem; color: #5a4a3a; cursor: pointer;
+            background: rgba(255,255,255,0.55); border: 1px solid rgba(139,105,20,0.18);
+            border-radius: 12px; margin-bottom: 8px; transition: border-color 0.2s, background 0.2s;
+        }
+        .ea-interests label:hover { border-color: #8b6914; background: rgba(255,255,255,0.8); }
+        .ea-interests input[type="checkbox"] { margin-top: 2px; accent-color: #8b6914; width: 16px; height: 16px; flex-shrink: 0; }
 
         /* ── FOUNDER LINE ── */
         .ea-founder { text-align: center; max-width: 640px; margin: 30px auto 0; font-size: 1rem; color: #5a4a3a; }
@@ -319,8 +332,8 @@
                     </div>
                     <div class="ea-feature">
                         <span class="ico" aria-hidden="true">🔒</span>
-                        <h3>Encrypted messaging &amp; calls</h3>
-                        <p>End-to-end encrypted family messaging and calls — private by default.</p>
+                        <h3>Encrypted messaging</h3>
+                        <p>End-to-end encrypted family messaging — private by default.</p>
                     </div>
                     <div class="ea-feature">
                         <span class="ico" aria-hidden="true">📅</span>
@@ -346,7 +359,7 @@
 
                 <p class="ea-launch">
                     Launching October 2026
-                    <span>Already in use by families in five countries.</span>
+                    <span>Already in use by dozens of families in five countries across USA, UK, Ireland, Germany and Spain.</span>
                 </p>
             </div>
         </section>
@@ -365,6 +378,12 @@
                             required
                             aria-label="Email address for early access signup"
                         />
+                        <fieldset class="ea-interests">
+                            <legend>Which parts are you most interested in? <span>(optional)</span></legend>
+                            <label><input type="checkbox" name="interest" value="nutrition"> Nutrition</label>
+                            <label><input type="checkbox" name="interest" value="household_shopping"> Household management &amp; shopping lists</label>
+                            <label><input type="checkbox" name="interest" value="hobbies_recreation"> Hobby &amp; recreational development</label>
+                        </fieldset>
                         <button type="submit" class="btn btn-primary">Get Early Access</button>
                         <div id="form-message"></div>
                     </form>
@@ -468,12 +487,15 @@
         // with the UTM data folded into the existing `source` column as JSON, so a
         // signup is NEVER lost regardless of whether the migration has been run.
         // Once 0004 is applied, the first attempt succeeds and the columns fill.
-        async function postSignup(email) {
+        async function postSignup(email, interests) {
             const base = {
                 email: email.toLowerCase(),
                 created_at: new Date().toISOString(),
                 locale: 'en'
             };
+            // Interests are captured inside the `source` JSON so no new column is
+            // required — a signup is never lost if the schema lacks an interests field.
+            const sourceJson = JSON.stringify({ ...utm, interests }).slice(0, 500);
             const send = (payload) => fetch(`${SUPABASE_URL}/rest/v1/beta_signups`, {
                 method: 'POST',
                 headers: {
@@ -485,16 +507,16 @@
                 body: JSON.stringify(payload)
             });
 
-            // Attempt 1: dedicated utm_* columns.
+            // Attempt 1: dedicated utm_* columns, with interests folded into `source`.
             let response = await send({
                 ...base,
-                source: utm.utm_source,
+                source: sourceJson,
                 utm_source: utm.utm_source,
                 utm_medium: utm.utm_medium,
                 utm_campaign: utm.utm_campaign
             });
 
-            // Attempt 2 (fallback): columns not present yet — fold UTM into `source`.
+            // Attempt 2 (fallback): columns not present yet — fold everything into `source`.
             if (response.status === 400) {
                 let missingColumn = false;
                 try {
@@ -505,7 +527,7 @@
                 if (missingColumn) {
                     response = await send({
                         ...base,
-                        source: JSON.stringify(utm).slice(0, 500)
+                        source: sourceJson
                     });
                 }
             }
@@ -525,12 +547,16 @@
                 return;
             }
 
+            const interests = Array.from(
+                e.target.querySelectorAll('input[name="interest"]:checked')
+            ).map((cb) => cb.value);
+
             submitButton.disabled = true;
             submitButton.textContent = 'Submitting...';
             messageDiv.textContent = '';
 
             try {
-                const response = await postSignup(email);
+                const response = await postSignup(email, interests);
 
                 if (response.ok || response.status === 201) {
                     messageDiv.className = 'success';

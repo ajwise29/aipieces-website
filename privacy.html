@@ -729,7 +729,7 @@
                         Cryptographic Standards &amp; Technical Security
                     </h3>
                     <p class="policy-body">
-                        The following cryptographic primitives and standards govern data security across FamilyCompass. All implementations conform to published, peer-reviewed specifications. No proprietary cryptography is used.
+                        The following cryptographic primitives and standards govern data security across FamilyCompass. All implementations conform to published, peer-reviewed specifications, and our approach follows the algorithm and key-management guidance published by centres of excellence such as the UK's <a href="https://www.ncsc.gov.uk/" target="_blank" rel="noopener">National Cyber Security Centre (NCSC)</a> and the <a href="https://www.enisa.europa.eu/" target="_blank" rel="noopener">EU Agency for Cybersecurity (ENISA)</a>. No proprietary cryptography is used.
                     </p>
 
                     <table class="crypto-table">
@@ -785,7 +785,7 @@
                         <div class="hardware-card">
                             <div class="hardware-card-logo">🍎</div>
                             <h4>iOS Secure Enclave</h4>
-                            <p>Cryptographic keys for FamilyCompass are generated inside the <strong>Apple Secure Enclave</strong> — a dedicated security subsystem with its own isolated memory and microkernel. Private keys never leave the enclave and are bound to the specific device. Even if the main iOS operating system were compromised, the Secure Enclave keys remain inaccessible.</p>
+                            <p>Cryptographic keys for FamilyCompass are generated inside the <strong>Apple Secure Enclave</strong> — a dedicated security subsystem with its own isolated memory and microkernel. Private keys never leave the enclave and are bound to the specific device. This hardware-backed approach to key storage follows the mobile cryptographic-key handling requirements set out in <a href="https://owasp.org/www-project-mobile-app-security/" target="_blank" rel="noopener">OWASP's Mobile Application Security (MASVS)</a> project. Even if the main iOS operating system were compromised, the Secure Enclave keys remain inaccessible.</p>
                             <a href="https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web" target="_blank" rel="noopener">Apple Platform Security: Secure Enclave ↗</a>
                         </div>
                         <div class="hardware-card">
@@ -1034,6 +1034,9 @@
                         <li><a href="example-when-is-it-time-for-a-care-home.html">When Is It Time for a Care Home?</a></li>
                         <li><a href="family-medication-tracking-app.html">Family Medication Tracking</a></li>
                         <li><a href="co-parenting-app-private.html">Private Co-Parenting App</a></li>
+                        <li><a href="pet-health-records.html">Pet Health Records App</a></li>
+                        <li><a href="for-vets.html">For Veterinary Practices</a></li>
+                        <li><a href="for-pet-carers.html">For Pet Carers</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
